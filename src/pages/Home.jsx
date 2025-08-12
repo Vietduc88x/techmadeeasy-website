@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Wind, Brain, Globe, Cpu, Users, Eye, FileText } from 'lucide-react';
+import { ArrowRight, Wind, Brain, Globe, Cpu, Users, Eye, FileText, Download, Mail, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 
 export function Home() {
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubscribed(true);
+      setIsLoading(false);
+      setEmail('');
+    }, 1000);
+  };
+
   const features = [
     {
       icon: Wind,
@@ -122,6 +139,100 @@ export function Home() {
         </div>
       </section>
 
+      {/* Lead Magnet Section */}
+      <section className="py-20 bg-gradient-to-r from-primary/5 via-secondary/10 to-primary/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-2 border-primary/20 shadow-xl">
+              <CardHeader className="text-center pb-6">
+                <div className="flex justify-center mb-4">
+                  <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full">
+                    <Download className="h-8 w-8 text-primary" />
+                  </div>
+                </div>
+                <CardTitle className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                  Free Download: Renewable Energy Project Management Checklist
+                </CardTitle>
+                <CardDescription className="text-lg text-muted-foreground">
+                  Get our comprehensive 150+ item checklist used by project managers worldwide to deliver successful renewable energy projects on time and within budget.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <h4 className="font-semibold text-foreground">What's Included:</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        7-phase project roadmap with 150+ actionable items
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        Risk mitigation strategies for common challenges
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        Stakeholder management templates
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        Quality assurance protocols
+                      </li>
+                      <li className="flex items-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                        Critical success factors and pitfalls to avoid
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="space-y-4">
+                    <h4 className="font-semibold text-foreground">Perfect for:</h4>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      <li className="flex items-center">
+                        <Users className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0" />
+                        Project managers in renewable energy
+                      </li>
+                      <li className="flex items-center">
+                        <Users className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0" />
+                        Engineering consultants
+                      </li>
+                      <li className="flex items-center">
+                        <Users className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0" />
+                        Energy company executives
+                      </li>
+                      <li className="flex items-center">
+                        <Users className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0" />
+                        Clean energy investors
+                      </li>
+                      <li className="flex items-center">
+                        <Users className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0" />
+                        Anyone managing complex technical projects
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="border-t pt-6">
+                  <div className="text-center">
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Join 2,000+ professionals who have downloaded this guide
+                    </p>
+                    <Button size="lg" className="text-lg px-8" asChild>
+                      <a href="/Renewable-Energy-Workshop-01.pdf" download target="_blank" rel="noopener noreferrer">
+                        <Download className="mr-2 h-5 w-5" />
+                        Download Free Checklist
+                      </a>
+                    </Button>
+                    <p className="text-xs text-muted-foreground mt-2">
+                      No email required • Instant download • 100% Free
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Mission Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -165,27 +276,126 @@ export function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
+      {/* Newsletter Signup Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Ready to Explore?
-            </h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Join our community and stay updated with the latest insights in technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="text-lg px-8">
-                <Link to="/blog">
-                  Read Our Blog
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-8">
-                <Link to="/contact">Get in Touch</Link>
-              </Button>
-            </div>
+          <div className="max-w-3xl mx-auto">
+            <Card className="border-2 border-primary/20 shadow-xl">
+              <CardHeader className="text-center pb-6">
+                <div className="flex justify-center mb-4">
+                  <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full">
+                    <Mail className="h-8 w-8 text-primary" />
+                  </div>
+                </div>
+                <CardTitle className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                  Stay Ahead of Technology Trends
+                </CardTitle>
+                <CardDescription className="text-lg text-muted-foreground">
+                  Join 5,000+ professionals who receive weekly insights on renewable energy, AI, and emerging technologies. Get exclusive content, early access to guides, and expert analysis delivered to your inbox.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                {!isSubscribed ? (
+                  <form onSubmit={handleNewsletterSubmit} className="space-y-4">
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Input
+                        type="email"
+                        placeholder="Enter your email address"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className="flex-1 text-lg py-6"
+                        disabled={isLoading}
+                      />
+                      <Button 
+                        type="submit" 
+                        size="lg" 
+                        className="text-lg px-8 py-6"
+                        disabled={isLoading || !email}
+                      >
+                        {isLoading ? (
+                          <>
+                            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                            Subscribing...
+                          </>
+                        ) : (
+                          <>
+                            <Mail className="mr-2 h-5 w-5" />
+                            Subscribe Free
+                          </>
+                        )}
+                      </Button>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm text-muted-foreground">
+                      <div className="flex items-center justify-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        Weekly insights
+                      </div>
+                      <div className="flex items-center justify-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        No spam, ever
+                      </div>
+                      <div className="flex items-center justify-center">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        Unsubscribe anytime
+                      </div>
+                    </div>
+                  </form>
+                ) : (
+                  <div className="text-center space-y-4">
+                    <div className="flex justify-center">
+                      <div className="flex items-center justify-center w-16 h-16 bg-green-100 rounded-full">
+                        <CheckCircle className="h-8 w-8 text-green-600" />
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground">Welcome to the Community!</h3>
+                    <p className="text-muted-foreground">
+                      Thank you for subscribing! Check your email for a welcome message and your first weekly insight.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
+                      <Button asChild variant="outline">
+                        <Link to="/blog">
+                          <FileText className="mr-2 h-4 w-4" />
+                          Explore Our Blog
+                        </Link>
+                      </Button>
+                      <Button asChild>
+                        <a href="/Renewable-Energy-Workshop-01.pdf" download target="_blank" rel="noopener noreferrer">
+                          <Download className="mr-2 h-4 w-4" />
+                          Download Free Guide
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
+                )}
+                
+                <div className="border-t pt-6">
+                  <div className="text-center">
+                    <p className="text-sm text-muted-foreground mb-4">
+                      What you'll get every week:
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                      <div className="flex items-start">
+                        <Wind className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Latest renewable energy developments and project insights</span>
+                      </div>
+                      <div className="flex items-start">
+                        <Brain className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">AI applications and technology trends analysis</span>
+                      </div>
+                      <div className="flex items-start">
+                        <FileText className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Exclusive guides and templates for professionals</span>
+                      </div>
+                      <div className="flex items-start">
+                        <Users className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                        <span className="text-muted-foreground">Industry networking opportunities and events</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
