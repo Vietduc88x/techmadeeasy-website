@@ -68,53 +68,34 @@ Money isn't the only thing that compounds. Everything from **knowledge to relati
 
 *Knowledge builds upon itself, creating exponential understanding through interconnected concepts*
 
-### Interactive Learning Example: Basic Collision Physics
+### Interactive Compounding Visualization
 
-Let's explore how compounding works in education using a practical example from physics. Consider learning "Basic Collision" concepts - a fundamental topic that demonstrates how knowledge compounds beautifully.
+To truly understand how compounding works, let's visualize the exponential growth curve that makes compounding so powerful:
 
-![Collision Physics Demonstration](/collision-compounding-demo.png)
+![Interactive Compounding Chart](/interactive-compounding-chart.png)
 
-*Understanding momentum conservation in collisions: where physics meets compounding principles*
+*Interactive visualization of compounding growth: notice how the curve starts slowly then accelerates dramatically*
 
-**Stage 1: Foundation Building**
-When you first learn about collisions, you start with basic concepts:
-- Objects have mass and velocity
-- Momentum = mass × velocity
-- Energy is conserved in interactions
+This chart perfectly illustrates the key insight about compounding: **most of the growth happens in the later stages**. The shaded area under the curve represents the accumulated value over time, showing how small, consistent efforts compound into extraordinary results.
 
-**Stage 2: Concept Integration**
-These simple ideas begin to compound:
-- You understand how momentum transfers between objects
-- You see patterns in elastic vs. inelastic collisions
-- Mathematical relationships become intuitive
+![Compounding Effect Visualization](/compounding-visualization.png)
 
-**Stage 3: Advanced Applications**
-The compounding effect accelerates:
-- You can predict outcomes of complex multi-body collisions
-- You apply these principles to engineering problems
-- You connect collision physics to other areas like astronomy, sports science, and vehicle safety
+*The compounding effect: each layer builds upon the previous, creating exponential growth*
 
-![Interactive Learning Progression](/skill-progression-chart.png)
+**Key Observations from the Visualization:**
 
-*From Basic Collision Physics to advanced applications: the compounding journey of learning*
+1. **Slow Start**: The initial period shows minimal visible growth
+2. **Acceleration Point**: Around the middle, growth begins to noticeably accelerate  
+3. **Exponential Phase**: The final portion shows dramatic, almost vertical growth
+4. **Cumulative Power**: The total accumulated area (value) is dominated by the later stages
 
-**The Compounding Magic in Learning:**
-
-Just like financial compound interest, each new physics concept you master doesn't just add to your knowledge - it **multiplies** your understanding. When you grasp momentum conservation, it doesn't just help you solve collision problems. It also:
-
-- Enhances your understanding of rotational dynamics
-- Provides foundation for thermodynamics concepts
-- Connects to quantum mechanics principles
-- Applies to cosmological models
-
-This is why students who master fundamentals early often excel exponentially in advanced courses. Their knowledge compounds, creating an ever-widening foundation for new learning.
+This is why patience and persistence are crucial for compounding to work its magic. Whether you're building wealth, developing skills, or growing relationships, the pattern remains the same.
 
 ### Knowledge Compounding
 
 - Each new piece of information builds upon previous knowledge
 - Connections between concepts create exponential understanding
 - Expertise in one area accelerates learning in related fields
-- **Real Example:** Understanding basic collision physics opens doors to advanced mechanics, engineering design, and even space exploration
 
 ### Relationship Compounding
 
