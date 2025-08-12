@@ -1,0 +1,7 @@
+# Redirect PDF files to correct location
+/blog/PDF /Renewable-Energy-Workshop-01.pdf 301
+/blog/*.pdf /:splat.pdf 301
+
+# SPA fallback
+/*    /index.html   200
+
