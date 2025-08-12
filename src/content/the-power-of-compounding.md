@@ -18,7 +18,7 @@ Compounding is like a snowball rolling downhill: the longer it rolls, the bigger
 
 The most visible form of compounding is **compound interest**, where the interest on a sum of money, if reinvested and untouched, goes on to itself earn interest. This means the total sum of money grows faster and faster, creating an exponential curve rather than a linear progression.
 
-![Compounding Growth Chart](/compounding-chart.png)
+![Compounding Growth Chart](/enhanced-compounding-chart.png)
 
 *The exponential nature of compounding: most gains occur in the later stages*
 
@@ -72,15 +72,15 @@ Money isn't the only thing that compounds. Everything from **knowledge to relati
 
 To truly understand how compounding works, let's visualize the exponential growth curve that makes compounding so powerful:
 
-![Interactive Compounding Chart](/interactive-compounding-chart.png)
+![Interactive Compounding Chart](/enhanced-compounding-chart.png)
 
 *Interactive visualization of compounding growth: notice how the curve starts slowly then accelerates dramatically*
 
 This chart perfectly illustrates the key insight about compounding: **most of the growth happens in the later stages**. The shaded area under the curve represents the accumulated value over time, showing how small, consistent efforts compound into extraordinary results.
 
-![Compounding Effect Visualization](/compounding-visualization.png)
+![Compounding Effect Visualization](/dynamic-growth-visualization.png)
 
-*The compounding effect: each layer builds upon the previous, creating exponential growth*
+*The compounding effect: exponential growth curves showing the acceleration of value over time*
 
 **Key Observations from the Visualization:**
 
