@@ -10,6 +10,13 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'renewable-energy-workshop-01': {
+      title: 'Renewable Energy Workshop 01',
+      category: 'Renewable Energy',
+      readTime: '5 min read',
+      date: 'August 2025',
+      author: 'Duc Hoang',
+    },
     'lever-leverage': {
       title: 'Lever – Leverage',
       category: 'Philosophy',

@@ -8,6 +8,15 @@ import { Badge } from '@/components/ui/badge';
 export function Blog() {
   const blogPosts = [
     {
+      slug: 'renewable-energy-workshop-01',
+      title: 'Renewable Energy Workshop 01',
+      excerpt: 'This post introduces the key insights from our first Renewable Energy Workshop. It covers fundamental concepts and recent advancements in the field, providing a solid foundation for understanding sustainable energy solutions. Explore the attached PDF for comprehensive details and in-depth analysis of the topics discussed, offering valuable perspectives on the future of energy.',
+      category: 'Renewable Energy',
+      readTime: '5 min read',
+      date: 'August 2025',
+      featured: true,
+    },
+    {
       slug: 'lever-leverage',
       title: 'Lever – Leverage',
       excerpt: 'Give me a lever long enough and a fulcrum on which to place it, and I shall move the world. Exploring the concept of leverage in the digital age.',
