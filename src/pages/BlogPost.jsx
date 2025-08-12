@@ -10,6 +10,13 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'the-power-of-compounding': {
+      title: 'The Power of Compounding: The Eighth Wonder of the World',
+      category: 'Personal Development',
+      readTime: '15 min read',
+      date: 'August 2025',
+      author: 'Duc Hoang',
+    },
     'renewable-energy-workshop-01': {
       title: 'Renewable Energy Workshop 01',
       category: 'Renewable Energy',

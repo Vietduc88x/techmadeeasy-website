@@ -8,6 +8,15 @@ import { Badge } from '@/components/ui/badge';
 export function Blog() {
   const blogPosts = [
     {
+      slug: 'the-power-of-compounding',
+      title: 'The Power of Compounding: The Eighth Wonder of the World',
+      excerpt: 'Understanding how small, consistent efforts can lead to extraordinary results. Explore the mathematical beauty and practical applications of compounding in finance, knowledge, relationships, and personal growth.',
+      category: 'Personal Development',
+      readTime: '15 min read',
+      date: 'August 2025',
+      featured: true,
+    },
+    {
       slug: 'renewable-energy-workshop-01',
       title: 'Renewable Energy Workshop 01',
       excerpt: 'This post introduces the key insights from our first Renewable Energy Workshop. It covers fundamental concepts and recent advancements in the field, providing a solid foundation for understanding sustainable energy solutions. Explore the attached PDF for comprehensive details and in-depth analysis of the topics discussed, offering valuable perspectives on the future of energy.',
