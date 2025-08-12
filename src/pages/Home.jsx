@@ -63,7 +63,7 @@ export function Home() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center">
-            <img src="/images/energy_ecosystem.png" alt="Energy Ecosystem" className="max-w-full h-auto" />
+            <img src="/images/energy_ecosystem.png" alt="Energy Ecosystem" className="w-full max-w-6xl h-auto" />
           </div>
         </div>
       </section>
