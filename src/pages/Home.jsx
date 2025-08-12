@@ -59,11 +59,31 @@ export function Home() {
         </div>
       </section>
 
-      {/* Image Section */}
-      <section className="py-16 bg-muted/30">
+      {/* Vision & Stats Section */}
+      <section className="py-20 bg-gradient-to-r from-primary/10 via-secondary/5 to-primary/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center items-center">
-            <img src="/images/energy_ecosystem.png" alt="Energy Ecosystem" className="w-full max-w-6xl h-auto" />
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              Empowering the Future of Technology
+            </h2>
+            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Our mission is to bridge the gap between complex technology and everyday understanding, making innovation accessible to everyone.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+              <div className="text-center">
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">17+</div>
+                <div className="text-lg text-muted-foreground">Expert Articles</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">4</div>
+                <div className="text-lg text-muted-foreground">Focus Areas</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">100%</div>
+                <div className="text-lg text-muted-foreground">Accessible Content</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
