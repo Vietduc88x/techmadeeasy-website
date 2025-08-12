@@ -200,6 +200,23 @@ export function BlogPost() {
         if (line.startsWith('### ')) {
           return <h3 key={index} className="text-xl font-bold text-foreground mb-3 mt-5">{line.slice(4)}</h3>;
         }
+        if (line.startsWith('![') && line.includes('](') && line.endsWith(')')) {
+          const altText = line.substring(line.indexOf('[') + 1, line.indexOf(']'));
+          const imageUrl = line.substring(line.indexOf('(') + 1, line.indexOf(')'));
+          return (
+            <div key={index} className="my-8 text-center">
+              <img 
+                src={imageUrl} 
+                alt={altText} 
+                className="max-w-full h-auto mx-auto rounded-lg shadow-lg"
+                style={{ maxHeight: '500px' }}
+              />
+            </div>
+          );
+        }
+        if (line.startsWith('*') && !line.startsWith('**') && line.endsWith('*') && !line.endsWith('**')) {
+          return <p key={index} className="text-sm text-muted-foreground italic text-center mb-6 -mt-4">{line.slice(1, -1)}</p>;
+        }
         if (line.startsWith('> ')) {
           return (
             <blockquote key={index} className="border-l-4 border-primary pl-4 italic text-muted-foreground my-4">
@@ -223,6 +240,9 @@ export function BlogPost() {
           return <p key={index} className="text-muted-foreground mb-4 leading-relaxed"><a href={linkUrl} className="text-primary hover:underline">{linkText}</a></p>;
         }
         if (line.trim() === ")") {
+          return <br key={index} />;
+        }
+        if (line.trim() === "") {
           return <br key={index} />;
         }
         return <p key={index} className="text-muted-foreground mb-4 leading-relaxed">{line}</p>;
