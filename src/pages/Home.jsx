@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Wind, Brain, Globe, Cpu, Users, Eye, FileText, Download, Mail, CheckCircle } from 'lucide-react';
+import { ArrowRight, Wind, Brain, Globe, Cpu, Users, Eye, FileText, Download, Mail, CheckCircle, Star, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -42,6 +42,30 @@ export function Home() {
       icon: Cpu,
       title: 'Digital Twins',
       description: 'Understand digital twin technology and its real-world applications.',
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Chen',
+      role: 'Project Manager, GreenTech Solutions',
+      company: 'Fortune 500 Energy Company',
+      content: 'The renewable energy project management checklist from TechMadeEasy saved our team months of planning time. The comprehensive approach and practical insights are invaluable for any clean energy project.',
+      rating: 5,
+    },
+    {
+      name: 'Michael Rodriguez',
+      role: 'Senior Engineer',
+      company: 'Offshore Wind Consultancy',
+      content: 'Duc\'s articles on offshore wind development are the most practical and insightful content I\'ve found. His real-world experience shines through in every piece.',
+      rating: 5,
+    },
+    {
+      name: 'Dr. Emily Watson',
+      role: 'AI Research Director',
+      company: 'Tech Innovation Lab',
+      content: 'The AI applications in renewable energy series opened my eyes to new possibilities. The technical depth combined with accessible explanations is exactly what our industry needs.',
+      rating: 5,
     },
   ];
 
@@ -270,6 +294,62 @@ export function Home() {
                 <cite className="text-sm font-semibold text-foreground">
                   — Duc Hoang, Founder & CEO
                 </cite>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Trusted by Industry Professionals
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Join thousands of professionals who rely on our insights to stay ahead in the rapidly evolving technology landscape.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="relative group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardHeader>
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <Quote className="h-8 w-8 text-primary/20 absolute top-4 right-4" />
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground italic">
+                    "{testimonial.content}"
+                  </p>
+                  <div className="border-t pt-4">
+                    <p className="font-semibold text-foreground">{testimonial.name}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <p className="text-xs text-muted-foreground">{testimonial.company}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <div className="inline-flex items-center space-x-8 text-muted-foreground">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">5,000+</div>
+                <div className="text-sm">Newsletter Subscribers</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">50+</div>
+                <div className="text-sm">Countries Reached</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-primary">98%</div>
+                <div className="text-sm">Reader Satisfaction</div>
               </div>
             </div>
           </div>
