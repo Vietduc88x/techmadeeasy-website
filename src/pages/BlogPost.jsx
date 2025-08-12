@@ -213,7 +213,25 @@ export function BlogPost() {
         if (line.startsWith("[") && line.includes("](") && line.endsWith(")")) {
           const linkText = line.substring(line.indexOf("[") + 1, line.indexOf("]"));
           const linkUrl = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
-          return <p key={index} className="text-muted-foreground mb-4 leading-relaxed"><a href={linkUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{linkText}</a></p>;
+          return (
+            <p key={index} className="text-muted-foreground mb-4 leading-relaxed">
+              <a 
+                href={linkUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-primary hover:underline"
+                onClick={(e) => {
+                  // For PDF files, prevent React Router from handling the link
+                  if (linkUrl.endsWith('.pdf')) {
+                    e.preventDefault();
+                    window.open(linkUrl, '_blank');
+                  }
+                }}
+              >
+                {linkText}
+              </a>
+            </p>
+          );
         }
         if (line.trim() === ")") {
           return <br key={index} />;
