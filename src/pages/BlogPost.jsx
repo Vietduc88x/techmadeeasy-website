@@ -209,7 +209,8 @@ export function BlogPost() {
         }
         if (line.startsWith('**') && line.endsWith('**')) {
           return <p key={index} className="font-bold text-foreground mb-4">{line.slice(2, -2)}</p>;
-        }        if (line.startsWith("[") && line.includes("](") && line.endsWith(")")) {
+        }
+        if (line.startsWith("[") && line.includes("](") && line.endsWith(")")) {
           const linkText = line.substring(line.indexOf("[") + 1, line.indexOf("]"));
           const linkUrl = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
           return <p key={index} className="text-muted-foreground mb-4 leading-relaxed"><a href={linkUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{linkText}</a></p>;
