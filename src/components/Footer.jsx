@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Zap, Mail, Phone, MapPin } from 'lucide-react';
+import { Zap, Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -83,6 +83,17 @@ export function Footer() {
               <li className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-muted-foreground" />
                 <span className="text-sm text-muted-foreground">+84 0966 96 1190</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Linkedin className="h-4 w-4 text-muted-foreground" />
+                <a 
+                  href="https://www.linkedin.com/in/hoang-vietduc-pmp%C2%AE-100842aa/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Hoang Viet Duc, PMP®
+                </a>
               </li>
             </ul>
           </div>

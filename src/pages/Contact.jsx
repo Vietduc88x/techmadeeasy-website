@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Mail, Phone, Send, Newspaper, Megaphone, PenTool } from 'lucide-react';
+import { MapPin, Mail, Phone, Send, Newspaper, Megaphone, PenTool, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -52,6 +52,12 @@ export function Contact() {
       title: 'Phone',
       content: '+84 0966 96 1190',
       link: 'tel:+84966961190',
+    },
+    {
+      icon: Linkedin,
+      title: 'LinkedIn',
+      content: 'Hoang Viet Duc, PMP®',
+      link: 'https://www.linkedin.com/in/hoang-vietduc-pmp%C2%AE-100842aa/',
     },
   ];
 
@@ -112,6 +118,8 @@ export function Contact() {
                           <a
                             href={info.link}
                             className="text-muted-foreground hover:text-primary transition-colors"
+                            target={info.title === 'LinkedIn' ? '_blank' : undefined}
+                            rel={info.title === 'LinkedIn' ? 'noopener noreferrer' : undefined}
                           >
                             {info.content}
                           </a>

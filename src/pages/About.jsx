@@ -6,9 +6,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 export function About() {
   const stats = [
-    { icon: Users, value: '800K+', label: 'Active Subscribers' },
-    { icon: Eye, value: '400K+', label: 'Monthly Unique Visitors' },
-    { icon: FileText, value: '2M+', label: 'Monthly Page Views' },
+    { icon: Users, value: '5,000+', label: 'Newsletter Subscribers' },
+    { icon: Eye, value: '50+', label: 'Countries Reached' },
+    { icon: FileText, value: '17+', label: 'Expert Articles Published' },
   ];
 
   const values = [
@@ -136,6 +136,110 @@ export function About() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                Meet Our Founder
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Learn about the vision and expertise behind Tech Made Easy.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-foreground">Duc Hoang, PMP®</h3>
+                  <p className="text-lg text-primary font-semibold">Founder & Technology Expert</p>
+                </div>
+                
+                <div className="space-y-4 text-muted-foreground">
+                  <p>
+                    Duc Hoang is a certified Project Management Professional (PMP®) with extensive experience in renewable energy project management and technology implementation. His passion for making complex technology accessible to everyone led to the creation of Tech Made Easy.
+                  </p>
+                  <p>
+                    With a deep understanding of offshore wind development, AI applications, and emerging technologies, Duc brings real-world expertise to every article and guide published on this platform.
+                  </p>
+                  <p>
+                    His mission is to bridge the gap between complex technical concepts and practical understanding, empowering professionals and enthusiasts to succeed in today's rapidly evolving technology landscape.
+                  </p>
+                </div>
+                
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-foreground">Expertise Areas:</h4>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="space-y-2">
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                        <span className="text-muted-foreground">Renewable Energy Project Management</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                        <span className="text-muted-foreground">Offshore Wind Farm Development</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                        <span className="text-muted-foreground">AI Applications in Energy</span>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                        <span className="text-muted-foreground">Digital Transformation</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                        <span className="text-muted-foreground">Web 3.0 Technologies</span>
+                      </div>
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                        <span className="text-muted-foreground">Technical Writing & Education</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="pt-4">
+                  <Button asChild>
+                    <a 
+                      href="https://www.linkedin.com/in/hoang-vietduc-pmp%C2%AE-100842aa/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center"
+                    >
+                      Connect on LinkedIn
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="flex justify-center">
+                <div className="relative">
+                  <div className="w-80 h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center">
+                    <div className="w-72 h-72 bg-card rounded-full border-4 border-primary/20 flex items-center justify-center">
+                      <div className="text-center space-y-4">
+                        <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto flex items-center justify-center">
+                          <Users className="h-12 w-12 text-primary" />
+                        </div>
+                        <div>
+                          <p className="font-bold text-foreground">Duc Hoang</p>
+                          <p className="text-sm text-muted-foreground">PMP® Certified</p>
+                          <p className="text-xs text-muted-foreground">Technology Expert</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
