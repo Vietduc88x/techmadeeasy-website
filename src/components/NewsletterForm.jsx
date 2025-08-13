@@ -17,8 +17,8 @@ export function NewsletterForm({ className = "" }) {
     setMessage('');
     
     try {
-      // Updated backend URL with SendGrid integration - Fixed URL
-      const response = await fetch('https://zmhqivcm975p.manus.space/api/newsletter/subscribe', {
+      // Use external API service (no environment variables needed)
+      const response = await fetch('https://58hpi8cwjw3q.manus.space/api/newsletter/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
