@@ -14,12 +14,32 @@ export function Home() {
     e.preventDefault();
     setIsLoading(true);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubscribed(true);
+    try {
+      const response = await fetch('https://mzhyi8cdlj3o.manus.space/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+      
+      const data = await response.json();
+      
+      if (response.ok) {
+        setIsSubscribed(true);
+        setEmail('');
+        // You could show different messages based on data.status
+        console.log('Subscription successful:', data);
+      } else {
+        // Handle error cases
+        alert(data.error || 'An error occurred while subscribing');
+      }
+    } catch (error) {
+      console.error('Subscription error:', error);
+      alert('An error occurred while subscribing. Please try again.');
+    } finally {
       setIsLoading(false);
-      setEmail('');
-    }, 1000);
+    }
   };
 
   const features = [
