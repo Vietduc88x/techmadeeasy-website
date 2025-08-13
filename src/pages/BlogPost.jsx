@@ -10,6 +10,20 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'complete-guide-offshore-wind-farm-development': {
+      title: 'Complete Guide to Offshore Wind Farm Development: From Planning to Operation',
+      category: 'Renewable Energy',
+      readTime: '25 min read',
+      date: 'August 2024',
+      author: 'Duc Hoang',
+    },
+    'ai-applications-renewable-energy-transformation': {
+      title: 'AI Applications in Renewable Energy: Transforming the Clean Energy Landscape',
+      category: 'Technology',
+      readTime: '20 min read',
+      date: 'August 2024',
+      author: 'Duc Hoang',
+    },
     'the-power-of-compounding': {
       title: 'The Power of Compounding: The Eighth Wonder of the World',
       category: 'Personal Development',
