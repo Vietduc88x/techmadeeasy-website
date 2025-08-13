@@ -17,7 +17,7 @@ export function NewsletterForm({ className = "" }) {
     setMessage('');
     
     try {
-      // Updated backend URL with SendGrid integration
+      // Updated backend URL with SendGrid integration - Fixed URL
       const response = await fetch('https://zmhqivcm975p.manus.space/api/newsletter/subscribe', {
         method: 'POST',
         headers: {
