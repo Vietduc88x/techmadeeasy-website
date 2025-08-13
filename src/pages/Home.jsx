@@ -140,6 +140,33 @@ export function Home() {
               We provide insightful and comprehensive content that simplifies the complexities of technology across multiple domains.
             </p>
           </div>
+
+          {/* Renewable Energy System Visualization */}
+          <div className="mb-16">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  Integrated Renewable Energy Ecosystem
+                </h3>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                  Explore how wind, solar, hydrogen, and smart grid technologies work together to create a sustainable energy future. From generation to storage and distribution, see the complete renewable energy value chain.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 shadow-lg">
+                <img 
+                  src="/renewable-energy-system.png" 
+                  alt="Integrated Renewable Energy System - Wind turbines, solar panels, hydrogen production, smart grid, and energy storage working together"
+                  className="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+                  style={{ maxHeight: '600px', objectFit: 'contain' }}
+                />
+                <div className="mt-6 text-center">
+                  <p className="text-sm text-muted-foreground italic">
+                    Complete renewable energy ecosystem: From offshore wind and solar generation to hydrogen production, smart grid integration, and end-user applications
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
