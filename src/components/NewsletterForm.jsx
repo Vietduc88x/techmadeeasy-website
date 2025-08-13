@@ -17,8 +17,8 @@ export function NewsletterForm({ className = "" }) {
     setMessage('');
     
     try {
-      // Use external API service (no environment variables needed)
-      const response = await fetch('https://58hpi8cwjw3q.manus.space/api/newsletter/subscribe', {
+      // Use Netlify Functions with environment variables
+      const response = await fetch('/.netlify/functions/newsletter', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
