@@ -2,6 +2,3 @@
   functions = "netlify/functions"
   publish = "dist"
 
-[functions]
-  python_runtime = "python3.9"
-
