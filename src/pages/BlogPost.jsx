@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Calendar, Clock, ArrowLeft, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import OffshoreWindGuide from '@/components/OffshoreWindGuide';
 
 export function BlogPost() {
   const { slug } = useParams();
@@ -309,17 +310,21 @@ export function BlogPost() {
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <article className="prose prose-lg max-w-none">
-              {loading ? (
-                <div className="text-center py-8">
-                  <p className="text-muted-foreground">Loading content...</p>
-                </div>
-              ) : (
-                <div className="space-y-4">
-                  {formatContent(content)}
-                </div>
-              )}
-            </article>
+            {slug === 'complete-guide-offshore-wind-farm-development' ? (
+              <OffshoreWindGuide />
+            ) : (
+              <article className="prose prose-lg max-w-none">
+                {loading ? (
+                  <div className="text-center py-8">
+                    <p className="text-muted-foreground">Loading content...</p>
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    {formatContent(content)}
+                  </div>
+                )}
+              </article>
+            )}
           </div>
         </div>
       </section>
