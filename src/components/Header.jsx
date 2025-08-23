@@ -10,6 +10,7 @@ export function Header() {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Blog', href: '/blog' },
+    { name: 'FIM Revolution', href: '/fim-revolution' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
