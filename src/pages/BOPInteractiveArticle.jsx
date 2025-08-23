@@ -23,8 +23,10 @@ import {
 } from 'lucide-react';
 
 export function BOPInteractiveArticle() {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [selectedEquipment, setSelectedEquipment] = useState('pv-modules');
+  const [activeTab, setActiveTab] = useState("overview");
+  const [selectedEquipment, setSelectedEquipment] = useState("pv-modules");
+  const [expandedChallenge, setExpandedChallenge] = useState(null);
+  const [expandedSolution, setExpandedSolution] = useState(null);
 
   const equipmentData = {
     'pv-modules': {
@@ -245,25 +247,45 @@ export function BOPInteractiveArticle() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
-                      Managing 50+ interfaces between equipment suppliers and BOP contractors creates chaos:
+                      In large-scale solar projects, traditional procurement strategies often present a dilemma:
                     </p>
                     <ul className="space-y-2">
-                      <li className="flex items-center gap-2">
-                        <XCircle className="h-4 w-4 text-red-500" />
-                        Finger-pointing when issues arise
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <XCircle className="h-4 w-4 text-red-500" />
-                        Unclear responsibility boundaries
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <XCircle className="h-4 w-4 text-red-500" />
-                        Performance guarantee gaps
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <XCircle className="h-4 w-4 text-red-500" />
-                        Cost overruns from scope creep
-                      </li>
+                      {[
+                        {
+                          key: "single-epc",
+                          title: "Single EPC: While seemingly simple, a single EPC (Engineering, Procurement, and Construction) contractor can lead to higher costs due to lack of competitive bidding for individual components.",
+                          details: "Opting for a single EPC contractor often means sacrificing competitive pricing for individual components. Without multiple bids, the EPC has less incentive to secure the best deals, leading to higher overall project costs. This approach also centralizes risk, making the project more vulnerable to the EPC's performance."
+                        },
+                        {
+                          key: "multiple-packages",
+                          title: "Multiple Packages: Breaking down the project into numerous smaller packages can introduce significant management overhead, coordination challenges, and increased risk of interface issues.",
+                          details: "While multiple packages might seem to offer more control, they dramatically increase the complexity of project management. Each package requires its own contracts, timelines, and interfaces, leading to a proliferation of coordination points. This complexity often results in delays, cost overruns, and disputes over responsibility."
+                        },
+                        {
+                          key: "unclear-responsibility",
+                          title: "Unclear Responsibility: With many contractors, pinpointing accountability for delays or defects becomes difficult, leading to finger-pointing and project stagnation.",
+                          details: "When numerous contractors are involved, the lines of responsibility can become blurred. If an issue arises, it's often difficult to determine which party is accountable, leading to 'finger-pointing' and prolonged resolution times. This lack of clear accountability can severely impact project progress and budget."
+                        },
+                        {
+                          key: "performance-gaps",
+                          title: "Performance Gaps: Ensuring consistent performance across diverse suppliers and contractors is a major hurdle, often resulting in unmet project targets.",
+                          details: "Integrating components from various suppliers and managing different contractors makes it challenging to ensure a cohesive and optimally performing system. Discrepancies in equipment specifications, installation quality, or operational procedures can lead to performance shortfalls, impacting the solar farm's efficiency and energy output."                        }
+                      ].map((item) => (
+                        <li key={item.key}>
+                          <div
+                            className="flex items-center gap-2 cursor-pointer hover:text-red-700 transition-colors"
+                            onClick={() => setExpandedChallenge(expandedChallenge === item.key ? null : item.key)}
+                          >
+                            <XCircle className="h-4 w-4 text-red-500" />
+                            {item.title}
+                          </div>
+                          {expandedChallenge === item.key && (
+                            <p className="text-muted-foreground mt-2 ml-6 text-sm italic">
+                              {item.details}
+                            </p>
+                          )}
+                        </li>
+                      ))}
                     </ul>
                   </CardContent>
                 </Card>
@@ -277,25 +299,46 @@ export function BOPInteractiveArticle() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
-                      Strategic BOP Package Design addresses these challenges:
+                      Our innovative approach, the <strong>Optimized BOP Package with Free-Issue PV Modules</strong>, offers a balanced solution:
                     </p>
                     <ul className="space-y-2">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        Clear interface definitions
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        Single-point responsibility
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        Integrated performance guarantees
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        Optimized package boundaries
-                      </li>
+                      {[
+                        {
+                          key: "cost-effectiveness",
+                          title: "Cost-Effectiveness: By directly procuring PV modules (free-issue), you leverage bulk purchasing power and avoid EPC markups, significantly reducing overall project costs.",
+                          details: "Free-issuing PV modules allows for direct negotiation with manufacturers, bypassing the EPC contractor's markup and enabling bulk discounts. This strategy ensures you get the best possible price for the most significant component of your solar farm, leading to substantial cost savings."
+                        },
+                        {
+                          key: "streamlined-management",
+                          title: "Streamlined Management: Consolidating the remaining Balance of Plant (BOP) components into a single, optimized package simplifies project management, reducing the number of interfaces from 50+ to a manageable few.",
+                          details: "Instead of managing dozens of individual contracts and suppliers for BOP components, our optimized package approach bundles these into a cohesive unit. This drastically reduces the number of interfaces, simplifying coordination, minimizing administrative burden, and allowing for more efficient project oversight."
+                        },
+                        {
+                          key: "clear-accountability",
+                          title: "Clear Accountability: With fewer, larger packages, responsibility for each segment is clearly defined, minimizing finger-pointing and ensuring timely issue resolution.",
+                          details: "By reducing the number of contractual interfaces, accountability becomes crystal clear. Each package supplier is responsible for a larger, more defined scope, making it easier to identify and resolve issues quickly. This fosters a more collaborative environment and reduces disputes."
+                        },
+                        {
+                          key: "integrated-performance",
+                          title: "Integrated Performance: This strategy allows for integrated performance guarantees across the entire BOP package, ensuring all components work seamlessly together to meet project targets.",
+                          details: "Our optimized BOP package ensures that all components are designed and supplied to work together seamlessly. This integrated approach allows for comprehensive performance guarantees across the entire BOP system, mitigating risks associated with mismatched components and ensuring the solar farm achieves its intended energy output and efficiency."
+                        }
+                      ].map((item) => (
+                        <li key={item.key}>
+                          <div
+                            className="flex items-center gap-2 cursor-pointer hover:text-green-700 transition-colors"
+                            onClick={() => setExpandedSolution(expandedSolution === item.key ? null : item.key)}
+                          >
+                            <CheckCircle className="h-4 w-4 text-green-500" />
+                            {item.title}
+                          </div>
+                          {expandedSolution === item.key && (
+                            <p className="text-muted-foreground mt-2 ml-6 text-sm italic">
+                              {item.details}
+                            </p>
+                          )}
+                        </li>
+                      ))}
                     </ul>
                   </CardContent>
                 </Card>
@@ -388,10 +431,10 @@ export function BOPInteractiveArticle() {
                   <CardContent>
                     <ul className="space-y-2">
                       {equipmentData[selectedEquipment].scopeItems.map((item, index) => (
-                        <li key={index} className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-500" />
-                          {item}
-                        </li>
+                      <li className="flex items-center gap-2">
+                        <XCircle className="h-4 w-4 text-red-500" />
+                               details: "Uncontrolled changes and expansions in project scope (scope creep) can lead to significant budget overruns and project delays, impacting financial viability. Without clear scope management, small additions can accumulate, leading to substantial cost increases and missed deadlines, ultimately jeopardizing the project's success."ial viability.
+                      </li>
                       ))}
                     </ul>
                   </CardContent>
