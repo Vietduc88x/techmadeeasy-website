@@ -586,76 +586,99 @@ const FIMRevolutionArticle = () => {
         </CardContent>
       </Card>
 
-      {/* Implementation Guide */}
-      <Card>
+      {/* FIM Implementation Roadmap */}
+      {/* FIM Implementation Roadmap */}
+      <Card className="bg-gradient-to-r from-purple-50 to-pink-50">
         <CardHeader>
-          <CardTitle className="text-2xl text-center">FIM Implementation Roadmap: Your Path to Procurement Excellence</CardTitle>
-          <p className="text-gray-600 text-center">A structured, phased approach to successfully integrate Free-Issue Material strategy into your renewable energy projects.</p>
+          <CardTitle className="text-2xl text-center text-purple-700">
+            FIM Implementation Roadmap: Your Path to Procurement Excellence
+          </CardTitle>
+          <p className="text-center text-gray-600">
+            A structured, phased approach to successfully integrate Free-Issue Material strategy into your renewable energy projects.
+          </p>
         </CardHeader>
         <CardContent>
-          <div className="space-y-6">
-            {[
-              {
-                phase: "Phase 1: Strategic Assessment & Planning",
-                duration: "2-4 weeks",
-                description: "This foundational phase involves a deep dive into your project's technical and commercial aspects to identify optimal FIM opportunities.",
-                tasks: [
-                  "Analyze project component breakdown and identify high-value, high-risk items suitable for FIM.",
-                  "Conduct a thorough market assessment of potential direct suppliers for identified components.",
-                  "Develop a detailed FIM procurement plan, including timelines, budget allocation, and risk mitigation strategies.",
-                  "Define clear roles and responsibilities for internal teams and external consultants."
-                ]
-              },
-              {
-                phase: "Phase 2: Supplier Engagement & Negotiation",
-                duration: "4-6 weeks", 
-                description: "Establishing direct relationships with manufacturers is key to unlocking FIM's full potential.",
-                tasks: [
-                  "Issue comprehensive Requests for Quotation (RFQs) to pre-qualified global manufacturers.",
-                  "Evaluate technical specifications, production capabilities, quality control processes, and commercial proposals.",
-                  "Conduct rigorous supplier audits and due diligence, including factory visits and reference checks.",
-                  "Negotiate favorable terms, pricing, warranty, and delivery schedules directly with selected suppliers."
-                ]
-              },
-              {
-                phase: "Phase 3: Contract Integration & Logistics Setup",
-                duration: "2-3 weeks",
-                description: "Seamless integration of FIM into existing project contracts and logistics is crucial for smooth execution.",
-                tasks: [
-                  "Modify existing EPC (Engineering, Procurement, and Construction) or Balance of Plant (BOP) contracts to clearly define FIM scope and responsibilities.",
-                  "Establish robust interface management protocols between direct suppliers, EPC contractors, and project teams.",
-                  "Set up comprehensive quality control and inspection procedures for FIM components at various stages (factory, port, site).",
-                  "Develop a detailed logistics and delivery plan, including transportation, insurance, and customs clearance."
-                ]
-              },
-              {
-                phase: "Phase 4: Execution & Proactive Monitoring",
-                duration: "Project duration",
-                description: "Continuous monitoring and proactive management are essential for realizing the full benefits of FIM.",
-                tasks: [
-                  "Actively monitor supplier performance, production milestones, and delivery schedules.",
-                  "Coordinate closely with EPC contractors to ensure timely availability of FIM components at the construction site.",
-                  "Manage quality inspections and resolve any non-conformance issues promptly and directly with suppliers.",
-                  "Track cost savings, schedule improvements, and quality metrics to demonstrate the value of the FIM strategy."
-                ]
-              }
-            ].map((phase, index) => (
-              <div key={index} className="border-l-4 border-l-blue-500 pl-4 py-2">
-                <div className="flex justify-between items-center mb-2">
-                  <h4 className="font-semibold text-blue-800 text-lg">{phase.phase}</h4>
-                  <Badge variant="outline">{phase.duration}</Badge>
-                </div>
-                <p className="text-gray-600 mb-3 text-sm">{phase.description}</p>
-                <ul className="space-y-1 text-sm">
-                  {phase.tasks.map((task, taskIndex) => (
-                    <li key={taskIndex} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500" />
-                      {task}
-                    </li>
-                  ))}
+          <div className="relative flex flex-col items-center py-8">
+            {/* Phase 1 */}
+            <div className="flex items-center w-full max-w-2xl mb-8">
+              <div className="flex-shrink-0 w-1/3 text-right pr-4">
+                <h4 className="font-bold text-lg text-purple-600">Phase 1: Strategic Assessment & Planning</h4>
+              </div>
+              <div className="flex-grow border-t-2 border-purple-400 relative">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white rounded-full h-6 w-6 flex items-center justify-center text-sm font-bold">1</div>
+              </div>
+              <div className="flex-shrink-0 w-1/3 pl-4">
+                <ul className="list-none space-y-1 text-sm text-gray-700">
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Analyze project component breakdown and identify high-value, high-risk items suitable for FIM.</li>
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Conduct a thorough market assessment of potential direct suppliers for identified components.</li>
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Develop a detailed FIM procurement plan, including budget allocation, and risk mitigation strategies.</li>
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Define clear roles and responsibilities for internal teams and external consultants.</li>
                 </ul>
               </div>
-            ))}
+            </div>
+
+            {/* Connector */}
+            <div className="w-0.5 h-16 bg-purple-400"></div>
+
+            {/* Phase 2 */}
+            <div className="flex items-center w-full max-w-2xl mb-8 flex-row-reverse">
+              <div className="flex-shrink-0 w-1/3 text-left pl-4">
+                <h4 className="font-bold text-lg text-purple-600">Phase 2: Supplier Engagement & Negotiation</h4>
+              </div>
+              <div className="flex-grow border-t-2 border-purple-400 relative">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white rounded-full h-6 w-6 flex items-center justify-center text-sm font-bold">2</div>
+              </div>
+              <div className="flex-shrink-0 w-1/3 pr-4 text-right">
+                <ul className="list-none space-y-1 text-sm text-gray-700">
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Issue comprehensive Requests for Quotation (RFQs) to pre-qualified global manufacturers.</li>
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Evaluate technical specifications, production capabilities, quality control processes, and commercial proposals.</li>
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Conduct rigorous supplier audits and due diligence, including factory visits and reference checks.</li>
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Negotiate favorable terms, pricing, warranty, and delivery schedules directly with selected suppliers.</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Connector */}
+            <div className="w-0.5 h-16 bg-purple-400"></div>
+
+            {/* Phase 3 */}
+            <div className="flex items-center w-full max-w-2xl mb-8">
+              <div className="flex-shrink-0 w-1/3 text-right pr-4">
+                <h4 className="font-bold text-lg text-purple-600">Phase 3: Contract Integration & Logistics Setup</h4>
+              </div>
+              <div className="flex-grow border-t-2 border-purple-400 relative">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white rounded-full h-6 w-6 flex items-center justify-center text-sm font-bold">3</div>
+              </div>
+              <div className="flex-shrink-0 w-1/3 pl-4">
+                <ul className="list-none space-y-1 text-sm text-gray-700">
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Modify existing EPC (Engineering, Procurement, and Construction) or Balance of Plant (BOP) contracts to clearly define FIM scope and responsibilities.</li>
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Establish robust interface management protocols between direct suppliers, EPC contractors, and project teams.</li>
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Set up comprehensive quality control and inspection procedures for FIM components at various stages (factory, port, site).</li>
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Develop a detailed logistics and delivery plan, including transportation, insurance, and customs clearance.</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Connector */}
+            <div className="w-0.5 h-16 bg-purple-400"></div>
+
+            {/* Phase 4 */}
+            <div className="flex items-center w-full max-w-2xl flex-row-reverse">
+              <div className="flex-shrink-0 w-1/3 text-left pl-4">
+                <h4 className="font-bold text-lg text-purple-600">Phase 4: Execution & Proactive Monitoring</h4>
+              </div>
+              <div className="flex-grow border-t-2 border-purple-400 relative">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-purple-600 text-white rounded-full h-6 w-6 flex items-center justify-center text-sm font-bold">4</div>
+              </div>
+              <div className="flex-shrink-0 w-1/3 pr-4 text-right">
+                <ul className="list-none space-y-1 text-sm text-gray-700">
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Actively monitor supplier performance, production milestones, and delivery schedules.</li>
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Coordinate closely with EPC contractors to ensure timely availability of FIM components at the construction site.</li>
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Manage quality inspections and resolve any non-conformance issues promptly and directly with suppliers.</li>
+                  <li><CheckCircle className="inline-block w-4 h-4 text-green-500 mr-1" /> Track cost savings, schedule improvements, and quality metrics to demonstrate the value of the FIM strategy.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </CardContent>
       </Card>
