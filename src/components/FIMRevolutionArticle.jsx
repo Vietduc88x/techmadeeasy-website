@@ -72,11 +72,9 @@ const FIMRevolutionArticle = () => {
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-            The FIM Revolution
+            Project Management Excellence for Renewable Energy series - Advance Procurement Strategies - The FIM Revolution
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 font-medium">
-            Project Management Excellence for Renewable Energy
-          </p>
+
           <div className="mt-6">
             <Badge className="bg-white/20 backdrop-blur-sm text-white text-lg px-6 py-3 border border-white/30 hover:bg-white/30 transition-all duration-300">
               Advanced Procurement Strategy Series
@@ -136,7 +134,7 @@ const FIMRevolutionArticle = () => {
                   <p className="text-sm text-gray-600 mb-2">Equipment represents 70-75% of total project cost. Direct turbine procurement can save $2-5M per 100MW project.</p>
                   <div className="flex justify-between text-xs">
                     <span className="text-blue-600 font-semibold">Turbine CAPEX: 70%</span>
-                    <span className="text-green-600 font-semibold">FIM Savings: 12-18%</span>
+                    <span className="text-emerald-600 font-semibold">FIM Savings: 12-18%</span>
                   </div>
                 </div>
               </div>
@@ -150,7 +148,7 @@ const FIMRevolutionArticle = () => {
                   <p className="text-sm text-gray-600 mb-2">Higher equipment costs (65-70% of CAPEX) due to specialized marine turbines. FIM critical for cost control.</p>
                   <div className="flex justify-between text-xs">
                     <span className="text-blue-600 font-semibold">Equipment CAPEX: 68%</span>
-                    <span className="text-green-600 font-semibold">FIM Savings: 15-22%</span>
+                    <span className="text-emerald-600 font-semibold">FIM Savings: 15-22%</span>
                   </div>
                 </div>
               </div>
@@ -164,7 +162,7 @@ const FIMRevolutionArticle = () => {
                   <p className="text-sm text-gray-600 mb-2">Module and inverter costs dominate (60-65% of CAPEX). Bulk procurement enables significant economies of scale.</p>
                   <div className="flex justify-between text-xs">
                     <span className="text-blue-600 font-semibold">Equipment CAPEX: 63%</span>
-                    <span className="text-green-600 font-semibold">FIM Savings: 10-16%</span>
+                    <span className="text-emerald-600 font-semibold">FIM Savings: 10-16%</span>
                   </div>
                 </div>
               </div>
@@ -178,25 +176,28 @@ const FIMRevolutionArticle = () => {
                   <p className="text-sm text-gray-600 mb-2">Battery systems account for 75-80% of total cost. Direct procurement essential for warranty and performance guarantees.</p>
                   <div className="flex justify-between text-xs">
                     <span className="text-blue-600 font-semibold">Battery CAPEX: 78%</span>
-                    <span className="text-green-600 font-semibold">FIM Savings: 18-25%</span>
+                    <span className="text-emerald-600 font-semibold">FIM Savings: 18-25%</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg mt-6">
-            <h4 className="font-semibold text-gray-800 mb-3 text-xl">The FIM Advantage in Numbers:</h4>
+          <div className="bg-gradient-to-r from-emerald-50 to-teal-50 p-6 rounded-lg mt-6 border border-emerald-100">
+            <h4 className="font-semibold text-gray-800 mb-3 text-xl flex items-center gap-2">
+              <TrendingUp className="w-6 h-6 text-emerald-600" />
+              The FIM Advantage in Numbers:
+            </h4>
             <div className="grid md:grid-cols-3 gap-4">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-600">$50M+</div>
+              <div className="text-center p-4 bg-white rounded-lg shadow-sm border border-emerald-100 hover:shadow-md transition-shadow duration-300">
+                <div className="text-3xl font-bold text-emerald-600">$50M+</div>
                 <div className="text-sm text-gray-600">Potential savings on 500MW wind project</div>
               </div>
-              <div className="text-center">
+              <div className="text-center p-4 bg-white rounded-lg shadow-sm border border-blue-100 hover:shadow-md transition-shadow duration-300">
                 <div className="text-3xl font-bold text-blue-600">15-25%</div>
                 <div className="text-sm text-gray-600">Typical contractor markup on equipment</div>
               </div>
-              <div className="text-center">
+              <div className="text-center p-4 bg-white rounded-lg shadow-sm border border-purple-100 hover:shadow-md transition-shadow duration-300">
                 <div className="text-3xl font-bold text-purple-600">60-80%</div>
                 <div className="text-sm text-gray-600">Equipment share of renewable CAPEX</div>
               </div>
@@ -272,22 +273,22 @@ const FIMRevolutionArticle = () => {
             <TabsContent value="fim" className="mt-4">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-xl text-green-600">BOP with FIM: The Optimized Approach</CardTitle>
+                  <CardTitle className="text-xl text-emerald-600">BOP with FIM: The Optimized Approach</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p>BOP with FIM (Free-Issue Material) is an advanced form of the BOP model, specifically emphasizing the strategic direct procurement of critical, high-value components by the owner. The owner not only procures but also manages the logistics and quality assurance of these materials, issuing them "free" to the contractor for installation.</p>
-                  <div className="bg-green-50 p-3 rounded-lg">
-                    <h5 className="font-semibold text-green-800 mb-2">Pros:</h5>
-                    <ul className="list-disc list-inside text-green-700 text-sm">
+                  <div className="bg-emerald-50 p-3 rounded-lg border border-emerald-100">
+                    <h5 className="font-semibold text-emerald-800 mb-2">Pros:</h5>
+                    <ul className="list-disc list-inside text-emerald-700 text-sm">
                       <li>Maximum cost savings by eliminating markups and leveraging bulk discounts.</li>
                       <li>Full control over equipment quality, specifications, and warranties.</li>
                       <li>Direct relationships with manufacturers for better support and innovation.</li>
                       <li>Enhanced supply chain transparency and risk mitigation.</li>
                     </ul>
                   </div>
-                  <div className="bg-green-50 p-3 rounded-lg">
-                    <h5 className="font-semibold text-green-800 mb-2">Cons:</h5>
-                    <ul className="list-disc list-inside text-green-700 text-sm">
+                  <div className="bg-emerald-50 p-3 rounded-lg border border-emerald-100">
+                    <h5 className="font-semibold text-emerald-800 mb-2">Cons:</h5>
+                    <ul className="list-disc list-inside text-emerald-700 text-sm">
                       <li>Requires internal procurement expertise and resources.</li>
                       <li>Increased logistical and coordination responsibilities for the owner.</li>
                       <li>Higher initial workload for setup and supplier management.</li>
@@ -328,13 +329,13 @@ const FIMRevolutionArticle = () => {
           </CardContent>
         </Card>
 
-        <Card className="border-l-4 border-l-green-500">
+        <Card className="border-l-4 border-l-emerald-500 hover:shadow-lg transition-shadow duration-300">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-green-600">
+            <CardTitle className="flex items-center gap-2 text-emerald-600">
               <CheckCircle className="w-6 h-6" />
               The FIM Approach: Strategic Advantages
             </CardTitle>
-            <Badge className="bg-green-100 text-green-800">Advanced & Optimized</Badge>
+            <Badge className="bg-emerald-100 text-emerald-800">Advanced & Optimized</Badge>
           </CardHeader>
           <CardContent>
             <ul className="space-y-3">
@@ -345,8 +346,8 @@ const FIMRevolutionArticle = () => {
                 "Quality control at source: Implement rigorous inspection and testing protocols from manufacturing to delivery.",
                 "Standardization across projects: Ensure consistency, simplify spare parts management, and improve operational efficiency."
               ].map((item, index) => (
-                <li key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
+                <li key={index} className="flex items-center gap-3 hover:bg-emerald-50 p-2 rounded transition-colors duration-200">
+                  <CheckCircle className="w-5 h-5 text-emerald-500" />
                   <span>{item}</span>
                 </li>
               ))}
@@ -384,33 +385,35 @@ const FIMRevolutionArticle = () => {
       </Card>
 
       {/* Results Section */}
-      <Card className="bg-gradient-to-r from-green-50 to-blue-50">
+      <Card className="bg-gradient-to-r from-emerald-50 to-blue-50 border border-emerald-100 hover:shadow-xl transition-all duration-300">
         <CardHeader>
-          <CardTitle className="text-2xl text-center">
+          <CardTitle className="text-2xl text-center text-gray-800">
             Real Results from Our 500MW Wind Project: A FIM Success Story
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { icon: DollarSign, value: animatedNumbers.costReduction, suffix: "%", label: "Cost Reduction", detail: "($50M savings)" },
-              { icon: Clock, value: animatedNumbers.timeSaving, suffix: " months", label: "Faster Delivery", detail: "" },
-              { icon: Target, value: animatedNumbers.qualityIssues, suffix: "", label: "Quality Issues", detail: "on turbines" },
-              { icon: TrendingUp, value: animatedNumbers.warrantyImprovement, suffix: "%", label: "Better Warranty", detail: "terms" }
+              { icon: DollarSign, value: animatedNumbers.costReduction, suffix: "%", label: "Cost Reduction", detail: "($50M savings)", color: "emerald" },
+              { icon: Clock, value: animatedNumbers.timeSaving, suffix: " months", label: "Faster Delivery", detail: "", color: "blue" },
+              { icon: Target, value: animatedNumbers.qualityIssues, suffix: "", label: "Quality Issues", detail: "on turbines", color: "purple" },
+              { icon: TrendingUp, value: animatedNumbers.warrantyImprovement, suffix: "%", label: "Better Warranty", detail: "terms", color: "teal" }
             ].map((item, index) => (
-              <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm">
-                <item.icon className="w-8 h-8 mx-auto mb-2 text-blue-600" />
-                <div className="text-3xl font-bold text-gray-800">
+              <div key={index} className={`text-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-${item.color}-100 hover:border-${item.color}-200 group`}>
+                <item.icon className={`w-10 h-10 mx-auto mb-3 text-${item.color}-600 group-hover:scale-110 transition-transform duration-300`} />
+                <div className={`text-4xl font-bold text-${item.color}-600 mb-1`}>
                   {item.value}{item.suffix}
                 </div>
-                <div className="text-sm font-medium text-gray-600">{item.label}</div>
-                {item.detail && <div className="text-xs text-gray-500">{item.detail}</div>}
+                <div className="text-sm font-medium text-gray-700">{item.label}</div>
+                {item.detail && <div className="text-xs text-gray-500 mt-1">{item.detail}</div>}
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-700 mt-6 text-lg font-semibold">
-            The secret to these results? Strategic component selection and proactive supplier management through FIM.
-          </p>
+          <div className="text-center mt-8 p-4 bg-white rounded-lg border border-emerald-100">
+            <p className="text-gray-700 text-lg font-semibold">
+              🎯 The secret to these results? Strategic component selection and proactive supplier management through FIM.
+            </p>
+          </div>
         </CardContent>
       </Card>
 
