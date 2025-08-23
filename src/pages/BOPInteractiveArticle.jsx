@@ -27,6 +27,7 @@ export function BOPInteractiveArticle() {
   const [selectedEquipment, setSelectedEquipment] = useState("pv-modules");
   const [expandedChallenge, setExpandedChallenge] = useState(null);
   const [expandedSolution, setExpandedSolution] = useState(null);
+  const [expandedRow, setExpandedRow] = useState(null);
 
   const equipmentData = {
     'pv-modules': {
@@ -91,66 +92,82 @@ export function BOPInteractiveArticle() {
   const scopeMatrix = [
     {
       activity: 'Design & Engineering',
-      owner: 'Owner',
-      epc: 'Support',
-      supplier: 'Input',
+      owner: 'Input',
+      bopEpc: 'Execute',
+      pvSupplier: 'N/A',
       responsibility: 'Overall system design and specifications',
       riskLevel: 'Medium'
     },
     {
-      activity: 'Equipment Procurement',
-      owner: 'Owner',
-      epc: 'Coordinate',
-      supplier: 'Supply',
-      responsibility: 'Direct procurement of major equipment',
+      activity: 'PV Module Procurement',
+      owner: 'Execute',
+      bopEpc: 'N/A',
+      pvSupplier: 'Supply',
+      responsibility: 'Direct procurement of PV modules',
       riskLevel: 'Low'
+    },
+    {
+      activity: 'BOP Equipment Procurement',
+      owner: 'N/A',
+      bopEpc: 'Execute',
+      pvSupplier: 'N/A',
+      responsibility: 'Procurement of all other Balance of Plant equipment',
+      riskLevel: 'Medium'
     },
     {
       activity: 'Site Preparation',
       owner: 'Approve',
-      epc: 'Execute',
-      supplier: 'N/A',
+      bopEpc: 'Execute',
+      pvSupplier: 'N/A',
       responsibility: 'Civil works and infrastructure',
       riskLevel: 'Medium'
     },
     {
       activity: 'Installation & Construction',
       owner: 'Supervise',
-      epc: 'Execute',
-      supplier: 'Support',
+      bopEpc: 'Execute',
+      pvSupplier: 'Support',
       responsibility: 'Physical installation of equipment',
       riskLevel: 'High'
     },
     {
       activity: 'Testing & Commissioning',
       owner: 'Approve',
-      epc: 'Execute',
-      supplier: 'Support',
+      bopEpc: 'Execute',
+      pvSupplier: 'Support',
       responsibility: 'System testing and performance validation',
       riskLevel: 'High'
     },
     {
       activity: 'Grid Connection',
       owner: 'Coordinate',
-      epc: 'Execute',
-      supplier: 'N/A',
+      bopEpc: 'Execute',
+      pvSupplier: 'N/A',
       responsibility: 'Utility interconnection and synchronization',
       riskLevel: 'High'
     },
     {
-      activity: 'Performance Monitoring',
+      activity: 'Performance Guarantee',
       owner: 'Owner',
-      epc: 'Support',
-      supplier: 'Provide',
-      responsibility: 'Ongoing system monitoring and optimization',
+      bopEpc: 'Execute',
+      pvSupplier: 'N/A',
+      responsibility: 'Guaranteeing the overall performance of the solar farm',
+      riskLevel: 'High'
+    },
+    {
+      activity: 'PV Module Warranty',
+      owner: 'Owner',
+      bopEpc: 'N/A',
+      pvSupplier: 'Provide',
+      responsibility: 'Warranty for PV modules',
       riskLevel: 'Low'
     },
     {
-      activity: 'Warranty Management',
+      activity: 'BOP Equipment Warranty',
       owner: 'Owner',
-      epc: 'Coordinate',
-      supplier: 'Provide',
-      responsibility: 'Equipment warranty and support services',
+      bopEpc: 'Provide',
+      pvSupplier: 'N/A',
+      responsibility: 'Warranty for all other Balance of Plant equipment',
       riskLevel: 'Medium'
     }
   ];
@@ -487,40 +504,58 @@ export function BOPInteractiveArticle() {
                     <table className="w-full border-collapse">
                       <thead>
                         <tr className="border-b">
-                          <th className="text-left p-3 font-semibold">Activity</th>
-                          <th className="text-center p-3 font-semibold">Owner</th>
-                          <th className="text-center p-3 font-semibold">EPC</th>
-                          <th className="text-center p-3 font-semibold">Supplier</th>
-                          <th className="text-left p-3 font-semibold">Key Responsibility</th>
-                          <th className="text-center p-3 font-semibold">Risk Level</th>
+                            <th className="p-2 <th className="p-2 font-semibold text-left">Activity</th>
+                      <th className="p-2 font-semibold text-left">Owner</th>
+                      <th className="p-2 font-semibold text-left">BOP EPC</th>
+                      <th className="p-2 font-semibold text-left">PV Supplier</th>
+                      <th className="p-2 font-semibold text-left">Key Responsibility</th>
+                      <th className="p-2 font-semibold text-left">Risk Level</th></th>
                         </tr>
                       </thead>
                       <tbody>
                         {scopeMatrix.map((row, index) => (
-                          <tr key={index} className="border-b hover:bg-muted/50">
-                            <td className="p-3 font-medium">{row.activity}</td>
-                            <td className="p-3 text-center">
-                              <Badge variant={row.owner === 'Owner' ? 'default' : 'secondary'}>
-                                {row.owner}
-                              </Badge>
-                            </td>
-                            <td className="p-3 text-center">
-                              <Badge variant={row.epc === 'Execute' ? 'default' : 'secondary'}>
-                                {row.epc}
-                              </Badge>
-                            </td>
-                            <td className="p-3 text-center">
-                              <Badge variant={row.supplier === 'Supply' || row.supplier === 'Provide' ? 'default' : 'secondary'}>
-                                {row.supplier}
-                              </Badge>
-                            </td>
-                            <td className="p-3 text-sm text-muted-foreground">{row.responsibility}</td>
-                            <td className="p-3 text-center">
-                              <Badge className={getRiskColor(row.riskLevel)}>
-                                {row.riskLevel}
-                              </Badge>
-                            </td>
-                          </tr>
+                          <React.Fragment key={index}>
+                            <tr 
+                              className="border-b hover:bg-muted/50 cursor-pointer"
+                              onClick={() => setExpandedRow(expandedRow === index ? null : index)}
+                            >
+                              <td className="p-3 font-medium">{row.activity}</td>
+                              <td className="p-3 text-center">
+                                <Badge variant={row.owner === 'N/A' ? 'secondary' : 'default'}>
+                                  {row.owner}
+                                </Badge>
+                              </td>
+                              <td className="p-3 text-center">
+                                <Badge variant={row.bopEpc === 'N/A' ? 'secondary' : 'default'}>
+                                  {row.bopEpc}
+                                </Badge>
+                              </td>
+                              <td className="p-3 text-center">
+                                <Badge variant={row.pvSupplier === 'N/A' ? 'secondary' : 'default'}>
+                                  {row.pvSupplier}
+                                </Badge>
+                              </td>
+                              <td className="p-3">{row.responsibility}</td>
+                              <td className="p-3 text-center">
+                                <Badge className={`${getRiskColor(row.riskLevel)} w-20 justify-center`}>
+                                  {row.riskLevel}
+                                </Badge>
+                              </td>
+                            </tr>
+                            {expandedRow === index && (
+                              <tr>
+                                <td colSpan="6" className="p-3 bg-muted/30 text-muted-foreground text-sm italic">
+                                  <p><strong>Detailed Responsibility:</strong> {row.responsibility}</p>
+                                  {row.activity === 'Design & Engineering' && <p>BOP EPC takes the lead on overall system design and specifications, with Owner providing critical input.</p>}
+                                  {row.activity === 'PV Module Procurement' && <p>Owner directly procures PV modules to leverage bulk purchasing power, with PV Supplier responsible for supply.</p>}
+                                  {row.activity === 'BOP Equipment Procurement' && <p>BOP EPC handles the procurement of all other Balance of Plant equipment, ensuring seamless integration.</p>}
+                                  {row.activity === 'Performance Guarantee' && <p>BOP EPC is responsible for guaranteeing the overall performance of the solar farm, ensuring all components work together efficiently.</p>}
+                                  {row.activity === 'PV Module Warranty' && <p>PV Supplier provides the warranty for PV modules, while Owner manages the process.</p>}
+                                  {/* Add more detailed explanations for other activities as needed */}
+                                </td>
+                              </tr>
+                            )}
+                          </React.Fragment>
                         ))}
                       </tbody>
                     </table>
