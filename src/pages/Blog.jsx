@@ -12,7 +12,7 @@ export function Blog() {
       title: 'The BOP Package Strategy That Transformed Our Solar Portfolio',
       excerpt: 'Balance of Plant (BOP) management is where average PMs fail and experts excel. Managing 50+ interfaces between equipment suppliers and BOP contractors creates chaos. This article explores the solution: Strategic BOP Package Design, leading to significant cost reduction, fewer interface issues, on-time delivery, and better performance guarantees.',
       category: 'Renewable Energy',
-      readTime: '10 min read',
+      readTime: '15 min read',
       date: 'August 2025',
       featured: true,
     },
@@ -73,7 +73,7 @@ export function Blog() {
     {
       slug: 'ark-invest-big-ideas-2025',
       title: 'ARK Invest Big Ideas 2025: A Vision for Disruptive Innovation',
-      excerpt: 'The world is evolving rapidly, driven by technological advancements, automation, and the rise of Artificial Intelligence. Exploring ARK Invest\'s vision for the future.',
+      excerpt: 'The world is evolving rapidly, driven by technological advancements, automation, and the rise of Artificial Intelligence. Exploring ARK Invest\\'s vision for the future.',
       category: 'Investment',
       readTime: '12 min read',
       date: 'January 2025',
@@ -100,7 +100,7 @@ export function Blog() {
     {
       slug: 'construction-cost-estimation',
       title: 'Construction Cost Estimation',
-      excerpt: 'Imagine You\'re Building a Cool Treehouse! You\'re standing in your backyard, gazing at that perfect tree. A comprehensive guide to construction cost estimation.',
+      excerpt: 'Imagine You\\'re Building a Cool Treehouse! You\\'re standing in your backyard, gazing at that perfect tree. A comprehensive guide to construction cost estimation.',
       category: 'Engineering',
       readTime: '9 min read',
       date: 'December 2024',
@@ -109,7 +109,7 @@ export function Blog() {
     {
       slug: 'work-breakdown-structure-for-offshore-wind-farm',
       title: 'Work Breakdown Structure for Offshore Wind Farm',
-      excerpt: 'By Duc Hoang So, What is a Work Breakdown Structure? Imagine we\'re building a massive offshore wind farm – it\'s like constructing a floating city powered by wind!',
+      excerpt: 'By Duc Hoang So, What is a Work Breakdown Structure? Imagine we\\'re building a massive offshore wind farm – it\\'s like constructing a floating city powered by wind!',
       category: 'Renewable Energy',
       readTime: '11 min read',
       date: 'December 2024',
@@ -127,7 +127,7 @@ export function Blog() {
     {
       slug: 'matrix-of-responsibility-between-packages-for-offshore-wind',
       title: 'Matrix of Responsibility between packages for Offshore Wind',
-      excerpt: 'Think of the offshore wind farm project as a huge puzzle. It\'s so big that it\'s tough for just one company to put it all together.',
+      excerpt: 'Think of the offshore wind farm project as a huge puzzle. It\\'s so big that it\\'s tough for just one company to put it all together.',
       category: 'Renewable Energy',
       readTime: '8 min read',
       date: 'November 2024',
@@ -154,7 +154,7 @@ export function Blog() {
     {
       slug: 'offshore-wind-risk-management-explained',
       title: 'Offshore Wind Risk Management Explained',
-      excerpt: 'Imagine we\'re embarking on an exciting voyage to build an offshore wind farm. Our mission: harness the wind\'s power while avoiding treacherous waters.',
+      excerpt: 'Imagine we\\'re embarking on an exciting voyage to build an offshore wind farm. Our mission: harness the wind\\'s power while avoiding treacherous waters.',
       category: 'Renewable Energy',
       readTime: '14 min read',
       date: 'October 2024',
@@ -163,7 +163,7 @@ export function Blog() {
     {
       slug: 'navigating-the-noise-finding-perspective',
       title: 'Navigating the Noise: Finding Perspective in Turbulent Times',
-      excerpt: 'You\'re right – there\'s a whirlwind of noise out there. Market downturns, layoffs, uncertainty – it feels like a storm brewing.',
+      excerpt: 'You\\'re right – there\\'s a whirlwind of noise out there. Market downturns, layoffs, uncertainty – it feels like a storm brewing.',
       category: 'Personal Development',
       readTime: '6 min read',
       date: 'October 2024',
@@ -181,7 +181,7 @@ export function Blog() {
     {
       slug: 'why-ignoring-technology-is-no-longer-an-option',
       title: 'Why Ignoring Technology Is No Longer an Option',
-      excerpt: 'In today\'s fast-paced world, innovation seems to be the name of the game, and at the forefront of this innovation stands Artificial Intelligence (AI).',
+      excerpt: 'In today\\'s fast-paced world, innovation seems to be the name of the game, and at the forefront of this innovation stands Artificial Intelligence (AI).',
       category: 'Technology',
       readTime: '9 min read',
       date: 'September 2024',
@@ -265,7 +265,7 @@ export function Blog() {
                       </div>
                     </div>
                     <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                      <Link to={post.slug === 'fim-revolution' ? '/fim-revolution' : `/blog/${post.slug}`}>
+                      <Link to={post.slug === 'fim-revolution' ? '/fim-revolution' : (post.slug === 'bop-package-strategy' ? '/blog/bop-interactive-article' : `/blog/${post.slug}`)}>
                         {post.title}
                       </Link>
                     </CardTitle>
@@ -305,7 +305,7 @@ export function Blog() {
                       </div>
                     </div>
                     <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                      <Link to={post.slug === 'fim-revolution' ? '/fim-revolution' : `/blog/${post.slug}`}>
+                      <Link to={post.slug === 'fim-revolution' ? '/fim-revolution' : (post.slug === 'bop-package-strategy' ? '/blog/bop-interactive-article' : `/blog/${post.slug}`)}>
                         {post.title}
                       </Link>
                     </CardTitle>
@@ -332,23 +332,23 @@ export function Blog() {
 
           {/* Newsletter Signup */}
           <div className="mt-16 bg-muted/30 rounded-lg p-8 text-center">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Stay Updated
-            </h3>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Stay Updated!</h2>
             <p className="text-muted-foreground mb-6">
-              Sign up to be the first reader of our up-to-date articles!
+              Subscribe to our newsletter to get the latest articles and insights delivered straight to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <form className="flex flex-col sm:flex-row gap-4 max-w-sm mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 border border-border rounded-md bg-background text-foreground"
+                className="flex-1 px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <Button>Subscribe</Button>
-            </div>
+              <Button type="submit">Subscribe</Button>
+            </form>
           </div>
         </div>
       </section>
+
+      {/* Footer is already handled by App.jsx */}
     </div>
   );
 }
