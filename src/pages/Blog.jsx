@@ -8,6 +8,15 @@ import { Badge } from '@/components/ui/badge';
 export function Blog() {
   const blogPosts = [
     {
+      slug: 'fim-revolution',
+      title: 'The Free Issue Material (FIM) Revolution for Renewable Energy Projects',
+      excerpt: 'Discover how the Free-Issue Material (FIM) approach can transform your renewable energy projects, leading to significant cost reductions, faster delivery, and improved quality control. This flagship article explores real-world case studies and provides an implementation roadmap.',
+      category: 'Renewable Energy',
+      readTime: '18 min read',
+      date: 'August 2025',
+      featured: true,
+    },
+    {
       slug: 'the-power-of-compounding',
       title: 'The Power of Compounding: The Eighth Wonder of the World',
       excerpt: 'Understanding how small, consistent efforts can lead to extraordinary results. Explore the mathematical beauty and practical applications of compounding in finance, knowledge, relationships, and personal growth.',
@@ -247,7 +256,7 @@ export function Blog() {
                       </div>
                     </div>
                     <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                      <Link to={`/blog/${post.slug}`}>
+                      <Link to={post.slug === 'fim-revolution' ? '/fim-revolution' : `/blog/${post.slug}`}>
                         {post.title}
                       </Link>
                     </CardTitle>
@@ -287,7 +296,7 @@ export function Blog() {
                       </div>
                     </div>
                     <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                      <Link to={`/blog/${post.slug}`}>
+                      <Link to={post.slug === 'fim-revolution' ? '/fim-revolution' : `/blog/${post.slug}`}>
                         {post.title}
                       </Link>
                     </CardTitle>
