@@ -304,7 +304,7 @@ export function BOPInteractiveArticle() {
               {/* Solar Farm Image */}
               <div className="text-center">
                 <img 
-                  src="/images/solar_farm_pv_modules.png" 
+                  src="/images/solar_farm_sunset.jpg" 
                   alt="Modern Solar Farm with PV Modules"
                   className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
                 />
@@ -402,7 +402,7 @@ export function BOPInteractiveArticle() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <img 
-                    src="/images/solar_farm_pv_modules.png" 
+                    src="/images/solar_farm_sunset.jpg" 
                     alt="PV Modules Installation"
                     className="w-full rounded-lg shadow-md mb-2"
                   />
