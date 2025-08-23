@@ -315,7 +315,7 @@ export function BOPInteractiveArticle() {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Understanding BOP Package Strategy</CardTitle>
+                  <CardTitle>Understand the Package Strategies with free issue of PV Modules</CardTitle>
                 </CardHeader>
                 <CardContent className="prose dark:prose-invert max-w-none">
                   <p>
