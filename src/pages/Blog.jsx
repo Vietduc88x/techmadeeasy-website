@@ -9,7 +9,7 @@ export function Blog() {
   const blogPosts = [
     {
       slug: 'bop-package-strategy',
-      title: 'The BOP Package Strategy That Transformed Our Solar Portfolio',
+      title: 'Easiest FIM and BOP Package Strategy of Solar Project',
       excerpt: 'Balance of Plant (BOP) management is where average PMs fail and experts excel. Managing 50+ interfaces between equipment suppliers and BOP contractors creates chaos. This article explores the solution: Strategic BOP Package Design, leading to significant cost reduction, fewer interface issues, on-time delivery, and better performance guarantees.',
       category: 'Renewable Energy',
       readTime: '15 min read',

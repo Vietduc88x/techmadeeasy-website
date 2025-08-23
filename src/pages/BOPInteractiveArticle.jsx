@@ -206,7 +206,7 @@ export function BOPInteractiveArticle() {
               Renewable Energy
             </Badge>
             <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
-              The BOP Package Strategy That Transformed Our Solar Portfolio
+              Easiest FIM and BOP Package Strategy of Solar Project
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Balance of Plant (BOP) management is where average PMs fail and experts excel. 
