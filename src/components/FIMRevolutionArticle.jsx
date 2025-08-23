@@ -68,16 +68,28 @@ const FIMRevolutionArticle = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-8">
       {/* Hero Section */}
-      <div className="text-center space-y-4 py-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl">
-        <h1 className="text-4xl md:text-6xl font-bold">
-          The FIM Revolution
-        </h1>
-        <p className="text-xl md:text-2xl opacity-90">
-          Project Management Excellence for Renewable Energy
-        </p>
-        <Badge className="bg-white text-blue-600 text-lg px-4 py-2">
-          Advanced Procurement Strategy Series
-        </Badge>
+      <div className="relative text-center space-y-6 py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white rounded-3xl overflow-hidden shadow-2xl">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="relative z-10">
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            The FIM Revolution
+          </h1>
+          <p className="text-xl md:text-2xl text-blue-100 font-medium">
+            Project Management Excellence for Renewable Energy
+          </p>
+          <div className="mt-6">
+            <Badge className="bg-white/20 backdrop-blur-sm text-white text-lg px-6 py-3 border border-white/30 hover:bg-white/30 transition-all duration-300">
+              Advanced Procurement Strategy Series
+            </Badge>
+          </div>
+          <div className="mt-6 bg-red-500/90 backdrop-blur-sm text-white px-6 py-3 rounded-lg inline-block border border-red-400/50">
+            <span className="font-bold">⚠️ Disclaimer:</span> The content is for educational purposes only, not technical & financial advice.
+          </div>
+        </div>
+        {/* Decorative elements */}
+        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-10 right-10 w-32 h-32 bg-purple-300/20 rounded-full blur-2xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-blue-300/20 rounded-full blur-lg"></div>
       </div>
 
       {/* Why FIM is Critical for Renewable Energy */}
@@ -683,21 +695,18 @@ const FIMRevolutionArticle = () => {
         </CardContent>
       </Card>
 
-      {/* Call to Action */}
+      {/* Contact Author */}
       <Card className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <CardContent className="text-center py-8">
-          <h3 className="text-2xl font-bold mb-4">Ready to Revolutionize Your Project Management?</h3>
+          <h3 className="text-2xl font-bold mb-4">Have Questions or Need More Details?</h3>
           <p className="text-lg mb-6 opacity-90">
-            Take the first step towards procurement excellence. Download our comprehensive FIM Implementation Guide and unlock the full potential of your renewable energy projects.
+            For more in-depth information, technical insights, or to discuss specific project applications, please feel free to contact the author, Duc Hoang.
           </p>
           <div className="space-y-4">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Award className="w-5 h-5 mr-2" />
-              Download Your FIM Implementation Guide Now
-            </Button>
-            <div className="text-sm opacity-75">
-              Get the complete toolkit with actionable templates, detailed checklists, and in-depth case studies.
-            </div>
+            <a href="mailto:duchoang@example.com" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8 bg-white text-blue-600 hover:bg-gray-100">
+              <Users className="w-5 h-5 mr-2" />
+              Contact Duc Hoang
+            </a>
           </div>
         </CardContent>
       </Card>
