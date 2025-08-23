@@ -12,7 +12,7 @@ export function Blog() {
       title: 'The BOP Package Strategy That Transformed Our Solar Portfolio',
       excerpt: 'Balance of Plant (BOP) management is where average PMs fail and experts excel. Managing 50+ interfaces between equipment suppliers and BOP contractors creates chaos. This article explores the solution: Strategic BOP Package Design, leading to significant cost reduction, fewer interface issues, on-time delivery, and better performance guarantees.',
       category: 'Renewable Energy',
-      readTime: '5 min read',
+      readTime: '10 min read',
       date: 'August 2025',
       featured: true,
     },
