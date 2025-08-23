@@ -80,26 +80,115 @@ const FIMRevolutionArticle = () => {
         </Badge>
       </div>
 
-      {/* Problem Statement */}
-      <Card className="border-l-4 border-l-red-500">
+      {/* Why FIM is Critical for Renewable Energy */}
+      <Card className="border-l-4 border-l-blue-500">
         <CardHeader>
-          <CardTitle className="text-2xl text-red-600">
-            The $2 Billion Problem Most PMs Don't See: Hidden Costs in Renewable Energy Procurement
+          <CardTitle className="text-2xl text-blue-600">
+            Why FIM is Critical for Renewable Energy: The CAPEX Advantage
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-6">
           <p className="text-lg">
-            In the rapidly expanding renewable energy sector, projects are often plagued by unforeseen cost overruns and quality issues, primarily stemming from inefficient procurement strategies. A staggering 70% of project budget deviations can be traced back to a lack of control over the supply chain. Traditional procurement models, where contractors handle all material sourcing, create a 'black box' scenario, leaving project managers vulnerable to inflated costs, compromised quality, and significant delivery risks.
+            Renewable energy projects are uniquely positioned to benefit from Free-Issue Material (FIM) strategies due to their equipment-intensive nature. Unlike traditional construction projects, renewable energy developments allocate 60-80% of their total CAPEX to critical components such as turbines, solar panels, inverters, and battery systems. This high equipment cost ratio creates unprecedented opportunities for cost optimization through direct procurement strategies.
           </p>
-          <div className="bg-red-50 p-4 rounded-lg">
-            <h4 className="font-semibold text-red-800 mb-2">Industry Reality Check: The Alarming Statistics</h4>
-            <ul className="space-y-2 text-red-700">
-              <li>• Average cost overrun: <span className="font-bold">23%</span> on renewable energy projects, directly impacting profitability and investor confidence.</li>
-              <li>• Quality issues discovered post-installation: <span className="font-bold">40%</span> of projects face critical component failures or underperformance, leading to costly retrofits and operational delays.</li>
-              <li>• Supply chain delays: <span className="font-bold">60%</span> of projects experience 2+ month delays, pushing back commissioning dates and delaying revenue generation.</li>
-              <li>• Contractor markup on components: <span className="font-bold">15-25%</span> industry average, a hidden cost that significantly inflates project budgets.</li>
-            </ul>
-            <p className="text-sm mt-3 text-red-600">These inefficiencies not only erode project profitability but also hinder the global transition to clean energy. It's time for a strategic shift.</p>
+          
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <h4 className="font-semibold text-blue-800 mb-3">Equipment CAPEX Breakdown by Technology:</h4>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div>
+                <h5 className="font-semibold text-blue-700 mb-2">Wind Projects:</h5>
+                <ul className="space-y-1 text-blue-600 text-sm">
+                  <li>• Turbines: <span className="font-bold">65-75%</span> of total CAPEX</li>
+                  <li>• Foundations: <span className="font-bold">10-15%</span> of total CAPEX</li>
+                  <li>• Electrical systems: <span className="font-bold">8-12%</span> of total CAPEX</li>
+                </ul>
+              </div>
+              <div>
+                <h5 className="font-semibold text-blue-700 mb-2">Solar Projects:</h5>
+                <ul className="space-y-1 text-blue-600 text-sm">
+                  <li>• Solar modules: <span className="font-bold">40-50%</span> of total CAPEX</li>
+                  <li>• Inverters: <span className="font-bold">15-20%</span> of total CAPEX</li>
+                  <li>• Mounting systems: <span className="font-bold">10-15%</span> of total CAPEX</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Project Type Showcase */}
+          <div className="grid md:grid-cols-2 gap-6 mt-8">
+            <div className="space-y-4">
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <img src="/images/onshore_wind.png" alt="Onshore Wind Farm" className="w-full h-48 object-cover" />
+                <div className="p-4">
+                  <h5 className="font-bold text-lg mb-2">Onshore Wind</h5>
+                  <p className="text-sm text-gray-600 mb-2">Equipment represents 70-75% of total project cost. Direct turbine procurement can save $2-5M per 100MW project.</p>
+                  <div className="flex justify-between text-xs">
+                    <span className="text-blue-600 font-semibold">Turbine CAPEX: 70%</span>
+                    <span className="text-green-600 font-semibold">FIM Savings: 12-18%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <img src="/images/offshore_wind.png" alt="Offshore Wind Farm" className="w-full h-48 object-cover" />
+                <div className="p-4">
+                  <h5 className="font-bold text-lg mb-2">Offshore Wind</h5>
+                  <p className="text-sm text-gray-600 mb-2">Higher equipment costs (65-70% of CAPEX) due to specialized marine turbines. FIM critical for cost control.</p>
+                  <div className="flex justify-between text-xs">
+                    <span className="text-blue-600 font-semibold">Equipment CAPEX: 68%</span>
+                    <span className="text-green-600 font-semibold">FIM Savings: 15-22%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <img src="/images/solar_farm.png" alt="Solar Farm" className="w-full h-48 object-cover" />
+                <div className="p-4">
+                  <h5 className="font-bold text-lg mb-2">Solar Farms</h5>
+                  <p className="text-sm text-gray-600 mb-2">Module and inverter costs dominate (60-65% of CAPEX). Bulk procurement enables significant economies of scale.</p>
+                  <div className="flex justify-between text-xs">
+                    <span className="text-blue-600 font-semibold">Equipment CAPEX: 63%</span>
+                    <span className="text-green-600 font-semibold">FIM Savings: 10-16%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <img src="/images/bess_project.png" alt="BESS Project" className="w-full h-48 object-cover" />
+                <div className="p-4">
+                  <h5 className="font-bold text-lg mb-2">BESS Projects</h5>
+                  <p className="text-sm text-gray-600 mb-2">Battery systems account for 75-80% of total cost. Direct procurement essential for warranty and performance guarantees.</p>
+                  <div className="flex justify-between text-xs">
+                    <span className="text-blue-600 font-semibold">Battery CAPEX: 78%</span>
+                    <span className="text-green-600 font-semibold">FIM Savings: 18-25%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg mt-6">
+            <h4 className="font-semibold text-gray-800 mb-3 text-xl">The FIM Advantage in Numbers:</h4>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-600">$50M+</div>
+                <div className="text-sm text-gray-600">Potential savings on 500MW wind project</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">15-25%</div>
+                <div className="text-sm text-gray-600">Typical contractor markup on equipment</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-600">60-80%</div>
+                <div className="text-sm text-gray-600">Equipment share of renewable CAPEX</div>
+              </div>
+            </div>
           </div>
         </CardContent>
       </Card>
