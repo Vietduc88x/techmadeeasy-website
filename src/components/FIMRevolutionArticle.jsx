@@ -71,17 +71,11 @@ const FIMRevolutionArticle = () => {
       <div className="relative text-center space-y-6 py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white rounded-3xl overflow-hidden shadow-2xl">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent leading-tight">
             Project Management Excellence for Renewable Energy series - Advance Procurement Strategies - The FIM Revolution
           </h1>
-
-          <div className="mt-6">
-            <Badge className="bg-white/20 backdrop-blur-sm text-white text-lg px-6 py-3 border border-white/30 hover:bg-white/30 transition-all duration-300">
-              Advanced Procurement Strategy Series
-            </Badge>
-          </div>
-          <div className="mt-6 bg-red-500/90 backdrop-blur-sm text-white px-6 py-3 rounded-lg inline-block border border-red-400/50">
-            <span className="font-bold">⚠️ Disclaimer:</span> The content is for educational purposes only, not technical & financial advice.
+          <div className="mt-6 bg-emerald-500/90 backdrop-blur-sm text-white px-6 py-3 rounded-lg inline-block border border-emerald-400/50">
+            <span className="font-bold">✅ Disclaimer:</span> The content is for educational purposes only, not technical & financial advice.
           </div>
         </div>
         {/* Decorative elements */}
