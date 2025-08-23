@@ -703,7 +703,7 @@ const FIMRevolutionArticle = () => {
             For more in-depth information, technical insights, or to discuss specific project applications, please feel free to contact the author, Duc Hoang.
           </p>
           <div className="space-y-4">
-            <a href="mailto:duchoang@example.com" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8 bg-white text-blue-600 hover:bg-gray-100">
+            <a href="https://techmadeeasy.info/contact" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8 bg-white text-blue-600 hover:bg-gray-100">
               <Users className="w-5 h-5 mr-2" />
               Contact Duc Hoang
             </a>
