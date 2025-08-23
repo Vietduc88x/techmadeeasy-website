@@ -22,7 +22,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/fim-revolution" element={<FIMRevolution />} />
-            <Route path="/blog/bop-package-strategy" element={<BOPInteractiveArticle />} />
+            <Route path="/blog/bop-interactive-article" element={<BOPInteractiveArticle />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
