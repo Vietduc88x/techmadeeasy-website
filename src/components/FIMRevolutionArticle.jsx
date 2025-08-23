@@ -193,6 +193,128 @@ const FIMRevolutionArticle = () => {
         </CardContent>
       </Card>
 
+      {/* What is FIM? */}
+      <Card className="border-l-4 border-l-purple-500">
+        <CardHeader>
+          <CardTitle className="text-2xl text-purple-600">
+            What is Free-Issue Material (FIM)?
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <p className="text-lg">
+            Free-Issue Material (FIM) is a strategic procurement approach where the project owner directly purchases and supplies critical, high-value components to the EPC (Engineering, Procurement, and Construction) or BOP (Balance of Plant) contractor. Instead of the contractor sourcing all materials and marking them up, the owner leverages their purchasing power and expertise to secure key equipment directly from manufacturers.
+          </p>
+          <div className="bg-purple-50 p-4 rounded-lg">
+            <h4 className="font-semibold text-purple-800 mb-3">Key Principles of FIM:</h4>
+            <ul className="space-y-2 text-purple-700">
+              <li><span className="font-bold">Direct Procurement:</span> Owner establishes direct relationships with equipment manufacturers.</li>
+              <li><span className="font-bold">Cost Optimization:</span> Eliminates contractor markups and leverages bulk purchasing power.</li>
+              <li><span className="font-bold">Quality Control:</span> Owner has direct oversight of manufacturing and quality assurance.</li>
+              <li><span className="font-bold">Supply Chain Transparency:</span> Full visibility into the origin and logistics of critical components.</li>
+            </ul>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Procurement Strategy Comparison */}
+      <Card className="border-l-4 border-l-teal-500">
+        <CardHeader>
+          <CardTitle className="text-2xl text-teal-600">
+            Choosing Your Path: Procurement Strategy Comparison
+          </CardTitle>
+          <p className="text-gray-600">Understand the fundamental differences between traditional and advanced procurement models.</p>
+        </CardHeader>
+        <CardContent>
+          <Tabs defaultValue="single-epc" className="w-full">
+            <TabsList className="grid w-full grid-cols-3">
+              <TabsTrigger value="single-epc">Single EPC</TabsTrigger>
+              <TabsTrigger value="bop">BOP</TabsTrigger>
+              <TabsTrigger value="fim">FIM</TabsTrigger>
+            </TabsList>
+            <TabsContent value="single-epc" className="mt-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl text-red-600">Single EPC: The Traditional Turnkey</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p>In a Single EPC contract, one contractor is responsible for the entire project from Engineering, Procurement, to Construction. The owner hands over the project and receives a complete, operational facility.</p>
+                  <div className="bg-red-50 p-3 rounded-lg">
+                    <h5 className="font-semibold text-red-800 mb-2">Pros:</h5>
+                    <ul className="list-disc list-inside text-red-700 text-sm">
+                      <li>Simplified project management for the owner.</li>
+                      <li>Single point of responsibility.</li>
+                      <li>Predictable lump-sum cost (often).</li>
+                    </ul>
+                  </div>
+                  <div className="bg-red-50 p-3 rounded-lg">
+                    <h5 className="font-semibold text-red-800 mb-2">Cons:</h5>
+                    <ul className="list-disc list-inside text-red-700 text-sm">
+                      <li>High contractor markups on equipment.</li>
+                      <li>Limited transparency and control over supply chain.</li>
+                      <li>Potential for quality compromises to meet budget.</li>
+                      <li>Owner loses direct relationship with manufacturers.</li>
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+            <TabsContent value="bop" className="mt-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl text-orange-600">BOP: Owner Procures Main Equipment</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p>In a BOP (Balance of Plant) contract, the owner typically procures the main, high-value equipment (like turbines or solar panels) directly, while the contractor is responsible for the remaining infrastructure and construction (the "balance of plant").</p>
+                  <div className="bg-orange-50 p-3 rounded-lg">
+                    <h5 className="font-semibold text-orange-800 mb-2">Pros:</h5>
+                    <ul className="list-disc list-inside text-orange-700 text-sm">
+                      <li>Owner gains some control over critical equipment.</li>
+                      <li>Potential for reduced equipment costs compared to Single EPC.</li>
+                      <li>Still leverages contractor for overall construction.</li>
+                    </ul>
+                  </div>
+                  <div className="bg-orange-50 p-3 rounded-lg">
+                    <h5 className="font-semibold text-orange-800 mb-2">Cons:</h5>
+                    <ul className="list-disc list-inside text-orange-700 text-sm">
+                      <li>Increased coordination complexity for the owner.</li>
+                      <li>Risk of interface issues between owner-supplied and contractor-supplied components.</li>
+                      <li>Logistics and warranty management for main equipment falls on the owner.</li>
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+            <TabsContent value="fim" className="mt-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-xl text-green-600">FIM: The Optimized Approach</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p>FIM (Free-Issue Material) is an advanced form of the BOP model, specifically emphasizing the strategic direct procurement of critical, high-value components by the owner. The owner not only procures but also manages the logistics and quality assurance of these materials, issuing them "free" to the contractor for installation.</p>
+                  <div className="bg-green-50 p-3 rounded-lg">
+                    <h5 className="font-semibold text-green-800 mb-2">Pros:</h5>
+                    <ul className="list-disc list-inside text-green-700 text-sm">
+                      <li>Maximum cost savings by eliminating markups and leveraging bulk discounts.</li>
+                      <li>Full control over equipment quality, specifications, and warranties.</li>
+                      <li>Direct relationships with manufacturers for better support and innovation.</li>
+                      <li>Enhanced supply chain transparency and risk mitigation.</li>
+                    </ul>
+                  </div>
+                  <div className="bg-green-50 p-3 rounded-lg">
+                    <h5 className="font-semibold text-green-800 mb-2">Cons:</h5>
+                    <ul className="list-disc list-inside text-green-700 text-sm">
+                      <li>Requires internal procurement expertise and resources.</li>
+                      <li>Increased logistical and coordination responsibilities for the owner.</li>
+                      <li>Higher initial workload for setup and supplier management.</li>
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+          </Tabs>
+        </CardContent>
+      </Card>
+
       {/* Comparison Section */}
       <div className="grid md:grid-cols-2 gap-6">
         <Card className="border-l-4 border-l-red-500">
