@@ -226,10 +226,9 @@ const FIMRevolutionArticle = () => {
         </CardHeader>
         <CardContent>
           <Tabs defaultValue="single-epc" className="w-full">
-            <TabsList className="grid w-full grid-cols-3">
+            <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="single-epc">Single EPC</TabsTrigger>
-              <TabsTrigger value="bop">BOP</TabsTrigger>
-              <TabsTrigger value="fim">FIM</TabsTrigger>
+              <TabsTrigger value="fim">BOP with FIM</TabsTrigger>
             </TabsList>
             <TabsContent value="single-epc" className="mt-4">
               <Card>
@@ -258,39 +257,13 @@ const FIMRevolutionArticle = () => {
                 </CardContent>
               </Card>
             </TabsContent>
-            <TabsContent value="bop" className="mt-4">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-xl text-orange-600">BOP: Owner Procures Main Equipment</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p>In a BOP (Balance of Plant) contract, the owner typically procures the main, high-value equipment (like turbines or solar panels) directly, while the contractor is responsible for the remaining infrastructure and construction (the "balance of plant").</p>
-                  <div className="bg-orange-50 p-3 rounded-lg">
-                    <h5 className="font-semibold text-orange-800 mb-2">Pros:</h5>
-                    <ul className="list-disc list-inside text-orange-700 text-sm">
-                      <li>Owner gains some control over critical equipment.</li>
-                      <li>Potential for reduced equipment costs compared to Single EPC.</li>
-                      <li>Still leverages contractor for overall construction.</li>
-                    </ul>
-                  </div>
-                  <div className="bg-orange-50 p-3 rounded-lg">
-                    <h5 className="font-semibold text-orange-800 mb-2">Cons:</h5>
-                    <ul className="list-disc list-inside text-orange-700 text-sm">
-                      <li>Increased coordination complexity for the owner.</li>
-                      <li>Risk of interface issues between owner-supplied and contractor-supplied components.</li>
-                      <li>Logistics and warranty management for main equipment falls on the owner.</li>
-                    </ul>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
             <TabsContent value="fim" className="mt-4">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-xl text-green-600">FIM: The Optimized Approach</CardTitle>
+                  <CardTitle className="text-xl text-green-600">BOP with FIM: The Optimized Approach</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p>FIM (Free-Issue Material) is an advanced form of the BOP model, specifically emphasizing the strategic direct procurement of critical, high-value components by the owner. The owner not only procures but also manages the logistics and quality assurance of these materials, issuing them "free" to the contractor for installation.</p>
+                  <p>BOP with FIM (Free-Issue Material) is an advanced form of the BOP model, specifically emphasizing the strategic direct procurement of critical, high-value components by the owner. The owner not only procures but also manages the logistics and quality assurance of these materials, issuing them "free" to the contractor for installation.</p>
                   <div className="bg-green-50 p-3 rounded-lg">
                     <h5 className="font-semibold text-green-800 mb-2">Pros:</h5>
                     <ul className="list-disc list-inside text-green-700 text-sm">
