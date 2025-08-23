@@ -8,6 +8,15 @@ import { Badge } from '@/components/ui/badge';
 export function Blog() {
   const blogPosts = [
     {
+      slug: 'bop-package-strategy',
+      title: 'The BOP Package Strategy That Transformed Our Solar Portfolio',
+      excerpt: 'Balance of Plant (BOP) management is where average PMs fail and experts excel. Managing 50+ interfaces between equipment suppliers and BOP contractors creates chaos. This article explores the solution: Strategic BOP Package Design, leading to significant cost reduction, fewer interface issues, on-time delivery, and better performance guarantees.',
+      category: 'Renewable Energy',
+      readTime: '5 min read',
+      date: 'August 2025',
+      featured: true,
+    },
+    {
       slug: 'fim-revolution',
       title: 'The Free Issue Material (FIM) Revolution for Renewable Energy Projects',
       excerpt: 'Discover how the Free-Issue Material (FIM) approach can transform your renewable energy projects, leading to significant cost reductions, faster delivery, and improved quality control. This flagship article explores real-world case studies and provides an implementation roadmap.',
