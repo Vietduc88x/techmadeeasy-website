@@ -8,6 +8,15 @@ import { Badge } from '@/components/ui/badge';
 export function Blog() {
   const blogPosts = [
     {
+      slug: 'bop-package-strategy',
+      title: 'Easiest FIM and BOP Package Strategy of Solar Project',
+      excerpt: 'Balance of Plant (BOP) management is where average PMs fail and experts excel. Managing 50+ interfaces between equipment suppliers and BOP contractors creates chaos. This article explores the solution: Strategic BOP Package Design, leading to significant cost reduction, fewer interface issues, on-time delivery, and better performance guarantees.',
+      category: 'Renewable Energy',
+      readTime: '15 min read',
+      date: 'August 2025',
+      featured: true,
+    },
+    {
       slug: 'fim-revolution',
       title: 'The Free Issue Material (FIM) Revolution for Renewable Energy Projects',
       excerpt: 'Discover how the Free-Issue Material (FIM) approach can transform your renewable energy projects, leading to significant cost reductions, faster delivery, and improved quality control. This flagship article explores real-world case studies and provides an implementation roadmap.',
@@ -256,7 +265,7 @@ export function Blog() {
                       </div>
                     </div>
                     <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                      <Link to={post.slug === 'fim-revolution' ? '/fim-revolution' : `/blog/${post.slug}`}>
+                      <Link to={post.slug === 'fim-revolution' ? '/fim-revolution' : (post.slug === 'bop-package-strategy' ? '/blog/bop-interactive-article' : `/blog/${post.slug}`)}>
                         {post.title}
                       </Link>
                     </CardTitle>
@@ -296,7 +305,7 @@ export function Blog() {
                       </div>
                     </div>
                     <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                      <Link to={post.slug === 'fim-revolution' ? '/fim-revolution' : `/blog/${post.slug}`}>
+                      <Link to={post.slug === 'fim-revolution' ? '/fim-revolution' : (post.slug === 'bop-package-strategy' ? '/blog/bop-interactive-article' : `/blog/${post.slug}`)}>
                         {post.title}
                       </Link>
                     </CardTitle>
@@ -323,23 +332,23 @@ export function Blog() {
 
           {/* Newsletter Signup */}
           <div className="mt-16 bg-muted/30 rounded-lg p-8 text-center">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Stay Updated
-            </h3>
+            <h2 className="text-2xl font-bold text-foreground mb-4">Stay Updated!</h2>
             <p className="text-muted-foreground mb-6">
-              Sign up to be the first reader of our up-to-date articles!
+              Subscribe to our newsletter to get the latest articles and insights delivered straight to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <form className="flex flex-col sm:flex-row gap-4 max-w-sm mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 border border-border rounded-md bg-background text-foreground"
+                className="flex-1 px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               />
-              <Button>Subscribe</Button>
-            </div>
+              <Button type="submit">Subscribe</Button>
+            </form>
           </div>
         </div>
       </section>
+
+      {/* Footer is already handled by App.jsx */}
     </div>
   );
 }

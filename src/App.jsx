@@ -8,6 +8,7 @@ import { BlogPost } from './pages/BlogPost';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import FIMRevolution from './pages/FIMRevolution';
+import { BOPInteractiveArticle } from './pages/BOPInteractiveArticle';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/fim-revolution" element={<FIMRevolution />} />
+            <Route path="/blog/bop-interactive-article" element={<BOPInteractiveArticle />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
