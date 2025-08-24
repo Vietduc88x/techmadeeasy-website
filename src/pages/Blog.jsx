@@ -8,6 +8,15 @@ import { Badge } from '@/components/ui/badge';
 export function Blog() {
   const blogPosts = [
     {
+      slug: 'fim-implementation-roadmap',
+      title: 'FIM Implementation Roadmap: Your Path to Procurement Excellence',
+      excerpt: 'A detailed and interactive guide to integrating Free Issue Material (FIM) strategy for optimal procurement in renewable energy projects, covering workshops, procurement structure, team organization, and business case.',
+      category: 'Procurement',
+      readTime: '25 min read',
+      date: 'August 2025',
+      featured: true,
+    },
+    {
       slug: 'renewable-energy-costs-2024',
       title: 'Renewable Power Generation Cost in 2024: Source IRENA',
       excerpt: 'An interactive analysis of the latest cost trends in renewable energy technologies based on IRENA\'s comprehensive 2024 report. Explore how Solar PV achieved 90% cost reduction, making it one of the most competitive renewable technologies.',

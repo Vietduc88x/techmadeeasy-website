@@ -10,6 +10,7 @@ import { Contact } from './pages/Contact';
 import FIMRevolution from './pages/FIMRevolution';
 import { BOPInteractiveArticle } from './pages/BOPInteractiveArticle';
 import { RenewableEnergyCosts2024 } from './pages/RenewableEnergyCosts2024';
+import { FIMImplementationRoadmap } from './pages/FIMImplementationRoadmap';
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/fim-revolution" element={<FIMRevolution />} />
             <Route path="/blog/bop-interactive-article" element={<BOPInteractiveArticle />} />
             <Route path="/blog/renewable-energy-costs-2024" element={<RenewableEnergyCosts2024 />} />
+            <Route path="/blog/fim-implementation-roadmap" element={<FIMImplementationRoadmap />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
