@@ -504,12 +504,12 @@ export function BOPInteractiveArticle() {
                     <table className="w-full border-collapse">
                       <thead>
                         <tr className="border-b">
-                            <th className="p-2 <th className="p-2 font-semibold text-left">Activity</th>
-                      <th className="p-2 font-semibold text-left">Owner</th>
-                      <th className="p-2 font-semibold text-left">BOP EPC</th>
-                      <th className="p-2 font-semibold text-left">PV Supplier</th>
-                      <th className="p-2 font-semibold text-left">Key Responsibility</th>
-                      <th className="p-2 font-semibold text-left">Risk Level</th></th>
+                          <th className="p-2 font-semibold text-left">Activity</th>
+                          <th className="p-2 font-semibold text-left">Owner</th>
+                          <th className="p-2 font-semibold text-left">BOP EPC</th>
+                          <th className="p-2 font-semibold text-left">PV Supplier</th>
+                          <th className="p-2 font-semibold text-left">Key Responsibility</th>
+                          <th className="p-2 font-semibold text-left">Risk Level</th>
                         </tr>
                       </thead>
                       <tbody>

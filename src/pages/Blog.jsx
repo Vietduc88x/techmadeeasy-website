@@ -8,6 +8,15 @@ import { Badge } from '@/components/ui/badge';
 export function Blog() {
   const blogPosts = [
     {
+      slug: 'renewable-energy-costs-2024',
+      title: 'Renewable Power Generation Cost in 2024: Source IRENA',
+      excerpt: 'An interactive analysis of the latest cost trends in renewable energy technologies based on IRENA\'s comprehensive 2024 report. Explore how Solar PV achieved 90% cost reduction, making it one of the most competitive renewable technologies.',
+      category: 'Renewable Energy',
+      readTime: '15 min read',
+      date: 'December 2024',
+      featured: true,
+    },
+    {
       slug: 'bop-package-strategy',
       title: 'Easiest FIM and BOP Package Strategy of Solar Project',
       excerpt: 'Balance of Plant (BOP) management is where average PMs fail and experts excel. Managing 50+ interfaces between equipment suppliers and BOP contractors creates chaos. This article explores the solution: Strategic BOP Package Design, leading to significant cost reduction, fewer interface issues, on-time delivery, and better performance guarantees.',
