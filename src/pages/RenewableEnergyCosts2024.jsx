@@ -477,16 +477,86 @@ export function RenewableEnergyCosts2024() {
                     <CardTitle>Performance Metrics</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ResponsiveContainer width="100%" height={300}>
-                      <RadialBarChart cx="50%" cy="50%" innerRadius="20%" outerRadius="90%" data={[
-                        { name: 'Cost Competitiveness', value: Math.max(10, 100 - (selectedTech.lcoe["2024"] * 1000)), fill: selectedTech.color },
-                        { name: 'Capacity Factor', value: selectedTech.capacity_factor["2023"], fill: selectedTech.color + '80' },
-                        { name: 'Cost Reduction', value: Math.min(100, Math.abs(selectedTech.total_installed_cost.change_percent)), fill: selectedTech.color + '60' }
-                      ]}>
-                        <RadialBar dataKey="value" cornerRadius={10} fill={selectedTech.color} />
-                        <Tooltip />
-                      </RadialBarChart>
-                    </ResponsiveContainer>
+                    <div className="space-y-4">
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span>Cost Competitiveness</span>
+                          <span>{selectedTech.lcoe["2024"] < 0.05 ? "Excellent" : selectedTech.lcoe["2024"] < 0.08 ? "Good" : "Moderate"}</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-3">
+                          <div 
+                            className="h-3 rounded-full transition-all duration-500" 
+                            style={{ 
+                              width: `${Math.max(10, 100 - (selectedTech.lcoe["2024"] * 1000))}%`,
+                              backgroundColor: selectedTech.color
+                            }}
+                          ></div>
+                        </div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          LCOE: ${selectedTech.lcoe["2024"]?.toFixed(3)}/kWh
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span>Capacity Factor</span>
+                          <span>{selectedTech.capacity_factor["2023"]}%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-3">
+                          <div 
+                            className="h-3 rounded-full transition-all duration-500" 
+                            style={{ 
+                              width: `${selectedTech.capacity_factor["2023"]}%`,
+                              backgroundColor: selectedTech.color,
+                              opacity: 0.8
+                            }}
+                          ></div>
+                        </div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          {selectedTech.capacity_factor.change_percent > 0 ? '+' : ''}{selectedTech.capacity_factor.change_percent}% since 2010
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span>Cost Reduction (2010-2024)</span>
+                          <span>{Math.abs(selectedTech.total_installed_cost.change_percent)}%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-3">
+                          <div 
+                            className="h-3 rounded-full transition-all duration-500" 
+                            style={{ 
+                              width: `${Math.min(100, Math.abs(selectedTech.total_installed_cost.change_percent))}%`,
+                              backgroundColor: selectedTech.color,
+                              opacity: 0.6
+                            }}
+                          ></div>
+                        </div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          {selectedTech.total_installed_cost.change_percent < 0 ? 'Decreased' : 'Increased'} from ${selectedTech.total_installed_cost["2010"]?.toLocaleString()}/kW
+                        </div>
+                      </div>
+
+                      <div>
+                        <div className="flex justify-between text-sm mb-1">
+                          <span>LCOE Improvement</span>
+                          <span>{Math.abs(selectedTech.lcoe.change_percent)}%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-3">
+                          <div 
+                            className="h-3 rounded-full transition-all duration-500" 
+                            style={{ 
+                              width: `${Math.min(100, Math.abs(selectedTech.lcoe.change_percent))}%`,
+                              backgroundColor: selectedTech.lcoe.change_percent < 0 ? '#10b981' : '#ef4444',
+                              opacity: 0.9
+                            }}
+                          ></div>
+                        </div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          {selectedTech.lcoe.change_percent < 0 ? 'Reduced' : 'Increased'} from ${selectedTech.lcoe["2010"]?.toFixed(3)}/kWh
+                        </div>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               </div>
