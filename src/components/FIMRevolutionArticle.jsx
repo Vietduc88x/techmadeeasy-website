@@ -96,26 +96,127 @@ const FIMRevolutionArticle = () => {
             Renewable energy projects are uniquely positioned to benefit from Free-Issue Material (FIM) strategies due to their equipment-intensive nature. Unlike traditional construction projects, renewable energy developments allocate 60-80% of their total CAPEX to critical components such as turbines, solar panels, inverters, and battery systems. This high equipment cost ratio creates unprecedented opportunities for cost optimization through direct procurement strategies.
           </p>
           
-          <div className="bg-blue-50 p-4 rounded-lg">
-            <h4 className="font-semibold text-blue-800 mb-3">Equipment CAPEX Breakdown by Technology:</h4>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <h5 className="font-semibold text-blue-700 mb-2">Wind Projects:</h5>
-                <ul className="space-y-1 text-blue-600 text-sm">
-                  <li>• Turbines: <span className="font-bold">65-75%</span> of total CAPEX</li>
-                  <li>• Foundations: <span className="font-bold">10-15%</span> of total CAPEX</li>
-                  <li>• Electrical systems: <span className="font-bold">8-12%</span> of total CAPEX</li>
-                </ul>
-              </div>
-              <div>
-                <h5 className="font-semibold text-blue-700 mb-2">Solar Projects:</h5>
-                <ul className="space-y-1 text-blue-600 text-sm">
-                  <li>• Solar modules: <span className="font-bold">40-50%</span> of total CAPEX</li>
-                  <li>• Inverters: <span className="font-bold">15-20%</span> of total CAPEX</li>
-                  <li>• Mounting systems: <span className="font-bold">10-15%</span> of total CAPEX</li>
-                </ul>
-              </div>
-            </div>
+          <div className="bg-blue-50 p-6 rounded-lg border border-blue-100">
+            <h4 className="font-semibold text-blue-800 mb-4 text-xl">Equipment CAPEX Breakdown by Technology:</h4>
+            
+            <Tabs defaultValue="wind" className="w-full">
+              <TabsList className="grid w-full grid-cols-3 mb-6">
+                <TabsTrigger value="wind" className="text-sm font-medium">Wind Projects</TabsTrigger>
+                <TabsTrigger value="solar" className="text-sm font-medium">Solar Projects</TabsTrigger>
+                <TabsTrigger value="bess" className="text-sm font-medium">BESS Projects</TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="wind" className="mt-4">
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-blue-100 hover:shadow-md transition-shadow duration-300">
+                    <img src="/images/turbine_blades.png" alt="Wind Turbine Blades" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                      <h6 className="font-bold text-blue-700 mb-2">Turbine Blades</h6>
+                      <p className="text-xs text-gray-600 mb-2">Aerodynamic design, composite materials</p>
+                      <div className="text-sm font-semibold text-blue-600">25-30% of turbine cost</div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-blue-100 hover:shadow-md transition-shadow duration-300">
+                    <img src="/images/turbine_nacelle.png" alt="Turbine Nacelle" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                      <h6 className="font-bold text-blue-700 mb-2">Nacelle & Gearbox</h6>
+                      <p className="text-xs text-gray-600 mb-2">Generator, gearbox, control systems</p>
+                      <div className="text-sm font-semibold text-blue-600">40-45% of turbine cost</div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-blue-100 hover:shadow-md transition-shadow duration-300">
+                    <img src="/images/turbine_tower.png" alt="Turbine Tower" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                      <h6 className="font-bold text-blue-700 mb-2">Tower Structure</h6>
+                      <p className="text-xs text-gray-600 mb-2">Steel tower, foundation interface</p>
+                      <div className="text-sm font-semibold text-blue-600">25-30% of turbine cost</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                  <h6 className="font-semibold text-blue-800 mb-2">Wind Project CAPEX Breakdown:</h6>
+                  <ul className="space-y-1 text-blue-700 text-sm">
+                    <li>• <span className="font-bold">Turbines: 65-75%</span> of total CAPEX</li>
+                    <li>• <span className="font-bold">Foundations: 10-15%</span> of total CAPEX</li>
+                    <li>• <span className="font-bold">Electrical systems: 8-12%</span> of total CAPEX</li>
+                  </ul>
+                </div>
+              </TabsContent>
+
+              <TabsContent value="solar" className="mt-4">
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-orange-100 hover:shadow-md transition-shadow duration-300">
+                    <img src="/images/solar_module.png" alt="Solar Modules" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                      <h6 className="font-bold text-orange-700 mb-2">Solar Modules</h6>
+                      <p className="text-xs text-gray-600 mb-2">Photovoltaic cells, anti-reflective coating</p>
+                      <div className="text-sm font-semibold text-orange-600">40-50% of total CAPEX</div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-orange-100 hover:shadow-md transition-shadow duration-300">
+                    <img src="/images/solar_inverter.png" alt="Solar Inverters" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                      <h6 className="font-bold text-orange-700 mb-2">Inverters</h6>
+                      <p className="text-xs text-gray-600 mb-2">DC to AC conversion, grid connection</p>
+                      <div className="text-sm font-semibold text-orange-600">15-20% of total CAPEX</div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-orange-100 hover:shadow-md transition-shadow duration-300">
+                    <img src="/images/mounting_system.png" alt="Mounting Systems" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                      <h6 className="font-bold text-orange-700 mb-2">Mounting Systems</h6>
+                      <p className="text-xs text-gray-600 mb-2">Aluminum/steel racking, panel clamps</p>
+                      <div className="text-sm font-semibold text-orange-600">10-15% of total CAPEX</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-4 p-4 bg-orange-50 rounded-lg border border-orange-200">
+                  <h6 className="font-semibold text-orange-800 mb-2">Solar Project CAPEX Breakdown:</h6>
+                  <ul className="space-y-1 text-orange-700 text-sm">
+                    <li>• <span className="font-bold">Solar modules: 40-50%</span> of total CAPEX</li>
+                    <li>• <span className="font-bold">Inverters: 15-20%</span> of total CAPEX</li>
+                    <li>• <span className="font-bold">Mounting systems: 10-15%</span> of total CAPEX</li>
+                  </ul>
+                </div>
+              </TabsContent>
+
+              <TabsContent value="bess" className="mt-4">
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-purple-100 hover:shadow-md transition-shadow duration-300">
+                    <img src="/images/battery_rack.png" alt="Battery Racks" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                      <h6 className="font-bold text-purple-700 mb-2">Battery Racks</h6>
+                      <p className="text-xs text-gray-600 mb-2">Lithium-ion modules, cooling systems</p>
+                      <div className="text-sm font-semibold text-purple-600">60-70% of total CAPEX</div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-purple-100 hover:shadow-md transition-shadow duration-300">
+                    <img src="/images/power_conversion_system.png" alt="Power Conversion System" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                      <h6 className="font-bold text-purple-700 mb-2">Power Conversion</h6>
+                      <p className="text-xs text-gray-600 mb-2">Inverters, transformers, controls</p>
+                      <div className="text-sm font-semibold text-purple-600">15-20% of total CAPEX</div>
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-purple-100 hover:shadow-md transition-shadow duration-300">
+                    <img src="/images/bess_container.png" alt="BESS Container" className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                      <h6 className="font-bold text-purple-700 mb-2">Container Systems</h6>
+                      <p className="text-xs text-gray-600 mb-2">Housing, HVAC, fire suppression</p>
+                      <div className="text-sm font-semibold text-purple-600">8-12% of total CAPEX</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-4 p-4 bg-purple-50 rounded-lg border border-purple-200">
+                  <h6 className="font-semibold text-purple-800 mb-2">BESS Project CAPEX Breakdown:</h6>
+                  <ul className="space-y-1 text-purple-700 text-sm">
+                    <li>• <span className="font-bold">Battery systems: 75-80%</span> of total CAPEX</li>
+                    <li>• <span className="font-bold">Power conversion: 15-20%</span> of total CAPEX</li>
+                    <li>• <span className="font-bold">Balance of system: 5-10%</span> of total CAPEX</li>
+                  </ul>
+                </div>
+              </TabsContent>
+            </Tabs>
           </div>
 
           {/* Project Type Showcase */}
