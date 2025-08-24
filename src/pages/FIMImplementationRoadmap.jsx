@@ -412,5 +412,5 @@ const FIMImplementationRoadmap = () => {
   );
 };
 
-export default FIMImplementationRoadmap;
+export { FIMImplementationRoadmap };
 
