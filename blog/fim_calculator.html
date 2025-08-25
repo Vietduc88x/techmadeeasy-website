@@ -1,0 +1,31 @@
+<div class="fim-calculator">
+    <h2>FIM Savings Calculator: Estimate Your Project's Potential</h2>
+    <p>Adjust the sliders to see the potential cost savings for your renewable energy project by adopting the FIM approach.</p>
+
+    <div class="calculator-input">
+        <label for="projectValue">Total Project Value ($ Million):</label>
+        <input type="range" id="projectValue" min="100" max="1000" value="100">
+        <span id="projectValueDisplay">$100M</span>
+    </div>
+
+    <div class="calculator-input">
+        <label for="componentCost">Critical Component Cost (% of project value):</label>
+        <input type="range" id="componentCost" min="50" max="80" value="60">
+        <span id="componentCostDisplay">60%</span>
+    </div>
+
+    <div class="calculator-input">
+        <label for="contractorMarkup">Typical Contractor Markup (% on components):</label>
+        <input type="range" id="contractorMarkup" min="10" max="25" value="15">
+        <span id="contractorMarkupDisplay">15%</span>
+    </div>
+
+    <div class="calculator-output">
+        <h3>Potential FIM Savings</h3>
+        <p>Estimated Markup Savings: <span id="estimatedSavings">$0.00M</span></p>
+        <p>Equivalent Project Cost Reduction: <span id="costReduction">0.00%</span></p>
+        <p class="note">*This calculation provides an estimate. Actual savings may vary based on project specifics and market conditions.</p>
+    </div>
+</div>
+
+

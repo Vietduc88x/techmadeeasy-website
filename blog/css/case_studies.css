@@ -1,0 +1,85 @@
+.case-studies-container {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.case-studies-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.case-studies-container .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.case-studies-container .tab-button {
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 20px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 8px 8px 0 0;
+    margin: 0 2px;
+}
+
+.case-studies-container .tab-button:hover {
+    background-color: #ddd;
+}
+
+.case-studies-container .tab-button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.case-studies-container .tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    background-color: #fff;
+}
+
+.case-studies-container .tab-content.active {
+    display: block;
+}
+
+.case-studies-container .tab-content h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.case-studies-container .tab-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.case-studies-container .tab-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.case-studies-container .tab-content ul li {
+    margin-bottom: 5px;
+}
+
+.case-studies-container .note {
+    font-size: 0.8em;
+    color: #888;
+    margin-top: 15px;
+}
+
+
