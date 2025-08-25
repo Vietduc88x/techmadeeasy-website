@@ -42,11 +42,26 @@ export function BOPInteractiveArticle() {
         'Dimensions': '2m x 1m x 35mm'
       },
       scopeItems: [
-        'Module supply and delivery',
-        'Quality testing and certification',
-        'Mounting system compatibility',
-        'Performance monitoring integration',
-        'Warranty management'
+        { 
+          title: 'Module supply and delivery',
+          details: 'The PV Supplier is responsible for the timely and safe delivery of the PV modules to the project site, ensuring they arrive in good condition and meet all specified quality standards.'
+        },
+        { 
+          title: 'Quality testing and certification',
+          details: 'The PV Supplier must provide all necessary quality testing documentation and certifications for the modules, verifying their performance and compliance with international standards.'
+        },
+        { 
+          title: 'Mounting system compatibility',
+          details: 'The PV Supplier is responsible for ensuring that the provided modules are fully compatible with the mounting systems specified by the BOP EPC Contractor, including providing any necessary technical data and support.'
+        },
+        { 
+          title: 'Performance monitoring integration',
+          details: 'The PV Supplier must provide all necessary data and support to enable the seamless integration of the PV modules with the project-wide performance monitoring system.'
+        },
+        { 
+          title: 'Warranty management',
+          details: 'The PV Supplier is responsible for managing all warranty claims related to the PV modules, including providing replacements or repairs as needed.'
+        }
       ]
     },
     'inverters': {
@@ -61,11 +76,26 @@ export function BOPInteractiveArticle() {
         'Protection Rating': 'IP65'
       },
       scopeItems: [
-        'Inverter supply and installation',
-        'Grid connection and synchronization',
-        'SCADA system integration',
-        'Maintenance and monitoring',
-        'Performance optimization'
+        { 
+          title: 'Inverter supply and installation',
+          details: 'The BOP EPC Contractor is responsible for the supply, installation, and commissioning of the inverters, ensuring they are correctly integrated into the overall system.'
+        },
+        { 
+          title: 'Grid connection and synchronization',
+          details: 'The BOP EPC Contractor is responsible for all aspects of grid connection and synchronization, including obtaining necessary approvals and ensuring compliance with local utility requirements.'
+        },
+        { 
+          title: 'SCADA system integration',
+          details: 'The BOP EPC Contractor is responsible for integrating the inverters with the SCADA system, enabling centralized monitoring and control of the solar farm.'
+        },
+        { 
+          title: 'Maintenance and monitoring',
+          details: 'The BOP EPC Contractor is responsible for ongoing maintenance and monitoring of the inverters, ensuring they operate at peak performance.'
+        },
+        { 
+          title: 'Performance optimization',
+          details: 'The BOP EPC Contractor is responsible for optimizing the performance of the inverters, including firmware updates and parameter adjustments.'
+        }
       ]
     },
     'mv-transformers': {
@@ -80,11 +110,26 @@ export function BOPInteractiveArticle() {
         'Cooling': 'ONAN/ONAF'
       },
       scopeItems: [
-        'Transformer supply and delivery',
-        'Foundation and installation',
-        'Protection system integration',
-        'Testing and commissioning',
-        'Maintenance planning'
+        { 
+          title: 'Transformer supply and delivery',
+          details: 'The BOP EPC Contractor is responsible for the procurement, delivery, and inspection of MV transformers, ensuring they meet project specifications and quality standards.'
+        },
+        { 
+          title: 'Foundation and installation',
+          details: 'The BOP EPC Contractor is responsible for designing and constructing the foundations for the MV transformers, as well as their safe and proper installation on site.'
+        },
+        { 
+          title: 'Protection system integration',
+          details: 'The BOP EPC Contractor is responsible for integrating the MV transformers with the overall electrical protection system of the solar farm, including relays and circuit breakers.'
+        },
+        { 
+          title: 'Testing and commissioning',
+          details: 'The BOP EPC Contractor is responsible for conducting comprehensive testing and commissioning of the MV transformers to ensure their operational readiness and compliance with performance requirements.'
+        },
+        { 
+          title: 'Maintenance planning',
+          details: 'The BOP EPC Contractor is responsible for developing and implementing a maintenance plan for the MV transformers to ensure their long-term reliability and performance.'
+        }
       ]
     }
   };
@@ -96,7 +141,8 @@ export function BOPInteractiveArticle() {
       bopEpc: 'Execute',
       pvSupplier: 'N/A',
       responsibility: 'Overall system design and specifications',
-      riskLevel: 'Medium'
+      riskLevel: 'Medium',
+      details: 'The BOP EPC Contractor is responsible for the overall system design and engineering, ensuring that all components are integrated correctly and meet the project\'s performance requirements. The Owner provides input and approves the final design.'
     },
     {
       activity: 'PV Module Procurement',
@@ -104,7 +150,8 @@ export function BOPInteractiveArticle() {
       bopEpc: 'N/A',
       pvSupplier: 'Supply',
       responsibility: 'Direct procurement of PV modules',
-      riskLevel: 'Low'
+      riskLevel: 'Low',
+      details: 'The Owner is responsible for the direct procurement of PV modules from the PV Supplier. This allows the Owner to have more control over the quality and cost of the modules.'
     },
     {
       activity: 'BOP Equipment Procurement',
@@ -112,7 +159,8 @@ export function BOPInteractiveArticle() {
       bopEpc: 'Execute',
       pvSupplier: 'N/A',
       responsibility: 'Procurement of all other Balance of Plant equipment',
-      riskLevel: 'Medium'
+      riskLevel: 'Medium',
+      details: 'The BOP EPC Contractor is responsible for the procurement of all other Balance of Plant (BOP) equipment, such as inverters, transformers, and switchgear.'
     },
     {
       activity: 'Site Preparation',
@@ -120,7 +168,8 @@ export function BOPInteractiveArticle() {
       bopEpc: 'Execute',
       pvSupplier: 'N/A',
       responsibility: 'Civil works and infrastructure',
-      riskLevel: 'Medium'
+      riskLevel: 'Medium',
+      details: 'The BOP EPC Contractor is responsible for all civil works and infrastructure, including site grading, road construction, and foundation installation. The Owner approves the site preparation plan.'
     },
     {
       activity: 'Installation & Construction',
@@ -128,7 +177,8 @@ export function BOPInteractiveArticle() {
       bopEpc: 'Execute',
       pvSupplier: 'Support',
       responsibility: 'Physical installation of equipment',
-      riskLevel: 'High'
+      riskLevel: 'High',
+      details: 'The BOP EPC Contractor is responsible for the physical installation of all equipment, including the PV modules. The Owner supervises the installation process, and the PV Supplier provides support as needed.'
     },
     {
       activity: 'Testing & Commissioning',
@@ -136,7 +186,8 @@ export function BOPInteractiveArticle() {
       bopEpc: 'Execute',
       pvSupplier: 'Support',
       responsibility: 'System testing and performance validation',
-      riskLevel: 'High'
+      riskLevel: 'High',
+      details: 'The BOP EPC Contractor is responsible for system testing and performance validation. The Owner approves the testing and commissioning plan, and the PV Supplier provides support as needed.'
     },
     {
       activity: 'Grid Connection',
@@ -144,7 +195,8 @@ export function BOPInteractiveArticle() {
       bopEpc: 'Execute',
       pvSupplier: 'N/A',
       responsibility: 'Utility interconnection and synchronization',
-      riskLevel: 'High'
+      riskLevel: 'High',
+      details: 'The BOP EPC Contractor is responsible for the utility interconnection and synchronization. The Owner coordinates with the utility company.'
     },
     {
       activity: 'Performance Guarantee',
@@ -152,7 +204,8 @@ export function BOPInteractiveArticle() {
       bopEpc: 'Execute',
       pvSupplier: 'N/A',
       responsibility: 'Guaranteeing the overall performance of the solar farm',
-      riskLevel: 'High'
+      riskLevel: 'High',
+      details: 'The BOP EPC Contractor is responsible for guaranteeing the overall performance of the solar farm. The Owner holds the performance guarantee.'
     },
     {
       activity: 'PV Module Warranty',
@@ -160,7 +213,8 @@ export function BOPInteractiveArticle() {
       bopEpc: 'N/A',
       pvSupplier: 'Provide',
       responsibility: 'Warranty for PV modules',
-      riskLevel: 'Low'
+      riskLevel: 'Low',
+      details: 'The PV Supplier is responsible for providing the warranty for the PV modules. The Owner holds the warranty.'
     },
     {
       activity: 'BOP Equipment Warranty',
@@ -168,7 +222,8 @@ export function BOPInteractiveArticle() {
       bopEpc: 'Provide',
       pvSupplier: 'N/A',
       responsibility: 'Warranty for all other Balance of Plant equipment',
-      riskLevel: 'Medium'
+      riskLevel: 'Medium',
+      details: 'The BOP EPC Contractor is responsible for providing the warranty for all other Balance of Plant (BOP) equipment. The Owner holds the warranty.'
     }
   ];
 
@@ -448,10 +503,20 @@ export function BOPInteractiveArticle() {
                   <CardContent>
                     <ul className="space-y-2">
                       {equipmentData[selectedEquipment].scopeItems.map((item, index) => (
-                      <li className="flex items-center gap-2">
-                        <XCircle className="h-4 w-4 text-red-500" />
-                               details: "Uncontrolled changes and expansions in project scope (scope creep) can lead to significant budget overruns and project delays, impacting financial viability. Without clear scope management, small additions can accumulate, leading to substantial cost increases and missed deadlines, ultimately jeopardizing the project's success."ial viability.
-                      </li>
+                        <li key={index}>
+                          <div
+                            className="flex items-center gap-2 cursor-pointer hover:text-blue-700 transition-colors"
+                            onClick={() => setExpandedRow(expandedRow === index ? null : index)}
+                          >
+                            <ArrowRight className={`h-4 w-4 transition-transform ${expandedRow === index ? 'rotate-90' : ''}`} />
+                            {item.title}
+                          </div>
+                          {expandedRow === index && (
+                            <p className="text-muted-foreground mt-2 ml-6 text-sm italic">
+                              {item.details}
+                            </p>
+                          )}
+                        </li>
                       ))}
                     </ul>
                   </CardContent>
@@ -504,12 +569,12 @@ export function BOPInteractiveArticle() {
                     <table className="w-full border-collapse">
                       <thead>
                         <tr className="border-b">
-                            <th className="p-2 <th className="p-2 font-semibold text-left">Activity</th>
-                      <th className="p-2 font-semibold text-left">Owner</th>
-                      <th className="p-2 font-semibold text-left">BOP EPC</th>
-                      <th className="p-2 font-semibold text-left">PV Supplier</th>
-                      <th className="p-2 font-semibold text-left">Key Responsibility</th>
-                      <th className="p-2 font-semibold text-left">Risk Level</th></th>
+                          <th className="p-2 font-semibold text-left">Activity</th>
+                          <th className="p-2 font-semibold text-left">Owner</th>
+                          <th className="p-2 font-semibold text-left">BOP EPC</th>
+                          <th className="p-2 font-semibold text-left">PV Supplier</th>
+                          <th className="p-2 font-semibold text-left">Key Responsibility</th>
+                          <th className="p-2 font-semibold text-left">Risk Level</th>
                         </tr>
                       </thead>
                       <tbody>
