@@ -68,20 +68,21 @@ const FIMRevolutionArticle = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-8">
       {/* Hero Section */}
-      <div className="relative text-center space-y-6 py-16 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white rounded-3xl overflow-hidden shadow-2xl">
-        <div className="absolute inset-0 bg-black/10"></div>
+      <div className="relative text-center space-y-4 py-12 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 text-gray-800 rounded-2xl overflow-hidden shadow-lg border border-blue-100">
         <div className="relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent leading-tight">
-            Project Management Excellence for Renewable Energy series - Advance Procurement Strategies - The FIM Revolution
+          <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-700 to-indigo-600 bg-clip-text text-transparent leading-tight">
+            Advance Procurement Strategies: The FIM Revolution
           </h1>
-          <div className="mt-6 bg-emerald-500/90 backdrop-blur-sm text-white px-6 py-3 rounded-lg inline-block border border-emerald-400/50">
-            <span className="font-bold">✅ Disclaimer:</span> The content is for educational purposes only, not technical & financial advice.
+          <p className="text-base md:text-lg text-gray-600 mt-2 font-medium">
+            Project Management Excellence for Renewable Energy series
+          </p>
+          <div className="mt-4 bg-emerald-50 text-emerald-800 px-4 py-2 rounded-lg inline-block border border-emerald-200">
+            <span className="font-semibold text-sm">✅ Disclaimer:</span> <span className="text-sm">The content is for educational purposes only, not technical & financial advice.</span>
           </div>
         </div>
-        {/* Decorative elements */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
-        <div className="absolute bottom-10 right-10 w-32 h-32 bg-purple-300/20 rounded-full blur-2xl"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-blue-300/20 rounded-full blur-lg"></div>
+        {/* Subtle decorative elements */}
+        <div className="absolute top-6 left-6 w-12 h-12 bg-blue-200/30 rounded-full blur-lg"></div>
+        <div className="absolute bottom-6 right-6 w-16 h-16 bg-indigo-200/30 rounded-full blur-xl"></div>
       </div>
 
       {/* Why FIM is Critical for Renewable Energy */}
