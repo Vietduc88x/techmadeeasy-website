@@ -1,154 +1,237 @@
-# Thị trường vốn Internet: Con đường phía trước
+# Internet Capital Markets: The Road Ahead
 
 ![Internet Capital Markets Hero](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/blog/icm_hero_image.png)
-*Hình ảnh minh họa về thị trường vốn internet phi tập trung với các nút mạng kết nối toàn cầu*
+*An illustrative image of decentralized internet capital markets with globally connected network nodes*
 
-Chào mừng bạn đến với một hành trình khám phá thế giới đầy thú vị của Thị trường vốn Internet (Internet Capital Markets - ICM)! Trong bài viết này, chúng ta sẽ cùng nhau tìm hiểu về những khái niệm cốt lõi, những thách thức hiện tại và tương lai đầy hứa hẹn của lĩnh vực này, đặc biệt là trên nền tảng Solana. Hãy sẵn sàng để biến những khái niệm phức tạp thành những kiến thức dễ hiểu và hấp dẫn!
+Welcome to an exciting journey exploring the world of Internet Capital Markets (ICM)! In this article, we will delve into the core concepts, current challenges, and the promising future of this field, especially on the Solana platform. Get ready to transform complex ideas into easily understandable and engaging knowledge!
 
-## ICM là gì và tại sao nó quan trọng?
+## What is ICM and Why is it Important?
 
-Thị trường vốn Internet (ICM) là một khái niệm đang định hình lại cách chúng ta hiểu về tài chính và giao dịch. Thay vì các sàn giao dịch truyền thống tập trung, ICM hướng tới việc xây dựng một hệ thống tài chính phi tập trung, minh bạch và hiệu quả hơn, nơi mọi người đều có thể tham gia mà không bị giới hạn bởi địa lý hay các rào cản truyền thống.
+Internet Capital Markets (ICM) is a concept reshaping our understanding of finance and trading. Instead of traditional centralized exchanges, ICM aims to build a more decentralized, transparent, and efficient financial system where everyone can participate without geographical limitations or traditional barriers.
 
-Solana, một blockchain hiệu suất cao, đang dẫn đầu trong việc hiện thực hóa tầm nhìn này. Mục tiêu ban đầu của Solana là xây dựng một xương sống phi tập trung cho ICM. Điều này đòi hỏi khả năng băng thông cao và độ trễ thấp, những yếu tố cần thiết nhưng chưa đủ để giải quyết sự phức tạp của cấu trúc vi mô thị trường.
+Solana, a high-performance blockchain, is leading the way in realizing this vision. Solana's initial goal was to build a decentralized backbone for ICM. This requires high bandwidth and low latency, which are necessary but not sufficient to address the complexities of market microstructure.
 
-## ACE: Chìa khóa cho tương lai của ICM
+## ACE: The Key to ICM's Future
 
-Hiện tại, hệ sinh thái đang tập trung vào một tầm nhìn chung: **Thực thi được kiểm soát bởi ứng dụng (Application-Controlled Execution - ACE)**. Mục tiêu cuối cùng của ACE là cung cấp cho các hợp đồng thông minh khả năng kiểm soát thứ tự giao dịch của chính chúng ở cấp độ mili giây. Trong các cuộc trò chuyện với các nhóm trong toàn bộ hệ sinh thái, cấu trúc vi mô thị trường là vấn đề quan trọng nhất trong Solana hiện nay.
+Currently, the ecosystem is converging around a shared vision: **Application-Controlled Execution (ACE)**. The ultimate objective of ACE is to give smart contracts millisecond-level control over their own transaction ordering. In conversations with teams across the ecosystem, market microstructure is the single most important problem in Solana today.
 
-Để xây dựng các thị trường thanh khoản nhất trên chuỗi, chúng ta cần ba yếu tố chính:
+To build the most liquid markets on-chain, we need three key elements:
 
-1.  **Dung lượng chuỗi:** Chuỗi phải có đủ dung lượng để tiếp nhận tất cả thông tin liên quan đến thị trường theo thời gian thực với tốc độ đường truyền.
-2.  **Xác nhận nhanh và tốc độ tick nhanh:** Chuỗi phải có xác nhận nhanh và tốc độ tick nhanh hơn (thời gian slot).
-3.  **Kiểm soát thứ tự thực thi:** Chuỗi phải cho phép các ứng dụng kiểm soát thứ tự thực thi của riêng chúng để tạo điều kiện thử nghiệm các cấu trúc vi mô thị trường mới.
+1.  **Chain Capacity:** The chain must have more than enough capacity to ingest all market-relevant information in real-time at line rate.
+2.  **Fast Confirmations and Tick Rate:** The chain must have fast confirmations and an even faster tick rate (slot time).
+3.  **Execution Ordering Control:** The chain must allow applications to control their own execution ordering to facilitate experiments with new market microstructures.
 
-## Vấn đề lãnh đạo đơn lẻ và giải pháp MCL
+## The Single Leader Problem and MCL Solution
 
-Trong bất kỳ blockchain đơn lãnh đạo nào (hầu hết các chuỗi hiện đại đều là đơn lãnh đạo), một lãnh đạo duy nhất kiểm soát quyền truy cập và thứ tự giao dịch trong cửa sổ lãnh đạo của họ. Điều này có nghĩa là nếu chuỗi muốn cung cấp cho các ứng dụng quyền kiểm soát việc thực thi giao dịch của riêng chúng, nó phải có sự hợp tác của các lãnh đạo thân thiện. Trong một hệ thống phi tập trung toàn cầu, bạn không thể tin tưởng vào các lãnh đạo thân thiện sẽ hoạt động tốt với các ứng dụng tài chính trị giá hàng tỷ đô la.
+In any single-leader blockchain (almost all modern chains are single-leader), a single leader controls access and ordering of transactions during their leader window. This means that if the chain wants to give applications control over their own transaction execution, it must have the cooperation of friendly leaders. In a global permissionless system, you cannot count on friendly leaders to play nice with billion-dollar financial applications.
 
-**Nhiều lãnh đạo đồng thời (Multiple Concurrent Leaders - MCL)** là một giải pháp cho Vấn đề lãnh đạo đơn lẻ: chuỗi có thể kiểm soát thứ tự bằng cách thực thi việc sắp xếp lại ở giai đoạn phát lại, nhưng điều này không ngăn cản các trình xác thực chọn lọc bao gồm các giao dịch nhất định và kiểm duyệt những giao dịch khác để thao túng thứ tự cuối cùng vì lợi ích của riêng họ.
+**Multiple Concurrent Leaders (MCL)** is a solution to the Single Leader Problem: the chain can control ordering by enforcing reordering at the replay stage, but this doesn't prevent validators from selectively including certain transactions and censoring others to manipulate the final ordering for their own gain.
 
-Để giải quyết vấn đề kiểm duyệt chọn lọc, số lượng lãnh đạo có thể thêm giao dịch vào chuỗi trong bất kỳ cửa sổ lãnh đạo nào phải được tăng lên. Nếu một lãnh đạo kiểm duyệt một giao dịch, một lãnh đạo khác có thể bao gồm nó, do đó gây khó khăn cho bất kỳ lãnh đạo nào kiểm soát kết quả thực thi cuối cùng.
+To solve the selective censorship problem, the number of leaders who can add transactions to the chain during any given leader window must be increased. If one leader censors a transaction, another may include it, making it difficult for any one leader to control the final execution outcome.
 
-Khi các giao dịch đã được sắp xếp trong khối theo thứ tự ưu tiên, các ứng dụng tự động có nhiều quyền tự do để kiểm soát trình tự của riêng chúng bằng cách đọc phí ưu tiên và thực thi logic có điều kiện dựa trên đó. Việc triển khai ưu tiên hủy bỏ với thiết lập này rất đơn giản. Nói chung, cũng có thể chạy các cuộc đấu giá tùy ý nếu các nhà phát triển ứng dụng sáng tạo.
+Once transactions have been sorted intra-block in priority order, applications automatically have a lot of leeway to control their own sequencing by reading the priority fee and executing conditional logic based on that. It's simple to implement cancel prioritization with this setup. In general, it's also possible to run arbitrary auctions if app developers get creative.
 
-## Tương tác: Hiểu rõ hơn về Single Leader Problem
+## Interactive: Understanding the Single Leader Problem
 
-Để hiểu rõ hơn về vấn đề mà Solana đang giải quyết, hãy xem hình minh họa dưới đây:
+To better understand the problem Solana is solving, see the illustration below:
 
 ![Single Leader Problem](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/blog/single_leader_problem.png)
-*So sánh giữa Single Leader (trái) và Multiple Concurrent Leaders (phải)*
+*Comparison between Single Leader (left) and Multiple Concurrent Leaders (right)*
 
-Như bạn có thể thấy, trong mô hình Single Leader, tất cả giao dịch phải đi qua một điểm duy nhất, tạo ra tắc nghẽn. Trong khi đó, MCL cho phép nhiều leader xử lý giao dịch song song, tăng hiệu suất và giảm rủi ro kiểm duyệt.
+As you can see, in the Single Leader model, all transactions must pass through a single point, creating a bottleneck. In contrast, MCL allows multiple leaders to process transactions in parallel, increasing performance and reducing censorship risk.
 
-## Đồng bộ hóa thông tin toàn cầu
+## Global Information Synchronization
 
-Nhiều lãnh đạo đồng thời cho phép Solana tiếp nhận thông tin từ khắp nơi trên thế giới cùng lúc—nhanh hơn cơ sở hạ tầng đặt chung. Và, vì các hợp đồng thông minh là ngôn ngữ đa năng, các nhà tạo lập thị trường giờ đây có thể kết hợp thông tin thời gian thực được tạo ra ở New York và Tokyo trong chiến lược báo giá của họ bằng cách đọc cả hai luồng thông tin vào cùng một hợp đồng thông minh.
+Multiple concurrent leaders allow Solana to ingest information from around the world at the same time—faster than co-located infrastructure. And, because smart contracts are general-purpose languages, market makers can now combine real-time information generated in New York and Tokyo in their quoting strategies by reading both information streams into the same smart contract.
 
 ![MCL Architecture](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/blog/mcl_architecture.png)
-*Kiến trúc MCL cho phép đồng bộ hóa thông tin từ New York và Tokyo trong cùng một thời điểm*
+*MCL Architecture enables synchronization of information from New York and Tokyo simultaneously*
 
-Đây là một tính năng của các blockchain đa đề xuất mà không thể sao chép bởi một máy chủ duy nhất ở bất kỳ đâu trên thế giới. Nói cách khác, Solana sẽ cung cấp các công cụ cho thị trường vốn internet độc đáo cho các blockchain phi tập trung và không thể sao chép bởi các đối thủ tập trung.
+This is a feature of multiple proposer blockchains that cannot be replicated by a single server anywhere in the world. In other words, Solana will offer tools for internet capital markets that are unique to decentralized blockchains and cannot be replicated by centralized competitors.
 
-## Các đánh đổi trong cấu trúc vi mô thị trường
+## Trade-offs in Market Microstructure
 
-Có rất nhiều khía cạnh của cấu trúc vi mô thị trường, và việc cân bằng giữa chúng là rất quan trọng để tạo ra một thị trường hiệu quả và công bằng. Dưới đây là một số đánh đổi phổ biến mà các ứng dụng đang xem xét trong ngành:
+There are many aspects of market microstructure, and balancing them is crucial for creating an efficient and fair market. Here are some common trade-offs applications are considering in the industry:
 
-### Quyền riêng tư so với Tính minh bạch
+### Privacy vs. Transparency
 
-Một câu hỏi mà mọi người đặt ra về cả hai mặt của thị trường là: liệu các lệnh có nên được ẩn trước khi thực hiện hay không? Đối với các lệnh bán lẻ lớn, việc phát sóng giao dịch của bạn có thể cải thiện việc thực hiện vì nó giảm thông tin bất đối xứng giữa bạn và các nhà tạo lập thị trường. Ngược lại, tính thanh khoản ẩn có thể dẫn đến thị trường kém thanh khoản hơn vì việc ẩn lệnh bảo vệ các nhà tạo lập thị trường khỏi việc lựa chọn bất lợi do độc hại.
+A question people ask on both sides of the market is: should orders be hidden before execution? For large retail orders, broadcasting your transaction can improve execution as it reduces information asymmetry between you and market makers. Conversely, hidden liquidity can lead to less liquid markets because hiding orders protects market makers from adverse selection due to toxicity.
 
-### Tốc độ so với Giao dịch không hạn chế
+### Speed vs. Unrestricted Trading
 
-Các "gờ giảm tốc" (speedbumps) bảo vệ người nhận khỏi việc lựa chọn bất lợi, dẫn đến chênh lệch giá chặt chẽ hơn và thị trường thanh khoản hơn; tuy nhiên, các gờ giảm tốc cũng làm giảm khối lượng và khám phá giá chậm. Solana nên lưu trữ các thị trường thanh khoản nhất thế giới, không phải các thị trường có khối lượng cao nhất.
+Speedbumps protect takers from adverse selection, leading to tighter spreads and more liquid markets; however, speedbumps also reduce volume (as there are fewer toxic trades) and slow price discovery (as informed trades happen faster on non-speedbumped venues). But volume is a vanity metric. What users really care about is liquidity; that is, where users trade to get the best price. Some volume is good for creating more efficient markets, other volume—especially toxic taker volume—makes markets less liquid. When market makers consistently lose money to toxic takers, they compensate by quoting worse prices to users. If you make changes that reduce toxic taker volume, you might reduce overall volume but increase liquidity on the exchange.
 
-### Bao gồm so với Tính cuối cùng so với Độ trễ thực thi
+Solana should host the world's most liquid markets, not the highest volume markets.
 
-Thời gian bao gồm chủ yếu liên quan đến vòng đời giao dịch trước khi giao dịch đến chuỗi và thời gian slot (hiện tại 400ms); tính cuối cùng chủ yếu liên quan đến thuật toán đồng thuận. Trong khi tính cuối cùng nhanh hơn là quan trọng, thời gian bao gồm ngắn hơn là quan trọng hơn đối với tính thanh khoản vì nó xác định tốc độ các nhà tạo lập thị trường có thể cập nhật báo giá của họ.
+### Inclusion vs. Finality vs. Execution Latency
 
-### Đặt chung so với Phi tập trung hóa địa lý
+While the referenced tweet presents this design decision as a trade-off, it is not in fact. Inclusion time primarily relates to the transaction lifecycle before the transaction hits the chain and slot time (currently 400ms); finality primarily relates to the consensus algorithm.
 
-Phi tập trung hóa địa lý có những lợi thế khác ngoài việc đồng bộ hóa thông tin của thế giới nhanh nhất có thể. Nó làm cho mạng lưới kiên cường hơn trước các thảm họa tự nhiên và sự cố mất điện cục bộ. Nó cũng làm cho mạng lưới khó bị hỏng hơn bởi các thực thể thù địch.
+While faster finality is important because it reduces the need for market makers to account for complex branching logic, shorter inclusion time is more important for liquidity because it determines how quickly market makers can update their quotes. As inclusion time decreases, market makers are less exposed to "gap risk," where prices move off-chain and they are unable to cancel old quotes before they are picked off by takers.
 
-## Lộ trình ICM ngắn hạn, trung hạn và dài hạn
+Solana today offers optimistic finality on the order of ~1s. After Alpenglow (more on that below), which is expected to hit Solana mainnet in early 2026, inclusion time is expected to drop to 50-100 ms, and finality to ~150 ms.
+
+### Co-location vs. Geographic Decentralization
+
+On the surface, many believe co-location is faster, but it doesn’t necessarily get all of the world’s information on-chain as fast as possible. As a thought experiment, suppose all of the validators for a chain are located in New York. Then the Japanese government suddenly announces a loosening of trade restrictions on American cars. The geographic distance between the news event and the validator slows down information about the market’s reaction by over a hundred milliseconds before it reaches American validators. With geographic decentralization and multiple concurrent leaders (MCL), information from around the world can be ingested into the system in the same 20ms execution.
+
+By decentralizing transaction inclusion via MCL and pushing transaction inclusion to the edge, Solana can further reduce the time for information to impact price discovery, regardless of the information’s origin.
+
+Co-located systems also create extreme information asymmetry, making them parochial. Centralized trading makes extensive use of inter-exchange arbitrage, which may look like a global market, but in fact, each co-located system acts as a regional market based on time.
+
+Geographic decentralization has other advantages besides synchronizing the world’s information as fast as possible. It makes the network more resilient to natural disasters and local power outages. It also makes the network harder to break by hostile entities, and, in general, reduces round-trip time for users who can send transactions to leaders near them instead of having to send transactions to leaders on the other side of the world.
+
+### Maker vs. First Taker
+
+Spreads are determined by the zero-profit condition balancing two competing forces: revenue from uninformed traders and costs from being picked off by informed traders. On other markets, maker prioritization creates a healthier market with tighter spreads while taker prioritization increases adverse selection (widening spreads).
+
+In fact, in Solana today, the system does not explicitly prioritize one side; as a result, takers have effective prioritization on Solana because of periodic auctions in the scheduler. Other decentralized layer 1 networks are even worse because their auction times are even longer.
+
+In the solutions section, we will discuss in detail how ACE can enable individual applications to define custom rules related to maker vs. taker (e.g., speedbumps, executing cancels before taker orders, etc.).
+
+### Retail vs. Institutional
+
+Exchanges should try to attract as many uninformed traders as possible because they create the tightest spreads. To the extent that retail and institutional require different architectures, Solana’s hope is that different applications will be built to serve the needs of each, and both will thrive on Solana mainnet.
+
+### Flexible vs. Opinionated
+
+There are no zealots at Solana, only pragmatic engineers who want to build a platform that can support the world’s most liquid financial markets. If the community believed that a particular market structure was better than all the rest, the community would advocate for building that into the protocol—but they don’t.
+
+The only way to know which market structure is best at a particular time is to test them in production, gather data, iterate, and iterate. Solana is building a flexible platform to facilitate ACE because we believe that is the fastest path to converging on the best possible market structure.
+
+Solana applications will run many concurrent experiments testing all of the above trade-offs. That will lead to the best long-term equilibrium in market microstructure as fast as possible.
+
+### Hybrid vs. Fully On-Chain
+
+Solana is building for 100% on-chain markets—not a settlement layer for a centralized, off-chain exchange. There is no technical impossibility or open problem that will prevent the community from getting there. All that’s left is to build.
+
+Solana’s priority is to get as much liquidity on mainnet as possible.
+
+## ICM Roadmap: Short-term, Mid-term, and Long-term
 
 ![Roadmap Timeline](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/blog/roadmap_timeline.png)
-*Lộ trình phát triển ICM từ ngắn hạn đến dài hạn*
+*ICM Development Roadmap from Short-term to Long-term*
 
-Solana mainnet ngày nay không phải là một môi trường lý tưởng cho các Sổ lệnh giới hạn tập trung (CLOBs) vì nhiều lý do—nhưng nó sẽ sớm trở thành như vậy. Các nhóm trong toàn bộ hệ sinh thái đã và đang nỗ lực để làm cho CLOBs phát triển mạnh trên mainnet.
+Solana mainnet today is not an ideal environment for Central Limit Order Books (CLOBs) for many reasons—but it soon will be. Teams across the ecosystem have been working to make CLOBs thrive on mainnet, and several key developments are coming as early as next month, with more improvements to follow in the mid-term and long-term.
 
-### Ngắn hạn (1-3 tháng): BAM và Cải thiện hạ cánh giao dịch
+Below we will outline the short-term, mid-term, and long-term developments that ensure CLOBs thrive on Solana, and ultimately enable trading programs to compete with their centralized counterparts.
 
-#### Jito's Block Assembly Marketplace (BAM)
+### Short-term (1-3 months): Jito’s Block Assembly Marketplace (BAM) and Anza’s Transaction Landing Improvements
 
-BAM là một hệ thống xử lý giao dịch hiệu suất cao thế hệ tiếp theo, cung cấp cho các trình xác thực, nhà giao dịch và ứng dụng Solana các công cụ mới mạnh mẽ để cải thiện hiệu suất và tạo ra giá trị. BAM hoạt động thông qua một mạng lưới phi tập trung toàn cầu gồm các nhà điều hành chạy ngăn xếp phần mềm BAM bên trong Môi trường thực thi đáng tin cậy (TEEs).
+In this section, we define short-term as the next 1-3 months—e.g., projects that have been in the works for a while and are about to hit mainnet.
 
-BAM biến không gian khối Solana thành một hộp cát mở, nơi các nhà phát triển có thể xây dựng các chương trình mô-đun thêm chức năng vào xử lý giao dịch. Lần đầu tiên, các ứng dụng có thể triển khai các quy tắc tuần tự hóa tùy chỉnh, cho phép các Sổ lệnh giới hạn tập trung (CLOBs) cạnh tranh với các sàn giao dịch truyền thống.
+#### Jito’s Block Assembly Marketplace (BAM)
 
-BAM đang được triển khai vào cuối tháng 7. BAM sẽ giúp các ứng dụng Solana mainnet cảm thấy gần hơn với CEX.
+Jito’s Block Assembly Marketplace (BAM) is a next-generation high-performance transaction processing system, providing Solana validators, traders, and applications with powerful new tools to improve performance and create value.
 
-#### Cải thiện hạ cánh giao dịch của Anza
+Jito Labs began working on the Block Assembly Marketplace (BAM) in late 2024 because they recognized the need for in-slot transaction determinism. BAM is hitting testnet in the next few days.
 
-Đồng thời với BAM, Anza đang nỗ lực cải thiện độ tin cậy hạ cánh giao dịch với mục tiêu làm cho các giao dịch hạ cánh trong cùng một slot đáng tin cậy. Agave 2.3, được khuyến nghị sử dụng mainnet hiện tại, bao gồm một máy khách TPU mới sẽ giảm đáng kể độ trễ gửi giao dịch.
+In the near term, BAM provides something close to full ACE. Design partners—including Drift and Dflow—are building BAM plugins right now.
 
-### Trung hạn (3-9 tháng): DoubleZero, Alpenglow, APE
+BAM operates via a globally distributed decentralized network of operators running the BAM software stack inside Trusted Execution Environments (TEEs). Validators simply connect to BAM nodes via the new Jito-Solana client; no complex integration is required. BAM’s TEEs create a unique privacy that keeps transactions secret until execution while enabling fully transparent, verifiable serialization via open source code and TEE attestation. BAM creates cryptographic proofs of every operation, yielding the most transparent transaction processing system available.
+
+Via plugins, BAM includes a system that allows application developers to define in-slot transaction serialization rules. This effectively acts as ACE, but runs within BAM rather than directly on Solana mainnet.
+
+BAM turns the Solana blockspace into an open sandbox where developers can build modular programs that add functionality to transaction processing. For the first time, applications can implement custom serialization rules, enabling Central Limit Order Books (CLOBs) to compete with traditional exchanges. CLOB plugins can run inside BAM and rely on a combination of off-chain and on-chain logic, enabling full transparency and deterministic execution. Unlike traditional approaches that require validator forking to add custom functionality and negotiating BD deals with every validator, developers simply build their CLOB logic inside BAM via a plugin and immediately tap into Solana’s global on-chain network effects—to the entire ecosystem from day one while ensuring every transaction is cryptographically verifiable and transparently serialized.
+
+Validators earn more via better block building. Users get faster, cheaper, and more reliable trades. Professional traders gain unprecedented trust in Solana’s infrastructure because BAM’s open-source and verifiable nature will ensure fairness with no gaming or backroom deals. Everyone benefits as network effects increase, driving a virtuous cycle of innovation and value creation.
+
+BAM is rolling out in late July. You should expect significant improvements in trading as BAM rolls out. BAM will help Solana mainnet applications feel closer to CEX.
+
+#### Anza’s Transaction Landing Improvements
+
+Concurrent with BAM, Anza is working to improve transaction landing reliability with the goal of making transactions land in the same slot reliably. Agave 2.3, which is recommended for current mainnet use, includes a new TPU client that will significantly reduce transaction submission latency.
+
+A year ago, it was very difficult for transactions to make it past the ingress and scheduling phase, which was essentially random. After fixing several bugs with the QUIC implementation and introducing a unified scheduler, the Solana transaction pipeline is now in a much better place.
+
+Agave 2.3, which is recommended for current mainnet use, includes a new TPU client that will significantly reduce transaction submission latency. In addition, Anza engineers have been working with top market makers and RPC services to fix QUIC bugs and leader targeting issues that were impacting transaction landing rates. A change to Triton’s transaction landing has already been seen. Most of these changes are already live, and market makers are now observing 0 p95 slot transaction latency via the standard TPU path.
+
+### Mid-term (3-9 months): DoubleZero, Alpenglow, Asynchronous Program Execution (APE)
+
+In this section, we define mid-term as the next 3-9 months—e.g., projects that are known, in progress, and expected to hit mainnet in Q4 2025 or Q1 2026.
 
 #### DoubleZero
 
-DoubleZero (DZ) là một mạng cáp quang chuyên dụng hiệu suất cao cho các hệ thống phân tán, được xây dựng để cho phép các blockchain như Solana đạt được thông lượng và số lượng độ trễ không thể có trên internet. DoubleZero dự kiến sẽ có hiệu suất thực tế trên mainnet để cải thiện đáng kể khi mạng được áp dụng bởi cụm trình xác thực.
+DoubleZero (DZ) is a high-performance dedicated fiber optic network for distributed systems, built to enable blockchains like Solana to achieve throughput and latency numbers not possible over the internet. In addition to providing significantly reduced latency and increased bandwidth, DoubleZero also acts as a powerful filtering layer to protect the Solana network from denial-of-service disruptions, and to offload validators’ and RPCs’ excess traffic processing so they can focus on reducing execution latency and increasing blockspace, leading to increased network REV. DoubleZero will enable Solana transactions, blocks, and consensus messages to be propagated via Multicast, which is a hardware acceleration capability for packet replication, thereby further reducing traffic processing costs on the network and increasing fairness. When combined with low transmission latency and near-zero latency, this means Solana will have the high-performance backbone needed to improve protocol primitives and attract high-quality market makers and additional retail trading volume.
+
+Overall, DoubleZero is expected to have real-world performance on mainnet to significantly improve as the network is adopted by the validator cluster. Latency reductions of up to 100ms (including zero latency) along some routes, and a tenfold increase in available bandwidth for the average Solana validator.
+
+DoubleZero is on testnet today with over 100 validators and 3% of mainnet stake, and is expected to hit mainnet in mid-September 2025. Once DoubleZero mainnet launches, it will take several weeks for long-term Solana mainnet validators to adopt the DoubleZero network, at which point core contributors to Solana can begin raising protocol limits.
 
 #### Alpenglow
 
-Alpenglow là giao thức đồng thuận hiện đại, hoàn toàn mới của Solana. Mô hình đồng thuận hiện tại cung cấp tính cuối cùng trong 32 slot (~12.8s). Alpenglow sẽ hoàn thiện các khối trong 1-2 slot, hoặc khoảng ~150ms. Anza đang nhắm mục tiêu cuối năm 2025/đầu năm 2026 để kích hoạt Alpenglow trên mainnet.
+Alpenglow is Solana’s brand new, state-of-the-art consensus protocol. The current consensus model provides finality in 32 slots (~12.8s). Alpenglow will finalize blocks in 1-2 slots, or roughly ~150ms.
 
-#### Thực thi chương trình không đồng bộ (APE)
+Alpenglow represents a sweeping set of changes to consensus and block propagation designed to reduce end-to-end latency substantially. Additionally, Alpenglow is actually simpler to reason about than Solana’s current consensus model, which makes development easier and future changes like multiple concurrent leaders and async execution easier to design for and implement as well.
 
-APE loại bỏ việc phát lại thực thi khỏi đường dẫn quan trọng của việc hạ cánh giao dịch, giảm độ trễ. APE đã là một mục tiêu cho Solana trong gần 4 năm, và với những đơn giản hóa sắp tới với Alpenglow, phần lớn sự phức tạp cần thiết để triển khai APE sẽ được loại bỏ.
+Anza is targeting late 2025/early 2026 for Alpenglow activation on mainnet.
 
-### Dài hạn (2027+): MCL và ACE
+#### Asynchronous Program Execution (APE)
 
-Mục tiêu dài hạn là xây dựng thị trường thanh khoản nhất trên chuỗi bằng cách sử dụng MCL và ACE. Điều này bao gồm việc giải quyết vấn đề kiểm duyệt lãnh đạo đơn lẻ và đồng bộ hóa thông tin trên toàn cầu.
+Asynchronous Program Execution (APE) removes execution replay from the critical path of transaction landing, reducing latency.
 
-## Tương tác: Khám phá các khái niệm
+APE has been a goal for Solana for almost 4 years now, and with the simplifications coming to consensus with Alpenglow, much of the complexity required to implement APE (mostly around special treatment for the vote program) will be removed.
 
-### 🔍 Thuật ngữ quan trọng
+In the past few weeks, there have been a flurry of new SIMDs targeted towards APE. Anza expects it to be activated on mainnet shortly after Alpenglow rolls out in early to mid-2026.
 
-**Application-Controlled Execution (ACE)**: Khả năng cho phép các hợp đồng thông minh kiểm soát thứ tự thực thi giao dịch của chính chúng ở cấp độ mili giây.
+### Long-term (2027+): Multiple Concurrent Leaders (MCL) and Protocol-Enforced Application Controlled Execution (ACE)
 
-**Multiple Concurrent Leaders (MCL)**: Giải pháp cho phép nhiều leader xử lý giao dịch đồng thời, giảm tắc nghẽn và tăng tính phi tập trung.
+In this section, we define long-term plans as those aiming for 2027—e.g., projects that are currently in development by core developers at Anza and across the ecosystem.
 
-**Block Assembly Marketplace (BAM)**: Hệ thống xử lý giao dịch hiệu suất cao của Jito, cho phép các ứng dụng tùy chỉnh quy tắc sắp xếp giao dịch.
+#### MCL and ACE
 
-**Alpenglow**: Giao thức đồng thuận mới của Solana, giảm thời gian finality xuống ~150ms.
+To build the most liquid markets on-chain, we need 3 things:
 
-### 💡 Câu hỏi thường gặp
+1.  The chain must have more than enough capacity to ingest all market-relevant information in real time at line rate.
+2.  The chain must have fast confirmations and an even faster tick rate (slot time).
+3.  The chain must allow applications to control their own execution ordering in order to facilitate experiments with new market microstructures.
 
-**Q: Tại sao ICM quan trọng?**
-A: ICM tạo ra một hệ thống tài chính phi tập trung, minh bạch và hiệu quả hơn, cho phép mọi người tham gia mà không bị giới hạn bởi địa lý hay các rào cản truyền thống.
+At any time in a single-leader blockchain (almost all modern chains are single-leader), a single leader controls access and ordering of transactions during their leader window. This means that if the chain wants to give applications control over their own transaction execution, it must have the cooperation of friendly leaders. In a global permissionless system, you cannot count on friendly leaders to play nice with billion-dollar financial applications.
 
-**Q: MCL khác gì so với Single Leader?**
-A: MCL cho phép nhiều leader xử lý giao dịch đồng thời, giảm tắc nghẽn và tăng khả năng chống kiểm duyệt, trong khi Single Leader tạo ra điểm nghẽn duy nhất.
+Multiple concurrent leaders (MCL) is a solution to the Single Leader Problem: the chain can control ordering by enforcing reordering at the replay stage, but this doesn’t prevent validators from selectively including certain transactions and censoring others in order to manipulate the final ordering for their own gain.
 
-**Q: Khi nào các tính năng này sẽ có sẵn?**
-A: BAM sẽ ra mắt cuối tháng 7, Alpenglow vào cuối 2025/đầu 2026, và MCL/ACE vào năm 2027.
+To solve the selective censorship problem, the number of leaders who can add transactions to the chain during any given leader window must be increased. If one leader censors a transaction, another may include it, therefore making it difficult for any one leader to control the final execution outcome.
 
-## Kết luận: Tương lai của tài chính phi tập trung
+Once transactions have been sorted intra-block in priority order, applications automatically have a lot of leeway to control their own sequencing by reading the priority fee and executing conditional logic based on that. It’s simple to implement cancel prioritization with this setup. In general, it’s also possible to run arbitrary auctions if app developers get creative.
 
-Thị trường vốn Internet đại diện cho một bước tiến quan trọng trong việc dân chủ hóa tài chính. Với những cải tiến kỹ thuật như ACE, MCL, và các công nghệ hỗ trợ như BAM, DoubleZero, và Alpenglow, Solana đang xây dựng nền tảng cho một hệ thống tài chính thực sự toàn cầu và phi tập trung.
+## Interactive: Explore Concepts
 
-Hành trình này không chỉ là về công nghệ, mà còn về việc tạo ra một thế giới nơi mọi người đều có quyền truy cập công bằng vào các dịch vụ tài chính. Từ việc giải quyết vấn đề Single Leader đến việc đồng bộ hóa thông tin toàn cầu, mỗi bước tiến đều hướng tới mục tiêu cuối cùng: xây dựng thị trường vốn thanh khoản nhất thế giới trên blockchain.
+### 🔍 Key Terminology
 
-Khi chúng ta nhìn về tương lai, rõ ràng rằng ICM không chỉ là một khái niệm kỹ thuật, mà là một tầm nhìn về một hệ thống tài chính công bằng, minh bạch và hiệu quả hơn cho tất cả mọi người.
+**Application-Controlled Execution (ACE)**: The ability for smart contracts to control their own transaction execution order at millisecond-level.
+
+**Multiple Concurrent Leaders (MCL)**: A solution that allows multiple leaders to process transactions simultaneously, reducing bottlenecks and increasing decentralization.
+
+**Block Assembly Marketplace (BAM)**: Jito’s high-performance transaction processing system, enabling applications to customize transaction ordering rules.
+
+**Alpenglow**: Solana’s new consensus protocol, reducing finality time to ~150ms.
+
+### 💡 Frequently Asked Questions
+
+**Q: Why is ICM important?**
+A: ICM creates a more decentralized, transparent, and efficient financial system, allowing everyone to participate without geographical limitations or traditional barriers.
+
+**Q: How is MCL different from Single Leader?**
+A: MCL allows multiple leaders to process transactions simultaneously, reducing bottlenecks and increasing censorship resistance, whereas Single Leader creates a single point of congestion.
+
+**Q: When will these features be available?**
+A: BAM is launching in late July, Alpenglow in late 2025/early 2026, and MCL/ACE in 2027.
+
+## Conclusion: The Future of Decentralized Finance
+
+Internet Capital Markets represent a significant step forward in democratizing finance. With technical advancements like ACE, MCL, and supporting technologies such as BAM, DoubleZero, and Alpenglow, Solana is building the foundation for a truly global and decentralized financial system.
+
+This journey is not just about technology; it’s about creating a world where everyone has fair access to financial services. From solving the Single Leader Problem to synchronizing global information, every step aims towards the ultimate goal: building the world’s most liquid capital markets on the blockchain.
+
+As we look to the future, it’s clear that ICM is not just a technical concept, but a vision for a more equitable, transparent, and efficient financial system for all.
 
 ---
 
-*Bài viết này dựa trên nghiên cứu từ [The Internet Capital Markets Roadmap](https://www.anza.xyz/blog/the-internet-capital-markets-roadmap) của Anza. Để cập nhật thông tin mới nhất về ICM và Solana, hãy theo dõi các kênh chính thức của dự án.*
+*This article is based on research from [The Internet Capital Markets Roadmap](https://www.anza.xyz/blog/the-internet-capital-markets-roadmap) by Anza. For the latest updates on ICM and Solana, follow the project’s official channels.*
 
-**Tác giả:** Manus AI  
-**Ngày xuất bản:** 26 tháng 8, 2025  
+**Author:** Manus AI  
+**Publication Date:** August 26, 2025  
 **Tags:** #InternetCapitalMarkets #Solana #Blockchain #DeFi #ACE #MCL
-
-
-
 
 ---
 
