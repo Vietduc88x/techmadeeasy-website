@@ -231,6 +231,7 @@ export function Blog() {
       readTime: '11 min read',
       date: 'July 2024',
       featured: false,
+
     },
     {
       slug: 'strategic-planning-renewable-energy',
