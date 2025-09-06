@@ -158,6 +158,13 @@ export function BlogPost() {
       date: 'July 2024',
       author: 'Duc Hoang',
     },
+    'strategic-planning-renewable-energy': {
+      title: 'Strategic Planning for Large-Scale Renewable Energy Projects: Your Complete Playbook',
+      category: 'Renewable Energy',
+      readTime: '25 min read',
+      date: 'December 2024',
+      author: 'Renewable Energy Strategy Team',
+    },
   };
 
   const post = blogPosts[slug];

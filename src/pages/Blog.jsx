@@ -232,6 +232,15 @@ export function Blog() {
       date: 'July 2024',
       featured: false,
     },
+    {
+      slug: 'strategic-planning-renewable-energy',
+      title: 'Strategic Planning for Large-Scale Renewable Energy Projects: Your Complete Playbook',
+      excerpt: 'A comprehensive guide to strategic planning for large-scale renewable energy projects, covering analysis, strategy formulation, and execution phases with practical frameworks and real-world insights.',
+      category: 'Renewable Energy',
+      readTime: '25 min read',
+      date: 'December 2024',
+      featured: false,
+    }
   ];
 
   const categories = ['All', 'Philosophy', 'Investment', 'Personal Development', 'Renewable Energy', 'Technology', 'Web 3.0', 'Career', 'Engineering', 'Education'];
@@ -347,27 +356,10 @@ export function Blog() {
               ))}
             </div>
           </div>
-
-          {/* Newsletter Signup */}
-          <div className="mt-16 bg-muted/30 rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-bold text-foreground mb-4">Stay Updated!</h2>
-            <p className="text-muted-foreground mb-6">
-              Subscribe to our newsletter to get the latest articles and insights delivered straight to your inbox.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-4 max-w-sm mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-              <Button type="submit">Subscribe</Button>
-            </form>
-          </div>
         </div>
       </section>
-
-      {/* Footer is already handled by App.jsx */}
     </div>
   );
 }
+
 
