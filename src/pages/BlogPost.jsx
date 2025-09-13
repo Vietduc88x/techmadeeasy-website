@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import OffshoreWindGuide from '@/components/OffshoreWindGuide';
 import OffshoreWindFarmApp from '@/pages/offshore-wind-farm/App.jsx';
+import BachDangBattleApp from '@/pages/bach-dang-battle/App.jsx';
 
 export function BlogPost() {
   const { slug } = useParams();
@@ -12,6 +13,13 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'bach-dang-battle': {
+      title: 'Battle of Bach Dang: Vietnam\'s Resounding Victory',
+      category: 'History',
+      readTime: '18 min read',
+      date: 'September 2025',
+      author: 'Duc Hoang',
+    },
     'interactive-offshore-wind-farm': {
       title: 'Interactive Offshore Wind Farm',
       category: 'Renewable Energy',
@@ -347,6 +355,29 @@ export function BlogPost() {
                   </p>
                   <div className="w-full">
                     <OffshoreWindFarmApp />
+                  </div>
+                </div>
+              </div>
+            ) : slug === 'bach-dang-battle' ? (
+              <div className="space-y-8">
+                <article className="prose prose-lg max-w-none">
+                  {loading ? (
+                    <div className="text-center py-8">
+                      <p className="text-muted-foreground">Loading content...</p>
+                    </div>
+                  ) : (
+                    <div className="space-y-4">
+                      {formatContent(content)}
+                    </div>
+                  )}
+                </article>
+                <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 rounded-xl p-4 border">
+                  <h3 className="text-2xl font-bold text-center mb-4">⚔️ Interactive Battle of Bach Dang</h3>
+                  <p className="text-center text-muted-foreground mb-6">
+                    Experience the legendary battle through our interactive timeline. Watch Tran Hung Dao's brilliant strategy unfold!
+                  </p>
+                  <div className="w-full">
+                    <BachDangBattleApp />
                   </div>
                 </div>
               </div>
