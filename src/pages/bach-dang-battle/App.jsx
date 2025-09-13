@@ -1,11 +1,11 @@
 import React from 'react';
-import EnhancedInteractiveMap from './EnhancedInteractiveMap';
-import './EnhancedInteractiveMap.css';
+import RealisticBattleMap from './RealisticBattleMap';
+import './RealisticBattleMap.css';
 
 const BachDangBattleApp = () => {
   return (
     <div className="bach-dang-battle-app">
-      <EnhancedInteractiveMap />
+      <RealisticBattleMap />
     </div>
   );
 };
