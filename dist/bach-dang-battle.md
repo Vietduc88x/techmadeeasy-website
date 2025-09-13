@@ -1,6 +1,6 @@
 # Battle of Bach Dang: The Strategic Masterpiece That Redefined Warfare
 
-## 🎯 When 3,000 Hidden Stakes Shattered an Empire and Birthed Timeless Lessons in Strategic Excellence
+## 🎯 When 3,000 Hidden Stakes Shattered an Empire and Birthed Timeless Lessons in Strategic Excellence!
 
 *April 9, 1288 - The day a Vietnamese prince demonstrated that true power lies not in what you possess, but in how masterfully you orchestrate what others cannot see*
 
