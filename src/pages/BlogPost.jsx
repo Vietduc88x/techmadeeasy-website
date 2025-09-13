@@ -13,6 +13,13 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'sovereign-individual-digital-freedom': {
+      title: 'The Sovereign Individual: The Rise of Digital Freedom in the Information Age',
+      category: 'Technology',
+      readTime: '15 min read',
+      date: 'September 2025',
+      author: 'Duc Hoang',
+    },
     'strategic-masterpiece-redefined-warfare': {
       title: 'The Strategic Masterpiece That Redefined Warfare',
       category: 'History',

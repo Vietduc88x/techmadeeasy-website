@@ -8,6 +8,15 @@ import { Badge } from '@/components/ui/badge';
 export function Blog() {
   const blogPosts = [
     {
+      slug: 'sovereign-individual-digital-freedom',
+      title: 'The Sovereign Individual: The Rise of Digital Freedom in the Information Age',
+      excerpt: 'How technology is rewriting the rules of power, wealth, and individual liberty. Discover the transformation from nation-states to digital sovereignty and learn practical strategies for thriving in the Information Age.',
+      category: 'Technology',
+      readTime: '15 min read',
+      date: 'September 2025',
+      featured: true,
+    },
+    {
       slug: 'strategic-masterpiece-redefined-warfare',
       title: 'The Strategic Masterpiece That Redefined Warfare',
       excerpt: 'How one Vietnamese prince rewrote the rules of military strategy forever. Discover the revolutionary thinking behind the Battle of Bach Dang and its profound applications for modern business, leadership, and personal development.',
