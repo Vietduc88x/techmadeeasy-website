@@ -1,4 +1,4 @@
-# Battle of Bach Dang: The Strategic Masterpiece That Redefined Warfare
+# Battle of Bach Dang: The Strategic Masterpiece That Redefined Warfare.
 
 ## 🎯 When 3,000 Hidden Stakes Shattered an Empire and Birthed Timeless Lessons in Strategic Excellence
 
