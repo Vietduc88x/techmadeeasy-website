@@ -6,16 +6,6 @@
 
 ---
 
-## 🎮 Interactive Historical Experience
-
-**Explore the Battle That Changed History**
-
-[Enhanced Interactive Battle Map will be embedded here]
-
-*Experience the strategic genius of Tran Hung Dao through our interactive recreation. Click through the 5 battle phases to understand how environmental mastery, strategic deception, and perfect timing created one of history's most brilliant victories.*
-
----
-
 ## 🌊 The Stage is Set: David vs. Goliath on Water
 
 Picture this: The year is 1288. The Mongol Empire, having conquered from Eastern Europe to the Pacific, sets its hungry eyes on the last unconquered jewel of Southeast Asia - Vietnam. 
