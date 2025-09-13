@@ -18,6 +18,7 @@ export function BlogPost() {
       category: 'History',
       readTime: '18 min read',
       date: 'September 2025',
+      author: 'Duc Hoang',
     },
     'interactive-offshore-wind-farm': {
       title: 'Interactive Offshore Wind Farm',
