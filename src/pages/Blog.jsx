@@ -8,6 +8,15 @@ import { Badge } from '@/components/ui/badge';
 export function Blog() {
   const blogPosts = [
     {
+      slug: 'strategic-masterpiece-redefined-warfare',
+      title: 'The Strategic Masterpiece That Redefined Warfare',
+      excerpt: 'How one Vietnamese prince rewrote the rules of military strategy forever. Discover the revolutionary thinking behind the Battle of Bach Dang and its profound applications for modern business, leadership, and personal development.',
+      category: 'History',
+      readTime: '25 min read',
+      date: 'September 2025',
+      featured: true,
+    },
+    {
       slug: 'bach-dang-battle',
       title: 'Battle of Bach Dang: Vietnam\'s Resounding Victory',
       excerpt: 'Experience the legendary Battle of Bach Dang through an interactive timeline. Discover how Tran Hung Dao\'s brilliant strategy with 3,000 hidden stakes led to one of history\'s most ingenious military victories against the Mongol invasion in 1288.',
