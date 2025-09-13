@@ -4,6 +4,7 @@ import { Calendar, Clock, ArrowLeft, Share2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import OffshoreWindGuide from '@/components/OffshoreWindGuide';
+import OffshoreWindFarmApp from '@/pages/offshore-wind-farm/App.jsx';
 
 export function BlogPost() {
   const { slug } = useParams();
@@ -339,17 +340,13 @@ export function BlogPost() {
                     </div>
                   )}
                 </article>
-                <div className="bg-gradient-to-br from-blue-50 to-green-50 dark:from-blue-950/20 dark:to-green-950/20 rounded-xl p-8 border">
-                  <h3 className="text-2xl font-bold text-center mb-4">🌊 Interactive Application</h3>
+                <div className="bg-gradient-to-br from-blue-50 to-green-50 dark:from-blue-950/20 dark:to-green-950/20 rounded-xl p-4 border">
+                  <h3 className="text-2xl font-bold text-center mb-4">🌊 Interactive Offshore Wind Farm</h3>
                   <p className="text-center text-muted-foreground mb-6">
-                    Experience the complete offshore wind farm system through our interactive visualization
+                    Explore the complete offshore wind farm system below. Click on any component to learn more!
                   </p>
-                  <div className="text-center">
-                    <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">
-                      <a href="/offshore-wind-farm.html" target="_blank" rel="noopener noreferrer">
-                        🚀 Launch Interactive App
-                      </a>
-                    </Button>
+                  <div className="w-full">
+                    <OffshoreWindFarmApp />
                   </div>
                 </div>
               </div>
