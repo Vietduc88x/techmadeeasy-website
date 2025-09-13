@@ -13,6 +13,13 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'strategic-masterpiece-redefined-warfare': {
+      title: 'The Strategic Masterpiece That Redefined Warfare',
+      category: 'History',
+      readTime: '25 min read',
+      date: 'September 2025',
+      author: 'Duc Hoang',
+    },
     'bach-dang-battle': {
       title: 'Battle of Bach Dang: Vietnam\'s Resounding Victory',
       category: 'History',
