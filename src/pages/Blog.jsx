@@ -8,6 +8,15 @@ import { Badge } from '@/components/ui/badge';
 export function Blog() {
   const blogPosts = [
     {
+      slug: 'ca-nhan-chu-quyen-tu-do-so',
+      title: 'Cá Nhân Chủ Quyền: Sự Trỗi Dậy của Tự Do Số trong Kỷ Nguyên Thông Tin',
+      excerpt: 'Công nghệ đang viết lại luật chơi của quyền lực, tài sản và tự do cá nhân. Khám phá cuộc chuyển đổi từ quốc gia-dân tộc sang chủ quyền số và học các chiến lược thực tế để thịnh vượng trong Kỷ Nguyên Thông Tin.',
+      category: 'Công Nghệ',
+      readTime: '15 phút đọc',
+      date: 'Tháng 9 2025',
+      featured: true,
+    },
+    {
       slug: 'sovereign-individual-digital-freedom',
       title: 'The Sovereign Individual: The Rise of Digital Freedom in the Information Age',
       excerpt: 'How technology is rewriting the rules of power, wealth, and individual liberty. Discover the transformation from nation-states to digital sovereignty and learn practical strategies for thriving in the Information Age.',

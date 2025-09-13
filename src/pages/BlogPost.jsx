@@ -13,6 +13,13 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'ca-nhan-chu-quyen-tu-do-so': {
+      title: 'Cá Nhân Chủ Quyền: Sự Trỗi Dậy của Tự Do Số trong Kỷ Nguyên Thông Tin',
+      category: 'Công Nghệ',
+      readTime: '15 phút đọc',
+      date: 'Tháng 9 2025',
+      author: 'Duc Hoang',
+    },
     'sovereign-individual-digital-freedom': {
       title: 'The Sovereign Individual: The Rise of Digital Freedom in the Information Age',
       category: 'Technology',
