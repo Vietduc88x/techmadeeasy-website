@@ -1,11 +1,11 @@
 import React from 'react';
-import RealisticBattleMap from './RealisticBattleMap';
-import './RealisticBattleMap.css';
+import HistoricallyAccurateBattleMap from './HistoricallyAccurateBattleMap';
+import './HistoricallyAccurateBattleMap.css';
 
 const BachDangBattleApp = () => {
   return (
     <div className="bach-dang-battle-app">
-      <RealisticBattleMap />
+      <HistoricallyAccurateBattleMap />
     </div>
   );
 };

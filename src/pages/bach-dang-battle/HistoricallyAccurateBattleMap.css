@@ -1,0 +1,640 @@
+.historically-accurate-battle-map {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.battle-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.battle-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #1e40af, #dc2626);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.battle-header p {
+  font-size: 1.1rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.battle-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .battle-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.battle-map-container {
+  position: relative;
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.historical-battle-svg {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #87ceeb 0%, #4682b4 100%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.historical-battle-svg:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* River and landscape elements */
+.bach-dang-river {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: all 0.5s ease;
+}
+
+.river-bank {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.island {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+.island:hover {
+  transform: scale(1.1);
+}
+
+.tree-group {
+  animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(1deg); }
+}
+
+/* Stakes formation */
+.stakes-formation {
+  cursor: pointer;
+}
+
+.stake-group:hover .stake {
+  stroke: #dc2626;
+  stroke-width: 0.8;
+}
+
+.stake-group:hover .stake-tip {
+  fill: #ef4444;
+  transform: scale(1.2);
+}
+
+.animate-stake {
+  animation: stakeAppear 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(5px);
+}
+
+@keyframes stakeAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.splash-effect {
+  animation: splash 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes splash {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+
+/* Fleet formations */
+.mongol-fleet-formation,
+.vietnamese-fleet-formation {
+  cursor: pointer;
+}
+
+.mongol-war-ship,
+.vietnamese-river-ship {
+  transition: all 0.3s ease;
+}
+
+.mongol-war-ship:hover,
+.vietnamese-river-ship:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
+.ship-moving {
+  animation: shipBob 2s ease-in-out infinite;
+}
+
+@keyframes shipBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-0.5px); }
+}
+
+.ship-trapped {
+  animation: shipSink 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 5px #ff4444);
+}
+
+@keyframes shipSink {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(0.5px) rotate(-1deg); }
+  75% { transform: translateY(0.5px) rotate(1deg); }
+}
+
+.ship-sail {
+  animation: sailFlutter 1.5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes sailFlutter {
+  0%, 100% { transform: skewX(0deg); }
+  50% { transform: skewX(2deg); }
+}
+
+.wake-effect {
+  animation: wakeFlow 2s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes wakeFlow {
+  0% { opacity: 0.6; stroke-dasharray: 0 10; }
+  50% { opacity: 0.3; stroke-dasharray: 5 5; }
+  100% { opacity: 0.6; stroke-dasharray: 10 0; }
+}
+
+.damage-effect {
+  animation: damageFlicker 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes damageFlicker {
+  0% { opacity: 0.7; }
+  100% { opacity: 0.3; }
+}
+
+.crack-effect {
+  animation: crackGrow 1s ease-out forwards;
+  stroke-dasharray: 0 10;
+}
+
+@keyframes crackGrow {
+  0% { stroke-dasharray: 0 10; }
+  100% { stroke-dasharray: 10 0; }
+}
+
+/* Commanders section */
+.commanders-section {
+  cursor: pointer;
+}
+
+.commanders-section:hover rect {
+  fill: rgba(255, 255, 255, 1);
+  transform: scale(1.05);
+}
+
+/* Interactive hotspots */
+.hotspot {
+  cursor: pointer;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.hotspot:hover {
+  fill: rgba(59, 130, 246, 0.9);
+  stroke: #1e40af;
+  stroke-width: 3;
+}
+
+/* Tide indicator */
+.tide-indicator {
+  animation: tidePulse 3s ease-in-out infinite;
+}
+
+@keyframes tidePulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.tide-level-bar {
+  transition: width 1s ease-in-out;
+}
+
+/* Battle legend */
+.battle-legend {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.battle-legend h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  margin-right: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.legend-color.mongol { background: #8b0000; }
+.legend-color.vietnamese { background: #228b22; }
+.legend-color.stakes { background: #8b4513; }
+.legend-color.river { background: #2563eb; }
+.legend-color.islands { background: #d2b48c; }
+
+/* Battle info panel */
+.battle-info {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  height: fit-content;
+}
+
+.phase-info h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 8px;
+}
+
+.phase-info h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #7c3aed;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.phase-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+.battle-stats {
+  border-top: 2px solid #e5e7eb;
+  padding-top: 20px;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: rgba(59, 130, 246, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+.stat-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  font-weight: 700;
+  color: #1e40af;
+  font-size: 0.9rem;
+}
+
+.stat-value.tide-high {
+  color: #2563eb;
+}
+
+.stat-value.tide-low {
+  color: #dc2626;
+}
+
+.stat-value.visible {
+  color: #dc2626;
+}
+
+.stat-value.hidden {
+  color: #6b7280;
+}
+
+/* Battle controls */
+.battle-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  flex-wrap: wrap;
+}
+
+.play-button {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.play-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+.play-button.playing {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.sound-button {
+  background: rgba(107, 114, 128, 0.1);
+  border: 2px solid #6b7280;
+  color: #6b7280;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sound-button:hover {
+  background: rgba(107, 114, 128, 0.2);
+  transform: scale(1.1);
+}
+
+.sound-button.enabled {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: #22c55e;
+  color: #22c55e;
+}
+
+.phase-selector {
+  display: flex;
+  gap: 8px;
+}
+
+.phase-button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #d1d5db;
+  background: white;
+  color: #6b7280;
+  border-radius: 50%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phase-button:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+  transform: scale(1.1);
+}
+
+.phase-button.active {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  border-color: #1e40af;
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.progress-bar {
+  flex: 1;
+  min-width: 200px;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3b82f6, #1e40af);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Detail modal */
+.detail-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: modalAppear 0.3s ease-out;
+}
+
+@keyframes modalAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #dc2626;
+}
+
+.modal-content h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 15px;
+  padding-right: 40px;
+}
+
+.modal-content .description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #374151;
+  margin-bottom: 20px;
+}
+
+.details-section,
+.strategic-lesson {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.05);
+  border-left: 4px solid #3b82f6;
+}
+
+.details-section h4,
+.strategic-lesson h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+
+.details-section p,
+.strategic-lesson p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.strategic-lesson {
+  background: rgba(124, 58, 237, 0.05);
+  border-left-color: #7c3aed;
+}
+
+.strategic-lesson h4 {
+  color: #7c3aed;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .historically-accurate-battle-map {
+    padding: 15px;
+  }
+  
+  .battle-header h2 {
+    font-size: 2rem;
+  }
+  
+  .battle-controls {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .phase-selector {
+    order: -1;
+  }
+  
+  .progress-bar {
+    order: 1;
+    min-width: 100%;
+  }
+  
+  .modal-content {
+    padding: 20px;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .battle-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .battle-info {
+    padding: 20px;
+  }
+  
+  .phase-info h3 {
+    font-size: 1.3rem;
+  }
+  
+  .phase-info h4 {
+    font-size: 1rem;
+  }
+}
+
