@@ -37,6 +37,10 @@ Like a master project manager who doesn't compete on resources but on innovation
 
 ## 🏛️ The Four Pillars of Strategic Mastery
 
+![Four Pillars of Strategic Mastery](/four_pillars_diagram.png)
+
+*Visual framework showing how Tran Hung Dao's strategic principles apply to modern project management*
+
 ### 1. 🗺️ Environmental Intelligence
 **"Know Your Battlefield Better Than Your Enemy"**
 
@@ -210,6 +214,10 @@ Study Environment → Map Patterns → Identify Advantages → Create Weapons fr
 ## 🎯 Modern Applications: From Ancient Waters to Modern Boardrooms
 
 ### 📋 For Project Managers: The Tran Hung Dao Method
+
+![The Tran Hung Dao Framework](/tran_hung_dao_framework.png)
+
+*Complete strategic framework for modern project managers based on Bach Dang principles*
 
 **Phase 1: Environmental Mastery**
 - Map your organizational "tides" - budget cycles, decision rhythms, stakeholder attention patterns
