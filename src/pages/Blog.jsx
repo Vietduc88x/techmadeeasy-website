@@ -17,15 +17,6 @@ export function Blog() {
       featured: true,
     },
     {
-      slug: 'bach-dang-battle',
-      title: 'Battle of Bach Dang: Vietnam\'s Resounding Victory',
-      excerpt: 'Experience the legendary Battle of Bach Dang through an interactive timeline. Discover how Tran Hung Dao\'s brilliant strategy with 3,000 hidden stakes led to one of history\'s most ingenious military victories against the Mongol invasion in 1288.',
-      category: 'History',
-      readTime: '18 min read',
-      date: 'September 2025',
-      featured: true,
-    },
-    {
       slug: 'interactive-offshore-wind-farm',
       title: 'Interactive Offshore Wind Farm',
       excerpt: 'Explore the complete offshore wind farm ecosystem through an interactive visualization. From floating turbines in deep waters to grid connections on shore, discover how these engineering marvels harness ocean winds to generate clean electricity.',

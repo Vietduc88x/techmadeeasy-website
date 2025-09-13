@@ -20,13 +20,6 @@ export function BlogPost() {
       date: 'September 2025',
       author: 'Duc Hoang',
     },
-    'bach-dang-battle': {
-      title: 'Battle of Bach Dang: Vietnam\'s Resounding Victory',
-      category: 'History',
-      readTime: '18 min read',
-      date: 'September 2025',
-      author: 'Duc Hoang',
-    },
     'interactive-offshore-wind-farm': {
       title: 'Interactive Offshore Wind Farm',
       category: 'Renewable Energy',
@@ -365,7 +358,7 @@ export function BlogPost() {
                   </div>
                 </div>
               </div>
-            ) : slug === 'bach-dang-battle' || slug === 'strategic-masterpiece-redefined-warfare' ? (
+            ) : slug === 'strategic-masterpiece-redefined-warfare' ? (
               <div className="space-y-8">
                 <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 rounded-xl p-4 border">
                   <h3 className="text-2xl font-bold text-center mb-4">⚔️ Interactive Battle of Bach Dang</h3>
