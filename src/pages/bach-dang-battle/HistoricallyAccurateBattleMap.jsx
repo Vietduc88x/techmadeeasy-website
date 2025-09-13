@@ -220,7 +220,6 @@ const HistoricallyAccurateBattleMap = () => {
     <div className="historically-accurate-battle-map">
       <div className="battle-header">
         <h2>⚔️ Battle of Bach Dang 1288 - Historically Accurate Recreation</h2>
-        <p>Based on historical records and visual documentation from "Dòng Chảy Sử Việt"</p>
       </div>
 
       <div className="battle-container">
