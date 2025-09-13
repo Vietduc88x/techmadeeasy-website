@@ -12,7 +12,7 @@ export function Blog() {
       title: 'The Strategic Masterpiece That Redefined Warfare',
       excerpt: 'How one Vietnamese prince rewrote the rules of military strategy forever. Discover the revolutionary thinking behind the Battle of Bach Dang and its profound applications for modern business, leadership, and personal development.',
       category: 'History',
-      readTime: '25 min read',
+      readTime: '15 min read',
       date: 'September 2025',
       featured: true,
     },

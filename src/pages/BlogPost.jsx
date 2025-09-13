@@ -16,7 +16,7 @@ export function BlogPost() {
     'strategic-masterpiece-redefined-warfare': {
       title: 'The Strategic Masterpiece That Redefined Warfare',
       category: 'History',
-      readTime: '25 min read',
+      readTime: '15 min read',
       date: 'September 2025',
       author: 'Duc Hoang',
     },
