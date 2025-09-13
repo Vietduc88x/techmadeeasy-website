@@ -8,6 +8,15 @@ import { Badge } from '@/components/ui/badge';
 export function Blog() {
   const blogPosts = [
     {
+      slug: 'interactive-offshore-wind-farm',
+      title: 'Interactive Offshore Wind Farm',
+      excerpt: 'Explore the complete offshore wind farm ecosystem through an interactive visualization. From floating turbines in deep waters to grid connections on shore, discover how these engineering marvels harness ocean winds to generate clean electricity.',
+      category: 'Renewable Energy',
+      readTime: '12 min read',
+      date: 'September 2025',
+      featured: true,
+    },
+    {
       slug: 'fim-implementation-roadmap',
       title: 'FIM Implementation Roadmap: Your Path to Procurement Excellence',
       excerpt: 'A detailed and interactive guide to integrating Free Issue Material (FIM) strategy for optimal procurement in renewable energy projects, covering workshops, procurement structure, team organization, and business case.',

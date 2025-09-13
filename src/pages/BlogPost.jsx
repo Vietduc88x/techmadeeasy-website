@@ -11,6 +11,13 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'interactive-offshore-wind-farm': {
+      title: 'Interactive Offshore Wind Farm',
+      category: 'Renewable Energy',
+      readTime: '12 min read',
+      date: 'September 2025',
+      author: 'Duc Hoang',
+    },
     'complete-guide-offshore-wind-farm-development': {
       title: 'Complete Guide to Offshore Wind Farm Development: From Planning to Operation',
       category: 'Renewable Energy',
@@ -319,6 +326,33 @@ export function BlogPost() {
           <div className="max-w-4xl mx-auto">
             {slug === 'complete-guide-offshore-wind-farm-development' ? (
               <OffshoreWindGuide />
+            ) : slug === 'interactive-offshore-wind-farm' ? (
+              <div className="space-y-8">
+                <article className="prose prose-lg max-w-none">
+                  {loading ? (
+                    <div className="text-center py-8">
+                      <p className="text-muted-foreground">Loading content...</p>
+                    </div>
+                  ) : (
+                    <div className="space-y-4">
+                      {formatContent(content)}
+                    </div>
+                  )}
+                </article>
+                <div className="bg-gradient-to-br from-blue-50 to-green-50 dark:from-blue-950/20 dark:to-green-950/20 rounded-xl p-8 border">
+                  <h3 className="text-2xl font-bold text-center mb-4">🌊 Interactive Application</h3>
+                  <p className="text-center text-muted-foreground mb-6">
+                    Experience the complete offshore wind farm system through our interactive visualization
+                  </p>
+                  <div className="text-center">
+                    <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700">
+                      <a href="/offshore-wind-farm.html" target="_blank" rel="noopener noreferrer">
+                        🚀 Launch Interactive App
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
             ) : (
               <article className="prose prose-lg max-w-none">
                 {loading ? (
