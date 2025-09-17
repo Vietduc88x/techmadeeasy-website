@@ -1,20 +1,28 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Clock, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Search, Filter, Grid, List } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
 
 export function Blog() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'list'
+  const [sortBy, setSortBy] = useState('date'); // 'date', 'readTime', 'title'
+
   const blogPosts = [
     {
       slug: 'ca-nhan-chu-quyen-tu-do-so',
       title: 'Cá Nhân Chủ Quyền: Sự Trỗi Dậy của Tự Do Số trong Kỷ Nguyên Thông Tin',
       excerpt: 'Công nghệ đang viết lại luật chơi của quyền lực, tài sản và tự do cá nhân. Khám phá cuộc chuyển đổi từ quốc gia-dân tộc sang chủ quyền số và học các chiến lược thực tế để thịnh vượng trong Kỷ Nguyên Thông Tin.',
-      category: 'Công Nghệ',
+      category: 'Technology',
       readTime: '15 phút đọc',
-      date: 'Tháng 9 2025',
+      date: 'September 2025',
+      dateSort: '2025-09',
       featured: true,
+      tags: ['blockchain', 'cryptocurrency', 'digital sovereignty', 'future'],
     },
     {
       slug: 'sovereign-individual-digital-freedom',
@@ -23,16 +31,20 @@ export function Blog() {
       category: 'Technology',
       readTime: '15 min read',
       date: 'September 2025',
+      dateSort: '2025-09',
       featured: true,
+      tags: ['blockchain', 'cryptocurrency', 'digital sovereignty', 'future'],
     },
     {
       slug: 'strategic-masterpiece-redefined-warfare',
       title: 'The Strategic Masterpiece That Redefined Warfare',
       excerpt: 'How one Vietnamese prince rewrote the rules of military strategy forever. Discover the revolutionary thinking behind the Battle of Bach Dang and its profound applications for modern business, leadership, and personal development.',
-      category: 'History',
+      category: 'Philosophy',
       readTime: '15 min read',
       date: 'September 2025',
+      dateSort: '2025-09',
       featured: true,
+      tags: ['strategy', 'leadership', 'history', 'business'],
     },
     {
       slug: 'interactive-offshore-wind-farm',
@@ -41,16 +53,20 @@ export function Blog() {
       category: 'Renewable Energy',
       readTime: '12 min read',
       date: 'September 2025',
+      dateSort: '2025-09',
       featured: true,
+      tags: ['wind energy', 'offshore', 'renewable', 'interactive'],
     },
     {
       slug: 'fim-implementation-roadmap',
       title: 'FIM Implementation Roadmap: Your Path to Procurement Excellence',
       excerpt: 'A detailed and interactive guide to integrating Free Issue Material (FIM) strategy for optimal procurement in renewable energy projects, covering workshops, procurement structure, team organization, and business case.',
-      category: 'Procurement',
+      category: 'Engineering',
       readTime: '25 min read',
       date: 'August 2025',
+      dateSort: '2025-08',
       featured: true,
+      tags: ['procurement', 'FIM', 'project management', 'renewable energy'],
     },
     {
       slug: 'renewable-energy-costs-2024',
@@ -59,25 +75,9 @@ export function Blog() {
       category: 'Renewable Energy',
       readTime: '15 min read',
       date: 'December 2024',
+      dateSort: '2024-12',
       featured: true,
-    },
-    {
-      slug: 'bop-package-strategy',
-      title: 'Easiest FIM and BOP Package Strategy of Solar Project',
-      excerpt: 'Balance of Plant (BOP) management is where average PMs fail and experts excel. Managing 50+ interfaces between equipment suppliers and BOP contractors creates chaos. This article explores the solution: Strategic BOP Package Design, leading to significant cost reduction, fewer interface issues, on-time delivery, and better performance guarantees.',
-      category: 'Renewable Energy',
-      readTime: '15 min read',
-      date: 'August 2025',
-      featured: true,
-    },
-    {
-      slug: 'fim-revolution',
-      title: 'The Free Issue Material (FIM) Revolution for Renewable Energy Projects',
-      excerpt: 'Discover how the Free-Issue Material (FIM) approach can transform your renewable energy projects, leading to significant cost reductions, faster delivery, and improved quality control. This flagship article explores real-world case studies and provides an implementation roadmap.',
-      category: 'Renewable Energy',
-      readTime: '18 min read',
-      date: 'August 2025',
-      featured: true,
+      tags: ['solar', 'costs', 'IRENA', 'analysis'],
     },
     {
       slug: 'the-power-of-compounding',
@@ -86,16 +86,9 @@ export function Blog() {
       category: 'Personal Development',
       readTime: '15 min read',
       date: 'August 2025',
+      dateSort: '2025-08',
       featured: true,
-    },
-    {
-      slug: 'complete-guide-offshore-wind-farm-development',
-      title: 'Complete Guide to Offshore Wind Farm Development: From Planning to Operation',
-      excerpt: 'A comprehensive guide covering the entire lifecycle of offshore wind farm development, from initial planning and feasibility assessment to construction, operation, and maintenance. Essential reading for project managers and industry professionals.',
-      category: 'Renewable Energy',
-      readTime: '25 min read',
-      date: 'August 2024',
-      featured: true,
+      tags: ['compounding', 'growth', 'finance', 'personal development'],
     },
     {
       slug: 'ai-applications-renewable-energy-transformation',
@@ -104,25 +97,9 @@ export function Blog() {
       category: 'Technology',
       readTime: '20 min read',
       date: 'August 2024',
+      dateSort: '2024-08',
       featured: true,
-    },
-    {
-      slug: 'renewable-energy-workshop-01',
-      title: 'Renewable Energy Workshop 01',
-      excerpt: 'This post introduces the key insights from our first Renewable Energy Workshop. It covers fundamental concepts and recent advancements in the field, providing a solid foundation for understanding sustainable energy solutions. Explore the attached PDF for comprehensive details and in-depth analysis of the topics discussed, offering valuable perspectives on the future of energy.',
-      category: 'Renewable Energy',
-      readTime: '5 min read',
-      date: 'August 2025',
-      featured: true,
-    },
-    {
-      slug: 'lever-leverage',
-      title: 'Lever – Leverage',
-      excerpt: 'Give me a lever long enough and a fulcrum on which to place it, and I shall move the world. Exploring the concept of leverage in the digital age.',
-      category: 'Philosophy',
-      readTime: '8 min read',
-      date: 'January 2025',
-      featured: true,
+      tags: ['AI', 'renewable energy', 'smart grid', 'optimization'],
     },
     {
       slug: 'ark-invest-big-ideas-2025',
@@ -131,7 +108,9 @@ export function Blog() {
       category: 'Investment',
       readTime: '12 min read',
       date: 'January 2025',
+      dateSort: '2025-01',
       featured: true,
+      tags: ['investment', 'innovation', 'ARK Invest', 'future trends'],
     },
     {
       slug: 'the-courage-to-be-you',
@@ -140,7 +119,9 @@ export function Blog() {
       category: 'Personal Development',
       readTime: '10 min read',
       date: 'January 2025',
+      dateSort: '2025-01',
       featured: false,
+      tags: ['psychology', 'self-improvement', 'courage', 'book review'],
     },
     {
       slug: 'hard-work-in-a-company-no-longer-gives-you-safe',
@@ -149,43 +130,9 @@ export function Blog() {
       category: 'Career',
       readTime: '7 min read',
       date: 'December 2024',
+      dateSort: '2024-12',
       featured: false,
-    },
-    {
-      slug: 'construction-cost-estimation',
-      title: 'Construction Cost Estimation',
-      excerpt: 'Imagine You\'re Building a Cool Treehouse! You\'re standing in your backyard, gazing at that perfect tree. A comprehensive guide to construction cost estimation.',
-      category: 'Engineering',
-      readTime: '9 min read',
-      date: 'December 2024',
-      featured: false,
-    },
-    {
-      slug: 'work-breakdown-structure-for-offshore-wind-farm',
-      title: 'Work Breakdown Structure for Offshore Wind Farm',
-      excerpt: 'By Duc Hoang So, What is a Work Breakdown Structure? Imagine we\'re building a massive offshore wind farm – it\'s like constructing a floating city powered by wind!',
-      category: 'Renewable Energy',
-      readTime: '11 min read',
-      date: 'December 2024',
-      featured: false,
-    },
-    {
-      slug: 'construction-of-the-intertidal-wind-farm',
-      title: 'Construction of the Intertidal Wind Farm – What Should We Know?',
-      excerpt: 'So… What is the key to success of construction of a nearshore wind farm? The answer is simple… planning…, planning … planning.',
-      category: 'Renewable Energy',
-      readTime: '13 min read',
-      date: 'November 2024',
-      featured: false,
-    },
-    {
-      slug: 'matrix-of-responsibility-between-packages-for-offshore-wind',
-      title: 'Matrix of Responsibility between packages for Offshore Wind',
-      excerpt: 'Think of the offshore wind farm project as a huge puzzle. It\'s so big that it\'s tough for just one company to put it all together.',
-      category: 'Renewable Energy',
-      readTime: '8 min read',
-      date: 'November 2024',
-      featured: false,
+      tags: ['career', 'employment', 'future of work', 'job security'],
     },
     {
       slug: 'self-sovereignty',
@@ -194,7 +141,9 @@ export function Blog() {
       category: 'Web 3.0',
       readTime: '15 min read',
       date: 'November 2024',
+      dateSort: '2024-11',
       featured: true,
+      tags: ['web3', 'decentralization', 'privacy', 'sovereignty'],
     },
     {
       slug: 'new-york-on-tech-is-helping-under-resourced-students-become-future-tech-leaders',
@@ -203,200 +152,307 @@ export function Blog() {
       category: 'Education',
       readTime: '10 min read',
       date: 'October 2024',
+      dateSort: '2024-10',
       featured: false,
-    },
-    {
-      slug: 'offshore-wind-risk-management-explained',
-      title: 'Offshore Wind Risk Management Explained',
-      excerpt: 'Imagine we\'re embarking on an exciting voyage to build an offshore wind farm. Our mission: harness the wind\'s power while avoiding treacherous waters.',
-      category: 'Renewable Energy',
-      readTime: '14 min read',
-      date: 'October 2024',
-      featured: false,
-    },
-    {
-      slug: 'navigating-the-noise-finding-perspective',
-      title: 'Navigating the Noise: Finding Perspective in Turbulent Times',
-      excerpt: 'You\'re right – there\'s a whirlwind of noise out there. Market downturns, layoffs, uncertainty – it feels like a storm brewing.',
-      category: 'Personal Development',
-      readTime: '6 min read',
-      date: 'October 2024',
-      featured: false,
-    },
-    {
-      slug: 'measurement-and-surveys-for-offshore-wind-farm',
-      title: 'Measurement and Surveys for Offshore Wind Farm',
-      excerpt: 'Before building a wind farm, we need to befriend the wind and ocean, just like detectives solving a mystery! We use cool gadgets to collect clues.',
-      category: 'Renewable Energy',
-      readTime: '12 min read',
-      date: 'September 2024',
-      featured: false,
-    },
-    {
-      slug: 'why-ignoring-technology-is-no-longer-an-option',
-      title: 'Why Ignoring Technology Is No Longer an Option',
-      excerpt: 'In today\'s fast-paced world, innovation seems to be the name of the game, and at the forefront of this innovation stands Artificial Intelligence (AI).',
-      category: 'Technology',
-      readTime: '9 min read',
-      date: 'September 2024',
-      featured: false,
-    },
-    {
-      slug: 'wind-farm-contract-structure-your-path-to-success',
-      title: 'Wind Farm Contract Structure: Your Path to Success',
-      excerpt: 'Building a wind farm is much like assembling a complex puzzle. It involves aligning numerous components—contracts and partnerships—in perfect harmony.',
-      category: 'Renewable Energy',
-      readTime: '10 min read',
-      date: 'August 2024',
-      featured: false,
-    },
-    {
-      slug: 'wind-turbine-onshore-transportation-challenges',
-      title: 'Wind Turbine Onshore Transportation challenges',
-      excerpt: 'Wind turbine transportation is a critical issue for any wind farm projects. This short article aims to provide an overview of wind turbines inland-transportation challenges.',
-      category: 'Renewable Energy',
-      readTime: '8 min read',
-      date: 'August 2024',
-      featured: false,
-    },
-    {
-      slug: 'nearshore-wind-farm-foundations-in-vietnam',
-      title: 'Nearshore Wind Farm Foundations in Vietnam – The case study in Mekong Delta Nearshore area',
-      excerpt: 'There are several types of foundation available for nearshore/ offshore wind towers. The choice of foundation is one of the key determining factors.',
-      category: 'Renewable Energy',
-      readTime: '11 min read',
-      date: 'July 2024',
-      featured: false,
-
-    },
-    {
-      slug: 'strategic-planning-renewable-energy',
-      title: 'Strategic Planning for Large-Scale Renewable Energy Projects: Your Complete Playbook',
-      excerpt: 'A comprehensive guide to strategic planning for large-scale renewable energy projects, covering analysis, strategy formulation, and execution phases with practical frameworks and real-world insights.',
-      category: 'Renewable Energy',
-      readTime: '25 min read',
-      date: 'December 2024',
-      featured: false,
+      tags: ['education', 'tech leadership', 'diversity', 'opportunity'],
     }
   ];
 
-  const categories = ['All', 'Philosophy', 'Investment', 'Personal Development', 'Renewable Energy', 'Technology', 'Web 3.0', 'Career', 'Engineering', 'Education'];
+  const categories = [
+    { name: 'All', count: blogPosts.length },
+    { name: 'Technology', count: blogPosts.filter(p => p.category === 'Technology').length },
+    { name: 'Renewable Energy', count: blogPosts.filter(p => p.category === 'Renewable Energy').length },
+    { name: 'Philosophy', count: blogPosts.filter(p => p.category === 'Philosophy').length },
+    { name: 'Personal Development', count: blogPosts.filter(p => p.category === 'Personal Development').length },
+    { name: 'Investment', count: blogPosts.filter(p => p.category === 'Investment').length },
+    { name: 'Engineering', count: blogPosts.filter(p => p.category === 'Engineering').length },
+    { name: 'Career', count: blogPosts.filter(p => p.category === 'Career').length },
+    { name: 'Web 3.0', count: blogPosts.filter(p => p.category === 'Web 3.0').length },
+    { name: 'Education', count: blogPosts.filter(p => p.category === 'Education').length }
+  ].filter(cat => cat.count > 0);
+
+  // Filter and sort posts
+  const filteredAndSortedPosts = useMemo(() => {
+    let filtered = blogPosts;
+
+    // Filter by category
+    if (selectedCategory !== 'All') {
+      filtered = filtered.filter(post => post.category === selectedCategory);
+    }
+
+    // Filter by search query
+    if (searchQuery) {
+      filtered = filtered.filter(post =>
+        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.tags?.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+      );
+    }
+
+    // Sort posts
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'date':
+          return b.dateSort.localeCompare(a.dateSort);
+        case 'readTime':
+          const aTime = parseInt(a.readTime.match(/\d+/)[0]);
+          const bTime = parseInt(b.readTime.match(/\d+/)[0]);
+          return aTime - bTime;
+        case 'title':
+          return a.title.localeCompare(b.title);
+        default:
+          return 0;
+      }
+    });
+
+    return filtered;
+  }, [selectedCategory, searchQuery, sortBy]);
+
+  const featuredPosts = filteredAndSortedPosts.filter(post => post.featured);
+  const regularPosts = filteredAndSortedPosts.filter(post => !post.featured);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
               Latest Insights
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              Discover the newest updates and tips in technology. We explore the latest trends and provide in-depth analysis.
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Discover cutting-edge insights on technology, renewable energy, and strategic thinking. 
+              Explore in-depth analysis and practical guidance for the digital age.
             </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-md mx-auto relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+              <Input
+                type="text"
+                placeholder="Search articles, topics, or tags..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 pr-4 py-3 text-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Filters and Controls */}
+      <section className="py-8 border-b bg-background/50 backdrop-blur-sm sticky top-0 z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Categories Filter */}
+            <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+              {categories.map((category) => (
+                <Badge
+                  key={category.name}
+                  variant={category.name === selectedCategory ? 'default' : 'secondary'}
+                  className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-all duration-200 px-4 py-2 text-sm font-medium"
+                  onClick={() => setSelectedCategory(category.name)}
+                >
+                  {category.name} ({category.count})
+                </Badge>
+              ))}
+            </div>
+
+            {/* View Controls */}
+            <div className="flex items-center gap-4">
+              {/* Sort Dropdown */}
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-3 py-2 border rounded-md bg-background text-foreground text-sm"
+              >
+                <option value="date">Sort by Date</option>
+                <option value="readTime">Sort by Read Time</option>
+                <option value="title">Sort by Title</option>
+              </select>
+
+              {/* View Mode Toggle */}
+              <div className="flex border rounded-md">
+                <Button
+                  variant={viewMode === 'grid' ? 'default' : 'ghost'}
+                  size="sm"
+                  onClick={() => setViewMode('grid')}
+                  className="rounded-r-none"
+                >
+                  <Grid className="h-4 w-4" />
+                </Button>
+                <Button
+                  variant={viewMode === 'list' ? 'default' : 'ghost'}
+                  size="sm"
+                  onClick={() => setViewMode('list')}
+                  className="rounded-l-none"
+                >
+                  <List className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          </div>
+
+          {/* Results Summary */}
+          <div className="mt-4 text-sm text-muted-foreground text-center lg:text-left">
+            Showing {filteredAndSortedPosts.length} article{filteredAndSortedPosts.length !== 1 ? 's' : ''}
+            {selectedCategory !== 'All' && ` in ${selectedCategory}`}
+            {searchQuery && ` matching "${searchQuery}"`}
           </div>
         </div>
       </section>
 
       {/* Blog Content */}
-      <section className="py-16">
+      <section className="py-16 flex-1">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Categories Filter */}
-          <div className="flex flex-wrap gap-2 mb-12 justify-center">
-            {categories.map((category) => (
-              <Badge
-                key={category}
-                variant={category === 'All' ? 'default' : 'secondary'}
-                className="cursor-pointer hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                {category}
-              </Badge>
-            ))}
-          </div>
-
           {/* Featured Posts */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-foreground mb-8">Featured Posts</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {blogPosts.filter(post => post.featured).map((post) => (
-                <Card key={post.slug} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge variant="secondary">{post.category}</Badge>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Clock className="h-4 w-4 mr-1" />
-                        {post.readTime}
-                      </div>
-                    </div>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                      <Link to={post.slug === 'fim-revolution' ? '/fim-revolution' : (post.slug === 'bop-package-strategy' ? '/blog/bop-interactive-article' : `/blog/${post.slug}`)}>
-                        {post.title}
-                      </Link>
-                    </CardTitle>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {post.date}
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="mb-4">
-                      {post.excerpt}
-                    </CardDescription>
-                    <Button asChild variant="ghost" className="p-0 h-auto">
-                      <Link to={`/blog/${post.slug}`} className="flex items-center text-primary hover:text-primary/80">
-                        Read More
-                        <ArrowRight className="ml-1 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
+          {featuredPosts.length > 0 && (
+            <div className="mb-16">
+              <div className="flex items-center gap-3 mb-8">
+                <h2 className="text-3xl font-bold text-foreground">Featured Articles</h2>
+                <Badge variant="secondary" className="px-3 py-1">
+                  {featuredPosts.length}
+                </Badge>
+              </div>
+              
+              <div className={`grid gap-8 ${
+                viewMode === 'grid' 
+                  ? 'grid-cols-1 lg:grid-cols-2 xl:grid-cols-3' 
+                  : 'grid-cols-1'
+              }`}>
+                {featuredPosts.map((post) => (
+                  <PostCard key={post.slug} post={post} viewMode={viewMode} featured={true} />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
-          {/* All Posts */}
-          <div>
-            <h2 className="text-2xl font-bold text-foreground mb-8">All Posts</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {blogPosts.map((post) => (
-                <Card key={post.slug} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge variant="secondary">{post.category}</Badge>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Clock className="h-4 w-4 mr-1" />
-                        {post.readTime}
-                      </div>
-                    </div>
-                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                      <Link to={post.slug === 'fim-revolution' ? '/fim-revolution' : (post.slug === 'bop-package-strategy' ? '/blog/bop-interactive-article' : `/blog/${post.slug}`)}>
-                        {post.title}
-                      </Link>
-                    </CardTitle>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {post.date}
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="mb-4">
-                      {post.excerpt}
-                    </CardDescription>
-                    <Button asChild variant="ghost" className="p-0 h-auto">
-                      <Link to={`/blog/${post.slug}`} className="flex items-center text-primary hover:text-primary/80">
-                        Read More
-                        <ArrowRight className="ml-1 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
+          {/* Regular Posts */}
+          {regularPosts.length > 0 && (
+            <div>
+              <div className="flex items-center gap-3 mb-8">
+                <h2 className="text-3xl font-bold text-foreground">All Articles</h2>
+                <Badge variant="outline" className="px-3 py-1">
+                  {regularPosts.length}
+                </Badge>
+              </div>
+              
+              <div className={`grid gap-6 ${
+                viewMode === 'grid' 
+                  ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
+                  : 'grid-cols-1'
+              }`}>
+                {regularPosts.map((post) => (
+                  <PostCard key={post.slug} post={post} viewMode={viewMode} featured={false} />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
+
+          {/* No Results */}
+          {filteredAndSortedPosts.length === 0 && (
+            <div className="text-center py-16">
+              <div className="max-w-md mx-auto">
+                <Filter className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-foreground mb-2">No articles found</h3>
+                <p className="text-muted-foreground mb-6">
+                  Try adjusting your search terms or category filter to find what you're looking for.
+                </p>
+                <Button 
+                  onClick={() => {
+                    setSelectedCategory('All');
+                    setSearchQuery('');
+                  }}
+                  variant="outline"
+                >
+                  Clear Filters
+                </Button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </div>
   );
 }
 
+// Post Card Component
+function PostCard({ post, viewMode, featured }) {
+  const isListView = viewMode === 'list';
+  
+  return (
+    <Card className={`group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
+      isListView ? 'flex flex-row' : 'flex flex-col'
+    } ${featured ? 'border-primary/20 bg-gradient-to-br from-primary/5 to-transparent' : ''}`}>
+      <div className={`${isListView ? 'flex-1' : ''}`}>
+        <CardHeader className={`${isListView ? 'pb-2' : ''}`}>
+          <div className="flex items-center justify-between mb-3">
+            <Badge 
+              variant={featured ? 'default' : 'secondary'}
+              className="text-xs font-medium"
+            >
+              {post.category}
+            </Badge>
+            {featured && (
+              <Badge variant="outline" className="text-xs">
+                Featured
+              </Badge>
+            )}
+          </div>
+          
+          <CardTitle className={`group-hover:text-primary transition-colors ${
+            isListView ? 'text-lg' : 'text-xl'
+          } ${featured ? 'text-xl lg:text-2xl' : ''}`}>
+            {post.title}
+          </CardTitle>
+          
+          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-1">
+              <Calendar className="h-3 w-3" />
+              <span>{post.date}</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <Clock className="h-3 w-3" />
+              <span>{post.readTime}</span>
+            </div>
+          </div>
+        </CardHeader>
+        
+        <CardContent className={`${isListView ? 'pt-0' : ''}`}>
+          <CardDescription className={`mb-4 leading-relaxed ${
+            featured ? 'text-base' : 'text-sm'
+          }`}>
+            {post.excerpt}
+          </CardDescription>
+          
+          {/* Tags */}
+          {post.tags && (
+            <div className="flex flex-wrap gap-1 mb-4">
+              {post.tags.slice(0, 3).map((tag) => (
+                <Badge key={tag} variant="outline" className="text-xs px-2 py-0.5">
+                  {tag}
+                </Badge>
+              ))}
+              {post.tags.length > 3 && (
+                <Badge variant="outline" className="text-xs px-2 py-0.5">
+                  +{post.tags.length - 3}
+                </Badge>
+              )}
+            </div>
+          )}
+          
+          <Link to={`/blog/${post.slug}`}>
+            <Button 
+              variant={featured ? 'default' : 'outline'} 
+              className="group/btn w-full sm:w-auto"
+            >
+              Read More
+              <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
+        </CardContent>
+      </div>
+    </Card>
+  );
+}
 
