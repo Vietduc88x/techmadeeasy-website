@@ -23,7 +23,7 @@ export function BlogPost() {
     'sovereign-individual-digital-freedom': {
       title: 'The Sovereign Individual: The Rise of Digital Freedom in the Information Age',
       category: 'Technology',
-      readTime: '25 min read',
+      readTime: '15 min read',
       date: 'September 2025',
       author: 'Duc Hoang',
     },
