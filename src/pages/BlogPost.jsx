@@ -16,7 +16,7 @@ export function BlogPost() {
     'ai-power-hungry-giants-energy-demands': {
       title: 'The Power Hungry Giants: Understanding AI Data Center Energy Demands and Load Profiles',
       category: 'Technology',
-      readTime: '20 min read',
+      readTime: '10 min read',
       date: 'September 2025',
       author: 'Duc Hoang',
     },
