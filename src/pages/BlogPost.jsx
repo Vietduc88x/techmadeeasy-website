@@ -13,6 +13,13 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'ai-power-hungry-giants-energy-demands': {
+      title: 'The Power Hungry Giants: Understanding AI Data Center Energy Demands and Load Profiles',
+      category: 'Technology',
+      readTime: '20 min read',
+      date: 'September 2025',
+      author: 'Duc Hoang',
+    },
     'ca-nhan-chu-quyen-tu-do-so': {
       title: 'Cá Nhân Chủ Quyền: Sự Trỗi Dậy của Tự Do Số trong Kỷ Nguyên Thông Tin',
       category: 'Công Nghệ',

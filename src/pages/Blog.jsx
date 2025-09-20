@@ -14,12 +14,23 @@ export function Blog() {
 
   const blogPosts = [
     {
+      slug: 'ai-power-hungry-giants-energy-demands',
+      title: 'The Power Hungry Giants: Understanding AI Data Center Energy Demands and Load Profiles',
+      excerpt: 'As AI models grow exponentially in capability, their appetite for electricity is reshaping the global energy landscape. Explore the complex energy dynamics of AI data centers, from unique load profiles to innovative cooling solutions.',
+      category: 'Technology',
+      readTime: '20 min read',
+      date: 'September 2025',
+      dateSort: '2025-09',
+      featured: true,
+      tags: ['AI', 'data centers', 'energy', 'power consumption', 'cooling'],
+    },
+    {
       slug: 'ca-nhan-chu-quyen-tu-do-so',
       title: 'Cá Nhân Chủ Quyền: Sự Trỗi Dậy của Tự Do Số trong Kỷ Nguyên Thông Tin',
       excerpt: 'Công nghệ đang viết lại luật chơi của quyền lực, tài sản và tự do cá nhân. Khám phá cuộc chuyển đổi từ quốc gia-dân tộc sang chủ quyền số và học các chiến lược thực tế để thịnh vượng trong Kỷ Nguyên Thông Tin.',
-      category: 'Technology',
+      category: 'Công Nghệ',
       readTime: '15 phút đọc',
-      date: 'September 2025',
+      date: 'Tháng 9 2025',
       dateSort: '2025-09',
       featured: true,
       tags: ['blockchain', 'cryptocurrency', 'digital sovereignty', 'future'],
