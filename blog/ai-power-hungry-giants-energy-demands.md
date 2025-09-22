@@ -24,10 +24,13 @@ When you ask ChatGPT a question, you're tapping into one of the most energy-inte
 
 ## 🏗️ Inside an AI Data Center: General Layout and Components
 
-![AI Server Racks](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-2.jpg)
-*AI server racks: Each cabinet contains millions of dollars worth of GPUs*
+![AI Data Center Aerial View](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-aerial-6.jpg)
+*Aerial view of a massive AI data center complex - notice the scale and infrastructure*
 
 ### The Physical Layout
+
+![Data Center Layout](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/datacenter-layout-2.jpg)
+*Detailed floor plan showing power distribution and cooling zones*
 
 **Zone 1: Power Infrastructure**
 - High-voltage transformers (138kV → 13.8kV)
@@ -49,10 +52,13 @@ When you ask ChatGPT a question, you're tapping into one of the most energy-inte
 - Monitoring and control systems
 - Security and access control
 
-![GPU Close-up](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-3.jpg)
-*Inside an AI server: Each black card is a $10,000+ GPU consuming 400W*
+![AI Server Racks](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-2.jpg)
+*AI server racks: Each cabinet contains millions of dollars worth of GPUs*
 
 ### Key Components Breakdown
+
+![GPU Close-up](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-3.jpg)
+*Inside an AI server: Each black card is a $10,000+ GPU consuming 400W*
 
 | Component | Power Draw | Function | Quantity per Rack |
 |-----------|------------|----------|-------------------|
@@ -67,10 +73,13 @@ When you ask ChatGPT a question, you're tapping into one of the most energy-inte
 
 ## ⚡ Electrical System Architecture: Powering the Giants
 
+![Electrical System Overview](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/electrical-system-1.jpg)
+*Complete electrical system architecture from grid connection to server racks*
+
 ### Power Distribution Hierarchy
 
-![Data Center Cooling](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/cooling-system-7.jpg)
-*The electrical backbone: High-voltage systems feeding AI infrastructure*
+![Power Distribution](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/power-distribution-3.jpg)
+*Multi-level power distribution system with redundancy and monitoring*
 
 **Level 1: Grid Connection (138-500kV)**
 - Direct connection to electrical transmission grid
@@ -92,6 +101,9 @@ When you ask ChatGPT a question, you're tapping into one of the most energy-inte
 - Individual component power regulation
 - Precise power quality management
 
+![Overhead Cable Management](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/overhead-cables-4.jpg)
+*Sophisticated overhead cable management system for power and data*
+
 ### Electrical Infrastructure Requirements
 
 **Power Quality Systems**
@@ -110,8 +122,8 @@ When you ask ChatGPT a question, you're tapping into one of the most energy-inte
 
 ## 🌡️ The Cooling Challenge: Managing Extreme Heat
 
-![Advanced Cooling](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/cooling-system-8.jpg)
-*Next-gen immersion cooling: GPUs literally swim in special coolant*
+![Cooling Infrastructure](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/cooling-infrastructure-5.jpg)
+*Massive cooling infrastructure required for AI data centers*
 
 ### Why Cooling is Critical
 
@@ -123,6 +135,9 @@ Each AI rack generates 50-100 kW of heat - like running 50 electric ovens contin
 - **Other Components**: Memory, storage, networking (10%)
 
 **Cooling Solutions**
+
+![Data Center Cooling](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/cooling-system-7.jpg)
+*Liquid cooling system: The blue pipes carry coolant directly to hot components*
 
 **Traditional Air Cooling** ❌
 - Limited to 20 kW per rack
@@ -138,6 +153,9 @@ Each AI rack generates 50-100 kW of heat - like running 50 electric ovens contin
 - Complete GPU submersion in coolant
 - Highest efficiency (PUE < 1.1)
 - Enables maximum performance
+
+![Advanced Cooling](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/cooling-system-8.jpg)
+*Next-gen immersion cooling: GPUs literally swim in special coolant*
 
 ---
 
@@ -311,10 +329,6 @@ With proper planning, we can achieve:
 The power hungry giants of today can become efficient servants of tomorrow. The future of intelligence depends on the energy choices we make today.
 
 ---
-
-## About the Author
-
-**Duc Hoang** is a technology strategist and energy systems analyst with extensive experience in data center infrastructure and renewable energy integration.
 
 **Published**: September 2025  
 **Reading Time**: 10 minutes  
