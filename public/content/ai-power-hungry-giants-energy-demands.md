@@ -161,33 +161,39 @@ Advanced Immersion Cooling 🚀
 
 ## 📈 AI Load Profiles: The Grid's New Challenge
 
-![US Energy Mix](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/energy-chart-4.jpg)
-*Current US energy sources - AI is driving demand for all types*
+![AI Load Profile 24h](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-load-profile-24h.png)
+*Comprehensive 24-hour load profile comparison: Traditional vs AI data centers*
 
-### Unique AI Energy Patterns
+### Understanding Load Profile Fundamentals
 
-Traditional Data Center Load
-```
-Morning: ████████░░ (80% usage)
-Afternoon: ██████████ (100% usage)  
-Evening: ████████░░ (80% usage)
-Night: ████░░░░░░ (40% usage)
-```
+Load profiles represent how electricity consumption varies throughout a 24-hour period. Traditional data centers follow predictable patterns tied to human activity, while AI facilities operate under entirely different principles that challenge grid operators worldwide.
 
-AI Data Center Load
-```
-Morning: ██████████ (100% usage)
-Afternoon: ██████████ (100% usage)
-Evening: ██████████ (100% usage)
-Night: ██████████ (100% usage)
-```
+### Traditional Data Center Load Characteristics
 
-### Why AI Never Sleeps
+Traditional data centers exhibit clear daily patterns with peak hours from 9 AM to 6 PM reaching 85-100% of capacity, driven by business applications and web traffic. During off-peak hours from 10 PM to 6 AM, load drops to 35-45% of capacity as user activity decreases. This predictable pattern allows grid operators to forecast demand accurately and adjust power generation accordingly.
 
-- Global Users: 24/7 query processing
-- Training Jobs: Continuous for months
-- Model Serving: Instant response required
-- Redundancy: Backup systems always running
+### AI Training Workload Patterns
+
+![AI Power Consumption MW](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-power-consumption-mw.png)
+*Real power consumption in megawatts for a 500 MW AI facility*
+
+AI training represents the most energy-intensive computing workload ever deployed at scale. These facilities maintain 94-100% of capacity continuously, with only 6% variation throughout the entire day. Training jobs run continuously for weeks or months and cannot be interrupted without losing significant progress. The minimal daily variation occurs due to cooling efficiency changes and grid conditions rather than computational demand.
+
+### AI Inference Workload Dynamics
+
+AI inference shows more variation but remains substantially higher than traditional workloads. The pattern follows global usage with Asia peak during 12 AM - 4 AM US time (85-95% load), Europe peak during 6 AM - 10 AM US time (90-98% load), and US peak during 2 PM - 8 PM US time (95-100% load). Even during global minimum hours (4 AM - 6 AM US time), consumption remains at 58-65% of capacity.
+
+### Load Profile Impact on Grid Stability
+
+The constant high demand from AI facilities presents unprecedented challenges for grid operators. Unlike traditional data centers that provide natural low periods for grid recovery, AI workloads offer limited flexibility for demand response. Single facilities consuming 500-1000 MW continuously require massive baseload generation capacity and strain transmission systems designed for variable demand patterns.
+
+### Economic Implications of Load Profiles
+
+The economic impact is substantial, with a 500 MW AI training facility consuming approximately $93,600 worth of electricity daily compared to $38,400 for a traditional data center. This represents over $20 million additional annual operating costs. The constant high demand also triggers maximum demand charges and requires utilities to build infrastructure for peak AI demand rather than average consumption.
+
+### Future Load Profile Evolution
+
+Looking toward 2030, load profiles will evolve through optimization and transformation phases. Smart load management systems will adjust consumption based on grid conditions, while renewable integration will provide direct connections to solar and wind farms. Neuromorphic computing promises 100x efficiency improvements, and distributed training will spread workloads across multiple smaller facilities, making AI demand more manageable while total consumption continues growing.
 
 ---
 
