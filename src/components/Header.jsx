@@ -11,6 +11,7 @@ export function Header() {
     { name: 'Home', href: '/' },
     { name: 'Blog', href: '/blog' },
     { name: 'About', href: '/about' },
+    { name: 'Techconnect', href: '/techconnect' },
     { name: 'Contact', href: '/contact' },
   ];
 
