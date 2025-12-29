@@ -10,7 +10,7 @@ export function Header() {
   const navigation = [
     { name: 'Home', href: '/', external: false },
     { name: 'Blog', href: '/blog', external: false },
-    { name: 'Mentalhub', href: '/mentalhub', external: false },
+    { name: 'Mentalhub', href: 'https://mentalhub-bsqdcmnk.manus.space', external: true },
     { name: 'About', href: '/about', external: false },
     { name: 'Techconnect', href: 'https://techconnect.manus.space', external: true },
     { name: 'Contact', href: '/contact', external: false },
