@@ -7,6 +7,7 @@ import { Blog } from './pages/Blog';
 import { BlogPost } from './pages/BlogPost';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
+import { Mentalhub } from './pages/Mentalhub';
 import FIMRevolution from './pages/FIMRevolution';
 import { BOPInteractiveArticle } from './pages/BOPInteractiveArticle';
 import { RenewableEnergyCosts2024 } from './pages/RenewableEnergyCosts2024';
@@ -23,6 +24,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/mentalhub" element={<Mentalhub />} />
             <Route path="/fim-revolution" element={<FIMRevolution />} />
             <Route path="/blog/bop-interactive-article" element={<BOPInteractiveArticle />} />
             <Route path="/blog/renewable-energy-costs-2024" element={<RenewableEnergyCosts2024 />} />
