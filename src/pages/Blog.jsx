@@ -124,6 +124,17 @@ export function Blog() {
       tags: ['investment', 'innovation', 'ARK Invest', 'future trends'],
     },
     {
+      slug: 'my-story-told-again',
+      title: 'My Story, Told Again - Once look back, see how far you\'ve come!',
+      excerpt: 'A new year is a time for reflection. From a young broke engineer with just a Honda motorbike to exploring renewable energy and beyond - a journey of continuous learning, humility, and taking risks.',
+      category: 'Personal Development',
+      readTime: '8 min read',
+      date: 'January 2026',
+      dateSort: '2026-01',
+      featured: false,
+      tags: ['personal growth', 'career journey', 'renewable energy', 'learning'],
+    },
+    {
       slug: 'the-courage-to-be-you',
       title: 'The Courage to Be You: Lessons from a Profound Book',
       excerpt: 'Last weekend, I had the chance to delve into a thoughtful book, The Courage to Be Disliked. Profound life lessons that resonated deeply.',
