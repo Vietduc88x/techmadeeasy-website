@@ -142,7 +142,7 @@ export function Blog() {
       readTime: '10 min read',
       date: 'January 2025',
       dateSort: '2025-01',
-      featured: false,
+      featured: true,
       tags: ['psychology', 'self-improvement', 'courage', 'book review'],
     },
     {
