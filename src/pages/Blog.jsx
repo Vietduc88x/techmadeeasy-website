@@ -131,7 +131,7 @@ export function Blog() {
       readTime: '8 min read',
       date: 'January 2026',
       dateSort: '2026-01',
-      featured: false,
+      featured: true,
       tags: ['personal growth', 'career journey', 'renewable energy', 'learning'],
     },
     {
