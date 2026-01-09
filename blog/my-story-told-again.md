@@ -6,7 +6,7 @@ I remember a time when I was a young, broke engineer. I had almost nothing excep
 
 I'm sure that students and engineers today are much better off than I was. The best thing I had back then was my Honda. I still have and use it, and it reminds me every day of how far I've come. It's been more than a friend; it's been like a faithful horse that has been with me for so long.
 
-![My Honda, loaded with all my belongings, ready to leave small town behind. Even now, I didn't remember why I took this picture.](placeholder-for-image)
+![My Honda, loaded with all my belongings, ready to leave small town behind. Even now, I didn't remember why I took this picture.](/images/honda-motorbike-journey.png)
 
 *My Honda, loaded with all my belongings, ready to leave small town behind. Even now, I didn't remember why I took this picture.*
 
