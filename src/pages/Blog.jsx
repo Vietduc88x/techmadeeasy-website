@@ -349,27 +349,7 @@ export function Blog() {
             </div>
           )}
 
-          {/* Regular Posts */}
-          {regularPosts.length > 0 && (
-            <div>
-              <div className="flex items-center gap-3 mb-8">
-                <h2 className="text-3xl font-bold text-foreground">All Articles</h2>
-                <Badge variant="outline" className="px-3 py-1">
-                  {regularPosts.length}
-                </Badge>
-              </div>
-              
-              <div className={`grid gap-6 ${
-                viewMode === 'grid' 
-                  ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
-                  : 'grid-cols-1'
-              }`}>
-                {regularPosts.map((post) => (
-                  <PostCard key={post.slug} post={post} viewMode={viewMode} featured={false} />
-                ))}
-              </div>
-            </div>
-          )}
+          {/* All Articles section removed - only showing Featured Articles */}
 
           {/* No Results */}
           {filteredAndSortedPosts.length === 0 && (
