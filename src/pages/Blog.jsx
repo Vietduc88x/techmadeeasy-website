@@ -153,7 +153,7 @@ export function Blog() {
       readTime: '7 min read',
       date: 'December 2024',
       dateSort: '2024-12',
-      featured: false,
+      featured: true,
       tags: ['career', 'employment', 'future of work', 'job security'],
     },
     {
