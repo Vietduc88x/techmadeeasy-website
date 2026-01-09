@@ -90,6 +90,13 @@ export function BlogPost() {
       date: 'January 2025',
       author: 'Duc Hoang',
     },
+    'my-story-told-again': {
+      title: 'My Story, Told Again - Once look back, see how far you\'ve come!',
+      category: 'Personal Development',
+      readTime: '8 min read',
+      date: 'January 2026',
+      author: 'Duc Hoang',
+    },
     'the-courage-to-be-you': {
       title: 'The Courage to Be You: Lessons from a Profound Book',
       category: 'Personal Development',
