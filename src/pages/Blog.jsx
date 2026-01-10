@@ -124,6 +124,17 @@ export function Blog() {
       tags: ['investment', 'innovation', 'ARK Invest', 'future trends'],
     },
     {
+      slug: 'symmetric-risk-versus-asymmetric-risk',
+      title: 'The world of symmetric risk versus the power of asymmetric risk',
+      excerpt: 'High risk, high reward? Not always. Explore the fundamental difference between symmetric and asymmetric risk through real-world examples from Solar Power Plants to Tesla, NVIDIA, and the attention economy.',
+      category: 'Investment',
+      readTime: '7 min read',
+      date: 'January 2026',
+      dateSort: '2026-01',
+      featured: true,
+      tags: ['risk management', 'investment', 'asymmetric risk', 'finance', 'strategy'],
+    },
+    {
       slug: 'my-story-told-again',
       title: 'My Story, Told Again - Once look back, see how far you\'ve come!',
       excerpt: 'A new year is a time for reflection. From a young broke engineer with just a Honda motorbike to exploring renewable energy and beyond - a journey of continuous learning, humility, and taking risks.',

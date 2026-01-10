@@ -13,6 +13,13 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'symmetric-risk-versus-asymmetric-risk': {
+      title: 'The world of symmetric risk versus the power of asymmetric risk',
+      category: 'Investment',
+      readTime: '7 min read',
+      date: 'January 2026',
+      author: 'Duc Hoang',
+    },
     'ai-power-hungry-giants-energy-demands': {
       title: 'The Power Hungry Giants: Understanding AI Data Center Energy Demands and Load Profiles',
       category: 'Technology',
