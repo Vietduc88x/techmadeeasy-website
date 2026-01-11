@@ -1,5 +1,8 @@
 # The world of symmetric risk versus the power of asymmetric risk
 
+![Symmetric Risk vs Asymmetric Risk](/images/symmetric-asymmetric-risk.png)
+*Symmetric Risk vs Asymmetric Risk - Understanding the fundamental difference*
+
 As I mentioned in a previous article, I'm a firm believer that "the biggest risk is not taking any risk at all." You can read more of my initial story [here](https://techmadeeasy.info/blog/my-story-told-again).
 
 **Disclaimer:** I am not a financial advisor or a professional trader. My posts are based on my own self-learnings and many years dying through brutal markets. Nothing written here is investment advice, and I don't offer any training or get anything from you guys. This is for informational purposes only. If you find it useful, good for you. If not, then, that's it, man.
