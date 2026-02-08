@@ -72,7 +72,7 @@ export function About() {
                   "Our blog is built on the belief that technology should be accessible to all. By breaking down complex concepts and making them easy to understand, we're helping to create a more informed and empowered society."
                 </blockquote>
                 <cite className="text-sm font-semibold text-foreground">
-                  — Duc Hoang, Founder & CEO
+                  — Tech Made Easy Team
                 </cite>
               </div>
             </div>
@@ -140,8 +140,8 @@ export function About() {
         </div>
       </section>
 
-      {/* Founder Section */}
-      <section className="py-20 bg-muted/30">
+      {/* Founder Section - Hidden */}
+      <section className="py-20 bg-muted/30" style={{display: 'none'}}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">

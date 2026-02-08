@@ -306,16 +306,12 @@ export function Home() {
                 </Button>
               </div>
               
-              <div className="flex justify-center items-center">
-                <img src="/duc_hoang_profile.png" alt="Duc Hoang, Founder" className="rounded-lg shadow-lg max-w-full h-auto" />
-              </div>
-
               <div className="bg-card rounded-lg p-8 border">
                 <blockquote className="text-lg italic text-muted-foreground mb-4">
                   "Our blog is built on the belief that technology should be accessible to all. By breaking down complex concepts and making them easy to understand, we\'re helping to create a more informed and empowered society."
                 </blockquote>
                 <cite className="text-sm font-semibold text-foreground">
-                  — Duc Hoang, Founder & CEO
+                  — Tech Made Easy Team
                 </cite>
               </div>
             </div>
