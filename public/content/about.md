@@ -4,7 +4,7 @@
 
 Welcome to Tech-Made-Easy, your go-to resource for technology insights and education. We believe that technology can be understandable, accessible and even enjoyable, and our mission is to make that a reality for all. Whether you’re a tech enthusiast, a business owner, or someone looking to learn more about the world of technology, our blog is here to help. We provide easy-to-understand explanations, in-depth analyses, and expert opinions on a wide range of tech-related topics, from renewable energy to the latest gadgets and beyond.
 
-### Duc Hoang
+### techmadeeasy team
 
 Founder. CEO
 

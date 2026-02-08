@@ -80,4 +80,4 @@ I'm not telling you to buy anything. I'm sharing my homework and the framework I
 > The biggest risk is not taking any risk at all.
 What platforms are you watching? What flywheels have caught your eye? I'd love to hear your perspective.
 © 2026 Tech Made Easy. All rights reserved.
-By Duc Hoang, PMP®
+By techmadeeasy team, PMP®

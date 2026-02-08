@@ -1,6 +1,6 @@
 # Wind Farm Contract Structure: Your Path to Success
 
-**By Duc Hoang and Tam Tran**
+**By techmadeeasy team and Tam Tran**
 
 Building a wind farm is much like assembling a complex puzzle. It involves aligning numerous components—contracts and partnerships—in perfect harmony. But fear not, for understanding and managing these contracts are crucial steps towards ensuring the success of your project. Let’s embark on brief discussion through various contract types and learn how to navigate them effectively.
 

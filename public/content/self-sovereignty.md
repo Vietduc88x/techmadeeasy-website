@@ -1,6 +1,6 @@
 # Self-Sovereignty
 
-**By Duc Hoang**
+**By techmadeeasy team**
 
 The internet has revolutionized the way we communicate and interact with each other, but it has also led to a centralized system where tech giants have complete control over our data. The rise of Web 3 technology offers an alternative approach, empowering individuals with self-sovereignty. In this blog post, we will explore the concept of self-sovereignty and how Web 3 can help us take control of our online lives.
 

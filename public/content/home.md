@@ -6,7 +6,7 @@ Our goal is to provide our readers with insightful and comprehensive content tha
 
 At first, this blog will be more focus on the renewable energy sector including onshore wind and offshore wind. However, our aims will be more than that, we will expand to other technology sector including Artificial Intelligence, Open Web, Digital Twins as these are the furture of technologgy.
 
-Duc Hoang, Founder.
+techmadeeasy team, Founder.
 
 “Hey, have you heard about offshore wind energy? It’s basically using wind farms built in the ocean to generate electricity. They usually put them on the shallow continental shelf, but they’re starting to explore deeper waters too. It’s getting cheaper too, especially in the past three years. They’re even looking into floating wind turbines now, which is pretty cool. As the technology gets better and they start doing bigger projects, the costs should go down even more. Exciting stuff, right?”
 

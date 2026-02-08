@@ -1,6 +1,6 @@
 # NEARSHORE WIND FARM FOUNDATIONS IN VIETNAM – The case study in Mekong Deltar Nearshore area.
 
-_**By: Duc Hoang**_
+_**By: techmadeeasy team**_
 
 _**Editor: Trang Tran**_
 

@@ -1,6 +1,6 @@
 # MEASUREMENT AND SURVEYS FOR OFFSHORE WIND FARM
 
-By Duc Hoang
+By techmadeeasy team
 
 _If you haven’t explored the previous post about the WORK BREAKDOWN STRUCTURE FOR OFFSHORE WIND FARM, I recommend you click the link here to discover more about the components that make our wind farm dreams come true. [https://techmadeeasy.info/work-breakdown-structure-for-offshore-wind-farm/]()._
 

@@ -1,6 +1,6 @@
 Matrix of Responsibility between packages for Offshore Wind
 
-By Duc Hoang
+By techmadeeasy team
 
 Think of the offshore wind farm project as a huge puzzle. It’s so big that it’s tough for just one company to put it all together. That’s why the project owner will probably split it into smaller pieces, called ‘packages,’ and manage them separately. Making sure all these pieces fit together perfectly is super important.
 

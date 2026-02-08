@@ -1,6 +1,6 @@
 # Why Ignoring Technology Is No Longer an Option
 
-By Duc Hoang
+By techmadeeasy team
 
 In today’s fast-paced world, innovation seems to be the name of the game, and at the forefront of this innovation stands Artificial Intelligence (AI). The recent application of Chat GPT, a prime example of AI, demonstrates how software algorithms are revolutionizing complex decision-making processes, mirroring the intricacies of human thought and senses.This advancement is set to accelerate human and machine interactions across the board.
 

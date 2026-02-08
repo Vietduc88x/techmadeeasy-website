@@ -80,4 +80,4 @@ Tôi không bảo bạn mua gì cả. Tôi chỉ chia sẻ bài tập và khuôn
 > Rủi ro lớn nhất là không chấp nhận rủi ro nào cả.
 Bạn đang theo dõi nền tảng nào? Những flywheel nào đã thu hút bạn? Tôi rất muốn nghe quan điểm của bạn.
 © 2026 Tech Made Easy. Bảo lưu mọi quyền.
-Bởi Duc Hoang, PMP®
+Bởi techmadeeasy team, PMP®

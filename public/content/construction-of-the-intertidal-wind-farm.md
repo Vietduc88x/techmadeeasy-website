@@ -3,7 +3,7 @@
 **By Nam Vu  
 **
 
-**Editor: Trang Tran, Duc Hoang**
+**Editor: Trang Tran, techmadeeasy team**
 
 So… What is the key to success of construction of a nearshore wind farm?
 

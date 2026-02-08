@@ -1,6 +1,6 @@
 # Complete Guide to Offshore Wind Farm Development: From Planning to Operation
 
-*Published: August 12, 2024 | By Duc Hoang, PMP®*
+*Published: August 12, 2024 | By techmadeeasy team, PMP®*
 
 Offshore wind energy represents one of the most promising renewable energy technologies of our time, offering vast potential for clean electricity generation while addressing the growing global demand for sustainable energy solutions. As coastal nations worldwide accelerate their transition to renewable energy, offshore wind farms have emerged as critical infrastructure projects that require sophisticated planning, engineering expertise, and project management capabilities to succeed.
 
@@ -136,5 +136,5 @@ The future of offshore wind development will be shaped by continued innovation i
 
 *This comprehensive guide provides project managers and industry professionals with essential knowledge for successful offshore wind farm development. For more insights on renewable energy project management and technology trends, visit [TechMadeEasy.info](https://techmadeeasy.info).*
 
-**About the Author:** Duc Hoang, PMP® is a renewable energy project management expert with extensive experience in offshore wind development. Connect with him on [LinkedIn](https://www.linkedin.com/in/hoang-vietduc-pmp%C2%AE-100842aa/) for more insights on clean energy project management.
+**About the Author:** techmadeeasy team, PMP® is a renewable energy project management expert with extensive experience in offshore wind development. Connect with him on [LinkedIn](https://www.linkedin.com/in/hoang-vietduc-pmp%C2%AE-100842aa/) for more insights on clean energy project management.
 

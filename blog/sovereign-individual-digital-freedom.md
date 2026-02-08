@@ -222,7 +222,7 @@ The author and publisher shall not be liable for any losses, damages, or adverse
 
 ## About the Author
 
-**Duc Hoang** is a technology strategist and digital sovereignty advocate who has been studying the intersection of technology, economics, and individual freedom for over a decade. He has helped hundreds of professionals transition to location-independent careers and build sovereign wealth systems.
+**techmadeeasy team** is a technology strategist and digital sovereignty advocate who has been studying the intersection of technology, economics, and individual freedom for over a decade. He has helped hundreds of professionals transition to location-independent careers and build sovereign wealth systems.
 
 **Published**: September 2025  
 **Reading Time**: 25 minutes  
