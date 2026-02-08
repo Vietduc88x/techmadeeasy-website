@@ -66,36 +66,12 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Newsletter */}
           <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-foreground">Contact</h3>
-            <ul className="space-y-2">
-              <li className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">Ho Chi Minh, Vietnam</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-muted-foreground" />
-                <a href="mailto:re.hoangvietduc@gmail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  re.hoangvietduc@gmail.com
-                </a>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">+84 0966 96 1190</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <Linkedin className="h-4 w-4 text-muted-foreground" />
-                <a 
-                  href="https://www.linkedin.com/in/hoang-vietduc-pmp%C2%AE-100842aa/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Hoang Viet Duc, PMP®
-                </a>
-              </li>
-            </ul>
+            <h3 className="text-sm font-semibold text-foreground">Stay Updated</h3>
+            <p className="text-sm text-muted-foreground">
+              Subscribe to our newsletter for the latest technology insights and updates.
+            </p>
           </div>
         </div>
 
@@ -105,7 +81,7 @@ export function Footer() {
               © 2025 Tech Made Easy. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground mt-2 md:mt-0">
-              Founded by Duc Hoang
+              Built with passion for technology education
             </p>
           </div>
         </div>
