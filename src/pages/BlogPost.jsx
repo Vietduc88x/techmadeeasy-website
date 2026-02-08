@@ -162,7 +162,7 @@ export function BlogPost() {
     },
     'self-sovereignty': {
       title: 'Self-Sovereignty',
-      category: 'Web 3.0',
+      category: 'Crypto Network',
       readTime: '15 min read',
       date: 'November 2024',
       author: 'techmadeeasy',

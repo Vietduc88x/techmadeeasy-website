@@ -196,7 +196,7 @@ export function About() {
                       </div>
                       <div className="flex items-center">
                         <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                        <span className="text-muted-foreground">Web 3.0 Technologies</span>
+                        <span className="text-muted-foreground">Crypto Network Technologies</span>
                       </div>
                       <div className="flex items-center">
                         <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
@@ -273,9 +273,9 @@ export function About() {
               </div>
               
               <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Web 3.0 & Open Web</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Crypto Network & Open Web</h3>
                 <p className="text-muted-foreground">
-                  Web 3.0 is all about decentralization, privacy, and shifting digital ownership from companies to decentralized networks, builders, and users. We discover together what open webs are, their use cases, and potential investments.
+                  Crypto Network is all about decentralization, privacy, and shifting digital ownership from companies to decentralized networks, builders, and users. We discover together what open webs are, their use cases, and potential investments.
                 </p>
               </div>
               

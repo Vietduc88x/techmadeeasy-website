@@ -193,7 +193,7 @@ export function Blog() {
       slug: 'self-sovereignty',
       title: 'Self-Sovereignty',
       excerpt: 'The internet has revolutionized the way we communicate and interact with each other, but it has also led to a centralized system where tech giants have complete control over our data.',
-      category: 'Web 3.0',
+      category: 'Crypto Network',
       readTime: '15 min read',
       date: 'November 2024',
       dateSort: '2024-11',
@@ -222,7 +222,7 @@ export function Blog() {
     { name: 'Investment', count: blogPosts.filter(p => p.category === 'Investment').length },
     { name: 'Engineering', count: blogPosts.filter(p => p.category === 'Engineering').length },
     { name: 'Career', count: blogPosts.filter(p => p.category === 'Career').length },
-    { name: 'Web 3.0', count: blogPosts.filter(p => p.category === 'Web 3.0').length },
+    { name: 'Crypto Network', count: blogPosts.filter(p => p.category === 'Crypto Network').length },
     { name: 'Education', count: blogPosts.filter(p => p.category === 'Education').length }
   ].filter(cat => cat.count > 0);
 

@@ -55,7 +55,7 @@ export function Home() {
     },
     {
       icon: Globe,
-      title: 'Web 3.0 & Open Web',
+      title: 'Crypto Network & Open Web',
       description: 'Learn about decentralization, privacy, and digital ownership.',
     },
     {

@@ -58,7 +58,7 @@ export function Footer() {
                 <span className="text-sm text-muted-foreground">Artificial Intelligence</span>
               </li>
               <li>
-                <span className="text-sm text-muted-foreground">Web 3.0</span>
+                <span className="text-sm text-muted-foreground">Crypto Network</span>
               </li>
               <li>
                 <span className="text-sm text-muted-foreground">Digital Twins</span>
