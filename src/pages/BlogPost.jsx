@@ -13,6 +13,20 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'platform-revolution-meets-defi': {
+      title: 'Platform Revolution Meets Decentralized Finance',
+      category: 'Investment',
+      readTime: '20 min read',
+      date: 'February 2026',
+      author: 'Duc Hoang',
+    },
+    'cach-mang-platform-gap-go-defi': {
+      title: 'Cách mạng Platform Gặp gỡ Tài chính Phi tập trung',
+      category: 'Đầu Tư',
+      readTime: '20 phút đọc',
+      date: 'Tháng 2 2026',
+      author: 'Duc Hoang',
+    },
     'symmetric-risk-versus-asymmetric-risk': {
       title: 'The world of symmetric risk versus the power of asymmetric risk',
       category: 'Investment',
