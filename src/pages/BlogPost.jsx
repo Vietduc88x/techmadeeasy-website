@@ -13,7 +13,20 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
-
+    'platform-revolution-meets-defi': {
+      title: 'Platform Revolution Meets Decentralized Finance',
+      category: 'Investment',
+      readTime: '20 min read',
+      date: 'February 2026',
+      author: 'techmadeeasy',
+    },
+    'cach-mang-platform-gap-go-defi': {
+      title: 'Cách mạng Platform Gặp gỡ Tài chính Phi tập trung',
+      category: 'Đầu Tư',
+      readTime: '20 phút đọc',
+      date: 'Tháng 2 2026',
+      author: 'techmadeeasy',
+    },
     'symmetric-risk-versus-asymmetric-risk': {
       title: 'The world of symmetric risk versus the power of asymmetric risk',
       category: 'Investment',
@@ -369,7 +382,26 @@ export function BlogPost() {
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            {slug === 'complete-guide-offshore-wind-farm-development' ? (
+            {slug === 'platform-revolution-meets-defi' || slug === 'cach-mang-platform-gap-go-defi' ? (
+              <iframe 
+                src={`/articles/${slug}.html`}
+                className="w-full border-0"
+                style={{ minHeight: '100vh', height: '100%' }}
+                title={post.title}
+                onLoad={(e) => {
+                  // Auto-resize iframe to content height
+                  const iframe = e.target;
+                  if (iframe.contentWindow) {
+                    try {
+                      const height = iframe.contentWindow.document.body.scrollHeight;
+                      iframe.style.height = height + 'px';
+                    } catch (err) {
+                      console.log('Cannot access iframe content');
+                    }
+                  }
+                }}
+              />
+            ) : slug === 'complete-guide-offshore-wind-farm-development' ? (
               <OffshoreWindGuide />
             ) : slug === 'interactive-offshore-wind-farm' ? (
               <div className="space-y-8">
