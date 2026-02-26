@@ -10,8 +10,6 @@ export function Header() {
   const navigation = [
     { name: 'Home', href: '/', external: false },
     { name: 'Blog', href: '/blog', external: false },
-    { name: 'Mentalhub', href: 'https://mentalhub.techmadeeasy.info', external: true },
-    { name: 'Techconnect', href: 'https://connect.techmadeeasy.info/', external: true },
   ];
 
   const isActive = (href) => location.pathname === href;
