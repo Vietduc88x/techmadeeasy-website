@@ -124,6 +124,17 @@ export function Blog() {
       tags: ['investment', 'innovation', 'ARK Invest', 'future trends'],
     },
     {
+      slug: 'life-thesis',
+      title: "Don't Set Goals. Build Layers.",
+      excerpt: 'A three-layer operating system for building an extraordinary life — Mental & Physical OS, Life Architecture, and the Growth Engine. How Stoicism, mental models, and falsification triggers create compounding results.',
+      category: 'Personal Development',
+      readTime: '20 min read',
+      date: 'February 2026',
+      dateSort: '2026-02',
+      featured: true,
+      tags: ['life thesis', 'mental models', 'Stoicism', 'compounding', 'personal development', 'framework'],
+    },
+    {
       slug: 'platform-revolution-meets-defi',
       title: 'Platform Revolution Meets Decentralized Finance',
       excerpt: 'How the Platform Business Model framework from Parker, Van Alstyne & Choudary explains why Solana, Hyperliquid, and NEAR Protocol are undervalued platform businesses generating real revenue.',
