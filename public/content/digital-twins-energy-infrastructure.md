@@ -11,8 +11,6 @@ That moment stuck with me. Because the answer to that wish already exists. It's 
 
 > A digital twin is a living, breathing virtual copy of a physical asset. It's constantly fed real-time data from sensors, weather stations, SCADA systems, IoT devices -- everything. It doesn't just look like your asset. It behaves like your asset. It ages like your asset. And if you are paying attention, it tells you what your asset is about to do before it actually does it.
 
-As a PM who has managed projects across solar farms, battery energy storage systems (BESS), onshore wind, nearshore wind, and offshore wind -- I can tell you this isn't hype. This is a genuine game-changer for how we plan, build, and operate energy infrastructure.
-
 ---
 
 ## The Numbers Are Hard to Ignore
