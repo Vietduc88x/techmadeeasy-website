@@ -14,6 +14,17 @@ export function Blog() {
 
   const blogPosts = [
     {
+      slug: 'solar-bess-dominance',
+      title: "Why Solar and BESS Will Dominate -- A Field Engineer's Honest Take",
+      excerpt: "Solar at $35/MWh. Batteries down 45% in one year. A PM's honest comparison of solar+BESS vs nuclear, onshore wind, and offshore wind -- with real numbers from Lazard, BloombergNEF, and the IEA.",
+      category: 'Renewable Energy',
+      readTime: '10 min read',
+      date: 'February 2026',
+      dateSort: '2026-02',
+      featured: true,
+      tags: ['solar', 'BESS', 'battery storage', 'renewable energy', 'nuclear', 'offshore wind', 'energy transition'],
+    },
+    {
       slug: 'digital-twins-energy-infrastructure',
       title: 'Digital Twins in Energy: Why Your Next Power Plant Already Exists Before You Build It',
       excerpt: "A field engineer's honest take on how digital twins are transforming energy infrastructure. From solar farms to BESS to offshore wind -- what works, what doesn't, and why every PM should care.",

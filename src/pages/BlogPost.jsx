@@ -13,6 +13,13 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'solar-bess-dominance': {
+      title: "Why Solar and BESS Will Dominate -- A Field Engineer's Honest Take",
+      category: 'Renewable Energy',
+      readTime: '10 min read',
+      date: 'February 2026',
+      author: 'techmadeeasy',
+    },
     'digital-twins-energy-infrastructure': {
       title: 'Digital Twins in Energy: Why Your Next Power Plant Already Exists Before You Build It',
       category: 'Technology',
