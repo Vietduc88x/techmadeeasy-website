@@ -16,7 +16,7 @@ export function Blog() {
     {
       slug: 'digital-twins-energy-infrastructure',
       title: 'Digital Twins in Energy: Why Your Next Power Plant Already Exists Before You Build It',
-      excerpt: 'A field engineer's honest take on how digital twins are transforming energy infrastructure. From solar farms to BESS to offshore wind -- what works, what doesn't, and why every PM should care.',
+      excerpt: "A field engineer's honest take on how digital twins are transforming energy infrastructure. From solar farms to BESS to offshore wind -- what works, what doesn't, and why every PM should care.",
       category: 'Technology',
       readTime: '8 min read',
       date: 'March 2026',
