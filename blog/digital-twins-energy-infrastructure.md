@@ -1,8 +1,4 @@
-# Digital Twins in Energy: Why Your Next Power Plant Already Exists Before You Build It
-
 ## The Moment That Changed How I Think About Energy Assets
-
-*A project manager's honest take on the technology transforming how we plan, build, and operate energy infrastructure*
 
 ![Solar Farm](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/solar_farm.png)
 *Modern solar farm -- the kind of asset that benefits most from digital twin technology*

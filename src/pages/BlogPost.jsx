@@ -344,9 +344,9 @@ export function BlogPost() {
           return <br key={index} />;
         }
         if (line.trim() === "") {
-          return <br key={index} />;
+          return null;
         }
-        return <p key={index} className="text-muted-foreground mb-4 leading-relaxed">{line}</p>;
+        return <p key={index} className="text-muted-foreground mb-2 leading-relaxed">{line}</p>;
       });
   };
 
@@ -425,7 +425,7 @@ export function BlogPost() {
                       <p className="text-muted-foreground">Loading content...</p>
                     </div>
                   ) : (
-                    <div className="space-y-4">
+                    <div className="space-y-1">
                       {formatContent(content)}
                     </div>
                   )}
@@ -457,7 +457,7 @@ export function BlogPost() {
                       <p className="text-muted-foreground">Loading content...</p>
                     </div>
                   ) : (
-                    <div className="space-y-4">
+                    <div className="space-y-1">
                       {formatContent(content)}
                     </div>
                   )}
@@ -470,7 +470,7 @@ export function BlogPost() {
                     <p className="text-muted-foreground">Loading content...</p>
                   </div>
                 ) : (
-                  <div className="space-y-4">
+                  <div className="space-y-1">
                     {formatContent(content)}
                   </div>
                 )}
