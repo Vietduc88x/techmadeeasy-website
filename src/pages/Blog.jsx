@@ -14,6 +14,17 @@ export function Blog() {
 
   const blogPosts = [
     {
+      slug: 'digital-twins-energy-infrastructure',
+      title: 'Digital Twins in Energy: Why Your Next Power Plant Already Exists Before You Build It',
+      excerpt: 'A field engineer's honest take on how digital twins are transforming energy infrastructure. From solar farms to BESS to offshore wind -- what works, what doesn't, and why every PM should care.',
+      category: 'Technology',
+      readTime: '8 min read',
+      date: 'March 2026',
+      dateSort: '2026-03',
+      featured: true,
+      tags: ['digital twins', 'energy', 'renewable energy', 'AI', 'project management', 'BESS'],
+    },
+    {
       slug: 'ai-power-hungry-giants-energy-demands',
       title: 'The Power Hungry Giants: Understanding AI Data Center Energy Demands and Load Profiles',
       excerpt: 'As AI models grow exponentially in capability, their appetite for electricity is reshaping the global energy landscape. Explore the complex energy dynamics of AI data centers, from unique load profiles to innovative cooling solutions.',

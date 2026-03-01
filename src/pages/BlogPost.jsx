@@ -13,6 +13,13 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'digital-twins-energy-infrastructure': {
+      title: 'Digital Twins in Energy: Why Your Next Power Plant Already Exists Before You Build It',
+      category: 'Technology',
+      readTime: '8 min read',
+      date: 'March 2026',
+      author: 'techmadeeasy',
+    },
     'life-thesis': {
       title: "Don't Set Goals. Build Layers.",
       category: 'Personal Development',
