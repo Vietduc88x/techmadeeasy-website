@@ -4,20 +4,20 @@ The PM doesn't do less work. The PM does different work -- reviewing agent outpu
 
 That's AI orchestration. And it's not a 2030 prediction. It's happening right now.
 
-![AI Infrastructure](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-1.jpg)
-*The infrastructure powering AI agent teams is scaling fast -- and so is the opportunity for project managers who understand orchestration*
+![AI and Human Collaboration](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai_human_collaboration.jpg)
+*The future of project management is human-AI collaboration -- not replacement*
 
 ---
 
 ## The Numbers Are Staggering
 
-By 2028, **33% of enterprise software** will include agentic AI capabilities. In 2024, that number was less than 1% (Gartner 2025).
+By 2028, 33% of enterprise software will include agentic AI capabilities. In 2024, that number was less than 1% (Gartner 2025).
 
 Let that sink in. From less than 1% to a third of all enterprise software in four years. That's not gradual adoption. That's a phase shift.
 
-The autonomous AI agent market hit **$8.5 billion in 2026**, with some estimates projecting it to reach $47 billion by 2030 (Industry Reports). According to Deloitte's 2025 AI Agent Survey, **15% of day-to-day work decisions** are already being made autonomously by AI agents -- without a human pressing "approve."
+The autonomous AI agent market hit $8.5 billion in 2026, with some estimates projecting it to reach $47 billion by 2030 (Industry Reports). According to Deloitte's 2025 AI Agent Survey, 15% of day-to-day work decisions are already being made autonomously by AI agents -- without a human pressing "approve."
 
-And **86% of Chief Human Resources Officers** now view integrating digital labor as central to their organizational strategy. Not supplementary. Central.
+And 86% of Chief Human Resources Officers now view integrating digital labor as central to their organizational strategy. Not supplementary. Central.
 
 > This isn't about ChatGPT writing your status reports. This is about coordinated AI agent TEAMS running parts of your projects.
 
@@ -29,13 +29,13 @@ Think of it as managing a hybrid team where some members are humans and some are
 
 Not one AI doing everything. Multiple agents, each with a specific capability:
 
-![Energy Ecosystem](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/energy_ecosystem.png)
-*Just like an energy ecosystem with interconnected components, AI orchestration connects specialized agents into a coordinated system*
+![Team Collaboration](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/team_collaboration_data.jpg)
+*AI orchestration is about coordinating multiple specialized agents -- just like managing a diverse team of experts*
 
-- **Agent 1** monitors schedule dependencies across all work packages and auto-adjusts timelines when upstream tasks slip
-- **Agent 2** scans risk patterns across 200+ projects in the portfolio and flags anomalies in real-time -- the kind of cross-project pattern recognition no human PM could do manually
-- **Agent 3** handles procurement workflows -- drafting RFPs, managing vendor communications, tracking delivery timelines
-- **Agent 4** generates executive reports by synthesizing real-time data from scheduling tools, financial systems, and field reports
+- Agent 1 monitors schedule dependencies across all work packages and auto-adjusts timelines when upstream tasks slip
+- Agent 2 scans risk patterns across 200+ projects in the portfolio and flags anomalies in real-time -- the kind of cross-project pattern recognition no human PM could do manually
+- Agent 3 handles procurement workflows -- drafting RFPs, managing vendor communications, tracking delivery timelines
+- Agent 4 generates executive reports by synthesizing real-time data from scheduling tools, financial systems, and field reports
 
 These agents don't work in isolation. They communicate through protocols like Google's Agent-to-Agent (A2A) and Anthropic's Model Context Protocol (MCP). They share context. They coordinate decisions. And when something falls outside their defined authority, they escalate to the human PM.
 
@@ -47,15 +47,15 @@ The key word is "orchestration" -- not automation. Automation replaces human tas
 
 Organizations already running agent orchestration are reporting significant results:
 
+![AI Agent Network](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai_agent_network.jpg)
+*AI agents are reaching into every corner of enterprise operations -- from scheduling to risk analysis*
+
 | Metric | Impact |
 |--------|--------|
-| Process time reductions | **30-50%** in multi-handoff workflows |
-| Day-to-day decisions by AI | **15%** made autonomously (Deloitte 2025) |
-| Resource utilization | **20-30% improvement** with agent scheduling |
-| CHROs prioritizing digital labor | **86%** view it as central to strategy |
-
-![AI Systems at Scale](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-2.jpg)
-*Behind every AI agent team is infrastructure designed for scale -- the same infrastructure now accessible to enterprise project teams*
+| Process time reductions | 30-50% in multi-handoff workflows |
+| Day-to-day decisions by AI | 15% made autonomously (Deloitte 2025) |
+| Resource utilization | 20-30% improvement with agent scheduling |
+| CHROs prioritizing digital labor | 86% view it as central to strategy |
 
 McKinsey's 2025 State of AI report found that organizations with the most mature AI agent deployments aren't just faster -- they're making fundamentally different decisions because they have access to real-time cross-project intelligence that was impossible to compile manually.
 
@@ -69,14 +69,14 @@ The PM isn't doing less. The PM is doing the work that actually requires a human
 
 Not all AI agent deployments look the same. There's a spectrum, and understanding it is critical for any PM thinking about how to implement this:
 
-![Data Center Operations](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/datacenter-layout-2.jpg)
-*From human-in-the-loop to fully autonomous -- the level of AI autonomy depends on the complexity and risk of each task*
+![Human and AI Autonomy](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/human_ai_autonomy.jpg)
+*The spectrum of AI autonomy ranges from full human control to fully autonomous agents -- knowing which level to apply is the PM's new superpower*
 
 ### Level 1: Human in the Loop
 
 The AI suggests. The human decides every time. Every output gets reviewed before action.
 
-**Examples:** Schedule optimization recommendations, risk scoring and prioritization, draft communications for human review.
+Examples: Schedule optimization recommendations, risk scoring and prioritization, draft communications for human review.
 
 This is where most organizations start, and for good reason. It builds trust, surfaces edge cases, and lets the team learn what the agents are good at -- and where they fail.
 
@@ -84,7 +84,7 @@ This is where most organizations start, and for good reason. It builds trust, su
 
 The AI acts within defined boundaries. The human monitors and intervenes only when needed.
 
-**Examples:** Automated procurement workflows within pre-approved parameters, report generation and distribution, routine data analysis and alerting.
+Examples: Automated procurement workflows within pre-approved parameters, report generation and distribution, routine data analysis and alerting.
 
 This is where the real productivity gains kick in. The agent handles the 80% of routine cases autonomously, and the PM only gets involved for the 20% that fall outside the boundaries. But it requires clear rules: what decisions can the agent make? What requires escalation? What's the rollback procedure if the agent gets it wrong?
 
@@ -92,7 +92,7 @@ This is where the real productivity gains kick in. The agent handles the 80% of 
 
 Fully autonomous within a defined scope. The agent executes without human oversight for specific, well-bounded tasks.
 
-**Examples:** Routine alert triage, automated data backups and integrity checks, standard compliance reporting.
+Examples: Routine alert triage, automated data backups and integrity checks, standard compliance reporting.
 
 Very few organizations are here today, and for most PM workflows, this level isn't appropriate -- yet. But for narrow, well-defined tasks with low risk of catastrophic failure, it's increasingly viable.
 
@@ -104,14 +104,14 @@ Very few organizations are here today, and for most PM workflows, this level isn
 
 Here's where the honest part comes in. AI orchestration is powerful, but the gap between the vision and the reality is significant.
 
-**Only 28% of enterprises** claim maturity with AI agents (Gartner 2025). That means 72% are still figuring it out -- experimenting, failing, learning.
+![Project Strategy Board](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/project_strategy_board.jpg)
+*The gap between the AI vision and reality requires strategic thinking -- not just technology adoption*
 
-**Over 40% of agentic AI projects** face cancellation by 2027 due to scaling complexity. Not because the technology doesn't work, but because organizations underestimate the organizational change required to make it work.
+Only 28% of enterprises claim maturity with AI agents (Gartner 2025). That means 72% are still figuring it out -- experimenting, failing, learning.
 
-**Scaling complexity** is the #1 killer of agent deployments. It's relatively easy to build a single agent that does one thing well. It's enormously hard to build a system of agents that coordinate reliably across an entire project lifecycle.
+Over 40% of agentic AI projects face cancellation by 2027 due to scaling complexity. Not because the technology doesn't work, but because organizations underestimate the organizational change required to make it work.
 
-![Complex Infrastructure](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-3.jpg)
-*The complexity of coordinating AI agents mirrors the complexity of managing large-scale infrastructure -- and both require experienced orchestrators*
+Scaling complexity is the #1 killer of agent deployments. It's relatively easy to build a single agent that does one thing well. It's enormously hard to build a system of agents that coordinate reliably across an entire project lifecycle.
 
 The pattern is familiar to anyone who's managed large projects: the technology works in the pilot. Then you try to scale it, and suddenly you're dealing with data quality issues, integration challenges, change resistance, and the realization that your processes weren't as standardized as you thought.
 
@@ -131,17 +131,17 @@ Here's the part that matters most: the PM role isn't disappearing. It's transfor
 | Compiling risk registers | Strategic decision-making with real-time intelligence |
 | Building slide decks | Orchestrating outcomes across hybrid teams |
 
-![Project Infrastructure](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/cooling-infrastructure-5.jpg)
-*Just as modern infrastructure requires sophisticated control systems, modern project management requires orchestration skills across human and AI team members*
+![Team Leadership](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/team_leadership.jpg)
+*The PM of the future leads hybrid teams of humans and AI agents -- the skill is orchestration, not execution*
 
 The agents handle the repetitive 80%. The PM focuses on the strategic 20% that actually requires a human being in the room -- the relationship management, the political navigation, the judgment calls that come from experience.
 
 But this only works if PMs develop new skills. The traditional PM skillset -- scheduling, budgeting, risk management -- is necessary but no longer sufficient. The PMs who thrive in an AI-orchestrated world will also need:
 
-1. **Agent boundary design** -- knowing how to define what an agent can and can't do
-2. **Escalation architecture** -- building the rules for when agents hand off to humans
-3. **Cross-system thinking** -- understanding how data flows between agents and between agents and humans
-4. **Trust calibration** -- knowing when to trust agent outputs and when to override them
+1. Agent boundary design -- knowing how to define what an agent can and can't do
+2. Escalation architecture -- building the rules for when agents hand off to humans
+3. Cross-system thinking -- understanding how data flows between agents and between agents and humans
+4. Trust calibration -- knowing when to trust agent outputs and when to override them
 
 ---
 
@@ -179,7 +179,7 @@ Start building the skills now. The window between "early advantage" and "table s
 
 ---
 
-**Sources:**
+Sources:
 - Gartner, "Agentic AI in Enterprise Software," 2025
 - Deloitte, "AI Agent Survey," 2025
 - McKinsey, "State of AI," 2025
@@ -187,6 +187,6 @@ Start building the skills now. The window between "early advantage" and "table s
 - Google A2A Protocol Documentation, 2025
 - Anthropic MCP Documentation, 2025
 
-**Disclaimer:** The views expressed in this article are entirely my own and do not represent any organization or employer.
+Disclaimer: The views expressed in this article are entirely my own and do not represent any organization or employer.
 
 *Duc Hoang, PMP | Tech Made Easy (techmadeeasy.info)*
