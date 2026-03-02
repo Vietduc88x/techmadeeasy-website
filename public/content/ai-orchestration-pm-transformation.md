@@ -4,20 +4,20 @@ The PM doesn't do less work. The PM does different work -- reviewing agent outpu
 
 That's AI orchestration. And it's not a 2030 prediction. It's happening right now.
 
-![AI Orchestration](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/solar_farm.png)
-*The next generation of project management isn't about tools -- it's about orchestrating intelligent agents*
+![AI Infrastructure](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-1.jpg)
+*The infrastructure powering AI agent teams is scaling fast -- and so is the opportunity for project managers who understand orchestration*
 
 ---
 
 ## The Numbers Are Staggering
 
-By 2028, 33% of enterprise software will include agentic AI capabilities. In 2024, that number was less than 1% (Gartner 2025).
+By 2028, **33% of enterprise software** will include agentic AI capabilities. In 2024, that number was less than 1% (Gartner 2025).
 
 Let that sink in. From less than 1% to a third of all enterprise software in four years. That's not gradual adoption. That's a phase shift.
 
-The autonomous AI agent market hit $8.5 billion in 2026, with some estimates projecting it to reach $47 billion by 2030 (Industry Reports). According to Deloitte's 2025 AI Agent Survey, 15% of day-to-day work decisions are already being made autonomously by AI agents -- without a human pressing "approve."
+The autonomous AI agent market hit **$8.5 billion in 2026**, with some estimates projecting it to reach $47 billion by 2030 (Industry Reports). According to Deloitte's 2025 AI Agent Survey, **15% of day-to-day work decisions** are already being made autonomously by AI agents -- without a human pressing "approve."
 
-And 86% of Chief Human Resources Officers now view integrating digital labor as central to their organizational strategy. Not supplementary. Central.
+And **86% of Chief Human Resources Officers** now view integrating digital labor as central to their organizational strategy. Not supplementary. Central.
 
 > This isn't about ChatGPT writing your status reports. This is about coordinated AI agent TEAMS running parts of your projects.
 
@@ -28,6 +28,9 @@ And 86% of Chief Human Resources Officers now view integrating digital labor as 
 Think of it as managing a hybrid team where some members are humans and some are AI agents with specialized roles.
 
 Not one AI doing everything. Multiple agents, each with a specific capability:
+
+![Energy Ecosystem](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/energy_ecosystem.png)
+*Just like an energy ecosystem with interconnected components, AI orchestration connects specialized agents into a coordinated system*
 
 - **Agent 1** monitors schedule dependencies across all work packages and auto-adjusts timelines when upstream tasks slip
 - **Agent 2** scans risk patterns across 200+ projects in the portfolio and flags anomalies in real-time -- the kind of cross-project pattern recognition no human PM could do manually
@@ -44,10 +47,15 @@ The key word is "orchestration" -- not automation. Automation replaces human tas
 
 Organizations already running agent orchestration are reporting significant results:
 
-- **30-50% process time reductions** in workflows that previously required multiple handoffs between humans and systems
-- **15% of day-to-day decisions** now made autonomously by AI agents (Deloitte 2025)
-- **20-30% improvement** in resource utilization when agents handle scheduling and allocation
-- **86% of CHROs** view digital labor integration as central to strategy
+| Metric | Impact |
+|--------|--------|
+| Process time reductions | **30-50%** in multi-handoff workflows |
+| Day-to-day decisions by AI | **15%** made autonomously (Deloitte 2025) |
+| Resource utilization | **20-30% improvement** with agent scheduling |
+| CHROs prioritizing digital labor | **86%** view it as central to strategy |
+
+![AI Systems at Scale](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-2.jpg)
+*Behind every AI agent team is infrastructure designed for scale -- the same infrastructure now accessible to enterprise project teams*
 
 McKinsey's 2025 State of AI report found that organizations with the most mature AI agent deployments aren't just faster -- they're making fundamentally different decisions because they have access to real-time cross-project intelligence that was impossible to compile manually.
 
@@ -60,6 +68,9 @@ The PM isn't doing less. The PM is doing the work that actually requires a human
 ## The Three Levels of AI Autonomy
 
 Not all AI agent deployments look the same. There's a spectrum, and understanding it is critical for any PM thinking about how to implement this:
+
+![Data Center Operations](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/datacenter-layout-2.jpg)
+*From human-in-the-loop to fully autonomous -- the level of AI autonomy depends on the complexity and risk of each task*
 
 ### Level 1: Human in the Loop
 
@@ -99,9 +110,10 @@ Here's where the honest part comes in. AI orchestration is powerful, but the gap
 
 **Scaling complexity** is the #1 killer of agent deployments. It's relatively easy to build a single agent that does one thing well. It's enormously hard to build a system of agents that coordinate reliably across an entire project lifecycle.
 
-The pattern is familiar to anyone who's managed large projects: the technology works in the pilot. Then you try to scale it, and suddenly you're dealing with data quality issues, integration challenges, change resistance, and the realization that your processes weren't as standardized as you thought.
+![Complex Infrastructure](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-3.jpg)
+*The complexity of coordinating AI agents mirrors the complexity of managing large-scale infrastructure -- and both require experienced orchestrators*
 
-Sound familiar? It should. It's the same pattern that's played out with every enterprise technology wave -- ERP, BIM, digital twins, and now AI agents.
+The pattern is familiar to anyone who's managed large projects: the technology works in the pilot. Then you try to scale it, and suddenly you're dealing with data quality issues, integration challenges, change resistance, and the realization that your processes weren't as standardized as you thought.
 
 > The organizations that succeed aren't the ones with the best technology. They're the ones that treat AI orchestration as an organizational transformation, not a technology deployment.
 
@@ -111,19 +123,16 @@ Sound familiar? It should. It's the same pattern that's played out with every en
 
 Here's the part that matters most: the PM role isn't disappearing. It's transforming.
 
-**Before AI orchestration:**
-- Writing status reports
-- Manually tracking schedules
-- Chasing vendor updates
-- Compiling risk registers
-- Building slide decks
+| Before AI Orchestration | After AI Orchestration |
+|------------------------|----------------------|
+| Writing status reports | Setting agent boundaries and escalation paths |
+| Manually tracking schedules | Defining autonomous decision parameters |
+| Chasing vendor updates | Managing exceptions and edge cases |
+| Compiling risk registers | Strategic decision-making with real-time intelligence |
+| Building slide decks | Orchestrating outcomes across hybrid teams |
 
-**After AI orchestration:**
-- Setting agent boundaries and escalation paths
-- Defining what decisions agents can make autonomously
-- Managing exceptions and edge cases
-- Strategic decision-making with real-time intelligence
-- Orchestrating outcomes across human and AI team members
+![Project Infrastructure](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/cooling-infrastructure-5.jpg)
+*Just as modern infrastructure requires sophisticated control systems, modern project management requires orchestration skills across human and AI team members*
 
 The agents handle the repetitive 80%. The PM focuses on the strategic 20% that actually requires a human being in the room -- the relationship management, the political navigation, the judgment calls that come from experience.
 
