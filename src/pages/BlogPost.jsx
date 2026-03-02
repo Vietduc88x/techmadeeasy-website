@@ -13,6 +13,13 @@ export function BlogPost() {
   const [loading, setLoading] = useState(true);
 
   const blogPosts = {
+    'ai-orchestration-pm-transformation': {
+      title: 'AI Orchestration: The 2026 Reality Most PMs Aren\'t Ready For',
+      category: 'Technology',
+      readTime: '9 min read',
+      date: 'March 2026',
+      author: 'techmadeeasy',
+    },
     'solar-bess-dominance': {
       title: "Why Solar and BESS Will Dominate -- A Field Engineer's Honest Take",
       category: 'Renewable Energy',

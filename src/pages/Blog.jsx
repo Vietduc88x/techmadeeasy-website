@@ -14,6 +14,17 @@ export function Blog() {
 
   const blogPosts = [
     {
+      slug: 'ai-orchestration-pm-transformation',
+      title: 'AI Orchestration: The 2026 Reality Most PMs Aren\'t Ready For',
+      excerpt: 'Picture this: a project manager walks into a Monday morning standup. But instead of chasing five people for status updates, three of the team members aren\'t people at all. They\'re AI agents -- one...',
+      category: 'Technology',
+      readTime: '9 min read',
+      date: 'March 2026',
+      dateSort: '2026-03',
+      featured: true,
+      tags: ['AI', 'AI agents', 'project management', 'orchestration', 'future of work'],
+    },
+    {
       slug: 'solar-bess-dominance',
       title: "Why Solar and BESS Will Dominate -- A Field Engineer's Honest Take",
       excerpt: "Solar at $35/MWh. Batteries down 45% in one year. A PM's honest comparison of solar+BESS vs nuclear, onshore wind, and offshore wind -- with real numbers from Lazard, BloombergNEF, and the IEA.",
