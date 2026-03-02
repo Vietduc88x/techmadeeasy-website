@@ -302,66 +302,152 @@ export function BlogPost() {
   }
 
   const formatContent = (content) => {
-    // Simple markdown-like formatting
-    return content
-      .split('\n')
-      .map((line, index) => {
-        if (line.startsWith('# ')) {
-          return <h1 key={index} className="text-3xl font-bold text-foreground mb-6 mt-8">{line.slice(2)}</h1>;
+    const lines = content.split('\n');
+
+    // --- Inline formatting helper ---
+    const renderInline = (text) => {
+      const parts = [];
+      let remaining = text;
+      let key = 0;
+      while (remaining.length > 0) {
+        const boldMatch = remaining.match(/\*\*(.+?)\*\*/);
+        const linkMatch = remaining.match(/\[([^\]]+)\]\(([^)]+)\)/);
+        const codeMatch = remaining.match(/`([^`]+)`/);
+        const italicMatch = remaining.match(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/);
+        const matches = [
+          boldMatch && { type: 'bold', m: boldMatch },
+          linkMatch && { type: 'link', m: linkMatch },
+          codeMatch && { type: 'code', m: codeMatch },
+          italicMatch && { type: 'italic', m: italicMatch },
+        ].filter(Boolean).sort((a, b) => a.m.index - b.m.index);
+        if (matches.length === 0) { parts.push(remaining); break; }
+        const first = matches[0];
+        if (first.m.index > 0) parts.push(remaining.slice(0, first.m.index));
+        if (first.type === 'bold') parts.push(<strong key={key++}>{first.m[1]}</strong>);
+        else if (first.type === 'link') parts.push(<a key={key++} href={first.m[2]} className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">{first.m[1]}</a>);
+        else if (first.type === 'code') parts.push(<code key={key++} className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono">{first.m[1]}</code>);
+        else if (first.type === 'italic') parts.push(<em key={key++}>{first.m[1]}</em>);
+        remaining = remaining.slice(first.m.index + first.m[0].length);
+      }
+      return parts.length === 1 && typeof parts[0] === 'string' ? parts[0] : parts;
+    };
+
+    // --- Phase 1: Group lines into blocks ---
+    const blocks = [];
+    let i = 0;
+    while (i < lines.length) {
+      const line = lines[i];
+      if (line.trim() === '') { i++; continue; }
+      if (line.trim() === '---') { blocks.push({ type: 'hr' }); i++; continue; }
+      // Table block
+      if (line.trim().startsWith('|') && i + 1 < lines.length && /^\|[\s\-:|]+\|$/.test(lines[i + 1]?.trim())) {
+        const tableLines = [];
+        while (i < lines.length && lines[i].trim().startsWith('|')) { tableLines.push(lines[i]); i++; }
+        blocks.push({ type: 'table', lines: tableLines });
+        continue;
+      }
+      // Ordered list block
+      if (/^\d+\.\s/.test(line)) {
+        const items = [];
+        while (i < lines.length && /^\d+\.\s/.test(lines[i])) { items.push(lines[i].replace(/^\d+\.\s/, '')); i++; }
+        blocks.push({ type: 'ol', items });
+        continue;
+      }
+      // Unordered list block (- prefix or *   prefix)
+      if (line.startsWith('- ') || line.startsWith('*   ')) {
+        const items = [];
+        while (i < lines.length && (lines[i].startsWith('- ') || lines[i].startsWith('*   '))) {
+          items.push(lines[i].startsWith('- ') ? lines[i].slice(2) : lines[i].slice(4));
+          i++;
         }
-        if (line.startsWith('## ')) {
-          return <h2 key={index} className="text-2xl font-bold text-foreground mb-4 mt-6">{line.slice(3)}</h2>;
-        }
-        if (line.startsWith('### ')) {
-          return <h3 key={index} className="text-xl font-bold text-foreground mb-3 mt-5">{line.slice(4)}</h3>;
-        }
-        if (line.startsWith('![') && line.includes('](') && line.endsWith(')')) {
-          const altText = line.substring(line.indexOf('[') + 1, line.indexOf(']'));
-          const imageUrl = line.substring(line.indexOf('(') + 1, line.indexOf(')'));
-          return (
-            <div key={index} className="my-8 text-center">
-              <img 
-                src={imageUrl} 
-                alt={altText} 
-                className="max-w-full h-auto mx-auto rounded-lg shadow-lg"
-                style={{ maxHeight: '500px' }}
-              />
-            </div>
-          );
-        }
-        if (line.startsWith('*') && !line.startsWith('**') && line.endsWith('*') && !line.endsWith('**')) {
-          return <p key={index} className="text-sm text-muted-foreground italic text-center mb-6 -mt-4">{line.slice(1, -1)}</p>;
-        }
-        if (line.startsWith('> ')) {
-          return (
-            <blockquote key={index} className="border-l-4 border-primary pl-4 italic text-muted-foreground my-4">
-              {line.slice(2)}
-            </blockquote>
-          );
-        }
-        if (line.startsWith('*   ')) {
-          return (
-            <li key={index} className="text-muted-foreground mb-2 ml-4">
-              {line.slice(4)}
-            </li>
-          );
-        }
-        if (line.startsWith('**') && line.endsWith('**')) {
-          return <p key={index} className="font-bold text-foreground mb-4">{line.slice(2, -2)}</p>;
-        }
-        if (line.startsWith("[") && line.includes("](") && line.endsWith(")")) {
-          const linkText = line.substring(line.indexOf("[") + 1, line.indexOf("]"));
-          const linkUrl = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
-          return <p key={index} className="text-muted-foreground mb-4 leading-relaxed"><a href={linkUrl} className="text-primary hover:underline">{linkText}</a></p>;
-        }
-        if (line.trim() === ")") {
-          return <br key={index} />;
-        }
-        if (line.trim() === "") {
-          return null;
-        }
-        return <p key={index} className="text-muted-foreground mb-2 leading-relaxed">{line}</p>;
-      });
+        blocks.push({ type: 'ul', items });
+        continue;
+      }
+      blocks.push({ type: 'line', text: line });
+      i++;
+    }
+
+    // --- Phase 2: Render blocks ---
+    return blocks.map((block, index) => {
+      if (block.type === 'hr') return <hr key={index} className="my-8 border-border" />;
+
+      if (block.type === 'table') {
+        const rows = block.lines
+          .filter(l => !/^\|[\s\-:|]+\|$/.test(l.trim()))
+          .map(l => l.split('|').filter((_, ci, arr) => ci > 0 && ci < arr.length - 1).map(c => c.trim()));
+        if (rows.length === 0) return null;
+        const header = rows[0];
+        const body = rows.slice(1);
+        return (
+          <div key={index} className="my-6 overflow-x-auto">
+            <table className="w-full border-collapse border border-border text-sm">
+              <thead>
+                <tr className="bg-muted">
+                  {header.map((cell, ci) => (
+                    <th key={ci} className="border border-border px-4 py-2 text-left font-semibold text-foreground">{renderInline(cell)}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {body.map((row, ri) => (
+                  <tr key={ri} className={ri % 2 === 0 ? '' : 'bg-muted/50'}>
+                    {row.map((cell, ci) => (
+                      <td key={ci} className="border border-border px-4 py-2 text-muted-foreground">{renderInline(cell)}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      }
+
+      if (block.type === 'ol') {
+        return (
+          <ol key={index} className="list-decimal list-inside space-y-2 my-4 ml-4">
+            {block.items.map((item, li) => <li key={li} className="text-muted-foreground leading-relaxed">{renderInline(item)}</li>)}
+          </ol>
+        );
+      }
+
+      if (block.type === 'ul') {
+        return (
+          <ul key={index} className="list-disc list-inside space-y-2 my-4 ml-4">
+            {block.items.map((item, li) => <li key={li} className="text-muted-foreground leading-relaxed">{renderInline(item)}</li>)}
+          </ul>
+        );
+      }
+
+      // Single-line rendering
+      const line = block.text;
+      if (line.startsWith('# ')) return <h1 key={index} className="text-3xl font-bold text-foreground mb-6 mt-8">{line.slice(2)}</h1>;
+      if (line.startsWith('## ')) return <h2 key={index} className="text-2xl font-bold text-foreground mb-4 mt-6">{line.slice(3)}</h2>;
+      if (line.startsWith('### ')) return <h3 key={index} className="text-xl font-bold text-foreground mb-3 mt-5">{line.slice(4)}</h3>;
+      if (line.startsWith('![') && line.includes('](') && line.endsWith(')')) {
+        const altText = line.substring(line.indexOf('[') + 1, line.indexOf(']'));
+        const imageUrl = line.substring(line.indexOf('(') + 1, line.lastIndexOf(')'));
+        return (
+          <div key={index} className="my-8 text-center">
+            <img src={imageUrl} alt={altText} className="max-w-full h-auto mx-auto rounded-lg shadow-lg" style={{ maxHeight: '500px' }} />
+          </div>
+        );
+      }
+      if (/^\*[^*]/.test(line) && /[^*]\*$/.test(line)) {
+        return <p key={index} className="text-sm text-muted-foreground italic text-center mb-6 -mt-4">{line.slice(1, -1)}</p>;
+      }
+      if (line.startsWith('> ')) {
+        return <blockquote key={index} className="border-l-4 border-primary pl-4 italic text-muted-foreground my-4">{renderInline(line.slice(2))}</blockquote>;
+      }
+      if (line.startsWith('**') && line.endsWith('**')) {
+        return <p key={index} className="font-bold text-foreground mb-4">{line.slice(2, -2)}</p>;
+      }
+      if (line.startsWith('[') && line.includes('](') && line.endsWith(')')) {
+        const linkText = line.substring(1, line.indexOf(']'));
+        const linkUrl = line.substring(line.indexOf('(') + 1, line.lastIndexOf(')'));
+        return <p key={index} className="text-muted-foreground mb-4 leading-relaxed"><a href={linkUrl} className="text-primary hover:underline">{linkText}</a></p>;
+      }
+      return <p key={index} className="text-muted-foreground mb-2 leading-relaxed">{renderInline(line)}</p>;
+    });
   };
 
   return (
