@@ -41,20 +41,6 @@ export function BlogPost() {
       date: 'February 2026',
       author: 'techmadeeasy',
     },
-    'platform-revolution-meets-defi': {
-      title: 'Platform Revolution Meets Decentralized Finance',
-      category: 'Investment',
-      readTime: '20 min read',
-      date: 'February 2026',
-      author: 'techmadeeasy',
-    },
-    'cach-mang-platform-gap-go-defi': {
-      title: 'Cách mạng Platform Gặp gỡ Tài chính Phi tập trung',
-      category: 'Đầu Tư',
-      readTime: '20 phút đọc',
-      date: 'Tháng 2 2026',
-      author: 'techmadeeasy',
-    },
     'symmetric-risk-versus-asymmetric-risk': {
       title: 'The world of symmetric risk versus the power of asymmetric risk',
       category: 'Investment',
@@ -496,7 +482,7 @@ export function BlogPost() {
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            {slug === 'platform-revolution-meets-defi' || slug === 'cach-mang-platform-gap-go-defi' || slug === 'life-thesis' ? (
+            {slug === 'life-thesis' ? (
               <iframe 
                 src={`/articles/${slug}.html`}
                 className="w-full border-0"
