@@ -18,6 +18,6 @@ export default defineConfig({
   },
   ssr: {
     // Bundle CJS packages into the SSR output so Node ESM can import them
-    noExternal: ['react-helmet-async'],
+    noExternal: true,  // Bundle all deps into SSR output to avoid pnpm isolation issues
   },
 })
