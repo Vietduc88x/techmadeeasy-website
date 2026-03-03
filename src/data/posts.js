@@ -161,6 +161,18 @@ export const blogPosts = [
     author: 'techmadeeasy',
   },
   {
+    slug: 'bach-dang-battle',
+    title: "Battle of Bach Dang: Vietnam's Resounding Victory",
+    excerpt: 'April 9, 1288 — When 3,000 hidden stakes shattered an empire\'s dreams and birthed timeless lessons in strategic excellence. Discover what modern project managers can learn from this masterclass in strategy.',
+    category: 'Philosophy',
+    readTime: '12 min read',
+    date: 'September 2025',
+    dateSort: '2025-09',
+    featured: true,
+    tags: ['strategy', 'history', 'project management', 'leadership', 'Vietnam'],
+    author: 'techmadeeasy',
+  },
+  {
     slug: 'strategic-masterpiece-redefined-warfare',
     title: 'The Strategic Masterpiece That Redefined Warfare',
     excerpt: 'How one Vietnamese prince rewrote the rules of military strategy forever. Discover the revolutionary thinking behind the Battle of Bach Dang and its profound applications for modern business, leadership, and personal development.',
