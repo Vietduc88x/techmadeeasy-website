@@ -58,7 +58,7 @@ We recommend negotiating batch delivery with the WTG supplier for three reasons:
 3. **Storage cost management**: Reduces the need for massive marshaling areas and long-term storage
 
 ![Wind Turbine Nacelle](/images/turbine_nacelle.png)
-*WTG nacelle ready for installation — batch delivery reduces single-point-of-failure risk*
+*WTG nacelle undergoing final assembly in the factory — standardized manufacturing enables predictable procurement and faster delivery*
 
 ---
 
