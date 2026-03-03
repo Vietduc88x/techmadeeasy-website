@@ -329,18 +329,6 @@ export const blogPosts = [
     author: 'techmadeeasy',
   },
   {
-    slug: 'self-sovereignty',
-    title: 'Self-Sovereignty',
-    excerpt: 'The internet has revolutionized the way we communicate and interact with each other, but it has also led to a centralized system where tech giants have complete control over our data.',
-    category: 'Crypto Network',
-    readTime: '15 min read',
-    date: 'November 2024',
-    dateSort: '2024-11',
-    featured: true,
-    tags: ['web3', 'decentralization', 'privacy', 'sovereignty'],
-    author: 'techmadeeasy',
-  },
-  {
     slug: 'new-york-on-tech-is-helping-under-resourced-students-become-future-tech-leaders',
     title: 'New York on Tech is helping under-resourced students become future tech leaders',
     excerpt: 'Jessica Santana and Evin Robinson were riding the subway home from a college leadership conference when they realized they were getting off at the same stop.',

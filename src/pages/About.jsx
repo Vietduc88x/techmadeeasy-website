@@ -203,10 +203,6 @@ export function About() {
                       </div>
                       <div className="flex items-center">
                         <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                        <span className="text-muted-foreground">Crypto Network Technologies</span>
-                      </div>
-                      <div className="flex items-center">
-                        <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
                         <span className="text-muted-foreground">Technical Writing & Education</span>
                       </div>
                     </div>
@@ -276,13 +272,6 @@ export function About() {
                 <h3 className="text-xl font-semibold text-foreground mb-3">Artificial Intelligence</h3>
                 <p className="text-muted-foreground">
                   AI is like teaching computers to think and learn just like us using math and code. We discuss different AI apps and tools that can help us get our work done faster and better.
-                </p>
-              </div>
-              
-              <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Crypto Network & Open Web</h3>
-                <p className="text-muted-foreground">
-                  Crypto Network is all about decentralization, privacy, and shifting digital ownership from companies to decentralized networks, builders, and users. We discover together what open webs are, their use cases, and potential investments.
                 </p>
               </div>
               

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Wind, Brain, Globe, Cpu, Users, Eye, FileText, Download, Mail, CheckCircle } from 'lucide-react';
+import { ArrowRight, Wind, Brain, Cpu, Users, Eye, FileText, Download, Mail, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -54,12 +54,7 @@ export function Home() {
       title: 'Artificial Intelligence',
       description: 'Discover AI applications, tools and how they revolutionize industries.',
     },
-    {
-      icon: Globe,
-      title: 'Crypto Network & Open Web',
-      description: 'Learn about decentralization, privacy, and digital ownership.',
-    },
-    {
+{
       icon: Cpu,
       title: 'Digital Twins',
       description: 'Understand digital twin technology and its real-world applications.',
@@ -72,7 +67,7 @@ export function Home() {
     <div className="flex flex-col">
       <Helmet>
         <title>Tech Made Easy - Making Technology Accessible to Everyone</title>
-        <meta name="description" content="Expert insights on renewable energy, AI, Web 3.0, and Digital Twins. Simplifying complex technology for professionals and decision-makers. By Duc Hoang, PMP." />
+        <meta name="description" content="Expert insights on renewable energy, AI, and Digital Twins. Simplifying complex technology for professionals and decision-makers. By Duc Hoang, PMP." />
         <link rel="canonical" href="https://techmadeeasy.info/" />
       </Helmet>
 
@@ -120,7 +115,7 @@ export function Home() {
                 <div className="text-lg text-muted-foreground">Expert Articles</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">4</div>
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">3</div>
                 <div className="text-lg text-muted-foreground">Focus Areas</div>
               </div>
               <div className="text-center">
@@ -172,7 +167,7 @@ export function Home() {
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardHeader className="text-center">
