@@ -150,7 +150,7 @@ By contrast, monopile installation is a specialized discipline with a limited po
 The cost advantage is substantial: pile cap foundations are typically **40–50% cheaper** than monopile foundations for Mekong Delta nearshore projects, primarily due to local manufacturing, simpler logistics, and lower vessel costs.
 
 ![Turbine Tower](/images/turbine_tower.png)
-*Wind turbine tower on a pile cap foundation — the dominant foundation type for Vietnam's nearshore wind sector*
+*Tower sections at a wind farm construction site — foundation design determines the entire erection sequence and construction schedule*
 
 ---
 

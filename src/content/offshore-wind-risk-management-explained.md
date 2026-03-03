@@ -219,7 +219,7 @@ The project board typically approves the budget at P75 or P80, meaning there's a
 **Mitigation**: Force majeure clauses in all contracts. Adequate insurance coverage (including delay in start-up/ALOP). Geographic diversification of supply chain. Business continuity planning.
 
 ![Turbine Blades](/images/turbine_blades.png)
-*Every component in an offshore wind project carries risk — from manufacturing quality to transportation damage to installation weather windows*
+*Blade manufacturing in the factory — quality control during production is the first line of defense against costly defects discovered offshore*
 
 ---
 

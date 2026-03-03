@@ -229,7 +229,7 @@ One often-overlooked aspect: survey data management. A single offshore wind proj
 Invest in a centralized project data management system from day one. The cost is trivial compared to the consequences of lost or mismanaged survey data.
 
 ![Energy Ecosystem](/images/energy_ecosystem.png)
-*The offshore wind ecosystem depends on comprehensive site data — surveys are the foundation of every engineering decision*
+*The energy ecosystem — from generation to transmission to consumption, offshore wind surveys feed critical data into every stage of project development*
 
 ---
 
