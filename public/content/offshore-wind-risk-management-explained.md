@@ -38,7 +38,7 @@ Imagine we’re embarking on an exciting voyage to build an offshore wind farm. 
 2.  **Impress the Admirals (Investors and Client):** Show them our well-charted course. They’ll trust our voyage and of course, their funds.
 3.  **Treasure Hunt:** Risk management uncovers hidden gems (opportunities) while guarding against sea monsters (threats).
 
-**Navigating Offshore Wind Risks: A simple typical risk indetification guide**
+**Navigating Offshore Wind Risks: A Simple Typical Risk Identification Guide**
 
 1.  **Environment Risk:**
     *   Imagine we’re building wind turbines at sea. Some spots are home to coral reefs or sensitive bird habitats.

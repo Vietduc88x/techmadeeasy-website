@@ -1,13 +1,3 @@
----
-title: "Strategic Planning for Large-Scale Renewable Energy Projects: Your Complete Playbook"
-date: 2024-12-19
-author: "Renewable Energy Strategy Team"
-categories: ["Renewable Energy", "Strategic Planning", "Project Management"]
-tags: ["renewable energy", "strategic planning", "wind energy", "solar energy", "project finance", "FIM", "PESTEL analysis", "SWOT analysis"]
-description: "A comprehensive guide to strategic planning for large-scale renewable energy projects, covering analysis, strategy formulation, and execution phases with practical frameworks and real-world insights."
-featured_image: "/images/renewable-energy-strategic-planning.jpg"
----
-
 # Strategic Planning for Large-Scale Renewable Energy Projects: Your Complete Playbook
 
 Building a giant wind or solar farm is like planning a multi-year, billion-dollar expedition to a new continent. You wouldn't just start walking and hope for the best. You'd need a map, a plan for every contingency, and a clear vision of your destination.
