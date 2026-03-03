@@ -53,9 +53,6 @@ export function Blog() {
     return filtered;
   }, [selectedCategory, searchQuery, sortBy]);
 
-  const featuredPosts = filteredAndSortedPosts.filter(post => post.featured);
-  const regularPosts = filteredAndSortedPosts.filter(post => !post.featured);
-
   return (
     <div className="flex flex-col min-h-screen">
       <Helmet>
@@ -156,29 +153,27 @@ export function Blog() {
       {/* Blog Content */}
       <section className="py-16 flex-1">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Featured Posts */}
-          {featuredPosts.length > 0 && (
+          {/* All Articles */}
+          {filteredAndSortedPosts.length > 0 && (
             <div className="mb-16">
               <div className="flex items-center gap-3 mb-8">
-                <h2 className="text-3xl font-bold text-foreground">Featured Articles</h2>
+                <h2 className="text-3xl font-bold text-foreground">All Articles</h2>
                 <Badge variant="secondary" className="px-3 py-1">
-                  {featuredPosts.length}
+                  {filteredAndSortedPosts.length}
                 </Badge>
               </div>
-              
+
               <div className={`grid gap-8 ${
-                viewMode === 'grid' 
-                  ? 'grid-cols-1 lg:grid-cols-2 xl:grid-cols-3' 
+                viewMode === 'grid'
+                  ? 'grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'
                   : 'grid-cols-1'
               }`}>
-                {featuredPosts.map((post) => (
-                  <PostCard key={post.slug} post={post} viewMode={viewMode} featured={true} />
+                {filteredAndSortedPosts.map((post) => (
+                  <PostCard key={post.slug} post={post} viewMode={viewMode} featured={post.featured} />
                 ))}
               </div>
             </div>
           )}
-
-          {/* All Articles section removed - only showing Featured Articles */}
 
           {/* No Results */}
           {filteredAndSortedPosts.length === 0 && (
