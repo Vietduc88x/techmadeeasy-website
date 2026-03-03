@@ -157,7 +157,7 @@ The commissioning phase compresses an enormous number of stakeholders into a sho
 Each of these stakeholders has their own schedule, requirements, and approval processes. A robust commissioning schedule with 2–3 weeks of buffer is not conservative — it's realistic.
 
 ![Wind Turbine Tower](/images/turbine_tower.png)
-*Tower installation in progress — commissioning planning should start long before the last bolt is tightened*
+*Tower sections staged for nearshore wind installation — in Vietnam's intertidal zone, every lift must be planned around tidal windows and weather*
 
 ---
 
