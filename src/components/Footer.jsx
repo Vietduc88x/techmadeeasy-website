@@ -78,7 +78,7 @@ export function Footer() {
         <div className="mt-8 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              © 2025 Tech Made Easy. All rights reserved.
+              © {new Date().getFullYear()} Tech Made Easy. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground mt-2 md:mt-0">
               Built with passion for technology education

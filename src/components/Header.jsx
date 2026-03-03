@@ -10,6 +10,8 @@ export function Header() {
   const navigation = [
     { name: 'Home', href: '/', external: false },
     { name: 'Blog', href: '/blog', external: false },
+    { name: 'About', href: '/about', external: false },
+    { name: 'Contact', href: '/contact', external: false },
   ];
 
   const isActive = (href) => location.pathname === href;

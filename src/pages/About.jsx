@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Users, Eye, FileText, Target, Heart, Lightbulb, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -36,6 +37,12 @@ export function About() {
 
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>About | Tech Made Easy</title>
+        <meta name="description" content="About Tech Made Easy - founded by Duc Hoang, PMP. Expert insights on renewable energy, AI, and emerging technologies for professionals and decision-makers." />
+        <link rel="canonical" href="https://techmadeeasy.info/about" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,8 +147,8 @@ export function About() {
         </div>
       </section>
 
-      {/* Founder Section - Hidden */}
-      <section className="py-20 bg-muted/30" style={{display: 'none'}}>
+      {/* Founder Section */}
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">

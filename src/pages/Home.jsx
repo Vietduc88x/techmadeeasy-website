@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Wind, Brain, Globe, Cpu, Users, Eye, FileText, Download, Mail, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -15,7 +16,7 @@ export function Home() {
     setIsLoading(true);
     
     try {
-      const response = await fetch('https://mzhyi8cdlj3o.manus.space/api/newsletter/subscribe', {
+      const response = await fetch('/.netlify/functions/newsletter', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -69,6 +70,12 @@ export function Home() {
 
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>Tech Made Easy - Making Technology Accessible to Everyone</title>
+        <meta name="description" content="Expert insights on renewable energy, AI, Web 3.0, and Digital Twins. Simplifying complex technology for professionals and decision-makers. By Duc Hoang, PMP." />
+        <link rel="canonical" href="https://techmadeeasy.info/" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -149,11 +156,12 @@ export function Home() {
                 </p>
               </div>
               <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 shadow-lg">
-                <img 
-                  src="/renewable-energy-system.png" 
+                <img
+                  src="/renewable-energy-system.png"
                   alt="Integrated Renewable Energy System - Wind turbines, solar panels, hydrogen production, smart grid, and energy storage working together"
                   className="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
                   style={{ maxHeight: '600px', objectFit: 'contain' }}
+                  loading="lazy"
                 />
                 <div className="mt-6 text-center">
                   <p className="text-sm text-muted-foreground italic">

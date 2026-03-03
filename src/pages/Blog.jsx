@@ -1,10 +1,12 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Calendar, Clock, ArrowRight, Search, Filter, Grid, List } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
+import { blogPosts, getCategories } from '@/data/posts';
 
 export function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -12,241 +14,7 @@ export function Blog() {
   const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'list'
   const [sortBy, setSortBy] = useState('date'); // 'date', 'readTime', 'title'
 
-  const blogPosts = [
-    {
-      slug: 'ai-orchestration-pm-transformation',
-      title: 'AI Orchestration: The 2026 Reality Most PMs Aren\'t Ready For',
-      excerpt: 'Picture this: a project manager walks into a Monday morning standup. But instead of chasing five people for status updates, three of the team members aren\'t people at all. They\'re AI agents -- one...',
-      category: 'Technology',
-      readTime: '9 min read',
-      date: 'March 2026',
-      dateSort: '2026-03',
-      featured: true,
-      tags: ['AI', 'AI agents', 'project management', 'orchestration', 'future of work'],
-    },
-    {
-      slug: 'solar-bess-dominance',
-      title: "Why Solar and BESS Will Dominate -- A Field Engineer's Honest Take",
-      excerpt: "Solar at $35/MWh. Batteries down 45% in one year. A PM's honest comparison of solar+BESS vs nuclear, onshore wind, and offshore wind -- with real numbers from Lazard, BloombergNEF, and the IEA.",
-      category: 'Renewable Energy',
-      readTime: '10 min read',
-      date: 'February 2026',
-      dateSort: '2026-02',
-      featured: true,
-      tags: ['solar', 'BESS', 'battery storage', 'renewable energy', 'nuclear', 'offshore wind', 'energy transition'],
-    },
-    {
-      slug: 'digital-twins-energy-infrastructure',
-      title: 'Digital Twins in Energy: Why Your Next Power Plant Already Exists Before You Build It',
-      excerpt: "A field engineer's honest take on how digital twins are transforming energy infrastructure. From solar farms to BESS to offshore wind -- what works, what doesn't, and why every PM should care.",
-      category: 'Technology',
-      readTime: '8 min read',
-      date: 'March 2026',
-      dateSort: '2026-03',
-      featured: true,
-      tags: ['digital twins', 'energy', 'renewable energy', 'AI', 'project management', 'BESS'],
-    },
-    {
-      slug: 'ai-power-hungry-giants-energy-demands',
-      title: 'The Power Hungry Giants: Understanding AI Data Center Energy Demands and Load Profiles',
-      excerpt: 'As AI models grow exponentially in capability, their appetite for electricity is reshaping the global energy landscape. Explore the complex energy dynamics of AI data centers, from unique load profiles to innovative cooling solutions.',
-      category: 'Technology',
-      readTime: '10 min read',
-      date: 'September 2025',
-      dateSort: '2025-09',
-      featured: true,
-      tags: ['AI', 'data centers', 'energy', 'power consumption', 'cooling'],
-    },
-    {
-      slug: 'ca-nhan-chu-quyen-tu-do-so',
-      title: 'Cá Nhân Chủ Quyền: Sự Trỗi Dậy của Tự Do Số trong Kỷ Nguyên Thông Tin',
-      excerpt: 'Công nghệ đang viết lại luật chơi của quyền lực, tài sản và tự do cá nhân. Khám phá cuộc chuyển đổi từ quốc gia-dân tộc sang chủ quyền số và học các chiến lược thực tế để thịnh vượng trong Kỷ Nguyên Thông Tin.',
-      category: 'Công Nghệ',
-      readTime: '15 phút đọc',
-      date: 'Tháng 9 2025',
-      dateSort: '2025-09',
-      featured: true,
-      tags: ['blockchain', 'cryptocurrency', 'digital sovereignty', 'future'],
-    },
-    {
-      slug: 'sovereign-individual-digital-freedom',
-      title: 'The Sovereign Individual: The Rise of Digital Freedom in the Information Age',
-      excerpt: 'How technology is rewriting the rules of power, wealth, and individual liberty. Discover the transformation from nation-states to digital sovereignty and learn practical strategies for thriving in the Information Age.',
-      category: 'Technology',
-      readTime: '15 min read',
-      date: 'September 2025',
-      dateSort: '2025-09',
-      featured: true,
-      tags: ['blockchain', 'cryptocurrency', 'digital sovereignty', 'future'],
-    },
-    {
-      slug: 'strategic-masterpiece-redefined-warfare',
-      title: 'The Strategic Masterpiece That Redefined Warfare',
-      excerpt: 'How one Vietnamese prince rewrote the rules of military strategy forever. Discover the revolutionary thinking behind the Battle of Bach Dang and its profound applications for modern business, leadership, and personal development.',
-      category: 'Philosophy',
-      readTime: '15 min read',
-      date: 'September 2025',
-      dateSort: '2025-09',
-      featured: true,
-      tags: ['strategy', 'leadership', 'history', 'business'],
-    },
-    {
-      slug: 'interactive-offshore-wind-farm',
-      title: 'Interactive Offshore Wind Farm',
-      excerpt: 'Explore the complete offshore wind farm ecosystem through an interactive visualization. From floating turbines in deep waters to grid connections on shore, discover how these engineering marvels harness ocean winds to generate clean electricity.',
-      category: 'Renewable Energy',
-      readTime: '12 min read',
-      date: 'September 2025',
-      dateSort: '2025-09',
-      featured: true,
-      tags: ['wind energy', 'offshore', 'renewable', 'interactive'],
-    },
-    {
-      slug: 'fim-implementation-roadmap',
-      title: 'FIM Implementation Roadmap: Your Path to Procurement Excellence',
-      excerpt: 'A detailed and interactive guide to integrating Free Issue Material (FIM) strategy for optimal procurement in renewable energy projects, covering workshops, procurement structure, team organization, and business case.',
-      category: 'Engineering',
-      readTime: '25 min read',
-      date: 'August 2025',
-      dateSort: '2025-08',
-      featured: true,
-      tags: ['procurement', 'FIM', 'project management', 'renewable energy'],
-    },
-    {
-      slug: 'renewable-energy-costs-2024',
-      title: 'Renewable Power Generation Cost in 2024: Source IRENA',
-      excerpt: 'An interactive analysis of the latest cost trends in renewable energy technologies based on IRENA\'s comprehensive 2024 report. Explore how Solar PV achieved 90% cost reduction, making it one of the most competitive renewable technologies.',
-      category: 'Renewable Energy',
-      readTime: '15 min read',
-      date: 'December 2024',
-      dateSort: '2024-12',
-      featured: true,
-      tags: ['solar', 'costs', 'IRENA', 'analysis'],
-    },
-    {
-      slug: 'the-power-of-compounding',
-      title: 'The Power of Compounding: The Eighth Wonder of the World',
-      excerpt: 'Understanding how small, consistent efforts can lead to extraordinary results. Explore the mathematical beauty and practical applications of compounding in finance, knowledge, relationships, and personal growth.',
-      category: 'Personal Development',
-      readTime: '15 min read',
-      date: 'August 2025',
-      dateSort: '2025-08',
-      featured: true,
-      tags: ['compounding', 'growth', 'finance', 'personal development'],
-    },
-    {
-      slug: 'ai-applications-renewable-energy-transformation',
-      title: 'AI Applications in Renewable Energy: Transforming the Clean Energy Landscape',
-      excerpt: 'Explore how artificial intelligence is revolutionizing renewable energy systems through predictive analytics, smart grid management, asset optimization, and advanced maintenance strategies. Discover the future of AI-powered clean energy.',
-      category: 'Technology',
-      readTime: '20 min read',
-      date: 'August 2024',
-      dateSort: '2024-08',
-      featured: true,
-      tags: ['AI', 'renewable energy', 'smart grid', 'optimization'],
-    },
-    {
-      slug: 'ark-invest-big-ideas-2025',
-      title: 'ARK Invest Big Ideas 2025: A Vision for Disruptive Innovation',
-      excerpt: 'The world is evolving rapidly, driven by technological advancements, automation, and the rise of Artificial Intelligence. Exploring ARK Invest\'s vision for the future.',
-      category: 'Investment',
-      readTime: '12 min read',
-      date: 'January 2025',
-      dateSort: '2025-01',
-      featured: true,
-      tags: ['investment', 'innovation', 'ARK Invest', 'future trends'],
-    },
-    {
-      slug: 'life-thesis',
-      title: "Don't Set Goals. Build Layers.",
-      excerpt: 'A three-layer operating system for building an extraordinary life — Mental & Physical OS, Life Architecture, and the Growth Engine. How Stoicism, mental models, and falsification triggers create compounding results.',
-      category: 'Personal Development',
-      readTime: '20 min read',
-      date: 'February 2026',
-      dateSort: '2026-02',
-      featured: true,
-      tags: ['life thesis', 'mental models', 'Stoicism', 'compounding', 'personal development', 'framework'],
-    },
-    {
-      slug: 'symmetric-risk-versus-asymmetric-risk',
-      title: 'The world of symmetric risk versus the power of asymmetric risk',
-      excerpt: 'High risk, high reward? Not always. Explore the fundamental difference between symmetric and asymmetric risk through real-world examples from Solar Power Plants to Tesla, NVIDIA, and the attention economy.',
-      category: 'Investment',
-      readTime: '7 min read',
-      date: 'January 2026',
-      dateSort: '2026-01',
-      featured: true,
-      tags: ['risk management', 'investment', 'asymmetric risk', 'finance', 'strategy'],
-    },
-    {
-      slug: 'my-story-told-again',
-      title: 'My Story, Told Again - Once look back, see how far you\'ve come!',
-      excerpt: 'A new year is a time for reflection. From a young broke engineer with just a Honda motorbike to exploring renewable energy and beyond - a journey of continuous learning, humility, and taking risks.',
-      category: 'Personal Development',
-      readTime: '8 min read',
-      date: 'January 2026',
-      dateSort: '2026-01',
-      featured: true,
-      tags: ['personal growth', 'career journey', 'renewable energy', 'learning'],
-    },
-    {
-      slug: 'the-courage-to-be-you',
-      title: 'The Courage to Be You: Lessons from a Profound Book',
-      excerpt: 'Last weekend, I had the chance to delve into a thoughtful book, The Courage to Be Disliked. Profound life lessons that resonated deeply.',
-      category: 'Personal Development',
-      readTime: '10 min read',
-      date: 'January 2025',
-      dateSort: '2025-01',
-      featured: true,
-      tags: ['psychology', 'self-improvement', 'courage', 'book review'],
-    },
-    {
-      slug: 'hard-work-in-a-company-no-longer-gives-you-safe',
-      title: 'Hard Work in a Company No Longer Gives You Safe',
-      excerpt: 'The Storm Clouds. The business landscape feels fragile, and the winds of change are blowing. Exploring the realities of modern employment.',
-      category: 'Career',
-      readTime: '7 min read',
-      date: 'December 2024',
-      dateSort: '2024-12',
-      featured: true,
-      tags: ['career', 'employment', 'future of work', 'job security'],
-    },
-    {
-      slug: 'self-sovereignty',
-      title: 'Self-Sovereignty',
-      excerpt: 'The internet has revolutionized the way we communicate and interact with each other, but it has also led to a centralized system where tech giants have complete control over our data.',
-      category: 'Crypto Network',
-      readTime: '15 min read',
-      date: 'November 2024',
-      dateSort: '2024-11',
-      featured: true,
-      tags: ['web3', 'decentralization', 'privacy', 'sovereignty'],
-    },
-    {
-      slug: 'new-york-on-tech-is-helping-under-resourced-students-become-future-tech-leaders',
-      title: 'New York on Tech is helping under-resourced students become future tech leaders',
-      excerpt: 'Jessica Santana and Evin Robinson were riding the subway home from a college leadership conference when they realized they were getting off at the same stop.',
-      category: 'Education',
-      readTime: '10 min read',
-      date: 'October 2024',
-      dateSort: '2024-10',
-      featured: false,
-      tags: ['education', 'tech leadership', 'diversity', 'opportunity'],
-    }
-  ];
-
-  const categories = [
-    { name: 'All', count: blogPosts.length },
-    { name: 'Technology', count: blogPosts.filter(p => p.category === 'Technology').length },
-    { name: 'Renewable Energy', count: blogPosts.filter(p => p.category === 'Renewable Energy').length },
-    { name: 'Philosophy', count: blogPosts.filter(p => p.category === 'Philosophy').length },
-    { name: 'Personal Development', count: blogPosts.filter(p => p.category === 'Personal Development').length },
-    { name: 'Investment', count: blogPosts.filter(p => p.category === 'Investment').length },
-    { name: 'Engineering', count: blogPosts.filter(p => p.category === 'Engineering').length },
-    { name: 'Career', count: blogPosts.filter(p => p.category === 'Career').length },
-    { name: 'Crypto Network', count: blogPosts.filter(p => p.category === 'Crypto Network').length },
-    { name: 'Education', count: blogPosts.filter(p => p.category === 'Education').length }
-  ].filter(cat => cat.count > 0);
+  const categories = getCategories();
 
   // Filter and sort posts
   const filteredAndSortedPosts = useMemo(() => {
@@ -290,6 +58,12 @@ export function Blog() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Helmet>
+        <title>Blog | Tech Made Easy</title>
+        <meta name="description" content="Expert articles on renewable energy, AI, digital twins, project management, and emerging technologies. In-depth analysis for professionals." />
+        <link rel="canonical" href="https://techmadeeasy.info/blog" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

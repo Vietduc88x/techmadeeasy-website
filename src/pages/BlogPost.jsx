@@ -1,18 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Calendar, Clock, ArrowLeft, Share2 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Calendar, Clock, ArrowLeft, Share2, Mail, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Input } from '@/components/ui/input';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import OffshoreWindGuide from '@/components/OffshoreWindGuide';
 import OffshoreWindFarmApp from '@/pages/offshore-wind-farm/App.jsx';
 import BachDangBattleApp from '@/pages/bach-dang-battle/App.jsx';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { blogPosts as allPosts, blogPostsBySlug } from '@/data/posts';
 
 export function BlogPost() {
   const { slug } = useParams();
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const blogPosts = {
+  const _legacyBlogPosts = {
     'ai-orchestration-pm-transformation': {
       title: 'AI Orchestration: The 2026 Reality Most PMs Aren\'t Ready For',
       category: 'Technology',
@@ -246,7 +255,42 @@ export function BlogPost() {
     },
   };
 
-  const post = blogPosts[slug];
+  // Use unified data source; fall back to legacy for any stragglers
+  const post = blogPostsBySlug[slug] || _legacyBlogPosts[slug];
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    try {
+      const response = await fetch('/.netlify/functions/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setIsSubscribed(true);
+        setEmail('');
+      } else {
+        alert(data.error || 'An error occurred while subscribing');
+      }
+    } catch (error) {
+      alert('An error occurred while subscribing. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Related posts: same category first, then other posts, excluding current
+  const relatedPosts = allPosts
+    .filter((p) => p.slug !== slug)
+    .sort((a, b) => {
+      const aMatch = a.category === post?.category ? 1 : 0;
+      const bMatch = b.category === post?.category ? 1 : 0;
+      if (bMatch !== aMatch) return bMatch - aMatch;
+      return b.dateSort?.localeCompare(a.dateSort || '') || 0;
+    })
+    .slice(0, 2);
 
   useEffect(() => {
     const loadContent = async () => {
@@ -287,157 +331,71 @@ export function BlogPost() {
     );
   }
 
-  const formatContent = (content) => {
-    const lines = content.split('\n');
-
-    // --- Inline formatting helper ---
-    const renderInline = (text) => {
-      const parts = [];
-      let remaining = text;
-      let key = 0;
-      while (remaining.length > 0) {
-        const boldMatch = remaining.match(/\*\*(.+?)\*\*/);
-        const linkMatch = remaining.match(/\[([^\]]+)\]\(([^)]+)\)/);
-        const codeMatch = remaining.match(/`([^`]+)`/);
-        const italicMatch = remaining.match(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/);
-        const matches = [
-          boldMatch && { type: 'bold', m: boldMatch },
-          linkMatch && { type: 'link', m: linkMatch },
-          codeMatch && { type: 'code', m: codeMatch },
-          italicMatch && { type: 'italic', m: italicMatch },
-        ].filter(Boolean).sort((a, b) => a.m.index - b.m.index);
-        if (matches.length === 0) { parts.push(remaining); break; }
-        const first = matches[0];
-        if (first.m.index > 0) parts.push(remaining.slice(0, first.m.index));
-        if (first.type === 'bold') parts.push(<strong key={key++}>{first.m[1]}</strong>);
-        else if (first.type === 'link') parts.push(<a key={key++} href={first.m[2]} className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">{first.m[1]}</a>);
-        else if (first.type === 'code') parts.push(<code key={key++} className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono">{first.m[1]}</code>);
-        else if (first.type === 'italic') parts.push(<em key={key++}>{first.m[1]}</em>);
-        remaining = remaining.slice(first.m.index + first.m[0].length);
-      }
-      return parts.length === 1 && typeof parts[0] === 'string' ? parts[0] : parts;
-    };
-
-    // --- Phase 1: Group lines into blocks ---
-    const blocks = [];
-    let i = 0;
-    while (i < lines.length) {
-      const line = lines[i];
-      if (line.trim() === '') { i++; continue; }
-      if (line.trim() === '---') { blocks.push({ type: 'hr' }); i++; continue; }
-      // Table block
-      if (line.trim().startsWith('|') && i + 1 < lines.length && /^\|[\s\-:|]+\|$/.test(lines[i + 1]?.trim())) {
-        const tableLines = [];
-        while (i < lines.length && lines[i].trim().startsWith('|')) { tableLines.push(lines[i]); i++; }
-        blocks.push({ type: 'table', lines: tableLines });
-        continue;
-      }
-      // Ordered list block
-      if (/^\d+\.\s/.test(line)) {
-        const items = [];
-        while (i < lines.length && /^\d+\.\s/.test(lines[i])) { items.push(lines[i].replace(/^\d+\.\s/, '')); i++; }
-        blocks.push({ type: 'ol', items });
-        continue;
-      }
-      // Unordered list block (- prefix or *   prefix)
-      if (line.startsWith('- ') || line.startsWith('*   ')) {
-        const items = [];
-        while (i < lines.length && (lines[i].startsWith('- ') || lines[i].startsWith('*   '))) {
-          items.push(lines[i].startsWith('- ') ? lines[i].slice(2) : lines[i].slice(4));
-          i++;
-        }
-        blocks.push({ type: 'ul', items });
-        continue;
-      }
-      blocks.push({ type: 'line', text: line });
-      i++;
-    }
-
-    // --- Phase 2: Render blocks ---
-    return blocks.map((block, index) => {
-      if (block.type === 'hr') return <hr key={index} className="my-8 border-border" />;
-
-      if (block.type === 'table') {
-        const rows = block.lines
-          .filter(l => !/^\|[\s\-:|]+\|$/.test(l.trim()))
-          .map(l => l.split('|').filter((_, ci, arr) => ci > 0 && ci < arr.length - 1).map(c => c.trim()));
-        if (rows.length === 0) return null;
-        const header = rows[0];
-        const body = rows.slice(1);
+  // Custom components for ReactMarkdown — preserves existing Tailwind styling
+  const markdownComponents = {
+    h1: ({ children }) => <h1 className="text-3xl font-bold text-foreground mb-6 mt-8">{children}</h1>,
+    h2: ({ children }) => <h2 className="text-2xl font-bold text-foreground mb-4 mt-6">{children}</h2>,
+    h3: ({ children }) => <h3 className="text-xl font-bold text-foreground mb-3 mt-5">{children}</h3>,
+    h4: ({ children }) => <h4 className="text-lg font-bold text-foreground mb-2 mt-4">{children}</h4>,
+    p: ({ children }) => <p className="text-muted-foreground mb-2 leading-relaxed">{children}</p>,
+    a: ({ href, children }) => <a href={href} className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">{children}</a>,
+    strong: ({ children }) => <strong className="font-bold text-foreground">{children}</strong>,
+    em: ({ children }) => <em>{children}</em>,
+    code: ({ className, children }) => {
+      // Fenced code blocks have a className like "language-js"
+      if (className) {
         return (
-          <div key={index} className="my-6 overflow-x-auto">
-            <table className="w-full border-collapse border border-border text-sm">
-              <thead>
-                <tr className="bg-muted">
-                  {header.map((cell, ci) => (
-                    <th key={ci} className="border border-border px-4 py-2 text-left font-semibold text-foreground">{renderInline(cell)}</th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {body.map((row, ri) => (
-                  <tr key={ri} className={ri % 2 === 0 ? '' : 'bg-muted/50'}>
-                    {row.map((cell, ci) => (
-                      <td key={ci} className="border border-border px-4 py-2 text-muted-foreground">{renderInline(cell)}</td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <code className="block bg-muted p-4 rounded-lg text-sm font-mono overflow-x-auto my-4">
+            {children}
+          </code>
         );
       }
-
-      if (block.type === 'ol') {
-        return (
-          <ol key={index} className="list-decimal list-inside space-y-2 my-4 ml-4">
-            {block.items.map((item, li) => <li key={li} className="text-muted-foreground leading-relaxed">{renderInline(item)}</li>)}
-          </ol>
-        );
-      }
-
-      if (block.type === 'ul') {
-        return (
-          <ul key={index} className="list-disc list-inside space-y-2 my-4 ml-4">
-            {block.items.map((item, li) => <li key={li} className="text-muted-foreground leading-relaxed">{renderInline(item)}</li>)}
-          </ul>
-        );
-      }
-
-      // Single-line rendering
-      const line = block.text;
-      if (line.startsWith('# ')) return <h1 key={index} className="text-3xl font-bold text-foreground mb-6 mt-8">{line.slice(2)}</h1>;
-      if (line.startsWith('## ')) return <h2 key={index} className="text-2xl font-bold text-foreground mb-4 mt-6">{line.slice(3)}</h2>;
-      if (line.startsWith('### ')) return <h3 key={index} className="text-xl font-bold text-foreground mb-3 mt-5">{line.slice(4)}</h3>;
-      if (line.startsWith('![') && line.includes('](') && line.endsWith(')')) {
-        const altText = line.substring(line.indexOf('[') + 1, line.indexOf(']'));
-        const imageUrl = line.substring(line.indexOf('(') + 1, line.lastIndexOf(')'));
-        return (
-          <div key={index} className="my-8 text-center">
-            <img src={imageUrl} alt={altText} className="max-w-full h-auto mx-auto rounded-lg shadow-lg" style={{ maxHeight: '500px' }} />
-          </div>
-        );
-      }
-      if (/^\*[^*]/.test(line) && /[^*]\*$/.test(line)) {
-        return <p key={index} className="text-sm text-muted-foreground italic text-center mb-6 -mt-4">{line.slice(1, -1)}</p>;
-      }
-      if (line.startsWith('> ')) {
-        return <blockquote key={index} className="border-l-4 border-primary pl-4 italic text-muted-foreground my-4">{renderInline(line.slice(2))}</blockquote>;
-      }
-      if (line.startsWith('**') && line.endsWith('**')) {
-        return <p key={index} className="font-bold text-foreground mb-4">{line.slice(2, -2)}</p>;
-      }
-      if (line.startsWith('[') && line.includes('](') && line.endsWith(')')) {
-        const linkText = line.substring(1, line.indexOf(']'));
-        const linkUrl = line.substring(line.indexOf('(') + 1, line.lastIndexOf(')'));
-        return <p key={index} className="text-muted-foreground mb-4 leading-relaxed"><a href={linkUrl} className="text-primary hover:underline">{linkText}</a></p>;
-      }
-      return <p key={index} className="text-muted-foreground mb-2 leading-relaxed">{renderInline(line)}</p>;
-    });
+      return <code className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono">{children}</code>;
+    },
+    pre: ({ children }) => <pre className="my-4">{children}</pre>,
+    blockquote: ({ children }) => <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground my-4">{children}</blockquote>,
+    ul: ({ children }) => <ul className="list-disc list-inside space-y-2 my-4 ml-4">{children}</ul>,
+    ol: ({ children }) => <ol className="list-decimal list-inside space-y-2 my-4 ml-4">{children}</ol>,
+    li: ({ children }) => <li className="text-muted-foreground leading-relaxed">{children}</li>,
+    hr: () => <hr className="my-8 border-border" />,
+    img: ({ src, alt }) => (
+      <span className="block my-8 text-center">
+        <img src={src} alt={alt} className="max-w-full h-auto mx-auto rounded-lg shadow-lg" style={{ maxHeight: '500px' }} loading="lazy" />
+      </span>
+    ),
+    table: ({ children }) => (
+      <div className="my-6 overflow-x-auto">
+        <table className="w-full border-collapse border border-border text-sm">{children}</table>
+      </div>
+    ),
+    thead: ({ children }) => <thead className="bg-muted">{children}</thead>,
+    th: ({ children }) => <th className="border border-border px-4 py-2 text-left font-semibold text-foreground">{children}</th>,
+    td: ({ children }) => <td className="border border-border px-4 py-2 text-muted-foreground">{children}</td>,
+    tr: ({ children }) => <tr>{children}</tr>,
   };
+
+  const renderMarkdown = (text) => (
+    <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+      {text}
+    </ReactMarkdown>
+  );
 
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>{post.title} | Tech Made Easy</title>
+        <meta name="description" content={post.excerpt || `${post.title} - Expert insights by Duc Hoang, PMP`} />
+        <link rel="canonical" href={`https://techmadeeasy.info/blog/${slug}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt || post.title} />
+        <meta property="og:url" content={`https://techmadeeasy.info/blog/${slug}`} />
+        <meta property="og:site_name" content="Tech Made Easy" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.excerpt || post.title} />
+      </Helmet>
+
       {/* Header */}
       <section className="py-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -512,7 +470,7 @@ export function BlogPost() {
                     </div>
                   ) : (
                     <div className="space-y-1">
-                      {formatContent(content)}
+                      {renderMarkdown(content)}
                     </div>
                   )}
                 </article>
@@ -544,7 +502,7 @@ export function BlogPost() {
                     </div>
                   ) : (
                     <div className="space-y-1">
-                      {formatContent(content)}
+                      {renderMarkdown(content)}
                     </div>
                   )}
                 </article>
@@ -557,11 +515,58 @@ export function BlogPost() {
                   </div>
                 ) : (
                   <div className="space-y-1">
-                    {formatContent(content)}
+                    {renderMarkdown(content)}
                   </div>
                 )}
               </article>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter CTA */}
+      <section className="py-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <Card className="border-2 border-primary/20">
+              <CardHeader className="text-center pb-4">
+                <CardTitle className="text-xl font-bold text-foreground">
+                  Enjoyed this article?
+                </CardTitle>
+                <CardDescription className="text-base text-muted-foreground">
+                  Get weekly insights on renewable energy, AI, and emerging technologies delivered to your inbox.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                {!isSubscribed ? (
+                  <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+                    <Input
+                      type="email"
+                      placeholder="Enter your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      className="flex-1"
+                      disabled={isLoading}
+                    />
+                    <Button type="submit" disabled={isLoading || !email}>
+                      {isLoading ? 'Subscribing...' : (
+                        <>
+                          <Mail className="mr-2 h-4 w-4" />
+                          Subscribe Free
+                        </>
+                      )}
+                    </Button>
+                  </form>
+                ) : (
+                  <div className="text-center space-y-2">
+                    <CheckCircle className="h-8 w-8 text-green-600 mx-auto" />
+                    <p className="font-semibold text-foreground">Welcome to the community!</p>
+                    <p className="text-sm text-muted-foreground">Check your email for a confirmation link.</p>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -572,23 +577,21 @@ export function BlogPost() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-foreground mb-8">Related Posts</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {Object.entries(blogPosts)
-                .filter(([key]) => key !== slug)
-                .slice(0, 2)
-                .map(([key, relatedPost]) => (
-                  <div key={key} className="bg-card rounded-lg p-6 border hover:shadow-lg transition-shadow">
-                    <Badge variant="secondary" className="mb-3">{relatedPost.category}</Badge>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">
-                      <Link to={`/blog/${key}`} className="hover:text-primary transition-colors">
-                        {relatedPost.title}
-                      </Link>
-                    </h3>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {relatedPost.date}
-                    </div>
+              {relatedPosts.map((relatedPost) => (
+                <div key={relatedPost.slug} className="bg-card rounded-lg p-6 border hover:shadow-lg transition-shadow">
+                  <Badge variant="secondary" className="mb-3">{relatedPost.category}</Badge>
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                    <Link to={`/blog/${relatedPost.slug}`} className="hover:text-primary transition-colors">
+                      {relatedPost.title}
+                    </Link>
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{relatedPost.excerpt}</p>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Calendar className="h-4 w-4 mr-1" />
+                    {relatedPost.date}
                   </div>
-                ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>

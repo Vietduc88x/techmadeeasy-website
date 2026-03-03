@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { MapPin, Mail, Phone, Send, Newspaper, Megaphone, PenTool, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -84,6 +85,12 @@ export function Contact() {
 
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>Contact | Tech Made Easy</title>
+        <meta name="description" content="Get in touch with Tech Made Easy. Submit a guest post, suggest a topic, or reach out for collaboration on renewable energy and technology content." />
+        <link rel="canonical" href="https://techmadeeasy.info/contact" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
