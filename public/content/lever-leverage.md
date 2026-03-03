@@ -1,108 +1,195 @@
-# Lever – Leverage
+> "Give me a lever long enough and a fulcrum on which to place it, and I shall move the world." — Archimedes
 
-_techmadeeasy team_
+It's a quiet Sunday morning. Coffee in hand, I'm scrolling through Vietnamese news — another celebrity scandal, another influencer caught selling counterfeit goods, ads for fake cosmetics and knockoff brands. I switch to international headlines: geopolitical tensions, trade wars, oil conflicts, political polarization. Same chaos, different geography.
 
-> “Give me a lever long enough and a fulcrum on which to place it, and I shall move the world.” — Archimedes
+I close the browser and sit back.
 
-It’s a quiet, boring Sunday morning.
+And then, almost accidentally, I stumble on that ancient Archimedes quote. I've read it a hundred times — probably first in a high school physics class, drawing force diagrams and calculating torque. Back then, it was just a formula. But reading it now, in the context of everything I've observed about how power, wealth, and influence actually work in the modern world, it hits differently.
 
-I’m at home, coffee in hand, mind drifting, and like most of us do these days—I open my laptop and start surfing the internet, trying to kill some time. I scroll aimlessly through the latest news in Vietnam, expecting something new, something refreshing. But instead, I find the same tired headlines flooding the screen.
+> The most powerful force in the modern world isn't effort — it's leverage. The people who understand this are building systems that work while they sleep. The people who don't are working harder every year and falling further behind.
 
-Another celebrity scandal. Another influencer caught selling fake goods. Ads promoting fake milk, counterfeit cosmetics, knockoff fashion brands. It’s like a carousel of absurdity that never stops spinning.
+This isn't a physics lesson. It's a reflection on how leverage — as a principle, not just a mechanism — explains almost everything about who gets ahead, who falls behind, and what we should do about it.
 
-I switch over to international news, hoping the broader world might offer something better. But what greets me is a heavy dose of geopolitical drama: U.S.–Iran tensions, Israel, oil, conflict, power struggles. Same chaos, different headlines. Another day, another storm.
+---
 
-I stare at the screen for a moment, then sigh deeply. Click close. Sit back.
+## What Leverage Actually Means
 
-**What a strange, crazy world we’re living in.**
+At its core, leverage is a force multiplier. It's the principle that allows a small, strategically applied input to produce a disproportionately large output.
 
-And then, almost accidentally, I click on another page. A quote appears. Simple, yet profound.
+In physics, it's straightforward: a crowbar amplifies your arm strength. A pulley reduces the force needed to lift a weight. A hydraulic press multiplies pressure.
 
-> “Give me a lever long enough and a fulcrum on which to place it, and I shall move the world.”
+But leverage extends far beyond mechanics. In the modern economy, leverage takes four fundamental forms — and understanding them is the difference between linear effort and exponential results.
 
-It stops me for a moment.
+### The Four Types of Leverage
 
-It’s a quote I’ve read before—probably a hundred times. It takes me back to high school, to those long afternoons filled with physics and math classes. I can still remember solving lever equations, calculating torque, drawing force diagrams on the chalkboard. Back then, it all seemed so theoretical. Just numbers and formulas to memorize for exams. But now, reading it again in a completely different context, it hits differently.
+Naval Ravikant, the founder of AngelList and one of the clearest thinkers on modern wealth creation, identifies four types of leverage. This framework fundamentally changed how I think about career strategy:
 
-I pause. Sit still. Reflect in abit.
+| Type of Leverage | Description | Marginal Cost | Permission Required | Example |
+|-----------------|-------------|--------------|--------------------|---------|
+| **Labor** | Other people working for you | High (salaries, management overhead) | Yes (hiring, managing) | Construction crew, corporate team |
+| **Capital** | Money working for you | Low (deployment cost) | Yes (need to raise/earn it first) | Investment portfolio, project finance |
+| **Code** | Software working for you | Zero (once built, runs free) | No | SaaS product, automated pipeline |
+| **Media** | Content working for you | Zero (once published, distributes free) | No | Blog post, YouTube channel, podcast |
 
-**Leverage.** Not the physical kind. Not just mechanical levers on diagrams. But **real-world leverage**—the kind being used all around us, by people, systems, platforms. The kind that actually moves the world today.
+The revolutionary insight is in the last two rows. **Code and media are leverage without permission.** You don't need anyone's approval to write software, publish content, or build an audience. And once created, they operate at zero marginal cost — a blog post published today can generate value for a decade. A piece of software can serve a million users for the same cost as serving one.
 
-Suddenly, things start to connect in my mind. Media. Influencers. Politicians. Tech moguls. Think about it: Trump, anti-Trump, MAGA, Social movements. Viral trends. Conspiracy theories. The rise and fall of reputations in a single day. **It’s all about leverage.**
+This is fundamentally different from the leverage our parents' generation understood. Their leverage was labor (manage a bigger team) and capital (save money, invest it). Those forms still work, but they require permission — someone has to hire you, promote you, or give you capital to manage.
 
-Not muscle. Not manpower. But influence—strategically applied at the right time, in the right place. That’s the lever.
+Code and media leverage require no permission. Only competence and consistency.
 
-The internet is overflowing with information. Scroll long enough and you feel like you’re drowning in noise. But behind all that noise, there’s something else: structure. Strategy. Hidden levers being pulled.
+---
 
-The floods of headlines, viral content, emotional manipulation, echo chambers—it’s not random. These are tools. And behind them are people or systems that know exactly how to use **media leverage** to shape opinions, drive clicks, spread ideas, and gain power.
+## Why Hard Work Alone Isn't Enough Anymore
 
-And here we are—caught in the current, reacting, commenting, sharing.
+I was raised to believe in effort. Put in the hours. Earn success through time, skill, and perseverance. If you worked hard, you'd be rewarded.
 
-**Whose lever are we helping to pull?**
+That belief isn't wrong — but it's incomplete. And in the modern economy, it's increasingly insufficient.
 
-As I think more deeply, another uncomfortable truth surfaces: In today’s world, a minority of people—just a small group—are gaining massive wealth and accumulating unprecedented influence. And they’re not necessarily doing it by working harder. They’re doing it through leverage.
+Here's why: linear effort produces linear results. You work twice as hard, you produce roughly twice the output. That's how most professional careers work — more hours, slightly more pay, incremental promotions.
 
-They’ve mastered how to use **platforms**, **algorithms**, **networks**, **capital**, and **narratives**. They’ve figured out how to build systems that multiply effort, automate influence, and scale results far beyond what any individual could achieve alone.
+But leveraged effort produces exponential results. You write code once, it runs forever. You publish content once, it reaches millions. You build a system once, it scales without your constant attention.
 
-It made me stop and ask myself: **What happened to hard work?**
+The data supports this. According to the World Inequality Report 2022, the top 1% of global earners captured 38% of all wealth growth since 1995, while the bottom 50% captured just 2%. This isn't primarily because the top 1% work 19x harder. It's because they apply leverage — capital, code, media, and network effects — to amplify their output far beyond what individual effort alone could achieve.
 
-We were raised to believe in effort. In putting in the hours. In earning success through time, skill, and perseverance. That if we worked hard, we’d be rewarded.
+### The Leverage Gap in Career Strategy
 
-But increasingly, that belief feels outdated—maybe even naive.
+Consider two engineers with identical skills and work ethic:
 
-In this new digital world, **hard work alone isn’t enough**. Because while we’re grinding day to day, others are building systems. Others are leveraging code, capital, connections, and platforms to achieve in minutes what might take someone else years.
+| Career Path | Year 1 | Year 5 | Year 10 | Leverage Type |
+|------------|--------|--------|---------|--------------|
+| **Engineer A**: Excellent individual contributor, works 60 hours/week at a company | $80K salary | $120K salary | $160K salary | Labor (selling own time) |
+| **Engineer B**: Same skills, but builds a technical blog, an open-source tool, and a consulting practice | $80K + $10K side income | $120K + $80K consulting | $200K salary + $300K business | Media + Code + Network |
 
-Maybe it’s time we stop ignoring this shift.
+Engineer B doesn't work harder. They work differently. They use media leverage (the blog builds reputation), code leverage (the open-source tool demonstrates capability), and network leverage (the reputation attracts consulting clients and better job offers).
 
-Maybe it’s time we take **leverage** seriously—not just as a concept, but as a tool for living, working, and succeeding in this new age.
+---
 
-Leverage is, at its essence, a force multiplier. It’s the principle that allows a small effort, strategically applied, to produce massive results. A little action that creates disproportionate impact.
+## How Leverage Actually Works in Practice
 
-Imagine a crowbar prying open a stubborn crate. A pulley lifting a boulder. A simple tool turning the impossible into the achievable. That’s the power of leverage. But in today’s world, the real levers aren’t just mechanical.They are:
+### Media Leverage: The Great Equalizer
 
-*   **Media leverage** – one post reaching Billions
+A decade ago, building an audience required institutional gatekeepers — publishers, TV networks, newspapers. Today, anyone with a laptop and internet connection can build a global audience.
 
-*   **Technology leverage** – code running 24/7 with zero marginal cost
+But here's the nuance: most people misunderstand media leverage. They think it's about going viral. It's not. It's about **consistent, high-quality output that compounds over time**.
 
-*   **Network leverage** – one connection opening endless doors
+A blog post that gets 500 views in its first week isn't impressive. But if you publish 200 posts over 4 years, and each one continues to get 50 views per month, you're generating 10,000 views per month — without doing any additional work. That's compounding. That's leverage.
 
-*   **Capital leverage** – money working while you sleep
+For a PM in renewable energy, media leverage means writing about what you know — project management lessons, technical insights, industry analysis. Each article demonstrates expertise, builds reputation, and attracts opportunities (consulting, speaking, career advancement) that would never come from individual effort alone.
 
-Those who understand and apply these forms of leverage don’t just work hard—they work smart. They design systems that **scale**. They plant seeds that grow exponentially. They use modern tools to extend their reach and compress time.
+That's exactly why we built Tech Made Easy.
 
-And the truth is, leverage is everywhere. In business, in education, in politics, in personal branding. It’s how books become bestsellers, how startups disrupt industries, how movements start from a single tweet. This isn’t about giving up or complaining. It’s about waking up.
+### Code Leverage: Systems That Scale
 
-We can no longer afford to think in purely linear terms—put in X effort, get Y result. Because the world no longer works that way.
+Code is the most powerful form of leverage available to technical professionals. Once software is written, it runs at zero marginal cost. A spreadsheet macro that saves you 30 minutes per day saves you 125 hours per year — forever.
 
-We have to start thinking about **how to apply our time, skills, ideas, and relationships with leverage**.
+But code leverage extends beyond automation. It includes:
+- **Templates and frameworks** that make your team more productive
+- **Data dashboards** that surface insights without manual analysis
+- **Workflow automations** that eliminate repetitive tasks
+- **Tools and calculators** that solve problems once and for everyone
 
-How to use tools that amplify our voice.
+In our own work, building automated content pipelines, data analysis tools, and project management templates has created leverage that compounds across every project.
 
-How to automate, delegate, and collaborate.
+### Capital Leverage: Money Working for You
 
-How to turn one action into many outcomes.
+Capital leverage is the oldest form — using money to generate more money. In renewable energy, this takes the form of project finance structures where $200M of equity can control $1B of assets through debt leverage.
 
-We need to ask:
+But capital leverage isn't just for billionaires. It includes:
+- **Investing in skills** that increase your earning capacity
+- **Investing in relationships** that open doors to opportunities
+- **Investing in tools** that multiply your productivity
+- **Investing in health** that sustains your performance over decades
 
-*   What should I build?
+The most powerful capital leverage isn't financial — it's intellectual capital deployed through the other three leverage types.
 
-*   What knowledge can I share at scale?
+### Network Leverage: Connections That Compound
 
-*   What platforms can I use to multiply my message?
+Your network is leverage because it extends your capabilities beyond your individual skills. One conversation with the right person can save you months of trial and error. One introduction can unlock a career-defining opportunity.
 
-Because in this new world, **it’s not about how hard you push—it’s about where and how you apply the pressure**.
+But network leverage requires genuine value creation. The people with the strongest networks aren't the ones who collect business cards — they're the ones who consistently help others without expecting immediate reciprocity. Over time, this creates a web of goodwill that generates opportunities from unexpected directions.
 
-As I close my laptop and finish the last sip of coffee, the thought lingers.
+---
 
-This is no longer the age of effort alone. This is the age of **leverage**.
+## The Dark Side of Leverage
 
-Those who understand this will lead, create, and shape the future. Those who ignore it may work endlessly and still fall behind.
+Leverage isn't inherently good or bad. It's a tool — and like any tool, it can be used constructively or destructively.
 
-So maybe the old quote was right all along:
+The negative manifestations of leverage are visible everywhere:
+- **Media manipulation**: Algorithms that amplify outrage for engagement, spreading misinformation at scale
+- **Financial leverage abuse**: Over-leveraged investments that create systemic risk (2008 financial crisis)
+- **Platform monopolies**: Network effects that lock users into platforms and extract value from creators
+- **Political leverage**: Social media used to polarize, radicalize, and undermine democratic discourse
 
-> _“Give me a lever long enough and a fulcrum on which to place it, and I shall move the world.”_
+Understanding leverage includes understanding its misuse. When you see viral content designed to make you angry, recognize the leverage mechanism at work. When you see a "free" platform, recognize that your attention is the product being leveraged.
 
-The lever is here. The fulcrum is now digital. The question is: **What are you trying to move?**
+The antidote isn't to reject leverage — it's to apply it consciously and ethically.
 
-### Tech-made-easy
+---
 
+## Applying Leverage: A Personal Framework
+
+Here's the framework I use to think about applying leverage in my own career and life:
+
+### Step 1: Identify Your Unique Knowledge
+
+What do you know — through experience, not just education — that is valuable and relatively rare? For me, it's the intersection of renewable energy engineering, project management, and the specific challenges of Southeast Asian markets.
+
+### Step 2: Choose Your Leverage Vehicle
+
+How can you package and distribute that knowledge at scale?
+- **Writing** (blog, LinkedIn, technical articles) — media leverage
+- **Tools and templates** (spreadsheets, calculators, frameworks) — code leverage
+- **Teaching and mentoring** (workshops, courses) — labor leverage amplified by media
+- **Consulting** (project-specific expertise) — labor leverage amplified by reputation
+
+### Step 3: Build Consistency, Not Virality
+
+The power of leverage comes from compounding, and compounding requires consistency. Publishing one article per week for 3 years (156 articles) creates a body of work that no single viral post can replicate. Building one tool per quarter for 5 years (20 tools) creates a toolkit that compounds in value.
+
+### Step 4: Reinvest the Returns
+
+Leverage generates returns — attention, reputation, income, opportunities. Reinvest these returns into building more leverage. Use the consulting income to fund better tools. Use the reputation to access better networks. Use the networks to create better content.
+
+This is the leverage flywheel. Once it starts spinning, it accelerates.
+
+---
+
+## The Connection to Project Management
+
+As a PM, leverage thinking transforms how you approach your role:
+
+| Without Leverage Thinking | With Leverage Thinking |
+|--------------------------|----------------------|
+| Create a new plan for every project | Build reusable templates that improve with each project |
+| Personally review every document | Build review checklists that enable team members to self-review |
+| Attend every meeting | Create asynchronous communication systems that reduce meetings |
+| Manually track progress | Build dashboards that update automatically |
+| Share knowledge in 1:1 conversations | Write it down once and share it with everyone |
+
+The PM who operates with leverage doesn't just manage better — they build systems that make every future project easier. Their knowledge compounds rather than depreciating.
+
+---
+
+## The Honest Take
+
+As I finish my coffee and close the laptop, the thought lingers.
+
+The world is noisy. The headlines are chaotic. The forces shaping our economy and society are complex and often opaque. But behind the noise, there's a simple principle at work: **leverage**.
+
+The people and systems gaining disproportionate influence in the modern world aren't doing so through brute effort. They're doing so through the strategic application of force multipliers — code, media, capital, and networks.
+
+This isn't a reason for despair. It's a reason for strategic clarity. If you understand leverage, you can apply it. Not to manipulate or exploit — but to amplify your unique knowledge, create value at scale, and build a career that compounds rather than plateaus.
+
+The lever is here. The fulcrum is digital. The question remains:
+
+**What are you trying to move?**
+
+---
+
+**Sources:**
+- Naval Ravikant — "How to Get Rich (Without Getting Lucky)" tweetstorm and podcast
+- World Inequality Report 2022
+- Andrew Chen — "The Cold Start Problem" (network effects)
+- Industry experience and reflection
+
+*By Duc Hoang, PMP | Tech Made Easy (techmadeeasy.info)*
