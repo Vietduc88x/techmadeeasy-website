@@ -5,6 +5,18 @@
 
 export const blogPosts = [
   {
+    slug: 'solar-pv-supply-chain-cost',
+    title: 'Solar PV Supply Chain Cost Tool: The Real Numbers Behind Solar Manufacturing',
+    excerpt: 'It costs $0.124/Wp to make a solar panel in Vietnam using Chinese cells. It costs $0.284/Wp to make the same panel in Germany. An interactive deep-dive into IRENA\'s 2026 supply chain cost data — polysilicon to module, 6 countries, 4 import scenarios.',
+    category: 'Renewable Energy',
+    readTime: '20 min read',
+    date: 'March 2026',
+    dateSort: '2026-03',
+    featured: true,
+    tags: ['solar', 'supply chain', 'costs', 'IRENA', 'manufacturing', 'TOPCon', 'polysilicon', 'interactive'],
+    author: 'techmadeeasy',
+  },
+  {
     slug: 'bess-silent-revolution-powering-grid',
     title: 'BESS: The Silent Revolution Powering the Grid',
     excerpt: 'The most important technology in energy isn\'t solar — it\'s what happens when the sun goes down. A PM\'s breakdown of how battery storage is reshaping the grid, from the duck curve to virtual power plants.',

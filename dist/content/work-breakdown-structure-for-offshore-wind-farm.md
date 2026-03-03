@@ -1,6 +1,6 @@
 # WORK BREAKDOWN STRUCTURE FOR OFFSHORE WIND FARM
 
-**By Duc Hoang**
+**By techmadeeasy team**
 
 So, what is the Work Breakdown Structure? By PMBOK6 – PMI definition, The WBS is a hierarchical decomposition of the total scope of work to be carried out by the project team to accomplish the project objectives and create the required deliverables. The WBS organizes and defines the total scope of the project and represents the work specified in the current approved project scope statement. The planned work is contained within the lowest level of WBS components, which are called work packages. A work package can be used to group the activities where work is scheduled and estimated, monitored, and controlled. In the context of the WBS, work refers to work products or deliverables that are the result of activity and not to the activity itself.
 

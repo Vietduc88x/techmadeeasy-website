@@ -1,6 +1,6 @@
 # AI Applications in Renewable Energy: Transforming the Clean Energy Landscape
 
-*Published: August 12, 2024 | By Duc Hoang, PMP®*
+*Published: August 12, 2024 | By techmadeeasy team, PMP®*
 
 Artificial intelligence is revolutionizing the renewable energy sector, transforming how we generate, distribute, and consume clean energy. As the world accelerates its transition toward sustainable energy systems, AI technologies are emerging as critical enablers that enhance efficiency, reduce costs, and improve reliability across the entire renewable energy value chain. From optimizing wind turbine performance to predicting solar energy output and managing complex grid systems, AI applications are reshaping the landscape of clean energy technology.
 
@@ -192,5 +192,5 @@ The convergence of AI and renewable energy represents more than just technologic
 
 *This comprehensive analysis explores the transformative impact of AI on renewable energy systems. For more insights on clean energy technology and project management, visit [TechMadeEasy.info](https://techmadeeasy.info).*
 
-**About the Author:** Duc Hoang, PMP® is a renewable energy project management expert specializing in technology integration and digital transformation. Connect with him on [LinkedIn](https://www.linkedin.com/in/hoang-vietduc-pmp%C2%AE-100842aa/) for more insights on AI and clean energy innovation.
+**About the Author:** techmadeeasy team, PMP® is a renewable energy project management expert specializing in technology integration and digital transformation. Connect with him on [LinkedIn](https://www.linkedin.com/in/hoang-vietduc-pmp%C2%AE-100842aa/) for more insights on AI and clean energy innovation.
 

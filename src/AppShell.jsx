@@ -11,6 +11,7 @@ import FIMRevolution from './pages/FIMRevolution';
 import { BOPInteractiveArticle } from './pages/BOPInteractiveArticle';
 import { RenewableEnergyCosts2024 } from './pages/RenewableEnergyCosts2024';
 import { FIMImplementationRoadmap } from './pages/FIMImplementationRoadmap';
+import { SolarSupplyChainCost } from './pages/SolarSupplyChainCost';
 import { NotFound } from './pages/NotFound';
 
 export function AppShell() {
@@ -21,11 +22,12 @@ export function AppShell() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/fim-revolution" element={<FIMRevolution />} />
           <Route path="/blog/bop-interactive-article" element={<BOPInteractiveArticle />} />
           <Route path="/blog/renewable-energy-costs-2024" element={<RenewableEnergyCosts2024 />} />
           <Route path="/blog/fim-implementation-roadmap" element={<FIMImplementationRoadmap />} />
+          <Route path="/blog/solar-pv-supply-chain-cost" element={<SolarSupplyChainCost />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
