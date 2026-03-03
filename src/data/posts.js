@@ -341,18 +341,6 @@ export const blogPosts = [
     author: 'techmadeeasy',
   },
   {
-    slug: 'new-york-on-tech-is-helping-under-resourced-students-become-future-tech-leaders',
-    title: 'New York on Tech is helping under-resourced students become future tech leaders',
-    excerpt: 'Jessica Santana and Evin Robinson were riding the subway home from a college leadership conference when they realized they were getting off at the same stop.',
-    category: 'Education',
-    readTime: '10 min read',
-    date: 'October 2024',
-    dateSort: '2024-10',
-    featured: false,
-    tags: ['education', 'tech leadership', 'diversity', 'opportunity'],
-    author: 'Tech Made Easy',
-  },
-  {
     slug: 'offshore-wind-risk-management-explained',
     title: 'Offshore Wind Risk Management Explained',
     excerpt: '11 risk categories that kill offshore wind projects — with quantified examples, probability-impact matrices, and the PM lessons from projects that got risk management right and wrong.',
