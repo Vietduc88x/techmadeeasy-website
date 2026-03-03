@@ -8,7 +8,7 @@ According to GWEC's Global Wind Report 2024, Vietnam installed approximately 4.6
 
 This article examines the foundation selection process for nearshore wind farms in Vietnam, using the Mekong Delta nearshore area as a case study — and draws on the practical lessons from projects that have been built in these conditions.
 
-![Offshore Wind Farm](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/offshore_wind.png)
+![Offshore Wind Farm](/images/offshore_wind.png)
 *Nearshore wind farms in Vietnam's Mekong Delta face unique foundation challenges driven by soft alluvial soils and shallow water*
 
 ---
@@ -149,7 +149,7 @@ By contrast, monopile installation is a specialized discipline with a limited po
 
 The cost advantage is substantial: pile cap foundations are typically **40–50% cheaper** than monopile foundations for Mekong Delta nearshore projects, primarily due to local manufacturing, simpler logistics, and lower vessel costs.
 
-![Turbine Tower](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/turbine_tower.png)
+![Turbine Tower](/images/turbine_tower.png)
 *Wind turbine tower on a pile cap foundation — the dominant foundation type for Vietnam's nearshore wind sector*
 
 ---

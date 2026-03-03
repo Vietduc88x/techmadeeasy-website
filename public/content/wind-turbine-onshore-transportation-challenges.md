@@ -8,7 +8,7 @@ According to GWEC's Global Wind Report 2024, Vietnam's installed wind capacity r
 
 This article shares the practical lessons from managing wind turbine transportation in Vietnam — the challenges that catch projects off guard and the planning approaches that prevent them.
 
-![Onshore Wind](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/onshore_wind.png)
+![Onshore Wind](/images/onshore_wind.png)
 *Onshore wind farms in Vietnam's highlands — reaching these sites with 70-meter blades requires meticulous transportation planning*
 
 ---
@@ -120,7 +120,7 @@ For blades above 65 meters, the blade-lift trailer has become the standard in Vi
 
 For nacelle transport (100–200 tonnes), SPMTs (Self-Propelled Modular Transporters) are the preferred option in Vietnam when bridge loading is a constraint. SPMTs distribute load across many axles (typically 12–20 axle lines for nacelle transport), reducing the point load on bridge structures and road surfaces.
 
-![Turbine Blades](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/turbine_blades.png)
+![Turbine Blades](/images/turbine_blades.png)
 *Wind turbine blades during transport — at 70+ meters, these components present extraordinary logistical challenges on narrow rural roads*
 
 ---
@@ -195,7 +195,7 @@ In Vietnam, oversized cargo transport is typically restricted to nighttime hours
 
 Vietnam's monsoon season (May–November in the central regions) brings heavy rain, flooding, and road deterioration. Mountain passes in the Central Highlands can become impassable during heavy rain events. Budget 2–4 weeks of weather contingency in the transportation schedule, and have contingency storage arrangements at intermediate points along the route.
 
-![Turbine Tower](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/turbine_tower.png)
+![Turbine Tower](/images/turbine_tower.png)
 *Tower sections in transit — weight and diameter restrictions make bridge crossings a critical planning factor*
 
 ---

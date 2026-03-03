@@ -8,7 +8,7 @@ According to the Construction Industry Institute (CII), the average cost overrun
 
 This article breaks down the construction cost estimation process as it applies to renewable energy projects — the methods, the components, the common mistakes, and the practical lessons from the field.
 
-![Solar Farm](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/solar_farm.png)
+![Solar Farm](/images/solar_farm.png)
 *Large-scale renewable energy projects demand rigorous cost estimation — the estimate is where project success or failure begins*
 
 ---
@@ -177,7 +177,7 @@ These are the general and administrative costs of running the contracting or dev
 
 The contractor's or developer's margin. For EPC contracts in renewable energy, typical profit margins range from 5–12% depending on competition intensity, risk profile, and strategic importance of the project.
 
-![Project Strategy](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/project_strategy_board.jpg)
+![Project Strategy](/images/project_strategy_board.jpg)
 *Cost estimation is where strategy meets reality — every line item represents a decision about risk, quality, and competitiveness*
 
 ---

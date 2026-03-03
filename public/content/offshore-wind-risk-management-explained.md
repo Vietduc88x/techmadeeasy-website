@@ -8,7 +8,7 @@ According to McKinsey's analysis of global offshore wind projects, the average c
 
 This article breaks down the risk management framework for offshore wind projects — the categories of risk, the tools for assessing them, and the practical lessons from projects that got risk management right (and wrong).
 
-![Offshore Wind Farm](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/offshore_wind.png)
+![Offshore Wind Farm](/images/offshore_wind.png)
 *Offshore wind projects face a unique combination of technical, environmental, and commercial risks — managing them systematically is what separates successful projects from costly failures*
 
 ---
@@ -218,7 +218,7 @@ The project board typically approves the budget at P75 or P80, meaning there's a
 
 **Mitigation**: Force majeure clauses in all contracts. Adequate insurance coverage (including delay in start-up/ALOP). Geographic diversification of supply chain. Business continuity planning.
 
-![Turbine Blades](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/turbine_blades.png)
+![Turbine Blades](/images/turbine_blades.png)
 *Every component in an offshore wind project carries risk — from manufacturing quality to transportation damage to installation weather windows*
 
 ---

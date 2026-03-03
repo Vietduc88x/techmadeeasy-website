@@ -8,7 +8,7 @@ According to IRENA's World Energy Transitions Outlook 2024, achieving the 1.5°C
 
 These numbers aren't abstract projections. They represent real projects that need real engineers, project managers, financiers, lawyers, and operators. Understanding the fundamentals is the first step to participating in this transformation.
 
-![Solar Farm](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/solar_farm.png)
+![Solar Farm](/images/solar_farm.png)
 *Utility-scale solar — the fastest-growing and cheapest form of new electricity generation globally*
 
 ---
@@ -82,7 +82,7 @@ BESS is the technology that makes variable renewable energy dispatchable — sto
 
 For a deeper analysis of BESS, see our article: [BESS: The Silent Revolution Powering the Grid](/blog/bess-silent-revolution-powering-grid)
 
-![Offshore Wind](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/offshore_wind.png)
+![Offshore Wind](/images/offshore_wind.png)
 *Offshore wind — the largest single structures ever moved by humans, generating clean electricity for decades*
 
 ---
@@ -158,7 +158,7 @@ This workshop is the first in a series. Future workshops will cover:
 
 If you're interested in attending or hosting a workshop, reach out through the contact page. We're committed to making renewable energy knowledge accessible to everyone who wants to contribute to the energy transition.
 
-![BESS Project](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/bess_project.png)
+![BESS Project](/images/bess_project.png)
 *Battery energy storage systems — the technology that makes the renewable energy transition possible*
 
 ---

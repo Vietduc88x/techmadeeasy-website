@@ -2,7 +2,7 @@ I was standing in the middle of a solar farm in 40-degree heat, staring at a row
 
 That moment stuck with me. Because the answer to that wish already exists. It's called a digital twin -- a living virtual copy of a physical asset, constantly fed real-time data from sensors, weather stations, SCADA systems, and IoT devices. It doesn't just look like your asset. It behaves like your asset. It ages like your asset. And if you're paying attention, it tells you what your asset is about to do before it actually does it.
 
-![Solar Farm](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/solar_farm.png)
+![Solar Farm](/images/solar_farm.png)
 *A modern solar farm -- the kind of asset where digital twins are already changing the game*
 
 ---
@@ -31,7 +31,7 @@ Let me walk you through three examples that stuck with me.
 
 ### Batteries -- The Silent Risk You Can't See
 
-![BESS Project](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/bess_project.png)
+![BESS Project](/images/bess_project.png)
 *Battery Energy Storage Systems -- where digital twins catch what traditional monitoring misses*
 
 This one hits close to home. About 80% of BESS operators rely solely on their battery management system for health monitoring. The problem? BMS data alone can mask degradation patterns.
@@ -40,7 +40,7 @@ A digital twin solution by 3E detected a 4% health discrepancy that the BMS comp
 
 ### Wind -- From 40 Days to 15 Minutes
 
-![Offshore Wind](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/offshore_wind.png)
+![Offshore Wind](/images/offshore_wind.png)
 *Offshore wind farms -- complex assets where digital twins are compressing timelines dramatically*
 
 Siemens Gamesa partnered with NVIDIA to use digital twins for wind farm layout optimization. Using physics-informed neural networks, they compressed what used to take 40 days of computation down to 15 minutes -- and the optimized layouts are expected to produce up to 20% more power.
@@ -77,7 +77,7 @@ That's not science fiction. That's happening right now on operating assets.
 
 ## What This Means If You're Managing Energy Projects
 
-![Solar Inverters](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/solar_inverters.png)
+![Solar Inverters](/images/solar_inverters.png)
 *From inverters to substations -- digital twins give PMs visibility across the entire asset lifecycle*
 
 If you're a project manager in energy -- or honestly, in any infrastructure-heavy industry -- digital twins should be on your radar.

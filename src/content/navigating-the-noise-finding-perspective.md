@@ -136,7 +136,7 @@ Looking back on my career journey — from a young engineer who could barely aff
 
 5. **The best time to plant a tree was 10 years ago. The second best time is today.** Whether it's learning a new skill, building a relationship, or starting a side project — don't wait for perfect conditions. They don't exist.
 
-![Honda Motorbike Journey](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/honda-motorbike-journey.png)
+![Honda Motorbike Journey](/images/honda-motorbike-journey.png)
 *Every journey starts with a single step — or in Vietnam, a single motorbike ride*
 
 ---

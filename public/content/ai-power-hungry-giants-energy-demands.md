@@ -4,7 +4,7 @@
 
 *As AI models grow exponentially in capability, their appetite for electricity is reshaping the global energy landscape*
 
-![AI Data Center](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-1.jpg)
+![AI Data Center](/images/ai-datacenter-1.jpg)
 *Modern AI data centers: Where intelligence meets massive energy consumption*
 
 ---
@@ -24,12 +24,12 @@ When you ask ChatGPT a question, you're tapping into one of the most energy-inte
 
 ## 🏗️ Inside an AI Data Center: General Layout and Components
 
-![AI Data Center Aerial View](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-aerial-6.jpg)
+![AI Data Center Aerial View](/images/ai-datacenter-aerial-6.jpg)
 *Aerial view of a massive AI data center complex - notice the scale and infrastructure*
 
 ### The Physical Layout
 
-![Data Center Layout](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/datacenter-layout-2.jpg)
+![Data Center Layout](/images/datacenter-layout-2.jpg)
 *Detailed floor plan showing power distribution and cooling zones*
 
 Zone 1: Power Infrastructure
@@ -52,12 +52,12 @@ Zone 4: Support Systems
 - Monitoring and control systems
 - Security and access control
 
-![AI Server Racks](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-2.jpg)
+![AI Server Racks](/images/ai-datacenter-2.jpg)
 *AI server racks: Each cabinet contains millions of dollars worth of GPUs*
 
 ### Key Components Breakdown
 
-![GPU Close-up](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-3.jpg)
+![GPU Close-up](/images/ai-datacenter-3.jpg)
 *Inside an AI server: Each black card is a $10,000+ GPU consuming 400W*
 
 | Component | Power Draw | Function | Quantity per Rack |
@@ -73,12 +73,12 @@ Zone 4: Support Systems
 
 ## ⚡ Electrical System Architecture: Powering the Giants
 
-![Electrical System Overview](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/electrical-system-1.jpg)
+![Electrical System Overview](/images/electrical-system-1.jpg)
 *Complete electrical system architecture from grid connection to server racks*
 
 ### Power Distribution Hierarchy
 
-![Power Distribution](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/power-distribution-3.jpg)
+![Power Distribution](/images/power-distribution-3.jpg)
 *Multi-level power distribution system with redundancy and monitoring*
 
 Level 1: Grid Connection (138-500kV)
@@ -101,7 +101,7 @@ Level 4: Rack-Level Power (12V/48V)
 - Individual component power regulation
 - Precise power quality management
 
-![Overhead Cable Management](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/overhead-cables-4.jpg)
+![Overhead Cable Management](/images/overhead-cables-4.jpg)
 *Sophisticated overhead cable management system for power and data*
 
 ### Electrical Infrastructure Requirements
@@ -122,7 +122,7 @@ Safety and Protection
 
 ## 🌡️ The Cooling Challenge: Managing Extreme Heat
 
-![Cooling Infrastructure](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/cooling-infrastructure-5.jpg)
+![Cooling Infrastructure](/images/cooling-infrastructure-5.jpg)
 *Massive cooling infrastructure required for AI data centers*
 
 ### Why Cooling is Critical
@@ -136,7 +136,7 @@ Heat Generation
 
 Cooling Solutions
 
-![Data Center Cooling](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/cooling-system-7.jpg)
+![Data Center Cooling](/images/cooling-system-7.jpg)
 *Liquid cooling system: The blue pipes carry coolant directly to hot components*
 
 Traditional Air Cooling ❌
@@ -154,14 +154,14 @@ Advanced Immersion Cooling 🚀
 - Highest efficiency (PUE < 1.1)
 - Enables maximum performance
 
-![Advanced Cooling](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/cooling-system-8.jpg)
+![Advanced Cooling](/images/cooling-system-8.jpg)
 *Next-gen immersion cooling: GPUs literally swim in special coolant*
 
 ---
 
 ## 📈 AI Load Profiles: The Grid's New Challenge
 
-![AI Load Profile 24h](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-load-profile-24h.png)
+![AI Load Profile 24h](/images/ai-load-profile-24h.png)
 *Comprehensive 24-hour load profile comparison: Traditional vs AI data centers*
 
 ### Understanding Load Profile Fundamentals
@@ -174,7 +174,7 @@ Traditional data centers exhibit clear daily patterns with peak hours from 9 AM 
 
 ### AI Training Workload Patterns
 
-![AI Power Consumption MW](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-power-consumption-mw.png)
+![AI Power Consumption MW](/images/ai-power-consumption-mw.png)
 *Real power consumption in megawatts for a 500 MW AI facility*
 
 AI training represents the most energy-intensive computing workload ever deployed at scale. These facilities maintain 94-100% of capacity continuously, with only 6% variation throughout the entire day. Training jobs run continuously for weeks or months and cannot be interrupted without losing significant progress. The minimal daily variation occurs due to cooling efficiency changes and grid conditions rather than computational demand.
@@ -199,7 +199,7 @@ Looking toward 2030, load profiles will evolve through optimization and transfor
 
 ## 🌍 Regional Energy Strategies
 
-![Energy Growth Chart](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/energy-chart-6.jpg)
+![Energy Growth Chart](/images/energy-chart-6.jpg)
 *The exponential growth curve reshaping energy markets*
 
 ### United States: Private Sector Race
@@ -233,7 +233,7 @@ Competitive Impact
 
 ## 🔮 Future Projections and Technology
 
-![Historical Energy](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/energy-chart-5.jpg)
+![Historical Energy](/images/energy-chart-5.jpg)
 *US energy consumption history - notice the recent data center spike*
 
 ### Growth Scenarios (2030)

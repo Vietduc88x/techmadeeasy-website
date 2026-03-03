@@ -4,7 +4,7 @@ The PM doesn't do less work. The PM does different work -- reviewing agent outpu
 
 That's AI orchestration. And it's not a 2030 prediction. It's happening right now.
 
-![AI and Human Collaboration](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai_human_collaboration.jpg)
+![AI and Human Collaboration](/images/ai_human_collaboration.jpg)
 *The future of project management is human-AI collaboration -- not replacement*
 
 ---
@@ -29,7 +29,7 @@ Think of it as managing a hybrid team where some members are humans and some are
 
 Not one AI doing everything. Multiple agents, each with a specific capability:
 
-![Team Collaboration](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/team_collaboration_data.jpg)
+![Team Collaboration](/images/team_collaboration_data.jpg)
 *AI orchestration is about coordinating multiple specialized agents -- just like managing a diverse team of experts*
 
 - Agent 1 monitors schedule dependencies across all work packages and auto-adjusts timelines when upstream tasks slip
@@ -47,7 +47,7 @@ The key word is "orchestration" -- not automation. Automation replaces human tas
 
 Organizations already running agent orchestration are reporting significant results:
 
-![AI Agent Network](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai_agent_network.jpg)
+![AI Agent Network](/images/ai_agent_network.jpg)
 *AI agents are reaching into every corner of enterprise operations -- from scheduling to risk analysis*
 
 | Metric | Impact |
@@ -69,7 +69,7 @@ The PM isn't doing less. The PM is doing the work that actually requires a human
 
 Not all AI agent deployments look the same. There's a spectrum, and understanding it is critical for any PM thinking about how to implement this:
 
-![Human and AI Autonomy](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/human_ai_autonomy.jpg)
+![Human and AI Autonomy](/images/human_ai_autonomy.jpg)
 *The spectrum of AI autonomy ranges from full human control to fully autonomous agents -- knowing which level to apply is the PM's new superpower*
 
 ### Level 1: Human in the Loop
@@ -104,7 +104,7 @@ Very few organizations are here today, and for most PM workflows, this level isn
 
 Here's where the honest part comes in. AI orchestration is powerful, but the gap between the vision and the reality is significant.
 
-![Project Strategy Board](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/project_strategy_board.jpg)
+![Project Strategy Board](/images/project_strategy_board.jpg)
 *The gap between the AI vision and reality requires strategic thinking -- not just technology adoption*
 
 Only 28% of enterprises claim maturity with AI agents (Gartner 2025). That means 72% are still figuring it out -- experimenting, failing, learning.
@@ -131,7 +131,7 @@ Here's the part that matters most: the PM role isn't disappearing. It's transfor
 | Compiling risk registers | Strategic decision-making with real-time intelligence |
 | Building slide decks | Orchestrating outcomes across hybrid teams |
 
-![Team Leadership](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/team_leadership.jpg)
+![Team Leadership](/images/team_leadership.jpg)
 *The PM of the future leads hybrid teams of humans and AI agents -- the skill is orchestration, not execution*
 
 The agents handle the repetitive 80%. The PM focuses on the strategic 20% that actually requires a human being in the room -- the relationship management, the political navigation, the judgment calls that come from experience.

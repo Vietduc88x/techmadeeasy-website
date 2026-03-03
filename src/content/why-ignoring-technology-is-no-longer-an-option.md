@@ -94,7 +94,7 @@ According to McKinsey's Global Institute, AI could add $13–22 trillion to the 
 
 **Honest assessment**: Quantum computing is real and progressing, but it's not yet practical for most energy applications. Worth monitoring, not worth building your strategy around today.
 
-![AI Data Center](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai-datacenter-1.jpg)
+![AI Data Center](/images/ai-datacenter-1.jpg)
 *AI data centers — the infrastructure behind the AI revolution, consuming enormous amounts of electricity and driving demand for renewable energy*
 
 ---
@@ -157,7 +157,7 @@ The fundamental economic principle of supply and demand applies to skills as wel
 
 **The most valuable skill of the 2020s is not expertise in any single technology. It's the ability to learn new technologies quickly and integrate them with existing domain knowledge.**
 
-![AI Human Collaboration](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/ai_human_collaboration.jpg)
+![AI Human Collaboration](/images/ai_human_collaboration.jpg)
 *The future is human-AI collaboration — where technology amplifies human expertise rather than replacing it*
 
 ---

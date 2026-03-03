@@ -8,7 +8,7 @@ According to the Carbon Trust's Offshore Wind Accelerator programme, site invest
 
 This article breaks down the critical measurement and survey campaigns required for offshore wind development — what they cost, how long they take, and the practical lessons from getting them right (and wrong).
 
-![Offshore Wind Farm](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/offshore_wind.png)
+![Offshore Wind Farm](/images/offshore_wind.png)
 *Offshore wind development starts long before the first turbine — with years of data collection and site investigation*
 
 ---
@@ -228,7 +228,7 @@ One often-overlooked aspect: survey data management. A single offshore wind proj
 
 Invest in a centralized project data management system from day one. The cost is trivial compared to the consequences of lost or mismanaged survey data.
 
-![Energy Ecosystem](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/energy_ecosystem.png)
+![Energy Ecosystem](/images/energy_ecosystem.png)
 *The offshore wind ecosystem depends on comprehensive site data — surveys are the foundation of every engineering decision*
 
 ---

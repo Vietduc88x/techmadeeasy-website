@@ -10,7 +10,7 @@ According to McKinsey's analysis of large infrastructure projects, 60–70% of s
 
 This article breaks down the typical package structure for offshore wind projects, the responsibility matrix that governs them, and the practical lessons from interface management in the field.
 
-![Offshore Wind Farm](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/offshore_wind.png)
+![Offshore Wind Farm](/images/offshore_wind.png)
 *Offshore wind projects are massive multi-contractor operations — getting the interfaces right is everything*
 
 ---
@@ -228,7 +228,7 @@ The project owner — the "Employer" in FIDIC contract terminology — has the m
 
 > **Honest reality check:** I've seen projects where the Employer tried to manage a 7-package structure with a team of 5 people and no Owner's Engineer. It didn't work. Multi-package offshore wind projects need a dedicated interface management function — typically 3–5 experienced engineers whose sole job is tracking and resolving interface issues. The cost of this function is a rounding error compared to the cost of interface failures.
 
-![Project Strategy](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/project_strategy_board.jpg)
+![Project Strategy](/images/project_strategy_board.jpg)
 *Interface management requires systematic tracking — every handover point between packages must be documented and managed*
 
 ---

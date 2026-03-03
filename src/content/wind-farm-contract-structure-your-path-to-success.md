@@ -8,7 +8,7 @@ Having worked across multiple contract structures — from full EPC turnkey to m
 
 This article examines the main contract structure options for wind farm projects, their pros and cons, and the FIDIC contract forms typically used with each. It's written for developers, PMs, and anyone involved in structuring these projects.
 
-![Offshore Wind Farm](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/offshore_wind.png)
+![Offshore Wind Farm](/images/offshore_wind.png)
 *Wind farm contract structure determines risk allocation, cost, and control — the most consequential project decision after site selection*
 
 ---
@@ -233,7 +233,7 @@ FIDIC (Federation Internationale Des Ingenieurs-Conseils) publishes internationa
 
 > **Important note on Sub-EPC contracts**: When a Wind EPC contractor subcontracts the BOP scope, the Sub-EPC contract typically does not include the performance guarantees (energy yield, availability) that are in the main EPC contract. The main EPC contractor retains these guarantees and manages the Sub-EPC contractor's performance to meet them. This distinction matters for warranty and liability purposes.
 
-![Project Strategy](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/project_strategy_board.jpg)
+![Project Strategy](/images/project_strategy_board.jpg)
 *Contract structure decisions require balancing cost, risk, control, and organizational capability — there's no one-size-fits-all answer*
 
 ---

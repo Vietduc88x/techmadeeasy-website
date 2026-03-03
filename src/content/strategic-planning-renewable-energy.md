@@ -8,7 +8,7 @@ According to IEA's World Energy Outlook 2024, global renewable energy investment
 
 This article provides a strategic planning framework for large-scale renewable energy projects — not as a generic textbook exercise, but as a practical playbook informed by the successes and failures of real projects.
 
-![Energy Ecosystem](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/energy_ecosystem.png)
+![Energy Ecosystem](/images/energy_ecosystem.png)
 *Strategic planning for renewable energy requires understanding the entire ecosystem — from policy and finance to technology and community*
 
 ---
@@ -252,7 +252,7 @@ No strategic plan survives contact with reality unchanged. The key is building a
 
 **Portfolio diversification**: Don't bet everything on one technology, one market, or one customer. A portfolio approach — across technologies (solar, wind, storage), markets (multiple countries or regions), and revenue sources (PPA mix) — provides natural hedging against strategic risks.
 
-![Solar Farm](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/solar_farm.png)
+![Solar Farm](/images/solar_farm.png)
 *Large-scale solar projects demonstrate the power of strategic planning — from site selection to grid connection, every decision compounds*
 
 ---

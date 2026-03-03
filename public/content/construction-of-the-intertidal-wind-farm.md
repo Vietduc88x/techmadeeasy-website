@@ -8,7 +8,7 @@ Vietnam's nearshore wind sector exploded between 2020 and 2021, with over 4 GW o
 
 This article distills the hard-won lessons from nearshore wind construction — the kind you only learn by being on site when things go sideways.
 
-![Offshore Wind Farm](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/offshore_wind.png)
+![Offshore Wind Farm](/images/offshore_wind.png)
 *Nearshore wind farms in Vietnam — where construction planning meets the reality of tides and weather*
 
 ---
@@ -57,7 +57,7 @@ We recommend negotiating batch delivery with the WTG supplier for three reasons:
 2. **Staged installation**: Enables partial COD per turbine group, generating revenue earlier
 3. **Storage cost management**: Reduces the need for massive marshaling areas and long-term storage
 
-![Wind Turbine Nacelle](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/turbine_nacelle.png)
+![Wind Turbine Nacelle](/images/turbine_nacelle.png)
 *WTG nacelle ready for installation — batch delivery reduces single-point-of-failure risk*
 
 ---
@@ -156,7 +156,7 @@ The commissioning phase compresses an enormous number of stakeholders into a sho
 
 Each of these stakeholders has their own schedule, requirements, and approval processes. A robust commissioning schedule with 2–3 weeks of buffer is not conservative — it's realistic.
 
-![Wind Turbine Tower](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/turbine_tower.png)
+![Wind Turbine Tower](/images/turbine_tower.png)
 *Tower installation in progress — commissioning planning should start long before the last bolt is tightened*
 
 ---

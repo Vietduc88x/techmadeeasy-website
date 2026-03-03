@@ -6,7 +6,7 @@ And here's the thing -- this isn't some future prediction. We're at the inflecti
 
 Let me break down why, from someone who's actually managed these projects in the field.
 
-![Solar Farm](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/solar_farm.png)
+![Solar Farm](/images/solar_farm.png)
 *Utility-scale solar -- the closest thing to plug-and-play in the energy world*
 
 ---
@@ -29,7 +29,7 @@ Banks love it. Insurance companies understand it. Financing is straightforward b
 
 Now add batteries to the mix.
 
-![BESS Project](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/bess_project.png)
+![BESS Project](/images/bess_project.png)
 *Battery Energy Storage Systems -- the missing piece that makes solar dispatchable 24/7*
 
 Global BESS demand jumped 51% in 2025, topping 315 GWh (Benchmark Minerals). Rystad Energy projects 130 GW and 350 GWh of BESS additions in 2026 alone. Stationary storage battery pack prices dropped to $70/kWh -- a 45% decline from 2024 (BloombergNEF).
@@ -76,7 +76,7 @@ From personal experience, onshore wind projects carry more site-specific risk th
 
 ## Offshore Wind -- The Expensive Reality No One Wants to Admit
 
-![Offshore Wind](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/offshore_wind.png)
+![Offshore Wind](/images/offshore_wind.png)
 *Offshore wind -- impressive engineering, but the economics tell a different story*
 
 I've worked on nearshore and offshore wind projects. And I'm going to say something that might be controversial: without massive government subsidies, most offshore wind projects don't pencil out.
@@ -109,7 +109,7 @@ Electric vehicles: more than 1 in 4 new cars sold globally is now electric (IEA)
 
 ## Why This Is the Inflection Point
 
-![Solar Inverters](https://raw.githubusercontent.com/Vietduc88x/techmadeeasy-website/main/public/images/solar_inverters.png)
+![Solar Inverters](/images/solar_inverters.png)
 *From inverters to substations -- solar infrastructure is mature, standardized, and bankable*
 
 Cost curves have crossed. Solar is now the cheapest source of new electricity. Full stop.
