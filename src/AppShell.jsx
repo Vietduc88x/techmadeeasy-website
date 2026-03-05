@@ -12,6 +12,7 @@ import { BOPInteractiveArticle } from './pages/BOPInteractiveArticle';
 import { RenewableEnergyCosts2024 } from './pages/RenewableEnergyCosts2024';
 import { FIMImplementationRoadmap } from './pages/FIMImplementationRoadmap';
 import { SolarSupplyChainCost } from './pages/SolarSupplyChainCost';
+import { DigitalAIPowerSystems } from './pages/DigitalAIPowerSystems';
 import { NotFound } from './pages/NotFound';
 
 export function AppShell() {
@@ -27,6 +28,7 @@ export function AppShell() {
           <Route path="/blog/renewable-energy-costs-2024" element={<RenewableEnergyCosts2024 />} />
           <Route path="/blog/fim-implementation-roadmap" element={<FIMImplementationRoadmap />} />
           <Route path="/blog/solar-pv-supply-chain-cost" element={<SolarSupplyChainCost />} />
+          <Route path="/blog/digitalisation-ai-power-systems" element={<DigitalAIPowerSystems />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

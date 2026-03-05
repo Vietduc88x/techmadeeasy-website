@@ -5,6 +5,18 @@
 
 export const blogPosts = [
   {
+    slug: 'digitalisation-ai-power-systems',
+    title: 'Digitalisation & AI for Power Systems: IRENA 2025 Interactive Analysis',
+    excerpt: 'A digitalised power system is no longer a nice option — it\'s the decisive enabler. AI forecasts are 45% more accurate, automated grids cut outages by 50%, and Denmark\'s AI saves $9M/year. An interactive deep-dive into IRENA\'s 2025 G7 report with charts, case studies, and visual insights.',
+    category: 'Technology',
+    readTime: '18 min read',
+    date: 'March 2026',
+    dateSort: '2026-03',
+    featured: true,
+    tags: ['AI', 'digitalisation', 'power systems', 'IRENA', 'smart grid', 'energy transition', 'G7', 'interactive'],
+    author: 'techmadeeasy',
+  },
+  {
     slug: 'solar-pv-supply-chain-cost',
     title: 'Solar PV Supply Chain Cost Tool: The Real Numbers Behind Solar Manufacturing',
     excerpt: 'It costs $0.124/Wp to make a solar panel in Vietnam using Chinese cells. It costs $0.284/Wp to make the same panel in Germany. An interactive deep-dive into IRENA\'s 2026 supply chain cost data — polysilicon to module, 6 countries, 4 import scenarios.',
