@@ -5,6 +5,18 @@
 
 export const blogPosts = [
   {
+    slug: 'time-management-starts-drawing-board',
+    title: "The Scheduler Cannot Fix What The Architect Broke",
+    excerpt: "Time management starts on the drawing board — not when you open Primavera. How sequential vs parallel design predetermines your schedule's resilience, with real examples from solar farms and wind projects. Based on the CIOB Guide to Good Practice.",
+    category: 'Engineering',
+    readTime: '18 min read',
+    date: 'March 2026',
+    dateSort: '2026-03',
+    featured: true,
+    tags: ['time management', 'CIOB', 'project management', 'scheduling', 'construction', 'solar', 'wind energy', 'critical path', 'buildability'],
+    author: 'techmadeeasy',
+  },
+  {
     slug: 'digitalisation-ai-power-systems',
     title: 'Digitalisation & AI for Power Systems: IRENA 2025 Interactive Analysis',
     excerpt: 'A digitalised power system is no longer a nice option — it\'s the decisive enabler. AI forecasts are 45% more accurate, automated grids cut outages by 50%, and Denmark\'s AI saves $9M/year. An interactive deep-dive into IRENA\'s 2025 G7 report with charts, case studies, and visual insights.',
