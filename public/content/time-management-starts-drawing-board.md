@@ -12,9 +12,9 @@ The real problem happened months earlier. On the drawing board.
 >
 > — CIOB Guide to Good Practice, Principle 1.1.10
 
-This single sentence, buried in a 172-page technical guide by the Chartered Institute of Building, might be the most consequential — and most ignored — principle in our industry.
+This single sentence, buried in a 176-page technical guide by the Chartered Institute of Building, might be the most consequential — and most ignored — principle in our industry.
 
-It means the architect, the concept designer, the person who decided how the project would be shaped and zoned — **that person effectively wrote the schedule.** The planner who came later just translated those design decisions into bars and logic links.
+It means the person who decided how the project would be shaped and zoned — the architect, the concept designer, the layout engineer — **that person effectively wrote the schedule.** The planner who came later just translated those design decisions into bars and logic links.
 
 ![Sequential vs Parallel Planning](/images/time_meme_3_drawing_board.png)
 *Bad planning creates sequential chains where one delay kills the whole project. Good planning creates parallel paths where delays stay local.*
@@ -27,7 +27,7 @@ Let me tell you about the moment this principle became real for me.
 
 **Project A** was a 200 MW solar plant designed as a single contiguous array with one central inverter station and shared civil infrastructure. Clean layout. Efficient cable routing. Looks great on the single-line diagram.
 
-But here's what that design meant for construction: site clearing had to proceed as one continuous operation across 400+ hectares. Pile driving followed a single front. Tracker installation followed the same linear path. Module mounting waited for the structure front to pass. DC cabling followed behind modules. Each phase was gate-kept by the previous one across the ENTIRE site.
+But here's what that design meant for construction: site clearing had to proceed as one continuous operation across 400+ hectares. Pile driving followed a single front. Tracker installation followed the same linear path. Module mounting waited for structures. DC cabling followed behind modules. Every phase was gate-kept by the previous one — across the ENTIRE site.
 
 When we got a three-week delay on civil works due to unexpected ground conditions in the southern zone, I watched it ripple through the entire schedule like dominoes. Cable trenching delayed three weeks. Inverter installation delayed three weeks. Grid connection pushed back. The whole project slipped — not because of bad scheduling, but because the design gave us no alternative path.
 
@@ -41,11 +41,11 @@ No amount of Primavera expertise or recovery planning can transform a single-blo
 
 ---
 
-## Wind Farms: Where This Becomes Even More Dramatic
+## Wind Farms: Where the Stakes Are Even Higher
 
-If you've worked on wind projects, you've seen this principle play out with even higher stakes.
+Solar taught me the principle. Wind made it impossible to ignore.
 
-**The sequential trap in wind:** If the foundation design requires ALL foundations to be poured and cured before ANY turbine erection begins — because the crane pad layout creates access dependencies between turbine positions — you're sitting idle with a $200,000/day crane while waiting for concrete to cure on the last foundation. I've seen this happen. It's painful.
+**The sequential trap in wind:** When the crane pad layout creates access dependencies between turbine positions, ALL foundations must be poured and cured before ANY turbine erection can begin. The result? You're sitting idle with a $200,000/day crane while waiting for concrete to cure on the last foundation. I've seen this happen. It's painful.
 
 **The parallel advantage in wind:** A well-designed wind farm layout allows foundation work and turbine erection to overlap across different clusters. While foundations are being poured in the northern cluster, turbines are being erected in the southern cluster where foundations cured weeks ago. The access roads are designed so the crane can move between zones without crossing active foundation work.
 
@@ -59,7 +59,7 @@ On another project, the layout forced a single installation sequence due to cabl
 
 ## BESS Projects: A Lesson in Modular Thinking
 
-Battery storage projects are a good counterexample — they naturally lend themselves to parallel construction because of their modular architecture. Each BESS container or rack is essentially an independent unit with its own BMS, thermal management, and DC connection.
+You might think battery storage is immune to this problem. After all, BESS projects naturally lend themselves to parallel construction because of their modular architecture. Each BESS container or rack is essentially an independent unit with its own BMS, thermal management, and DC connection.
 
 But even here, I've seen the sequential trap emerge. On one project, the civil works design placed all BESS containers along a single access road with a shared drainage system. The drainage had to be complete before any container could be placed. A two-week delay on drainage meant every single container placement was pushed back.
 
@@ -67,9 +67,11 @@ On a better-designed project, the BESS yard was split into four quadrants, each 
 
 The principle is universal: **any technology can be designed sequentially or in parallel.** The layout decides which one you get.
 
+So what does this look like mathematically? Let's put numbers on it.
+
 ---
 
-## Sequential vs Parallel: The Numbers Don't Lie
+## Sequential vs Parallel: What the Numbers Actually Show
 
 ![Critical Path Density](/images/time_critical_path_density.png)
 *In a sequential design, nearly 100% of activities are critical. In a parallel design, only ~15% are. That 85% difference is your schedule's shock absorber.*
@@ -102,7 +104,7 @@ The same three-week piling delay in Block B? Blocks A and C don't even notice. W
 
 ### The Math Behind It
 
-The CIOB gives us benchmarks: at medium schedule density, approximately **15% of activities should be critical**. That means 85% have float — they can absorb delays without affecting the completion date.
+Industry benchmarks suggest that in a well-structured schedule at medium density, approximately **15% of activities should be on the critical path**. That means 85% have float — they can absorb delays without affecting the completion date.
 
 In a single-block sequential design? Nearly **100% of activities are critical**. There is only one path. The schedule has zero resilience.
 
@@ -161,7 +163,7 @@ I've watched project managers burn through float in the first two months of a wi
 
 > *"Contingencies should be preserved as long as possible consistent with the current risk appraisal. If contingencies are absorbed in the early stages of a project, the likelihood of completion on time will be reduced."*
 
-Float is not a gift. It's a structural feature of good design. Spend it carelessly and you've converted a parallel schedule back into a sequential one.
+Spend it carelessly and you've effectively converted a parallel schedule back into a sequential one — with all the fragility that comes with it.
 
 ---
 
@@ -178,7 +180,7 @@ For renewable energy projects, this means asking:
 - Are there physical constraints (wetlands, cultural heritage zones, terrain) that force sequential working?
 - Are the required specialized resources (piling rigs, cable jointing crews, HV commissioning teams) available when the schedule demands them?
 
-This review should happen **before EPC tender** — ideally at the end of FEED. Once the EPC contract is signed with a fixed layout, the design is frozen and the programme is contractual. The opportunities for re-sequencing have evaporated.
+This review should happen **before EPC tender** — ideally at the end of FEED. Once the EPC contract is signed with a fixed layout, the design is frozen and the schedule is contractual. The opportunities for re-sequencing have evaporated.
 
 As the CIOB states:
 
@@ -191,9 +193,9 @@ Every week you delay the constructability review, you lose options. By the time 
 ## The Industry's Uncomfortable Truth
 
 ![CIOB Survey Statistics](/images/time_survey_stats.png)
-*The CIOB surveyed 400 companies across 2,000 projects. The results should keep every project director awake at night.*
+*The CIOB's industry-wide survey covered thousands of projects. The results should keep every project director awake at night.*
 
-Think about that. We have sophisticated scheduling software. We have Monte Carlo simulations. We have earned value dashboards. And yet **95% of the industry says the training is inadequate.**
+Think about that. We have sophisticated scheduling software. We have Monte Carlo simulations. We have earned value dashboards. And yet the overwhelming majority of practitioners surveyed say **time management training and education are inadequate.**
 
 This is not a technology gap. It's a knowledge and culture gap. Layout designers are not trained to think about construction time. Planners are brought in too late to influence design. And project managers are left trying to recover time that was given away before they were even hired.
 
@@ -228,12 +230,12 @@ Earned value tells you that you're behind. It doesn't tell you which activities 
 ## Five Schedule Types — Most Projects Only Have One
 
 ![Five Schedule Types](/images/time_five_schedules.png)
-*The CIOB identifies five distinct schedule types across a project's lifecycle. Most renewable energy projects only produce one — the Tender Schedule.*
+*Based on CIOB principles and industry practice, five distinct schedule types should exist across a project's lifecycle. Most renewable energy projects only produce one — the Tender Schedule.*
 
 | Schedule | Owner | When | Renewable Energy Example |
 |----------|-------|------|--------------------------|
 | **Development** | Developer | Pre-tender | Land acquisition milestones, permit timeline, grid connection dates, FEED schedule |
-| **Tender** | EPC Contractor | Tender | First construction-level programme with major milestones |
+| **Tender** | EPC Contractor | Tender | First construction-level schedule with major milestones |
 | **Working** | EPC Contractor | Construction | Resource-loaded, high density for next 3 months, crew allocation per block |
 | **Commissioning** | Developer/Owner | Pre-COD | Testing sequences, grid compliance, PPA milestones, regulatory inspections |
 | **As-Built** | EPC Contractor | Post-COD | Actual construction sequence, productivity rates, lessons learned |
@@ -312,7 +314,7 @@ The renewable energy industry has spent years investing in better scheduling sof
 
 The CIOB guide represents a shift in thinking that our industry still hasn't fully absorbed: **time management is not a construction-stage activity. It's a design-stage activity.**
 
-The layout designer who creates independent construction blocks is doing more for the schedule than any recovery programme. The developer who commissions a constructability review before EPC tender is saving more time than any acceleration package. The planner who advises on layout alternatives at FEED stage is worth ten planners producing bar charts during construction.
+The layout designer who creates independent construction blocks is doing more for the schedule than any recovery plan ever could. The developer who commissions a constructability review before EPC tender is saving more time than any acceleration package. The planner who advises on layout alternatives at FEED stage is worth ten planners producing bar charts during construction.
 
 I've learned this the hard way, through projects where the layout locked us into sequences we couldn't escape, and through projects where good design gave us the breathing room to absorb the unexpected.
 
@@ -329,9 +331,9 @@ Design for time. Or pay for it later.
 - **Multi-block layouts** create parallel paths where delays can be absorbed
 - **Constructability reviews** must happen before EPC tender — not after
 - **Float** is a byproduct of parallel design — planners cannot manufacture it in sequential layouts
-- **95% of industry professionals** rate time management education as unsatisfactory
+- The **overwhelming majority** of industry professionals rate time management education as inadequate
 - The schedule must function as a **dynamic time-model**, not a static bar chart
-- **Five schedule types** should exist across a project lifecycle — most projects only produce one
+- **Five schedule types** should exist across a project's lifecycle — most projects only produce one
 - Delays are not exceptional. They happen on every project. **Design for resilience.**
 
 ---
@@ -342,6 +344,6 @@ What's your experience? Have you worked on a project where the layout locked you
 
 **Disclaimer:** Views expressed are entirely my own and do not represent any employer, client, or organization.
 
-**Source:** This article draws from the **CIOB Guide to Good Practice in the Management of Time in Complex Projects** by the Chartered Institute of Building (Wiley-Blackwell, 2011), developed from a survey of 400 companies analysing data from nearly 2,000 projects over three years. It remains the most comprehensive industry standard for time management in construction.
+**Source:** This article draws from the **CIOB Guide to Good Practice in the Management of Time in Complex Projects** by the Chartered Institute of Building (Wiley-Blackwell, 1st edition 2011, 2nd edition 2018 retitled *Dynamic Time Modelling*), developed from an extensive industry-wide survey covering thousands of projects. It remains the most comprehensive industry standard for time management in construction.
 
 *Duc Hoang, PMP | Tech Made Easy (techmadeeasy.info)*
