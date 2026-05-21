@@ -12,7 +12,6 @@ export function Header() {
     { name: 'Blog', href: '/blog', external: false },
     { name: 'About', href: '/about', external: false },
     { name: 'Contact', href: '/contact', external: false },
-    { name: 'Energy Analyst', href: 'https://agent.techmadeeasy.info/', external: true },
     { name: 'Market', href: 'https://market.techmadeeasy.info/', external: true },
   ];
 
