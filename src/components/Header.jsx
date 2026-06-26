@@ -12,7 +12,6 @@ export function Header() {
     { name: 'Blog', href: '/blog', external: false },
     { name: 'About', href: '/about', external: false },
     { name: 'Contact', href: '/contact', external: false },
-    { name: 'Market', href: 'https://market.techmadeeasy.info/', external: true },
   ];
 
   const isActive = (href) => location.pathname === href;
