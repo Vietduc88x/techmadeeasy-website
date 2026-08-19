@@ -3,7 +3,7 @@
  * Both Blog.jsx (listing) and BlogPost.jsx (detail) import from here.
  */
 
-export const blogPosts = [
+const legacyBlogPosts = [
   {
     slug: 'time-management-starts-drawing-board',
     title: "The Scheduler Cannot Fix What The Architect Broke",
@@ -498,6 +498,83 @@ export const blogPosts = [
   },
 ];
 
+export const BLOG_TAXONOMY = [
+  'Preconstruction',
+  'Contracts & Packages',
+  'Constructability',
+  'Cost & Schedule',
+  'Solar + BESS',
+  'Wind + FPV',
+  'Off-site',
+];
+
+const CATEGORY_BY_SLUG = {
+  'time-management-starts-drawing-board': 'Cost & Schedule',
+  'digitalisation-ai-power-systems': 'Off-site',
+  'solar-pv-supply-chain-cost': 'Solar + BESS',
+  'bess-silent-revolution-powering-grid': 'Solar + BESS',
+  'green-hydrogen-reality-check': 'Off-site',
+  'hybrid-human-ai-workforce-pm-2026': 'Off-site',
+  'interconnection-queue-crisis': 'Preconstruction',
+  'ai-orchestration-pm-transformation': 'Off-site',
+  'solar-bess-dominance': 'Solar + BESS',
+  'digital-twins-energy-infrastructure': 'Preconstruction',
+  'life-thesis': 'Off-site',
+  'symmetric-risk-versus-asymmetric-risk': 'Off-site',
+  'my-story-told-again': 'Off-site',
+  'ai-power-hungry-giants-energy-demands': 'Off-site',
+  'ca-nhan-chu-quyen-tu-do-so': 'Off-site',
+  'sovereign-individual-digital-freedom': 'Off-site',
+  'bach-dang-battle': 'Off-site',
+  'strategic-masterpiece-redefined-warfare': 'Off-site',
+  'interactive-offshore-wind-farm': 'Wind + FPV',
+  'the-power-of-compounding': 'Off-site',
+  'fim-implementation-roadmap': 'Contracts & Packages',
+  'renewable-energy-workshop-01': 'Preconstruction',
+  'lever-leverage': 'Off-site',
+  'ark-invest-big-ideas-2025': 'Off-site',
+  'the-courage-to-be-you': 'Off-site',
+  'renewable-energy-costs-2024': 'Cost & Schedule',
+  'hard-work-in-a-company-no-longer-gives-you-safe': 'Off-site',
+  'construction-cost-estimation': 'Cost & Schedule',
+  'work-breakdown-structure-for-offshore-wind-farm': 'Cost & Schedule',
+  'construction-of-the-intertidal-wind-farm': 'Constructability',
+  'matrix-of-responsibility-between-packages-for-offshore-wind': 'Contracts & Packages',
+  'offshore-wind-risk-management-explained': 'Preconstruction',
+  'navigating-the-noise-finding-perspective': 'Off-site',
+  'measurement-and-surveys-for-offshore-wind-farm': 'Preconstruction',
+  'why-ignoring-technology-is-no-longer-an-option': 'Off-site',
+  'complete-guide-offshore-wind-farm-development': 'Wind + FPV',
+  'ai-applications-renewable-energy-transformation': 'Off-site',
+  'wind-farm-contract-structure-your-path-to-success': 'Contracts & Packages',
+  'wind-turbine-onshore-transportation-challenges': 'Constructability',
+  'nearshore-wind-farm-foundations-in-vietnam': 'Constructability',
+  'strategic-planning-renewable-energy': 'Preconstruction',
+};
+
+const FEATURED_RANK_BY_SLUG = {
+  'time-management-starts-drawing-board': 1,
+  'fim-implementation-roadmap': 2,
+  'construction-of-the-intertidal-wind-farm': 3,
+  'matrix-of-responsibility-between-packages-for-offshore-wind': 4,
+  'nearshore-wind-farm-foundations-in-vietnam': 5,
+};
+
+export const blogPosts = legacyBlogPosts.map((post) => {
+  const category = CATEGORY_BY_SLUG[post.slug];
+  if (!category) {
+    throw new Error(`Missing blog taxonomy for ${post.slug}`);
+  }
+
+  const featuredRank = FEATURED_RANK_BY_SLUG[post.slug];
+  return {
+    ...post,
+    category,
+    featured: Boolean(featuredRank),
+    ...(featuredRank ? { featuredRank } : {}),
+  };
+});
+
 /** Lookup object keyed by slug for quick access in BlogPost.jsx */
 export const blogPostsBySlug = Object.fromEntries(
   blogPosts.map((post) => [post.slug, post])
@@ -511,9 +588,7 @@ export function getCategories() {
   });
   return [
     { name: 'All', count: blogPosts.length },
-    ...Object.entries(counts)
-      .map(([name, count]) => ({ name, count }))
-      .sort((a, b) => b.count - a.count),
+    ...BLOG_TAXONOMY.map((name) => ({ name, count: counts[name] || 0 })),
   ];
 }
 
