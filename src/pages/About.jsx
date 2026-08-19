@@ -7,39 +7,39 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 export function About() {
   const stats = [
-    { icon: Users, value: '5,000+', label: 'Newsletter Subscribers' },
-    { icon: Eye, value: '50+', label: 'Countries Reached' },
-    { icon: FileText, value: '17+', label: 'Expert Articles Published' },
+    { icon: FileText, value: '41', label: 'Articles and playbooks' },
+    { icon: Target, value: '10+', label: 'Years, solar to nearshore wind' },
+    { icon: Users, value: 'VN · PH', label: 'Delivery; advisory in AU, MV, MY, KR' },
   ];
 
   const values = [
     {
       icon: Target,
-      title: 'Simplifying Complex Concepts',
-      description: 'We break down complex technical concepts into easy-to-understand explanations.',
+      title: 'Preconstruction first',
+      description: 'Layout versus schedule, FIM versus turnkey, technical and commercial — before FID, not after the overrun.',
     },
     {
       icon: Lightbulb,
-      title: 'Providing Insightful Analysis',
-      description: 'We offer in-depth analysis and commentary on the latest technology trends.',
+      title: 'Numbers that have to work',
+      description: 'Cost, commissioning versus COD, packages and EPC turnkey. Field notes from having to make the plant add up.',
     },
     {
       icon: Heart,
-      title: 'Empowering Individuals',
-      description: 'We empower individuals and businesses to succeed in the digital world.',
+      title: 'Honest geography',
+      description: 'Vietnam and the Philippines for delivery. Advisory, desktop works, and TDD in Australia, Maldives, Malaysia, and Korea. Offshore only where I have actually touched it.',
     },
     {
       icon: Users,
-      title: 'Making Technology Accessible',
-      description: 'We believe technology should be accessible to everyone, not just experts.',
+      title: 'Written for people on the job',
+      description: 'Playbooks for energy PMs, owner’s engineers, and EPC teams in APAC — not a generic tech-audience blog.',
     },
   ];
 
   return (
     <div className="flex flex-col">
       <Helmet>
-        <title>About | Tech Made Easy</title>
-        <meta name="description" content="About Tech Made Easy - founded by Duc Hoang, PMP. Expert insights on renewable energy, AI, and emerging technologies for professionals and decision-makers." />
+        <title>About Duc Hoang, PMP | Tech Made Easy</title>
+        <meta name="description" content="Duc Hoang, PMP. Solar, BESS, onshore and nearshore wind, FPV. Preconstruction, P6, FIDIC. Vietnam and the Philippines for delivery." />
         <link rel="canonical" href="https://techmadeeasy.info/about" />
       </Helmet>
 
@@ -48,10 +48,10 @@ export function About() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
-              About Tech Made Easy
+              Field notes from an energy PM
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Your go-to resource for technology insights and education. We believe that technology can be understandable, accessible and even enjoyable.
+              I’m Duc Hoang, PMP. Over a decade in solar, BESS, onshore and nearshore wind, and FPV. Strongest in preconstruction, technical and commercial, P6, and FIDIC.
             </p>
           </div>
         </div>
@@ -64,22 +64,22 @@ export function About() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <h2 className="text-3xl lg:text-4xl font-bold text-foreground">
-                  Our Mission
+                  Why this site exists
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  At Tech-Made-Easy, our mission is to empower individuals and businesses by making technology easy to understand and accessible to all. We believe that technology should be an enabler, not a barrier, to progress and innovation.
+                  I write the field notes I wish I had on site: constructability, packages, cost, the things a schedule cannot save. Vietnam and the Philippines for delivery. Technical advisory, desktop works, and technical due diligence in Australia, Maldives, Malaysia, and Korea.
                 </p>
                 <p className="text-lg text-muted-foreground">
-                  Our goal is to simplify complex technical concepts and provide insightful analysis and commentary to help our readers navigate the fast-changing world of technology. We strive to be a trusted resource for our community, providing accurate information, expert opinions, and practical advice.
+                  I also write the non-site stuff here: stories, thinking, a bit of entertainment. The job is still energy delivery — BOP / FIM packages and EPC turnkey, P6 and FIDIC, preconstruction.
                 </p>
               </div>
               
               <div className="bg-card rounded-lg p-8 border">
                 <blockquote className="text-lg italic text-muted-foreground mb-4">
-                  "Our blog is built on the belief that technology should be accessible to all. By breaking down complex concepts and making them easy to understand, we're helping to create a more informed and empowered society."
+                  "I write the field notes I wish I had on site: constructability, packages, cost, the things a schedule cannot save."
                 </blockquote>
                 <cite className="text-sm font-semibold text-foreground">
-                  — Tech Made Easy Team
+                  — Duc Hoang, PMP
                 </cite>
               </div>
             </div>
@@ -91,9 +91,9 @@ export function About() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">Our Impact</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-4">The job, in short</h2>
             <p className="text-xl text-muted-foreground">
-              We're proud to serve a growing community of technology enthusiasts.
+              Honest numbers. No 5,000-subscriber claim.
             </p>
           </div>
           
@@ -118,10 +118,10 @@ export function About() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Our Values
+              How I work
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              These core principles guide everything we do at Tech Made Easy.
+              Preconstruction, packages, and delivery — written for energy PMs, OE, and EPC.
             </p>
           </div>
           
@@ -163,19 +163,19 @@ export function About() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-foreground">Duc Hoang, PMP®</h3>
-                  <p className="text-lg text-primary font-semibold">Founder & Technology Expert</p>
+                  <h3 className="text-2xl font-bold text-foreground">Duc Hoang, PMP</h3>
+                  <p className="text-lg text-primary font-semibold">Energy project manager</p>
                 </div>
                 
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Duc Hoang is a certified Project Management Professional (PMP®) with extensive experience in renewable energy project management and technology implementation. His passion for making complex technology accessible to everyone led to the creation of Tech Made Easy.
+                    I’m a PMP with over a decade in solar, BESS, onshore and nearshore wind, and FPV. Some offshore, only where I have actually touched it. Strongest in preconstruction, technical and commercial, P6, and FIDIC — BOP / FIM packages and EPC turnkey.
                   </p>
                   <p>
-                    With a deep understanding of offshore wind development, AI applications, and emerging technologies, Duc brings real-world expertise to every article and guide published on this platform.
+                    Vietnam and the Philippines for delivery. Technical advisory, desktop works, and technical due diligence in Australia, Maldives, Malaysia, and Korea.
                   </p>
                   <p>
-                    His mission is to bridge the gap between complex technical concepts and practical understanding, empowering professionals and enthusiasts to succeed in today's rapidly evolving technology landscape.
+                    This site is the playbooks and field notes from that work, plus the non-site stuff: stories, thinking, a bit of entertainment.
                   </p>
                 </div>
                 
@@ -185,25 +185,25 @@ export function About() {
                     <div className="space-y-2">
                       <div className="flex items-center">
                         <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                        <span className="text-muted-foreground">Renewable Energy Project Management</span>
+                        <span className="text-muted-foreground">Preconstruction, P6, FIDIC</span>
                       </div>
                       <div className="flex items-center">
                         <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                        <span className="text-muted-foreground">Offshore Wind Farm Development</span>
+                        <span className="text-muted-foreground">Wind, nearshore first</span>
                       </div>
                       <div className="flex items-center">
                         <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                        <span className="text-muted-foreground">AI Applications in Energy</span>
+                        <span className="text-muted-foreground">Solar + BESS</span>
                       </div>
                     </div>
                     <div className="space-y-2">
                       <div className="flex items-center">
                         <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                        <span className="text-muted-foreground">Digital Transformation</span>
+                        <span className="text-muted-foreground">BOP / FIM and EPC turnkey</span>
                       </div>
                       <div className="flex items-center">
                         <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                        <span className="text-muted-foreground">Technical Writing & Education</span>
+                        <span className="text-muted-foreground">VN + PH delivery; APAC advisory</span>
                       </div>
                     </div>
                   </div>
@@ -234,8 +234,8 @@ export function About() {
                         </div>
                         <div>
                           <p className="font-bold text-foreground">Duc Hoang</p>
-                          <p className="text-sm text-muted-foreground">PMP® Certified</p>
-                          <p className="text-xs text-muted-foreground">Technology Expert</p>
+                          <p className="text-sm text-muted-foreground">PMP</p>
+                          <p className="text-xs text-muted-foreground">Energy PM</p>
                         </div>
                       </div>
                     </div>
@@ -253,32 +253,32 @@ export function About() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Our Focus Areas
+                Focus areas
               </h2>
               <p className="text-xl text-muted-foreground">
-                We cover a wide range of technology topics to keep you informed.
+                The work, not a generic tech syllabus.
               </p>
             </div>
             
             <div className="space-y-8">
               <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Renewable Energy</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Wind, nearshore first</h3>
                 <p className="text-muted-foreground">
-                  At first, this blog will be more focused on the renewable energy sector including onshore wind and offshore wind. We explore wind farms, their components, technologies and supply chains.
+                  Foundations, tides, packages. Onshore and nearshore wind, FPV. Offshore only where I have actually touched it.
                 </p>
               </div>
               
               <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Artificial Intelligence</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Solar + BESS</h3>
                 <p className="text-muted-foreground">
-                  AI is like teaching computers to think and learn just like us using math and code. We discuss different AI apps and tools that can help us get our work done faster and better.
+                  Cost, commissioning versus COD, the numbers behind the plant. Solar and battery storage from preconstruction through delivery.
                 </p>
               </div>
               
               <div className="bg-card rounded-lg p-6 border">
-                <h3 className="text-xl font-semibold text-foreground mb-3">Digital Twins</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Preconstruction</h3>
                 <p className="text-muted-foreground">
-                  Digital Twins represent the future of technology, enabling virtual representations of physical systems. We explore their applications and potential impact across industries.
+                  Layout versus schedule, FIM versus turnkey, technical and commercial. P6 and FIDIC. BOP / FIM packages and EPC turnkey.
                 </p>
               </div>
             </div>
@@ -291,17 +291,17 @@ export function About() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Join Our Community
+              Guest notes
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              If you have expertise in technology and a passion for making it accessible to everyone, we'd love to hear from you.
+              Written for APAC energy PMs, owner’s engineers, and EPC teams — not a generic tech-savvy audience.
             </p>
             <div className="space-y-4">
               <p className="text-muted-foreground">
-                Submit a guest post to our blog and join us in our mission to make technology easy.
+                If you work solar, BESS, wind, or FPV and have a field note worth publishing, get in touch.
               </p>
               <p className="text-muted-foreground">
-                You have a cool idea that you think fits our blog and our style? Send us your idea and let's talk!
+                Ads and partnerships: same readers. Energy delivery, not lifestyle tech.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
