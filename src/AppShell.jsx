@@ -14,6 +14,8 @@ import { FIMImplementationRoadmap } from './pages/FIMImplementationRoadmap';
 import { SolarSupplyChainCost } from './pages/SolarSupplyChainCost';
 import { DigitalAIPowerSystems } from './pages/DigitalAIPowerSystems';
 import { NotFound } from './pages/NotFound';
+import { AccessWasAssumed } from './pages/AccessWasAssumed';
+import { FIMvsEPCDecisionSheet } from './pages/FIMvsEPCDecisionSheet';
 
 export function AppShell() {
   return (
@@ -29,6 +31,8 @@ export function AppShell() {
           <Route path="/blog/fim-implementation-roadmap" element={<FIMImplementationRoadmap />} />
           <Route path="/blog/solar-pv-supply-chain-cost" element={<SolarSupplyChainCost />} />
           <Route path="/blog/digitalisation-ai-power-systems" element={<DigitalAIPowerSystems />} />
+          <Route path="/blog/access-was-assumed" element={<AccessWasAssumed />} />
+          <Route path="/blog/fim-vs-epc-decision-sheet" element={<FIMvsEPCDecisionSheet />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
