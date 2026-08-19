@@ -18,7 +18,7 @@ export function Blog() {
 
   // Filter and sort posts
   const filteredAndSortedPosts = useMemo(() => {
-    let filtered = blogPosts;
+    let filtered = [...blogPosts];
 
     // Filter by category
     if (selectedCategory !== 'All') {
@@ -37,12 +37,19 @@ export function Blog() {
     // Sort posts
     filtered.sort((a, b) => {
       switch (sortBy) {
-        case 'date':
+        case 'date': {
+          if (selectedCategory === 'All' && !searchQuery) {
+            const featuredOrder = (a.featuredRank ?? Number.POSITIVE_INFINITY)
+              - (b.featuredRank ?? Number.POSITIVE_INFINITY);
+            if (featuredOrder !== 0) return featuredOrder;
+          }
           return b.dateSort.localeCompare(a.dateSort);
-        case 'readTime':
+        }
+        case 'readTime': {
           const aTime = parseInt(a.readTime.match(/\d+/)[0]);
           const bTime = parseInt(b.readTime.match(/\d+/)[0]);
           return aTime - bTime;
+        }
         case 'title':
           return a.title.localeCompare(b.title);
         default:
@@ -57,7 +64,7 @@ export function Blog() {
     <div className="flex flex-col min-h-screen">
       <Helmet>
         <title>Blog | Tech Made Easy</title>
-        <meta name="description" content="Expert articles on renewable energy, AI, digital twins, project management, and emerging technologies. In-depth analysis for professionals." />
+        <meta name="description" content="Energy delivery playbooks from Duc Hoang, PMP: preconstruction, constructability, contracts, packages, cost, schedule, solar, BESS, wind, and FPV." />
         <link rel="canonical" href="https://techmadeeasy.info/blog" />
       </Helmet>
 
@@ -66,11 +73,11 @@ export function Blog() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
-              Latest Insights
+              Energy delivery playbooks
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Discover cutting-edge insights on technology, renewable energy, and strategic thinking. 
-              Explore in-depth analysis and practical guidance for the digital age.
+              Preconstruction, constructability, contracts, packages, cost, and schedule.
+              Field notes for energy PMs, owner&apos;s engineers, and EPC teams in APAC.
             </p>
             
             {/* Search Bar */}
@@ -169,7 +176,7 @@ export function Blog() {
                   : 'grid-cols-1'
               }`}>
                 {filteredAndSortedPosts.map((post) => (
-                  <PostCard key={post.slug} post={post} viewMode={viewMode} featured={post.featured} />
+                  <PostCard key={post.slug} post={post} viewMode={viewMode} featured={Boolean(post.featuredRank)} />
                 ))}
               </div>
             </div>

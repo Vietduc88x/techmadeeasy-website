@@ -93,7 +93,7 @@ export function About() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-foreground mb-4">The job, in short</h2>
             <p className="text-xl text-muted-foreground">
-              Honest numbers. No 5,000-subscriber claim.
+              The work, the experience, and the playbooks behind this site.
             </p>
           </div>
           

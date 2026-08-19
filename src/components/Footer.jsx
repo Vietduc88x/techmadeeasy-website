@@ -16,7 +16,7 @@ export function Footer() {
               <span className="text-xl font-bold text-foreground">Tech Made Easy</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Making technology accessible to everyone through insightful content and education.
+              Field notes on preconstruction, packages, and delivery for renewable-energy teams.
             </p>
           </div>
 
@@ -52,16 +52,16 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-foreground">Topics</h3>
             <ul className="space-y-2">
               <li>
-                <span className="text-sm text-muted-foreground">Renewable Energy</span>
+                <span className="text-sm text-muted-foreground">Preconstruction</span>
               </li>
               <li>
-                <span className="text-sm text-muted-foreground">Artificial Intelligence</span>
+                <span className="text-sm text-muted-foreground">Contracts &amp; Packages</span>
               </li>
               <li>
-                <span className="text-sm text-muted-foreground">Crypto Network</span>
+                <span className="text-sm text-muted-foreground">Constructability</span>
               </li>
               <li>
-                <span className="text-sm text-muted-foreground">Digital Twins</span>
+                <span className="text-sm text-muted-foreground">Cost &amp; Schedule</span>
               </li>
             </ul>
           </div>
@@ -70,7 +70,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-sm font-semibold text-foreground">Stay Updated</h3>
             <p className="text-sm text-muted-foreground">
-              Subscribe to our newsletter for the latest technology insights and updates.
+              Get the next project-delivery playbook when I publish it.
             </p>
           </div>
         </div>
@@ -81,7 +81,7 @@ export function Footer() {
               © {new Date().getFullYear()} Tech Made Easy. All rights reserved.
             </p>
             <p className="text-sm text-muted-foreground mt-2 md:mt-0">
-              Built with passion for technology education
+              Built from field experience in renewable-energy delivery
             </p>
           </div>
         </div>

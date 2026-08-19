@@ -54,7 +54,7 @@ export function NewsletterForm({ className = "" }) {
           </div>
           <h3 className="text-xl font-semibold text-foreground">Welcome to the Community!</h3>
           <p className="text-muted-foreground">
-            {message || "Thank you for subscribing! Check your email for a confirmation message and your first weekly insight."}
+            {message || "Thank you for subscribing. Check your email to confirm, and I will send the next playbook when it is ready."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
             <Button asChild variant="outline">
@@ -84,10 +84,10 @@ export function NewsletterForm({ className = "" }) {
           </div>
         </div>
         <CardTitle className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-          Stay Ahead of Technology Trends
+          Get the next playbook
         </CardTitle>
         <CardDescription className="text-lg text-muted-foreground">
-          Join 5,000+ professionals who receive weekly insights on renewable energy, AI, and emerging technologies. Get exclusive content, early access to guides, and expert analysis delivered to your inbox.
+          Field notes on preconstruction, constructability, packages, cost, and schedule. I send an email when a new playbook is ready.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
@@ -135,7 +135,7 @@ export function NewsletterForm({ className = "" }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm text-muted-foreground">
             <div className="flex items-center justify-center">
               <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-              Weekly insights
+              When I publish
             </div>
             <div className="flex items-center justify-center">
               <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
@@ -151,24 +151,24 @@ export function NewsletterForm({ className = "" }) {
         <div className="border-t pt-6">
           <div className="text-center">
             <p className="text-sm text-muted-foreground mb-4">
-              What you'll get every week:
+              What you&apos;ll get when I publish:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div className="flex items-start">
                 <Mail className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">Latest renewable energy developments and project insights</span>
+                <span className="text-muted-foreground">Preconstruction decisions and project setup</span>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">AI applications and technology trends analysis</span>
+                <span className="text-muted-foreground">Contracts, packages, and interface ownership</span>
               </div>
               <div className="flex items-start">
                 <FileText className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">Exclusive guides and templates for professionals</span>
+                <span className="text-muted-foreground">Cost and schedule assumptions that have to work</span>
               </div>
               <div className="flex items-start">
                 <Download className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">Industry networking opportunities and events</span>
+                <span className="text-muted-foreground">Constructability lessons from energy delivery</span>
               </div>
             </div>
           </div>

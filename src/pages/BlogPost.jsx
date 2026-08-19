@@ -299,7 +299,7 @@ export function BlogPost() {
                   Enjoyed this article?
                 </CardTitle>
                 <CardDescription className="text-base text-muted-foreground">
-                  Get weekly insights on renewable energy, AI, and emerging technologies delivered to your inbox.
+                  Get the next field note on preconstruction, packages, constructability, cost, or schedule when it is published.
                 </CardDescription>
               </CardHeader>
               <CardContent>
