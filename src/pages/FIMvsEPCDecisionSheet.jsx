@@ -103,7 +103,7 @@ export function FIMvsEPCDecisionSheet() {
             <div className="w-full min-w-0 max-w-full overflow-x-auto rounded-xl border">
               <table className="w-full min-w-[900px] border-collapse text-sm">
                 <thead className="bg-muted"><tr><th className="p-3 text-left">Decision</th><th className="p-3 text-left">FIM is stronger when</th><th className="p-3 text-left">EPC supply is stronger when</th><th className="p-3 text-left">Question that must be answered</th></tr></thead>
-                <tbody>{decisionRows.map((row) => <tr key={row[0]} className="border-t align-top">{row.map((cell, index) => <td key={cell} className={`p-3 ${index === 0 ? 'font-semibold text-foreground' : 'text-muted-foreground'}`}>{cell}</td>)}</tr>)}</tbody>
+                <tbody>{decisionRows.map((row) => <tr key={row[0]} className="border-t align-top">{row.map((cell, index) => <td key={`${row[0]}-${index}`} className={`p-3 ${index === 0 ? 'font-semibold text-foreground' : 'text-muted-foreground'}`}>{cell}</td>)}</tr>)}</tbody>
               </table>
             </div>
           </section>
@@ -114,7 +114,7 @@ export function FIMvsEPCDecisionSheet() {
             <div className="w-full min-w-0 max-w-full overflow-x-auto rounded-xl border">
               <table className="w-full min-w-[760px] border-collapse text-sm">
                 <thead className="bg-muted"><tr><th className="p-3 text-left">Interface</th><th className="p-3 text-left">Typical FIM starting point</th><th className="p-3 text-left">Typical EPC starting point</th><th className="p-3 text-left">Evidence required</th></tr></thead>
-                <tbody>{controlRows.map((row) => <tr key={row[0]} className="border-t align-top">{row.map((cell, index) => <td key={cell} className={`p-3 ${index === 0 ? 'font-semibold text-foreground' : 'text-muted-foreground'}`}>{cell}</td>)}</tr>)}</tbody>
+                <tbody>{controlRows.map((row) => <tr key={row[0]} className="border-t align-top">{row.map((cell, index) => <td key={`${row[0]}-${index}`} className={`p-3 ${index === 0 ? 'font-semibold text-foreground' : 'text-muted-foreground'}`}>{cell}</td>)}</tr>)}</tbody>
               </table>
             </div>
           </section>
