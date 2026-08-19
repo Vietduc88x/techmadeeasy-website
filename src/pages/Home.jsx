@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Wind, Brain, Cpu, Users, Eye, FileText, Download, Mail, CheckCircle } from 'lucide-react';
+import { ArrowRight, Wind, Sun, FileText, Download, Mail, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -46,18 +46,18 @@ export function Home() {
   const features = [
     {
       icon: Wind,
-      title: 'Renewable Energy',
-      description: 'Explore offshore wind farms, components, technologies and supply chains.',
+      title: 'Wind, nearshore first',
+      description: 'Foundations, tides, packages. Offshore only where I have actually touched it.',
     },
     {
-      icon: Brain,
-      title: 'Artificial Intelligence',
-      description: 'Discover AI applications, tools and how they revolutionize industries.',
+      icon: Sun,
+      title: 'Solar + BESS',
+      description: 'Cost, commissioning versus COD, the numbers behind the plant.',
     },
-{
-      icon: Cpu,
-      title: 'Digital Twins',
-      description: 'Understand digital twin technology and its real-world applications.',
+    {
+      icon: FileText,
+      title: 'Preconstruction',
+      description: 'Layout versus schedule, FIM versus turnkey, technical and commercial.',
     },
   ];
 
@@ -66,8 +66,8 @@ export function Home() {
   return (
     <div className="flex flex-col">
       <Helmet>
-        <title>Tech Made Easy - Making Technology Accessible to Everyone</title>
-        <meta name="description" content="Expert insights on renewable energy, AI, and Digital Twins. Simplifying complex technology for professionals and decision-makers. By Duc Hoang, PMP." />
+        <title>Tech Made Easy — Field notes from an energy PM</title>
+        <meta name="description" content="Duc Hoang, PMP. Solar, BESS, onshore and nearshore wind, FPV. Preconstruction, P6, FIDIC. Vietnam and the Philippines." />
         <link rel="canonical" href="https://techmadeeasy.info/" />
       </Helmet>
 
@@ -76,22 +76,24 @@ export function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
-              Making Technology{' '}
-              <span className="text-primary">Accessible</span>{' '}
-              to Everyone
+              Field notes from an{' '}
+              <span className="text-primary">energy PM</span>{' '}
+              who has had to make the numbers work.
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We believe that technology should be easy to understand and that everyone should have access to the tools they need to succeed in today's digital world.
+              I’m Duc Hoang, PMP. Over a decade in solar, BESS, onshore and nearshore wind, and FPV. Strongest in preconstruction, technical and commercial, P6, and FIDIC. Vietnam and the Philippines for delivery. Technical advisory, desktop works, and technical due diligence in Australia, Maldives, Malaysia, and Korea.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-lg px-8">
                 <Link to="/blog">
-                  Explore Our Blog
+                  Read the playbooks
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8">
-                <Link to="/about">Learn More</Link>
+                <a href="https://www.linkedin.com/in/hoang-vietduc-pmp%C2%AE-100842aa" target="_blank" rel="noopener">
+                  LinkedIn
+                </a>
               </Button>
             </div>
           </div>
@@ -103,24 +105,24 @@ export function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              Empowering the Future of Technology
+              The job, in short
             </h2>
             <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Our mission is to bridge the gap between complex technology and everyday understanding, making innovation accessible to everyone.
+              I also write the non-site stuff here: stories, thinking, a bit of entertainment. The job is still energy delivery.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">17+</div>
-                <div className="text-lg text-muted-foreground">Expert Articles</div>
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">10+</div>
+                <div className="text-lg text-muted-foreground">years, solar to nearshore wind</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">3</div>
-                <div className="text-lg text-muted-foreground">Focus Areas</div>
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">BOP / FIM</div>
+                <div className="text-lg text-muted-foreground">packages and EPC turnkey</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">100%</div>
-                <div className="text-lg text-muted-foreground">Accessible Content</div>
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">PMP · P6 · FIDIC</div>
+                <div className="text-lg text-muted-foreground">preconstruction</div>
               </div>
             </div>
           </div>
@@ -132,39 +134,11 @@ export function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Our Focus Areas
+              What I write about
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We provide insightful and comprehensive content that simplifies the complexities of technology across multiple domains.
+              Playbooks from delivery, not a generic tech syllabus.
             </p>
-          </div>
-
-          {/* Renewable Energy System Visualization */}
-          <div className="mb-16">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-foreground mb-4">
-                  Integrated Renewable Energy Ecosystem
-                </h3>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  Explore how wind, solar, hydrogen, and smart grid technologies work together to create a sustainable energy future. From generation to storage and distribution, see the complete renewable energy value chain.
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 shadow-lg">
-                <img
-                  src="/renewable-energy-system.png"
-                  alt="Integrated Renewable Energy System - Wind turbines, solar panels, hydrogen production, smart grid, and energy storage working together"
-                  className="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-                  style={{ maxHeight: '600px', objectFit: 'contain' }}
-                  loading="lazy"
-                />
-                <div className="mt-6 text-center">
-                  <p className="text-sm text-muted-foreground italic">
-                    Complete renewable energy ecosystem: From offshore wind and solar generation to hydrogen production, smart grid integration, and end-user applications
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -194,38 +168,21 @@ export function Home() {
       {/* Mission Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Our Mission
-              </h2>
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <div className="bg-card rounded-lg p-8 border">
+              <blockquote className="text-lg italic text-muted-foreground mb-4">
+                "I write the field notes I wish I had on site: constructability, packages, cost, the things a schedule cannot save."
+              </blockquote>
+              <cite className="text-sm font-semibold text-foreground">
+                — Duc Hoang, PMP
+              </cite>
             </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <p className="text-lg text-muted-foreground">
-                  At Tech-Made-Easy, our mission is to empower individuals and businesses by making technology easy to understand and accessible to all. We believe that technology should be an enabler, not a barrier, to progress and innovation.
-                </p>
-                <p className="text-lg text-muted-foreground">
-                  Our goal is to simplify complex technical concepts and provide insightful analysis and commentary to help our readers navigate the fast-changing world of technology.
-                </p>
-                <Button asChild className="mt-6">
-                  <Link to="/about">
-                    Learn More About Us
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              
-              <div className="bg-card rounded-lg p-8 border">
-                <blockquote className="text-lg italic text-muted-foreground mb-4">
-                  "Our blog is built on the belief that technology should be accessible to all. By breaking down complex concepts and making them easy to understand, we\'re helping to create a more informed and empowered society."
-                </blockquote>
-                <cite className="text-sm font-semibold text-foreground">
-                  — Tech Made Easy Team
-                </cite>
-              </div>
-            </div>
+            <Button asChild>
+              <Link to="/about">
+                More about the work
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -242,10 +199,10 @@ export function Home() {
                   </div>
                 </div>
                 <CardTitle className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                  Stay Ahead of Technology Trends
+                  Get the next playbook
                 </CardTitle>
                 <CardDescription className="text-lg text-muted-foreground">
-                  Join 5,000+ professionals who receive weekly insights on renewable energy, AI, and emerging technologies. Get exclusive content, early access to guides, and expert analysis delivered to your inbox.
+                  I send this when I publish a playbook. No fake weekly promise.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -283,7 +240,7 @@ export function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm text-muted-foreground">
                       <div className="flex items-center justify-center">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        Weekly insights
+                        When I publish
                       </div>
                       <div className="flex items-center justify-center">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
@@ -304,13 +261,13 @@ export function Home() {
                     </div>
                     <h3 className="text-xl font-semibold text-foreground">Welcome to the Community!</h3>
                     <p className="text-muted-foreground">
-                      Thank you for subscribing! Check your email for a welcome message and your first weekly insight.
+                      Thanks. I will send the next playbook when it is up.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
                       <Button asChild variant="outline">
                         <Link to="/blog">
                           <FileText className="mr-2 h-4 w-4" />
-                          Explore Our Blog
+                          Read the playbooks
                         </Link>
                       </Button>
                       <Button asChild>
@@ -322,32 +279,7 @@ export function Home() {
                     </div>
                   </div>
                 )}
-                
-                <div className="border-t pt-6">
-                  <div className="text-center">
-                    <p className="text-sm text-muted-foreground mb-4">
-                      What you'll get every week:
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                      <div className="flex items-start">
-                        <Wind className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">Latest renewable energy developments and project insights</span>
-                      </div>
-                      <div className="flex items-start">
-                        <Brain className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">AI applications and technology trends analysis</span>
-                      </div>
-                      <div className="flex items-start">
-                        <FileText className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">Exclusive guides and templates for professionals</span>
-                      </div>
-                      <div className="flex items-start">
-                        <Users className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">Industry networking opportunities and events</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
               </CardContent>
             </Card>
           </div>

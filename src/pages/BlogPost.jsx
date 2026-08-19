@@ -190,7 +190,7 @@ export function BlogPost() {
             
             <div className="flex items-center justify-between">
               <p className="text-muted-foreground">
-                By <span className="font-medium text-foreground">{post.author}</span>
+                By <span className="font-medium text-foreground">{post.author && post.author !== 'techmadeeasy' ? post.author : 'Duc Hoang, PMP'}</span>
               </p>
               <Button variant="outline" size="sm">
                 <Share2 className="h-4 w-4 mr-2" />
