@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Wind, Brain, Cpu, Users, Eye, FileText, Download, Mail, CheckCircle } from 'lucide-react';
+import { ArrowRight, Wind, Brain, Sun, Users, Eye, FileText, Download, Mail, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -46,18 +46,18 @@ export function Home() {
   const features = [
     {
       icon: Wind,
-      title: 'Renewable Energy',
-      description: 'Explore offshore wind farms, components, technologies and supply chains.',
+      title: 'Wind, nearshore first',
+      description: 'Foundations, tides, packages. Offshore only where I have actually touched it.',
     },
     {
-      icon: Brain,
-      title: 'Artificial Intelligence',
-      description: 'Discover AI applications, tools and how they revolutionize industries.',
+      icon: Sun,
+      title: 'Solar + BESS',
+      description: 'Cost, commissioning versus COD, the numbers behind the plant.',
     },
-{
-      icon: Cpu,
-      title: 'Digital Twins',
-      description: 'Understand digital twin technology and its real-world applications.',
+    {
+      icon: FileText,
+      title: 'Preconstruction',
+      description: 'Layout versus schedule, FIM versus turnkey, technical and commercial.',
     },
   ];
 
@@ -66,8 +66,8 @@ export function Home() {
   return (
     <div className="flex flex-col">
       <Helmet>
-        <title>Tech Made Easy - Making Technology Accessible to Everyone</title>
-        <meta name="description" content="Expert insights on renewable energy, AI, and Digital Twins. Simplifying complex technology for professionals and decision-makers. By Duc Hoang, PMP." />
+        <title>Tech Made Easy — Field notes from an energy PM</title>
+        <meta name="description" content="Duc Hoang, PMP. Solar, BESS, onshore and nearshore wind, FPV. Preconstruction, P6, FIDIC. Vietnam and the Philippines." />
         <link rel="canonical" href="https://techmadeeasy.info/" />
       </Helmet>
 
@@ -76,22 +76,24 @@ export function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
-              Making Technology{' '}
-              <span className="text-primary">Accessible</span>{' '}
-              to Everyone
+              Field notes from an{' '}
+              <span className="text-primary">energy PM</span>{' '}
+              who has had to make the numbers work.
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              We believe that technology should be easy to understand and that everyone should have access to the tools they need to succeed in today's digital world.
+              I’m Duc Hoang, PMP. Over a decade in solar, BESS, onshore and nearshore wind, and FPV. Strongest in preconstruction, technical and commercial, P6, and FIDIC. Vietnam and the Philippines for delivery. Technical advisory, desktop works, and technical due diligence in Australia, Maldives, Malaysia, and Korea.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="text-lg px-8">
                 <Link to="/blog">
-                  Explore Our Blog
+                  Read the playbooks
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8">
-                <Link to="/about">Learn More</Link>
+                <a href="https://www.linkedin.com/in/hoang-vietduc-pmp%C2%AE-100842aa" target="_blank" rel="noopener">
+                  LinkedIn
+                </a>
               </Button>
             </div>
           </div>
@@ -103,24 +105,24 @@ export function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              Empowering the Future of Technology
+              The job, in short
             </h2>
             <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Our mission is to bridge the gap between complex technology and everyday understanding, making innovation accessible to everyone.
+              I also write the non-site stuff here: stories, thinking, a bit of entertainment. The job is still energy delivery.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">17+</div>
-                <div className="text-lg text-muted-foreground">Expert Articles</div>
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">10+</div>
+                <div className="text-lg text-muted-foreground">years, solar to nearshore wind</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">3</div>
-                <div className="text-lg text-muted-foreground">Focus Areas</div>
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">BOP / FIM</div>
+                <div className="text-lg text-muted-foreground">packages and EPC turnkey</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">100%</div>
-                <div className="text-lg text-muted-foreground">Accessible Content</div>
+                <div className="text-4xl lg:text-5xl font-bold text-primary mb-2">PMP · P6 · FIDIC</div>
+                <div className="text-lg text-muted-foreground">preconstruction</div>
               </div>
             </div>
           </div>
@@ -219,10 +221,10 @@ export function Home() {
               
               <div className="bg-card rounded-lg p-8 border">
                 <blockquote className="text-lg italic text-muted-foreground mb-4">
-                  "Our blog is built on the belief that technology should be accessible to all. By breaking down complex concepts and making them easy to understand, we\'re helping to create a more informed and empowered society."
+                  "I write the field notes I wish I had on site: constructability, packages, cost, the things a schedule cannot save."
                 </blockquote>
                 <cite className="text-sm font-semibold text-foreground">
-                  — Tech Made Easy Team
+                  — Duc Hoang, PMP
                 </cite>
               </div>
             </div>
@@ -245,7 +247,7 @@ export function Home() {
                   Stay Ahead of Technology Trends
                 </CardTitle>
                 <CardDescription className="text-lg text-muted-foreground">
-                  Join 5,000+ professionals who receive weekly insights on renewable energy, AI, and emerging technologies. Get exclusive content, early access to guides, and expert analysis delivered to your inbox.
+                  I send this when I publish a playbook. No fake weekly promise.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -283,7 +285,7 @@ export function Home() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm text-muted-foreground">
                       <div className="flex items-center justify-center">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        Weekly insights
+                        When I publish
                       </div>
                       <div className="flex items-center justify-center">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
