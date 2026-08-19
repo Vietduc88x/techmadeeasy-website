@@ -29,3 +29,10 @@ test('the public article links authoritative guidance and contains no mojibake',
   assert.match(page, /iccwbo\.org\/business-solutions\/incoterms-rules/);
   assert.doesNotMatch(page, /â€œ|â€|â€™/);
 });
+
+test('table cells use row-and-column keys even when labels repeat', async () => {
+  const page = await readFile(pageUrl, 'utf8');
+
+  assert.doesNotMatch(page, /<td key=\{cell\}/);
+  assert.match(page, /<td key=\{`\$\{row\[0\]\}-\$\{index\}`\}/);
+});
