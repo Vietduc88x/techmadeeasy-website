@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 export function About() {
   const stats = [
-    { icon: FileText, value: '41', label: 'Articles and playbooks' },
+    { icon: FileText, value: '43', label: 'Articles and playbooks' },
     { icon: Target, value: '10+', label: 'Years, solar to nearshore wind' },
     { icon: Users, value: 'VN · PH', label: 'Delivery; advisory in AU, MV, MY, KR' },
   ];

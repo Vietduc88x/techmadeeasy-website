@@ -5,6 +5,30 @@
 
 const legacyBlogPosts = [
   {
+    slug: 'access-was-assumed',
+    title: 'Access Was Assumed',
+    excerpt: 'The activity is not late. The access assumption is false. Switch off four hidden enabling conditions and watch a simple construction sequence move.',
+    category: 'Preconstruction',
+    readTime: '10 min read + tool',
+    date: 'August 2026',
+    dateSort: '2026-08-19',
+    featured: true,
+    tags: ['preconstruction', 'schedule', 'constructability', 'access', 'P6', 'interactive'],
+    author: 'Duc Hoang, PMP',
+  },
+  {
+    slug: 'fim-vs-epc-decision-sheet',
+    title: 'FIM versus EPC: The One-Page Decision Sheet',
+    excerpt: 'A printable decision aid for comparing control, interfaces, logistics, schedule ownership and warranty exposure before choosing the procurement model.',
+    category: 'Contracts & Packages',
+    readTime: '6 min read',
+    date: 'August 2026',
+    dateSort: '2026-08-18',
+    featured: true,
+    tags: ['FIM', 'EPC', 'procurement', 'packages', 'responsibility matrix', 'one-pager'],
+    author: 'Duc Hoang, PMP',
+  },
+  {
     slug: 'time-management-starts-drawing-board',
     title: "The Scheduler Cannot Fix What The Architect Broke",
     excerpt: "Time management starts on the drawing board — not when you open Primavera. How sequential vs parallel design predetermines your schedule's resilience, with real examples from solar farms and wind projects. Based on the CIOB Guide to Good Practice.",
@@ -509,6 +533,8 @@ export const BLOG_TAXONOMY = [
 ];
 
 const CATEGORY_BY_SLUG = {
+  'access-was-assumed': 'Preconstruction',
+  'fim-vs-epc-decision-sheet': 'Contracts & Packages',
   'time-management-starts-drawing-board': 'Cost & Schedule',
   'digitalisation-ai-power-systems': 'Off-site',
   'solar-pv-supply-chain-cost': 'Solar + BESS',
@@ -553,11 +579,11 @@ const CATEGORY_BY_SLUG = {
 };
 
 const FEATURED_RANK_BY_SLUG = {
-  'time-management-starts-drawing-board': 1,
-  'fim-implementation-roadmap': 2,
-  'construction-of-the-intertidal-wind-farm': 3,
-  'matrix-of-responsibility-between-packages-for-offshore-wind': 4,
-  'nearshore-wind-farm-foundations-in-vietnam': 5,
+  'access-was-assumed': 1,
+  'fim-vs-epc-decision-sheet': 2,
+  'time-management-starts-drawing-board': 3,
+  'construction-of-the-intertidal-wind-farm': 4,
+  'matrix-of-responsibility-between-packages-for-offshore-wind': 5,
 };
 
 export const blogPosts = legacyBlogPosts.map((post) => {
