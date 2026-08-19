@@ -227,18 +227,11 @@ export function About() {
               <div className="flex justify-center">
                 <div className="relative">
                   <div className="w-80 h-80 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center">
-                    <div className="w-72 h-72 bg-card rounded-full border-4 border-primary/20 flex items-center justify-center">
-                      <div className="text-center space-y-4">
-                        <div className="w-24 h-24 bg-primary/10 rounded-full mx-auto flex items-center justify-center">
-                          <Users className="h-12 w-12 text-primary" />
-                        </div>
-                        <div>
-                          <p className="font-bold text-foreground">Duc Hoang</p>
-                          <p className="text-sm text-muted-foreground">PMP</p>
-                          <p className="text-xs text-muted-foreground">Energy PM</p>
-                        </div>
-                      </div>
-                    </div>
+                    <img
+                      src="/images/duc-hoang.jpg"
+                      alt="Duc Hoang, PMP"
+                      className="w-72 h-72 rounded-full object-cover border-4 border-primary/20 shadow-lg"
+                    />
                   </div>
                 </div>
               </div>
