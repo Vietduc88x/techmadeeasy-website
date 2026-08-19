@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
-import { accessAssumptions, calculateAccessScenario } from '../src/data/accessWasAssumed.js';
-import { access } from 'node:fs/promises';
+import { access, readFile } from 'node:fs/promises';
 import test from 'node:test';
+
+import { accessAssumptions, calculateAccessScenario } from '../src/data/accessWasAssumed.js';
 
 const allAvailable = Object.fromEntries(
   accessAssumptions.map(({ id }) => [id, true]),
@@ -23,6 +24,12 @@ test('the illustrative baseline completes in 19 days', () => {
       { id: 'testing-handover', start: 16, finish: 19 },
     ],
   );
+  assert.deepEqual(
+    scenario.activities.filter(({ critical }) => critical).map(({ id }) => id),
+    ['mobilisation', 'set-out', 'platform-release', 'main-installation', 'testing-handover'],
+  );
+  assert.equal(scenario.activities.find(({ id }) => id === 'fim-receipt').totalFloat, 4);
+  assert.equal(scenario.controllingGate, null);
 });
 
 test('access gates move downstream work without pretending delays are additive', () => {
@@ -35,9 +42,37 @@ test('access gates move downstream work without pretending delays are additive',
   assert.equal(roadBlocked.deltaDays, 8);
   assert.equal(fimLate.deltaDays, 5);
   assert.equal(allBlocked.deltaDays, 18);
+  assert.equal(roadBlocked.controllingGate.id, 'roadAccess');
+  assert.equal(fimLate.controllingGate.id, 'fimHandover');
+  assert.deepEqual(
+    fimLate.activities.filter(({ critical }) => critical).map(({ id }) => id),
+    ['mobilisation', 'fim-receipt', 'main-installation', 'testing-handover'],
+  );
+  assert.deepEqual(
+    allBlocked.criticalGates.map(({ id }) => id),
+    ['roadAccess', 'platformReady', 'temporaryPower'],
+  );
+  assert.equal(allBlocked.activities.find(({ id }) => id === 'fim-receipt').totalFloat, 1);
+  assert.deepEqual(
+    allBlocked.activities.find(({ id }) => id === 'platform-release').waitingPeriod,
+    { start: 13, finish: 19, duration: 6 },
+  );
   assert.ok(
     allBlocked.deltaDays < accessAssumptions.reduce((sum, item) => sum + item.delayDays, 0),
   );
+});
+
+test('the article exposes the model, field control and public-safe limitations', async () => {
+  const page = await readFile(new URL('../src/pages/AccessWasAssumed.jsx', import.meta.url), 'utf8');
+
+  assert.match(page, /Composite example, not a client programme/);
+  assert.match(page, /Installation start = max/);
+  assert.match(page, /Which access condition is most often missing from your baseline/);
+  assert.match(page, /What this model cannot tell you/);
+  assert.match(page, /Acceptance evidence/);
+  assert.match(page, /Time an activity can move without delaying project completion in the current scenario/);
+  assert.match(page, /extension of time \(EOT\)/);
+  assert.match(page, /Further reading/);
 });
 
 test('the release adds both public-safe assets to the blog and ships the LinkedIn PDF', async () => {
