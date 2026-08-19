@@ -62,6 +62,7 @@ export function Header() {
             <Button
               variant="ghost"
               size="sm"
+              className="min-h-11 min-w-11"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >

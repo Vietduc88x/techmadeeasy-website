@@ -5,6 +5,18 @@
 
 const legacyBlogPosts = [
   {
+    slug: 'drawing-showed-access',
+    title: 'The Drawing Showed Access',
+    excerpt: 'Could the delivery vehicle actually make the turn? Test road width, bend radius, vehicle length and clearance before a line on a plan becomes a site delay.',
+    category: 'Constructability',
+    readTime: '4 min read + interactive screen',
+    date: 'August 2026',
+    dateSort: '2026-08-19',
+    featured: true,
+    tags: ['constructability', 'logistics', 'access', 'swept path', 'transport', 'interactive'],
+    author: 'Duc Hoang, PMP',
+  },
+  {
     slug: 'access-was-assumed',
     title: 'Access Was Assumed',
     excerpt: 'The activity is not late. The access assumption is false. Switch off four hidden enabling conditions and watch a simple construction sequence move.',
@@ -533,6 +545,7 @@ export const BLOG_TAXONOMY = [
 ];
 
 const CATEGORY_BY_SLUG = {
+  'drawing-showed-access': 'Constructability',
   'access-was-assumed': 'Preconstruction',
   'fim-vs-epc-decision-sheet': 'Contracts & Packages',
   'time-management-starts-drawing-board': 'Cost & Schedule',
@@ -579,11 +592,12 @@ const CATEGORY_BY_SLUG = {
 };
 
 const FEATURED_RANK_BY_SLUG = {
-  'access-was-assumed': 1,
-  'fim-vs-epc-decision-sheet': 2,
-  'time-management-starts-drawing-board': 3,
-  'construction-of-the-intertidal-wind-farm': 4,
-  'matrix-of-responsibility-between-packages-for-offshore-wind': 5,
+  'drawing-showed-access': 1,
+  'access-was-assumed': 2,
+  'fim-vs-epc-decision-sheet': 3,
+  'time-management-starts-drawing-board': 4,
+  'construction-of-the-intertidal-wind-farm': 5,
+  'matrix-of-responsibility-between-packages-for-offshore-wind': 6,
 };
 
 export const blogPosts = legacyBlogPosts.map((post) => {
