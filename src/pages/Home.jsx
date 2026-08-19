@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Wind, Brain, Sun, Users, Eye, FileText, Download, Mail, CheckCircle } from 'lucide-react';
+import { ArrowRight, Wind, Sun, FileText, Download, Mail, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -134,39 +134,11 @@ export function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Our Focus Areas
+              What I write about
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We provide insightful and comprehensive content that simplifies the complexities of technology across multiple domains.
+              Playbooks from delivery, not a generic tech syllabus.
             </p>
-          </div>
-
-          {/* Renewable Energy System Visualization */}
-          <div className="mb-16">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold text-foreground mb-4">
-                  Integrated Renewable Energy Ecosystem
-                </h3>
-                <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  Explore how wind, solar, hydrogen, and smart grid technologies work together to create a sustainable energy future. From generation to storage and distribution, see the complete renewable energy value chain.
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-2xl p-8 shadow-lg">
-                <img
-                  src="/renewable-energy-system.png"
-                  alt="Integrated Renewable Energy System - Wind turbines, solar panels, hydrogen production, smart grid, and energy storage working together"
-                  className="w-full h-auto rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
-                  style={{ maxHeight: '600px', objectFit: 'contain' }}
-                  loading="lazy"
-                />
-                <div className="mt-6 text-center">
-                  <p className="text-sm text-muted-foreground italic">
-                    Complete renewable energy ecosystem: From offshore wind and solar generation to hydrogen production, smart grid integration, and end-user applications
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -196,38 +168,21 @@ export function Home() {
       {/* Mission Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-                Our Mission
-              </h2>
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <div className="bg-card rounded-lg p-8 border">
+              <blockquote className="text-lg italic text-muted-foreground mb-4">
+                "I write the field notes I wish I had on site: constructability, packages, cost, the things a schedule cannot save."
+              </blockquote>
+              <cite className="text-sm font-semibold text-foreground">
+                — Duc Hoang, PMP
+              </cite>
             </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <p className="text-lg text-muted-foreground">
-                  At Tech-Made-Easy, our mission is to empower individuals and businesses by making technology easy to understand and accessible to all. We believe that technology should be an enabler, not a barrier, to progress and innovation.
-                </p>
-                <p className="text-lg text-muted-foreground">
-                  Our goal is to simplify complex technical concepts and provide insightful analysis and commentary to help our readers navigate the fast-changing world of technology.
-                </p>
-                <Button asChild className="mt-6">
-                  <Link to="/about">
-                    Learn More About Us
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-              
-              <div className="bg-card rounded-lg p-8 border">
-                <blockquote className="text-lg italic text-muted-foreground mb-4">
-                  "I write the field notes I wish I had on site: constructability, packages, cost, the things a schedule cannot save."
-                </blockquote>
-                <cite className="text-sm font-semibold text-foreground">
-                  — Duc Hoang, PMP
-                </cite>
-              </div>
-            </div>
+            <Button asChild>
+              <Link to="/about">
+                More about the work
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -244,7 +199,7 @@ export function Home() {
                   </div>
                 </div>
                 <CardTitle className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                  Stay Ahead of Technology Trends
+                  Get the next playbook
                 </CardTitle>
                 <CardDescription className="text-lg text-muted-foreground">
                   I send this when I publish a playbook. No fake weekly promise.
@@ -306,13 +261,13 @@ export function Home() {
                     </div>
                     <h3 className="text-xl font-semibold text-foreground">Welcome to the Community!</h3>
                     <p className="text-muted-foreground">
-                      Thank you for subscribing! Check your email for a welcome message and your first weekly insight.
+                      Thanks. I will send the next playbook when it is up.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
                       <Button asChild variant="outline">
                         <Link to="/blog">
                           <FileText className="mr-2 h-4 w-4" />
-                          Explore Our Blog
+                          Read the playbooks
                         </Link>
                       </Button>
                       <Button asChild>
@@ -324,32 +279,7 @@ export function Home() {
                     </div>
                   </div>
                 )}
-                
-                <div className="border-t pt-6">
-                  <div className="text-center">
-                    <p className="text-sm text-muted-foreground mb-4">
-                      What you'll get every week:
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                      <div className="flex items-start">
-                        <Wind className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">Latest renewable energy developments and project insights</span>
-                      </div>
-                      <div className="flex items-start">
-                        <Brain className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">AI applications and technology trends analysis</span>
-                      </div>
-                      <div className="flex items-start">
-                        <FileText className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">Exclusive guides and templates for professionals</span>
-                      </div>
-                      <div className="flex items-start">
-                        <Users className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-muted-foreground">Industry networking opportunities and events</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
               </CardContent>
             </Card>
           </div>
