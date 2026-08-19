@@ -43,6 +43,24 @@ const ssrModule = await import(
 );
 const { render } = ssrModule;
 
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function removeExistingHeadTags(page, helmetMeta = '') {
+  const keys = [...helmetMeta.matchAll(/<meta\b[^>]*(?:name|property)="([^"]+)"[^>]*>/gi)]
+    .map((match) => match[1]);
+
+  return [...new Set(keys)].reduce((currentPage, key) => {
+    const escapedKey = escapeRegExp(key);
+    const existingTag = new RegExp(
+      `<meta\\b(?=[^>]*(?:name|property)="${escapedKey}")[^>]*>\\s*`,
+      'gi',
+    );
+    return currentPage.replace(existingTag, '');
+  }, page);
+}
+
 // ---------------------------------------------------------------------------
 // 3. Render each route and write to dist/
 // ---------------------------------------------------------------------------
@@ -66,17 +84,20 @@ for (const route of allRoutes) {
         );
       }
 
+      const helmetMeta = helmet.meta?.toString();
+      page = removeExistingHeadTags(page, helmetMeta);
+
       // Replace default canonical with page-specific one
       const helmetLink = helmet.link?.toString();
       if (helmetLink && helmetLink.includes('canonical')) {
         page = page.replace(
-          /<link rel="canonical" href="[^"]*" \/>/,
+          /<link\b(?=[^>]*rel="canonical")[^>]*>\s*/gi,
           '' // Remove default; Helmet's canonical is injected below
         );
       }
 
       const headTags = [
-        helmet.meta?.toString(),
+        helmetMeta,
         helmetLink,
         helmet.script?.toString(),
       ]

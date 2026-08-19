@@ -16,6 +16,7 @@ import { DigitalAIPowerSystems } from './pages/DigitalAIPowerSystems';
 import { NotFound } from './pages/NotFound';
 import { AccessWasAssumed } from './pages/AccessWasAssumed';
 import { FIMvsEPCDecisionSheet } from './pages/FIMvsEPCDecisionSheet';
+import { DrawingShowedAccess } from './pages/DrawingShowedAccess';
 
 export function AppShell() {
   return (
@@ -33,6 +34,7 @@ export function AppShell() {
           <Route path="/blog/digitalisation-ai-power-systems" element={<DigitalAIPowerSystems />} />
           <Route path="/blog/access-was-assumed" element={<AccessWasAssumed />} />
           <Route path="/blog/fim-vs-epc-decision-sheet" element={<FIMvsEPCDecisionSheet />} />
+          <Route path="/blog/drawing-showed-access" element={<DrawingShowedAccess />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

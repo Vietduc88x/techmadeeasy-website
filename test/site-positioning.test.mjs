@@ -40,11 +40,11 @@ test('site chrome consistently presents energy-delivery field notes', async () =
   for (const content of [about, newsletter, blogPost, newsletterFunction]) {
     assert.doesNotMatch(content, /5,000\+|weekly insights|next Tuesday|Making Technology Accessible/i);
   }
-  assert.match(about, /value: '43', label: 'Articles and playbooks'/);
+  assert.match(about, /value: '44', label: 'Articles and playbooks'/);
 });
 
 test('all posts use the new ordered taxonomy', () => {
-  assert.equal(blogPosts.length, 43);
+  assert.equal(blogPosts.length, 44);
   assert.deepEqual(getCategories().map(({ name }) => name), ['All', ...taxonomy]);
   assert.deepEqual([...new Set(blogPosts.map(({ category }) => category))].sort(), [...taxonomy].sort());
 });
@@ -54,8 +54,9 @@ test('signature playbooks have a unique explicit rank', () => {
     .filter(({ featuredRank }) => featuredRank)
     .sort((a, b) => a.featuredRank - b.featuredRank);
 
-  assert.deepEqual(featured.map(({ featuredRank }) => featuredRank), [1, 2, 3, 4, 5]);
+  assert.deepEqual(featured.map(({ featuredRank }) => featuredRank), [1, 2, 3, 4, 5, 6]);
   assert.deepEqual(featured.map(({ slug }) => slug), [
+    'drawing-showed-access',
     'access-was-assumed',
     'fim-vs-epc-decision-sheet',
     'time-management-starts-drawing-board',
