@@ -4,7 +4,6 @@ import './InteractiveBattleMap.css';
 const InteractiveBattleMap = () => {
   const [currentPhase, setCurrentPhase] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [showStakes, setShowStakes] = useState(false);
 
   const battlePhases = [
     {

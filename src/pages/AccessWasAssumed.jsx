@@ -3,11 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {
   AlertTriangle,
-  ArrowLeft,
   ArrowRight,
-  Calendar,
   FileDown,
-  GitBranch,
   Info,
   RotateCcw,
   ShieldCheck,
@@ -16,6 +13,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Switch } from '@/components/ui/switch';
+import { ArticleHeader } from '@/components/article/ArticleHeader';
 import {
   Table,
   TableBody,
@@ -254,43 +252,20 @@ export function AccessWasAssumed() {
       <Helmet>
         <title>Access Was Assumed | Tech Made Easy</title>
         <meta name="description" content="An interactive project-controls field note: expose access gates, waiting time, float and the path controlling completion." />
-        <link rel="canonical" href="https://techmadeeasy.info/blog/access-was-assumed" />
+        <link rel="canonical" href="https://techmadeeasy.info/blog/access-was-assumed/" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Access Was Assumed" />
         <meta property="og:description" content="The programme says installation starts on Day 9. The delivery truck cannot reach the workfront. Which date is lying?" />
       </Helmet>
 
-      <section className="border-b bg-gradient-to-br from-amber-500/10 via-background to-primary/5 py-14">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-5xl">
-            <Button asChild variant="ghost" className="mb-6">
-              <Link to="/blog"><ArrowLeft className="mr-2 h-4 w-4" />Back to Blog</Link>
-            </Button>
-            <div className="mb-6 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-              <Badge>Before the Spade</Badge>
-              <Badge variant="secondary">Preconstruction</Badge>
-              <span className="flex items-center gap-1"><Calendar className="h-4 w-4" />August 2026</span>
-              <span className="flex items-center gap-1"><GitBranch className="h-4 w-4" />Interactive field note</span>
-            </div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-amber-700 dark:text-amber-300">
-              One lie in the programme
-            </p>
-            <h1 className="max-w-4xl text-4xl font-bold tracking-tight text-foreground lg:text-6xl">Access Was Assumed</h1>
-            <p className="mt-6 max-w-3xl text-xl leading-relaxed text-muted-foreground">
-              The programme says installation starts on Day 9. The delivery truck cannot reach the workfront. Which date is lying?
-            </p>
-            <p className="mt-6 text-sm text-muted-foreground">By Duc Hoang, PMP</p>
-          </div>
-        </div>
-      </section>
+      <ArticleHeader slug="access-was-assumed" kicker="One lie in the programme" format="Interactive field note" summary="The programme says installation starts on Day 9. The delivery truck cannot reach the workfront. Which date is lying?" />
 
       <section className="py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-6xl">
             <div className="mb-5 flex flex-col gap-3 border-b pb-5 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-amber-700 dark:text-amber-300">Composite example, not a client programme</p>
-                <h2 className="mt-2 text-3xl font-bold text-foreground">Break the baseline</h2>
+                <h2 className="text-3xl font-bold text-foreground">Break the baseline</h2>
                 <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
                   Switch a readiness condition off. Orange is waiting created by a missing gate; black is work on the controlling path.
                 </p>
@@ -491,6 +466,7 @@ export function AccessWasAssumed() {
               <Info className="h-7 w-7 text-amber-700 dark:text-amber-300" />
               <h2 className="mt-4 text-2xl font-bold text-foreground">What this model cannot tell you</h2>
               <ul className="mt-4 list-disc space-y-3 pl-5 text-base">
+                <li>This is a composite teaching example, not a client programme.</li>
                 <li>It does not determine contractual entitlement, extension of time (EOT) or cost responsibility.</li>
                 <li>It omits resources, weather, calendars, permits and productivity.</li>
                 <li>The waiting periods are teaching inputs, not benchmark durations.</li>
@@ -505,7 +481,7 @@ export function AccessWasAssumed() {
               Under a single EPC package, equipment availability, logistics and installation may sit behind one contractual interface. Under a free-issue-material strategy, the owner may control supply while the contractor controls receipt, preservation and installation. The programme still needs both sides of the handover: the owner&apos;s delivery obligation and the contractor&apos;s acceptance evidence.
             </p>
             <div className="mt-6 rounded-2xl border-2 border-primary/20 bg-primary/5 p-6 sm:p-8">
-              <Badge variant="secondary">Companion playbook</Badge>
+              <Badge variant="secondary">Companion note</Badge>
               <h3 className="mt-4 text-2xl font-bold text-foreground">FIM versus EPC: the one-page decision sheet</h3>
               <p className="mt-3 text-base">Compare control, interface load, logistics, warranties and schedule ownership before choosing a procurement model.</p>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row">

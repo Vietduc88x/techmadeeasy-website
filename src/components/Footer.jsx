@@ -5,10 +5,9 @@ import { Zap } from 'lucide-react';
 export function Footer() {
   return (
     <footer className="bg-muted/50 border-t">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {/* Brand */}
-          <div className="space-y-4">
+      <div className="container mx-auto px-4 py-10 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
+          <div className="space-y-3">
             <Link to="/" className="flex items-center space-x-2">
               <div className="flex items-center justify-center w-8 h-8 bg-primary rounded-lg">
                 <Zap className="h-5 w-5 text-primary-foreground" />
@@ -20,61 +19,17 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-foreground">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Topics */}
-          <div className="space-y-4">
-            <h3 className="text-sm font-semibold text-foreground">Topics</h3>
-            <ul className="space-y-2">
-              <li>
-                <span className="text-sm text-muted-foreground">Preconstruction</span>
-              </li>
-              <li>
-                <span className="text-sm text-muted-foreground">Contracts &amp; Packages</span>
-              </li>
-              <li>
-                <span className="text-sm text-muted-foreground">Constructability</span>
-              </li>
-              <li>
-                <span className="text-sm text-muted-foreground">Cost &amp; Schedule</span>
-              </li>
-            </ul>
-          </div>
-
+          <nav aria-label="Footer navigation" className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold">
+            <Link to="/">Home</Link>
+            <Link to="/blog">Notes</Link>
+            <Link to="/about">About</Link>
+          </nav>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-border">
+        <div className="mt-8 border-t border-border pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Tech Made Easy. All rights reserved.
-            </p>
-            <p className="text-sm text-muted-foreground mt-2 md:mt-0">
-              Built from field experience in renewable-energy delivery
             </p>
           </div>
         </div>

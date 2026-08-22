@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { ArticleHeader } from '@/components/article/ArticleHeader';
 import { 
   Calendar, 
   Clock, 
@@ -252,9 +254,15 @@ export function RenewableEnergyCosts2024() {
   const COLORS = ['#f59e0b', '#10b981', '#3b82f6', '#f97316', '#06b6d4', '#8b5cf6'];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Renewable Power Generation Cost in 2024 | Tech Made Easy</title>
+        <meta name="description" content="An interactive reading of IRENA's 2024 renewable power generation cost data." />
+        <link rel="canonical" href="https://techmadeeasy.info/blog/renewable-energy-costs-2024/" />
+      </Helmet>
+      <ArticleHeader slug="renewable-energy-costs-2024" kicker="IRENA data note" format="Interactive analysis" />
       {/* Header */}
-      <div className="bg-white shadow-sm border-b">
+      <div className="hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <Link to="/blog" className="flex items-center text-blue-600 hover:text-blue-800 transition-colors">
@@ -277,10 +285,10 @@ export function RenewableEnergyCosts2024() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Article Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="hidden">
+          <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Renewable Power Generation Cost in 2024
-          </h1>
+          </div>
           <p className="text-xl text-gray-600 mb-6 max-w-3xl mx-auto">
             An comprehensive interactive analysis of renewable energy cost trends with advanced data visualizations based on IRENA's 2024 report
           </p>
@@ -293,13 +301,15 @@ export function RenewableEnergyCosts2024() {
 
         {/* Interactive Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-5 mb-8">
-            <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="technologies">Technologies</TabsTrigger>
-            <TabsTrigger value="trends">Historical Trends</TabsTrigger>
-            <TabsTrigger value="regional">Regional Analysis</TabsTrigger>
-            <TabsTrigger value="insights">Advanced Insights</TabsTrigger>
-          </TabsList>
+          <div className="mb-8 overflow-x-auto pb-2" aria-label="Cost analysis sections">
+            <TabsList className="flex h-auto w-max min-w-full justify-start">
+              <TabsTrigger className="min-w-36 flex-1 whitespace-nowrap" value="overview">Overview</TabsTrigger>
+              <TabsTrigger className="min-w-36 flex-1 whitespace-nowrap" value="technologies">Technologies</TabsTrigger>
+              <TabsTrigger className="min-w-40 flex-1 whitespace-nowrap" value="trends">Historical Trends</TabsTrigger>
+              <TabsTrigger className="min-w-40 flex-1 whitespace-nowrap" value="regional">Regional Analysis</TabsTrigger>
+              <TabsTrigger className="min-w-40 flex-1 whitespace-nowrap" value="insights">Advanced Insights</TabsTrigger>
+            </TabsList>
+          </div>
 
           {/* Overview Tab */}
           <TabsContent value="overview" className="space-y-8">
@@ -660,7 +670,7 @@ export function RenewableEnergyCosts2024() {
             </Card>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {regionalCapacityData.slice(0, 4).map((region, index) => (
+              {regionalCapacityData.slice(0, 4).map((region) => (
                 <Card key={region.region}>
                   <CardHeader className="pb-2">
                     <CardTitle className="text-sm">{region.region}</CardTitle>

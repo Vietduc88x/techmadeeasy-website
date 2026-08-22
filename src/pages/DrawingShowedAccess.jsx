@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { ArticleHeader } from '@/components/article/ArticleHeader';
 import {
   calculateTurningScreen,
   defaultTurningInputs,
@@ -135,7 +136,7 @@ export function DrawingShowedAccess() {
       <Helmet>
         <title>The Drawing Showed Access | Constructability Autopsy</title>
         <meta name="description" content="Could the delivery vehicle actually make the turn? Test road width, bend radius, vehicle length and clearance in a public-safe constructability screening model." />
-        <link rel="canonical" href="https://techmadeeasy.info/blog/drawing-showed-access" />
+        <link rel="canonical" href="https://techmadeeasy.info/blog/drawing-showed-access/" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://techmadeeasy.info/blog/drawing-showed-access" />
         <meta property="og:title" content="The Drawing Showed Access" />
@@ -160,18 +161,19 @@ export function DrawingShowedAccess() {
       </Helmet>
 
       <article>
-        <header className="border-b bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 py-16 text-white sm:py-20">
+        <ArticleHeader slug="drawing-showed-access" kicker="Constructability screen" format="Interactive tool" title="The drawing showed access. Could the delivery vehicle actually make the turn?" summary="A road line on a general arrangement is not a logistics release. Change four inputs, run the turn, and see where a plausible route becomes a constructability problem." />
+        <header className="hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-5xl">
               <Button asChild variant="ghost" className="mb-7 -ml-3 text-slate-300 hover:bg-white/10 hover:text-white">
-                <Link to="/blog"><ArrowLeft className="mr-2 h-4 w-4" />Back to playbooks</Link>
+                <Link to="/blog"><ArrowLeft className="mr-2 h-4 w-4" />Back to notes</Link>
               </Button>
               <div className="flex flex-wrap gap-2">
                 <Badge className="border-sky-400/30 bg-sky-400/15 text-sky-100">Constructability Autopsy</Badge>
                 <Badge variant="outline" className="border-white/25 text-slate-200">Interactive field note</Badge>
                 <Badge variant="outline" className="border-white/25 text-slate-200">Composite example</Badge>
               </div>
-              <h1 className="mt-7 max-w-4xl text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">The drawing showed access.</h1>
+              <div className="mt-7 max-w-4xl text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl">The drawing showed access.</div>
               <p className="mt-4 max-w-4xl text-2xl font-semibold text-sky-200 sm:text-3xl">Could the delivery vehicle actually make the turn?</p>
               <p className="mt-7 max-w-3xl text-lg leading-relaxed text-slate-300">A road line on a general arrangement is not a logistics release. Change four inputs, run the turn, and see where a plausible route becomes a constructability problem.</p>
               <p className="mt-6 text-sm text-slate-400">By Duc Hoang, PMP · August 2026 · 4 min read + interactive screen</p>

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend, LineChart, Line, PieChart, Pie, Cell, AreaChart, Area, ComposedChart } from 'recharts';
 import { Link } from 'react-router-dom';
+import { ArticleHeader } from '@/components/article/ArticleHeader';
 
 const FIMImplementationRoadmap = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -61,19 +63,27 @@ const FIMImplementationRoadmap = () => {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
 
   return (
-    <div className="container mx-auto p-4">
-      <Link to="/blog" className="text-blue-500 hover:underline mb-4 inline-block">&larr; Back to Blog</Link>
-      <h1 className="text-4xl font-bold mb-4">FIM Implementation Roadmap: Your Path to Procurement Excellence</h1>
-      <p className="text-lg text-gray-600 mb-6">A detailed and interactive guide to integrating Free Issue Material (FIM) strategy for optimal procurement in renewable energy projects.</p>
+    <div>
+      <Helmet>
+        <title>FIM Implementation Roadmap | Tech Made Easy</title>
+        <meta name="description" content="An interactive roadmap for planning and governing a free-issue material strategy." />
+        <link rel="canonical" href="https://techmadeeasy.info/blog/fim-implementation-roadmap/" />
+      </Helmet>
+      <ArticleHeader slug="fim-implementation-roadmap" kicker="Implementation guide" format="Interactive roadmap" />
+      <div className="container mx-auto max-w-6xl p-4 py-10">
+      <Link to="/blog" className="hidden">&larr; Back to Blog</Link>
+      <p className="sr-only">A detailed and interactive guide to integrating Free Issue Material (FIM) strategy for optimal procurement in renewable energy projects.</p>
 
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-5">
-          <TabsTrigger value="overview">Overview</TabsTrigger>
-          <TabsTrigger value="workshop">Workshops</TabsTrigger>
-          <TabsTrigger value="procurement_structure">Procurement Structure</TabsTrigger>
-          <TabsTrigger value="team_organization">Team Organization</TabsTrigger>
-          <TabsTrigger value="business_case">Business Case</TabsTrigger>
-        </TabsList>
+        <div className="overflow-x-auto pb-2" aria-label="Roadmap sections">
+          <TabsList className="flex h-auto w-max min-w-full justify-start">
+            <TabsTrigger className="min-w-36 flex-1 whitespace-nowrap" value="overview">Overview</TabsTrigger>
+            <TabsTrigger className="min-w-36 flex-1 whitespace-nowrap" value="workshop">Workshops</TabsTrigger>
+            <TabsTrigger className="min-w-48 flex-1 whitespace-nowrap" value="procurement_structure">Procurement Structure</TabsTrigger>
+            <TabsTrigger className="min-w-44 flex-1 whitespace-nowrap" value="team_organization">Team Organization</TabsTrigger>
+            <TabsTrigger className="min-w-40 flex-1 whitespace-nowrap" value="business_case">Business Case</TabsTrigger>
+          </TabsList>
+        </div>
 
         <TabsContent value="overview">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
@@ -408,6 +418,7 @@ const FIMImplementationRoadmap = () => {
           </Card>
         </TabsContent>
       </Tabs>
+      </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Wind, Waves, Zap, Factory, TreePine, Fish, Bird, Calculator, Clock, DollarSign, Settings, MapPin } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -12,8 +12,9 @@ const heroImg = '/images/blog/offshore-wind-hero.jpg';
 const timelineImg = '/images/blog/development-timeline.png';
 const foundationImg = '/images/blog/foundation-types.png';
 const energyFlowImg = '/images/blog/energy-flow.png';
+const MotionDiv = motion.div;
 
-const OffshoreWindGuide = () => {
+const OffshoreWindGuide = ({ embedded = false }) => {
   const [activeSection, setActiveSection] = useState('overview');
   const [turbineCount, setTurbineCount] = useState([50]);
   const [turbinePower, setTurbinePower] = useState([15]);
@@ -107,8 +108,9 @@ const OffshoreWindGuide = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50">
+    <div className={`${embedded ? 'rounded-2xl' : 'min-h-screen'} overflow-hidden bg-gradient-to-br from-blue-50 to-green-50`}>
       {/* Header */}
+      {!embedded && (
       <header className="bg-white/80 backdrop-blur-md border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -140,12 +142,13 @@ const OffshoreWindGuide = () => {
           </div>
         </div>
       </header>
+      )}
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8">
         <AnimatePresence mode="wait">
           {activeSection === 'overview' && (
-            <motion.div
+            <MotionDiv
               key="overview"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -153,7 +156,7 @@ const OffshoreWindGuide = () => {
               className="space-y-8"
             >
               {/* Hero Section */}
-              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-green-600 text-white">
+              {!embedded && <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-green-600 text-white">
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="relative z-10 p-8 md:p-12">
                   <h2 className="text-4xl md:text-6xl font-bold mb-4">
@@ -184,7 +187,7 @@ const OffshoreWindGuide = () => {
                     className="h-full w-full object-cover"
                   />
                 </div>
-              </div>
+              </div>}
 
               {/* Key Statistics */}
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -237,11 +240,11 @@ const OffshoreWindGuide = () => {
                   </p>
                 </CardContent>
               </Card>
-            </motion.div>
+            </MotionDiv>
           )}
 
           {activeSection === 'timeline' && (
-            <motion.div
+            <MotionDiv
               key="timeline"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -318,11 +321,11 @@ const OffshoreWindGuide = () => {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </MotionDiv>
           )}
 
           {activeSection === 'technology' && (
-            <motion.div
+            <MotionDiv
               key="technology"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -562,11 +565,11 @@ const OffshoreWindGuide = () => {
                   </Card>
                 </TabsContent>
               </Tabs>
-            </motion.div>
+            </MotionDiv>
           )}
 
           {activeSection === 'environment' && (
-            <motion.div
+            <MotionDiv
               key="environment"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -715,11 +718,11 @@ const OffshoreWindGuide = () => {
                   </Tabs>
                 </CardContent>
               </Card>
-            </motion.div>
+            </MotionDiv>
           )}
 
           {activeSection === 'calculator' && (
-            <motion.div
+            <MotionDiv
               key="calculator"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -931,10 +934,10 @@ const OffshoreWindGuide = () => {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </MotionDiv>
           )}
         </AnimatePresence>
-      </main>
+      </div>
     </div>
   );
 };

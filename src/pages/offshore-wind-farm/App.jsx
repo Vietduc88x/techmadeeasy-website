@@ -141,11 +141,11 @@ const scopeColors = {
   'Transmission system operator (TSO)': '#c080ff'
 }
 
-function App() {
+function App({ embedded = false }) {
   const [selectedComponent, setSelectedComponent] = useState(null)
   const [hoveredComponent, setHoveredComponent] = useState(null)
   const [isAutoTour, setIsAutoTour] = useState(false)
-  const [tourIndex, setTourIndex] = useState(0)
+  const [, setTourIndex] = useState(0)
 
   const componentIds = Object.keys(systemComponents)
 
@@ -184,7 +184,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 p-4 relative overflow-hidden">
+    <div className={`${embedded ? 'min-h-[44rem] rounded-xl' : 'min-h-screen'} bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 p-4 relative overflow-hidden`}>
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -193,7 +193,7 @@ function App() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <header className="text-center mb-8">
+        {!embedded && <header className="text-center mb-8">
           <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent mb-4 animate-pulse">
             Interactive Offshore Wind Farm
           </h1>
@@ -207,7 +207,7 @@ function App() {
             {isAutoTour ? <Pause className="w-4 h-4 mr-2" /> : <Play className="w-4 h-4 mr-2" />}
             {isAutoTour ? 'Dừng Tour' : 'Bắt đầu Auto Tour'}
           </Button>
-        </header>
+        </header>}
 
         {/* Enhanced Legend */}
         <Card className="mb-6 bg-white/10 backdrop-blur-md border-white/20 shadow-2xl">

@@ -1,9 +1,11 @@
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { ArticleHeader } from '@/components/article/ArticleHeader';
 import {
   Calendar,
   Clock,
@@ -138,7 +140,7 @@ const CHART_COLORS = {
 
 // ─── HELPER COMPONENTS ───────────────────────────────────────────────────────
 
-function StatCard({ title, value, subtitle, icon: Icon, color = 'blue', trend }) {
+function StatCard({ title, value, subtitle, icon, color = 'blue', trend }) {
   const colorMap = {
     blue: 'text-blue-600', green: 'text-green-600', amber: 'text-amber-600',
     red: 'text-red-600', purple: 'text-purple-600', cyan: 'text-cyan-600',
@@ -147,7 +149,7 @@ function StatCard({ title, value, subtitle, icon: Icon, color = 'blue', trend })
     <Card className="hover:shadow-lg transition-shadow duration-300">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-sm font-medium">{title}</CardTitle>
-        <Icon className={`h-4 w-4 ${colorMap[color]}`} />
+        {React.createElement(icon, { className: `h-4 w-4 ${colorMap[color]}` })}
       </CardHeader>
       <CardContent>
         <div className={`text-2xl font-bold ${colorMap[color]}`}>{value}</div>
@@ -250,19 +252,16 @@ export function SolarSupplyChainCost() {
     });
   }, []);
 
-  const countryComparisonInputs = useMemo(() => {
-    return COUNTRIES.map(c => ({
-      name: c.name,
-      flag: c.flag,
-      'Electricity ($/kWh)': COUNTRY_INPUTS[c.id].electricity,
-      'Salary ($/yr)': COUNTRY_INPUTS[c.id].salary,
-    }));
-  }, []);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-blue-50">
+    <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Solar PV Supply Chain Cost Tool | Tech Made Easy</title>
+        <meta name="description" content="An interactive view of solar PV manufacturing costs across the supply chain and selected countries." />
+        <link rel="canonical" href="https://techmadeeasy.info/blog/solar-pv-supply-chain-cost/" />
+      </Helmet>
+      <ArticleHeader slug="solar-pv-supply-chain-cost" kicker="Supply-chain cost note" format="Interactive analysis" />
       {/* Header */}
-      <div className="bg-white shadow-sm border-b">
+      <div className="hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <Link to="/blog" className="flex items-center text-blue-600 hover:text-blue-800 transition-colors">
@@ -285,11 +284,11 @@ export function SolarSupplyChainCost() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Article Header */}
-        <div className="text-center mb-12">
+        <div className="hidden">
           <Badge className="mb-4 bg-amber-100 text-amber-800 hover:bg-amber-200">IRENA 2026 Report Analysis</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Solar PV Supply Chain Cost Tool
-          </h1>
+          </div>
           <p className="text-xl text-gray-600 mb-6 max-w-3xl mx-auto">
             Interactive analysis of solar module manufacturing costs across the global supply chain — from polysilicon to finished panels.
             Explore cost drivers, country comparisons, and import scenarios.

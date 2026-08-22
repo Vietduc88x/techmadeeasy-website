@@ -21,7 +21,6 @@ const staticRoutes = [
   { path: '/', priority: '1.0' },
   { path: '/blog', priority: '0.9' },
   { path: '/about', priority: '0.8' },
-  { path: '/contact', priority: '0.7' },
   { path: '/fim-revolution', priority: '0.7' },
   { path: '/blog/bop-interactive-article', priority: '0.7' },
   { path: '/blog/renewable-energy-costs-2024', priority: '0.7' },

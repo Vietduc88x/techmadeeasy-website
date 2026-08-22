@@ -1,10 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, FileDown, Printer } from 'lucide-react';
+import { ArrowRight, FileDown, Printer } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { ArticleHeader } from '@/components/article/ArticleHeader';
 
 const decisionRows = [
   ['Commercial leverage', 'Owner can aggregate demand or negotiate directly.', 'Contractor can price and manage the complete supply chain.', 'Is the apparent saving still real after owner-side management and interface cost?'],
@@ -43,29 +44,15 @@ export function FIMvsEPCDecisionSheet() {
       <Helmet>
         <title>FIM versus EPC Decision Sheet | Tech Made Easy</title>
         <meta name="description" content="A one-page procurement decision aid comparing free-issue materials with EPC supply across control, interfaces, logistics, schedule and warranty." />
-        <link rel="canonical" href="https://techmadeeasy.info/blog/fim-vs-epc-decision-sheet" />
+        <link rel="canonical" href="https://techmadeeasy.info/blog/fim-vs-epc-decision-sheet/" />
       </Helmet>
 
-      <section className="border-b bg-gradient-to-br from-primary/10 via-background to-secondary/10 py-14 print:hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-6xl">
-            <Button asChild variant="ghost" className="mb-6"><Link to="/blog"><ArrowLeft className="mr-2 h-4 w-4" />Back to Blog</Link></Button>
-            <div className="mb-5 flex flex-wrap gap-2"><Badge>Before the Spade</Badge><Badge variant="secondary">Contracts &amp; Packages</Badge><Badge variant="outline">Printable one-pager</Badge></div>
-            <h1 className="max-w-4xl text-4xl font-bold tracking-tight lg:text-6xl">Free-issue materials versus EPC supply</h1>
-            <p className="mt-5 max-w-3xl text-xl leading-relaxed text-muted-foreground">
-              This field-ready sheet compares free-issue materials (FIM) with engineering, procurement and construction (EPC) supply. The price comparison is the easy part; the decision turns on who can manage the interfaces.
-            </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Button asChild><a href="/downloads/fim-vs-epc-decision-sheet.pdf" download><FileDown className="mr-2 h-4 w-4" />Download the one-page PDF</a></Button>
-              <Button variant="outline" onClick={() => window.print()}><Printer className="mr-2 h-4 w-4" />Print this page</Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="print:hidden"><ArticleHeader slug="fim-vs-epc-decision-sheet" kicker="One-page decision sheet" format="Printable A4 sheet" title="Free-issue materials versus EPC supply" summary="This sheet compares free-issue materials (FIM) with engineering, procurement and construction (EPC) supply. The price comparison is the easy part; the decision turns on who can manage the interfaces." /></div>
+      <section className="border-b py-5 print:hidden"><div className="container mx-auto flex max-w-5xl flex-col gap-3 px-4 sm:flex-row sm:px-6 lg:px-8"><Button asChild><a href="/downloads/fim-vs-epc-decision-sheet.pdf" download><FileDown className="mr-2 h-4 w-4" />Download the one-page PDF</a></Button><Button variant="outline" onClick={() => window.print()}><Printer className="mr-2 h-4 w-4" />Print this page</Button></div></section>
 
       <article className="container mx-auto min-w-0 overflow-x-hidden px-4 py-12 sm:px-6 lg:px-8 print:px-0 print:py-0">
         <div className="mx-auto w-full min-w-0 max-w-6xl space-y-10">
-          <div className="hidden print:block"><h1 className="text-3xl font-bold">FIM versus EPC - decision sheet</h1><p className="mt-2 text-sm">A generic project-delivery aid by Tech Made Easy</p></div>
+          <div className="hidden print:block"><div className="text-3xl font-bold">FIM versus EPC - decision sheet</div><p className="mt-2 text-sm">A generic project-delivery aid by Tech Made Easy</p></div>
 
           <Card className="border-2 border-primary/20">
             <CardContent className="grid gap-6 p-6 md:grid-cols-3">

@@ -345,7 +345,7 @@ const HistoricallyAccurateBattleMap = () => {
 
             {/* Mongol Fleet - Historical formation */}
             <g className="mongol-fleet-formation" onClick={() => handleElementClick(interactiveElements[1])}>
-              {mongolFleet.map((ship, i) => (
+              {mongolFleet.map((ship) => (
                 <g key={ship.id} className="mongol-war-ship">
                   {/* Large war junk hull */}
                   <ellipse
@@ -422,7 +422,7 @@ const HistoricallyAccurateBattleMap = () => {
 
             {/* Vietnamese Fleet - Guerrilla formation */}
             <g className="vietnamese-fleet-formation" onClick={() => handleElementClick(interactiveElements[2])}>
-              {vietnameseFleet.map((ship, i) => (
+              {vietnameseFleet.map((ship) => (
                 <g key={ship.id} className="vietnamese-river-ship">
                   {/* Smaller, agile river junk hull */}
                   <ellipse

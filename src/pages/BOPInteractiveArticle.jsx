@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { ArticleHeader } from '@/components/article/ArticleHeader';
+import { ArticleEnding } from '@/components/article/ArticleEnding';
 import { 
   Calendar, 
   Clock, 
@@ -265,39 +268,20 @@ export function BOPInteractiveArticle() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>A Practical FIM and BOP Package Strategy for Solar Projects | Tech Made Easy</title>
+        <meta name="description" content="An interactive guide to splitting owner-supplied equipment and balance-of-plant scope without losing control of the interfaces." />
+        <link rel="canonical" href="https://techmadeeasy.info/blog/bop-interactive-article/" />
+      </Helmet>
+      <ArticleHeader
+        slug="bop-interactive-article"
+        title="A Practical FIM and BOP Package Strategy for Solar Projects"
+        summary="An interactive guide to splitting owner-supplied equipment and balance-of-plant scope without losing control of the interfaces."
+        kicker="Package strategy"
+        format="Interactive guide"
+      />
       <div className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <Button asChild variant="ghost" className="mb-6 p-0 h-auto">
-            <Link to="/blog" className="flex items-center text-primary hover:text-primary/80">
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Blog
-            </Link>
-          </Button>
-
-          {/* Hero Section */}
-          <div className="text-center mb-12">
-            <Badge variant="secondary" className="mb-4">
-              Renewable Energy
-            </Badge>
-            <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
-              Easiest FIM and BOP Package Strategy of Solar Project
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Balance of Plant (BOP) management is where average PMs fail and experts excel. 
-              Discover how strategic package design led to 20% cost reduction and 100% on-time delivery.
-            </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center">
-                <Calendar className="h-4 w-4 mr-1" />
-                August 2025
-              </div>
-              <div className="flex items-center">
-                <Clock className="h-4 w-4 mr-1" />
-                15 min read
-              </div>
-            </div>
-          </div>
-            
           {/* Interactive Tabs */}
           <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-12">
             <TabsList className="grid w-full grid-cols-4">
@@ -366,34 +350,34 @@ export function BOPInteractiveArticle() {
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-green-600" />
-                      The Solution
+                      A workable split
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground mb-4">
-                      Our innovative approach, the <strong>Optimized BOP Package with Free-Issue PV Modules</strong>, offers a balanced solution:
+                      One option is to free-issue the PV modules and keep the remaining balance-of-plant scope in a clearly defined package. It can work when the owner is equipped to manage the retained interfaces.
                     </p>
                     <ul className="space-y-2">
                       {[
                         {
                           key: "cost-effectiveness",
-                          title: "Cost-Effectiveness: By directly procuring PV modules (free-issue), you leverage bulk purchasing power and avoid EPC markups, significantly reducing overall project costs.",
-                          details: "Free-issuing PV modules allows for direct negotiation with manufacturers, bypassing the EPC contractor's markup and enabling bulk discounts. This strategy ensures you get the best possible price for the most significant component of your solar farm, leading to substantial cost savings."
+                          title: "Cost control: Direct module procurement may remove an EPC markup, but it also moves procurement, logistics and interface work to the owner.",
+                          details: "Compare the supplier price with the owner's full retained cost: engineering, inspection, expediting, freight, customs, storage, preservation, financing, tax and schedule exposure."
                         },
                         {
                           key: "streamlined-management",
-                          title: "Streamlined Management: Consolidating the remaining Balance of Plant (BOP) components into a single, optimized package simplifies project management, reducing the number of interfaces from 50+ to a manageable few.",
-                          details: "Instead of managing dozens of individual contracts and suppliers for BOP components, our optimized package approach bundles these into a cohesive unit. This drastically reduces the number of interfaces, simplifying coordination, minimizing administrative burden, and allowing for more efficient project oversight."
+                          title: "Interface count: Keeping the remaining BOP scope together can reduce the number of contractual boundaries the project team must actively manage.",
+                          details: "The benefit depends on where the boundary is drawn and whether design data, delivery, custody, installation and commissioning responsibilities are explicit."
                         },
                         {
                           key: "clear-accountability",
-                          title: "Clear Accountability: With fewer, larger packages, responsibility for each segment is clearly defined, minimizing finger-pointing and ensuring timely issue resolution.",
-                          details: "By reducing the number of contractual interfaces, accountability becomes crystal clear. Each package supplier is responsible for a larger, more defined scope, making it easier to identify and resolve issues quickly. This fosters a more collaborative environment and reduces disputes."
+                          title: "Accountability: Fewer, larger packages can make responsibility easier to see, provided the handover points and acceptance evidence are named.",
+                          details: "A larger package does not remove interface risk by itself. The responsibility matrix still needs an owner, required date and acceptance criteria for every handover."
                         },
                         {
                           key: "integrated-performance",
-                          title: "Integrated Performance: This strategy allows for integrated performance guarantees across the entire BOP package, ensuring all components work seamlessly together to meet project targets.",
-                          details: "Our optimized BOP package ensures that all components are designed and supplied to work together seamlessly. This integrated approach allows for comprehensive performance guarantees across the entire BOP system, mitigating risks associated with mismatched components and ensuring the solar farm achieves its intended energy output and efficiency."
+                          title: "Integrated performance: A BOP wrapper can consolidate performance obligations, while module compatibility and overall plant performance still need deliberate allocation.",
+                          details: "State who owns the model, the input data, the tests and the remedy when equipment supplied under different contracts does not perform as one system."
                         }
                       ].map((item) => (
                         <li key={item.key}>
@@ -424,13 +408,13 @@ export function BOPInteractiveArticle() {
                   className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
                 />
                 <p className="text-sm text-muted-foreground mt-2">
-                  Modern solar farm showcasing strategic BOP package implementation
+                  A solar plant contains many physical and contractual interfaces beyond the modules.
                 </p>
               </div>
 
               <Card>
                 <CardHeader>
-                  <CardTitle>Understand the Package Strategies with free issue of PV Modules</CardTitle>
+                  <CardTitle>How the package split works</CardTitle>
                 </CardHeader>
                 <CardContent className="prose dark:prose-invert max-w-none">
                   <p>
@@ -440,9 +424,9 @@ export function BOPInteractiveArticle() {
                     interfaces, responsibilities, and risk allocation.
                   </p>
                   <p>
-                    Our approach focuses on creating clear package boundaries that minimize coordination complexity while 
-                    maximizing accountability. By carefully defining scope matrices and responsibility assignments, we've 
-                    transformed chaotic multi-contractor projects into streamlined, efficient operations.
+                    The practical work is to define each boundary before tender: design inputs, delivery point, custody,
+                    installation, testing, performance responsibility and the evidence required to accept a handover. The
+                    package split is useful only if the owner has the capability to manage what it retains.
                   </p>
                 </CardContent>
               </Card>
@@ -747,24 +731,12 @@ export function BOPInteractiveArticle() {
             </TabsContent>
           </Tabs>
 
-          {/* Call to Action */}
-          <Card className="mt-12 bg-gradient-to-r from-primary/10 to-secondary/10">
-            <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Solar Portfolio?</h3>
-              <p className="text-muted-foreground mb-6">
-                Learn more about strategic BOP package design and how it can benefit your renewable energy projects.
-              </p>
-              <Button size="lg" className="mr-4">
-                Contact Our Experts
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Download Case Study
-              </Button>
-            </CardContent>
-          </Card>
         </div>
       </div>
+      <ArticleEnding relatedPosts={[
+        { slug: 'fim-vs-epc-decision-sheet', category: 'Contracts & Packages', title: 'FIM versus EPC: The One-Page Decision Sheet' },
+        { slug: 'access-was-assumed', category: 'Preconstruction', title: 'Access Was Assumed' },
+      ]} />
     </div>
   );
 }
