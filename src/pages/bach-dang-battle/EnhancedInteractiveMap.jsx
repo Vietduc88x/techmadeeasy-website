@@ -342,7 +342,7 @@ const EnhancedInteractiveMap = () => {
               )}
 
               {/* Interactive Hotspots */}
-              {interactiveElements.map((element, index) => (
+              {interactiveElements.map((element) => (
                 <circle
                   key={element.id}
                   cx={element.position.x}

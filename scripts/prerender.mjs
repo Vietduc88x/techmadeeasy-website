@@ -38,6 +38,12 @@ const allRoutes = [...new Set([...staticRoutes, ...blogRoutes])]; // dedupe
 // ---------------------------------------------------------------------------
 const template = readFileSync(resolve(ROOT, 'dist/index.html'), 'utf-8');
 
+if (!template.includes('<!--ssr-outlet-->')) {
+  throw new Error(
+    'dist/index.html is already prerendered. Run the full build before running this script again.',
+  );
+}
+
 const ssrModule = await import(
   pathToFileURL(resolve(ROOT, 'dist-ssr/entry-server.js')).href
 );
@@ -69,7 +75,7 @@ let failed = 0;
 
 for (const route of allRoutes) {
   try {
-    const { html, helmet } = render(route);
+    const { html, helmet } = await render(route);
 
     let page = template.replace('<!--ssr-outlet-->', html);
 
@@ -118,7 +124,7 @@ for (const route of allRoutes) {
         ? resolve(ROOT, 'dist/index.html')
         : resolve(ROOT, outDir, 'index.html');
 
-    writeFileSync(outPath, page, 'utf-8');
+    writeFileSync(outPath, page.replace(/\r\n?/g, '\n'), 'utf-8');
     success++;
   } catch (err) {
     console.error(`  [SKIP] ${route}: ${err.message}`);
@@ -129,3 +135,5 @@ for (const route of allRoutes) {
 console.log(
   `Prerender complete: ${success} pages rendered, ${failed} failed (${allRoutes.length} total routes)`
 );
+
+if (failed > 0) process.exitCode = 1;

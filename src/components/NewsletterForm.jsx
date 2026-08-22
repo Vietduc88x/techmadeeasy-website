@@ -1,43 +1,37 @@
 import React, { useState } from 'react';
-import { Mail, CheckCircle, FileText, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Link } from 'react-router-dom';
+import { Label } from '@/components/ui/label';
 
-export function NewsletterForm({ className = "" }) {
+export function NewsletterForm({ className = '' }) {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     setIsLoading(true);
     setMessage('');
-    
+
     try {
-      // Use Netlify Functions with environment variables
       const response = await fetch('/.netlify/functions/newsletter', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
       });
-      
       const data = await response.json();
-      
+
       if (response.ok) {
         setIsSubscribed(true);
         setEmail('');
-        setMessage(data.message || 'Thank you for subscribing! Please check your email for confirmation.');
+        setMessage(data.message || 'Please check your email to confirm.');
       } else {
-        setMessage(data.error || 'An error occurred while subscribing. Please try again.');
+        setMessage(data.error || 'Something went wrong. Please try again.');
       }
     } catch (error) {
       console.error('Subscription error:', error);
-      setMessage('An error occurred while subscribing. Please try again.');
+      setMessage('Something went wrong. Please try again.');
     } finally {
       setIsLoading(false);
     }
@@ -45,136 +39,43 @@ export function NewsletterForm({ className = "" }) {
 
   if (isSubscribed) {
     return (
-      <Card className={`border-2 border-green-200 shadow-xl ${className}`}>
-        <CardContent className="text-center space-y-4 pt-6">
-          <div className="flex justify-center">
-            <div className="flex items-center justify-center w-16 h-16 bg-green-100 rounded-full">
-              <CheckCircle className="h-8 w-8 text-green-600" />
-            </div>
-          </div>
-          <h3 className="text-xl font-semibold text-foreground">Welcome to the Community!</h3>
-          <p className="text-muted-foreground">
-            {message || "Thank you for subscribing. Check your email to confirm, and I will send the next playbook when it is ready."}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-            <Button asChild variant="outline">
-              <Link to="/blog">
-                <FileText className="mr-2 h-4 w-4" />
-                Explore Our Blog
-              </Link>
-            </Button>
-            <Button asChild>
-              <a href="/Renewable-Energy-Workshop-01.pdf" download target="_blank" rel="noopener noreferrer">
-                <Download className="mr-2 h-4 w-4" />
-                Download Free Guide
-              </a>
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+      <div className={`border-y py-8 ${className}`}>
+        <h2 className="text-xl font-bold">Thanks for reading.</h2>
+        <p className="mt-2 text-muted-foreground">{message || 'Please check your email to confirm.'}</p>
+      </div>
     );
   }
 
   return (
-    <Card className={`border-2 border-primary/20 shadow-xl ${className}`}>
-      <CardHeader className="text-center pb-6">
-        <div className="flex justify-center mb-4">
-          <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full">
-            <Mail className="h-8 w-8 text-primary" />
-          </div>
+    <div className={`border-y py-8 ${className}`}>
+      <div className="grid gap-5 md:grid-cols-[1fr_1.2fr] md:items-end">
+        <div>
+          <p className="text-sm font-semibold text-muted-foreground">Occasional email</p>
+          <h2 className="mt-1 text-xl font-bold">New notes, when there is one</h2>
+          <p className="mt-2 text-sm leading-6 text-muted-foreground">If you&rsquo;d like, I&rsquo;ll send a short email when I publish something new.</p>
         </div>
-        <CardTitle className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-          Get the next playbook
-        </CardTitle>
-        <CardDescription className="text-lg text-muted-foreground">
-          Field notes on preconstruction, constructability, packages, cost, and schedule. I send an email when a new playbook is ready.
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="space-y-6">
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="flex flex-col sm:flex-row gap-4">
+        <form onSubmit={handleSubmit}>
+          <Label htmlFor="newsletter-email" className="sr-only">Email address</Label>
+          <div className="flex flex-col gap-3 sm:flex-row">
             <Input
+              id="newsletter-email"
+              name="email"
+              autoComplete="email"
               type="email"
-              placeholder="Enter your email address"
+              placeholder="Email address"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(event) => setEmail(event.target.value)}
               required
-              className="flex-1 text-lg py-6"
               disabled={isLoading}
+              className="min-h-11 flex-1"
             />
-            <Button 
-              type="submit" 
-              size="lg" 
-              className="text-lg px-8 py-6"
-              disabled={isLoading || !email}
-            >
-              {isLoading ? (
-                <>
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                  Subscribing...
-                </>
-              ) : (
-                <>
-                  <Mail className="mr-2 h-5 w-5" />
-                  Subscribe Free
-                </>
-              )}
+            <Button type="submit" variant="outline" disabled={isLoading || !email} className="min-h-11">
+              {isLoading ? 'Subscribing…' : 'Subscribe'}
             </Button>
           </div>
-          
-          {message && (
-            <div className={`text-center p-3 rounded-lg ${
-              message.includes('error') || message.includes('Error') 
-                ? 'bg-red-50 text-red-700 border border-red-200' 
-                : 'bg-green-50 text-green-700 border border-green-200'
-            }`}>
-              {message}
-            </div>
-          )}
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center text-sm text-muted-foreground">
-            <div className="flex items-center justify-center">
-              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-              When I publish
-            </div>
-            <div className="flex items-center justify-center">
-              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-              No spam, ever
-            </div>
-            <div className="flex items-center justify-center">
-              <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-              Unsubscribe anytime
-            </div>
-          </div>
+          {message && <p className="mt-3 text-sm text-muted-foreground" role="status">{message}</p>}
         </form>
-        
-        <div className="border-t pt-6">
-          <div className="text-center">
-            <p className="text-sm text-muted-foreground mb-4">
-              What you&apos;ll get when I publish:
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <div className="flex items-start">
-                <Mail className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">Preconstruction decisions and project setup</span>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">Contracts, packages, and interface ownership</span>
-              </div>
-              <div className="flex items-start">
-                <FileText className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">Cost and schedule assumptions that have to work</span>
-              </div>
-              <div className="flex items-start">
-                <Download className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground">Constructability lessons from energy delivery</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 }
-

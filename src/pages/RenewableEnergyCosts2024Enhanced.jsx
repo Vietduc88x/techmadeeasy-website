@@ -590,7 +590,7 @@ export function RenewableEnergyCosts2024() {
             </Card>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {regionalCapacityData.slice(0, 4).map((region, index) => (
+              {regionalCapacityData.slice(0, 4).map((region) => (
                 <Card key={region.region}>
                   <CardHeader className="pb-2">
                     <CardTitle className="text-sm">{region.region}</CardTitle>

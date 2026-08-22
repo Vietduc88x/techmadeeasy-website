@@ -5,6 +5,18 @@
 
 const legacyBlogPosts = [
   {
+    slug: 'foundation-before-ground-model',
+    title: 'The Foundation Was Chosen Before the Ground Model Was Ready',
+    excerpt: 'Test whether the available ground evidence supports option screening, a conditional concept or engineering design review—before an assumption hardens into a commitment.',
+    category: 'Preconstruction',
+    readTime: '11 min read + evidence gate',
+    date: 'August 2026',
+    dateSort: '2026-08-22',
+    featured: true,
+    tags: ['preconstruction', 'geotechnical', 'ground model', 'foundations', 'design management', 'risk'],
+    author: 'Duc Hoang, PMP',
+  },
+  {
     slug: 'drawing-showed-access',
     title: 'The Drawing Showed Access',
     excerpt: 'Could the delivery vehicle actually make the turn? Test road width, bend radius, vehicle length and clearance before a line on a plan becomes a site delay.',
@@ -21,7 +33,7 @@ const legacyBlogPosts = [
     title: 'Access Was Assumed',
     excerpt: 'The activity is not late. The access assumption is false. Switch off four hidden enabling conditions and watch a simple construction sequence move.',
     category: 'Preconstruction',
-    readTime: '10 min read + tool',
+    readTime: '10 min read',
     date: 'August 2026',
     dateSort: '2026-08-19',
     featured: true,
@@ -162,6 +174,7 @@ const legacyBlogPosts = [
   },
   {
     slug: 'life-thesis',
+    legacyPath: '/articles/life-thesis.html',
     title: "Don't Set Goals. Build Layers.",
     excerpt: 'A three-layer operating system for building an extraordinary life — Mental & Physical OS, Life Architecture, and the Growth Engine. How Stoicism, mental models, and falsification triggers create compounding results.',
     category: 'Personal Development',
@@ -545,6 +558,7 @@ export const BLOG_TAXONOMY = [
 ];
 
 const CATEGORY_BY_SLUG = {
+  'foundation-before-ground-model': 'Preconstruction',
   'drawing-showed-access': 'Constructability',
   'access-was-assumed': 'Preconstruction',
   'fim-vs-epc-decision-sheet': 'Contracts & Packages',
@@ -592,12 +606,12 @@ const CATEGORY_BY_SLUG = {
 };
 
 const FEATURED_RANK_BY_SLUG = {
-  'drawing-showed-access': 1,
-  'access-was-assumed': 2,
-  'fim-vs-epc-decision-sheet': 3,
-  'time-management-starts-drawing-board': 4,
-  'construction-of-the-intertidal-wind-farm': 5,
-  'matrix-of-responsibility-between-packages-for-offshore-wind': 6,
+  'foundation-before-ground-model': 1,
+  'drawing-showed-access': 2,
+  'access-was-assumed': 3,
+  'fim-vs-epc-decision-sheet': 4,
+  'time-management-starts-drawing-board': 5,
+  'construction-of-the-intertidal-wind-farm': 6,
 };
 
 export const blogPosts = legacyBlogPosts.map((post) => {

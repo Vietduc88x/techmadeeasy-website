@@ -9,14 +9,16 @@ export function Header() {
 
   const navigation = [
     { name: 'Home', href: '/', external: false },
-    { name: 'Blog', href: '/blog', external: false },
+    { name: 'Notes', href: '/blog', external: false },
     { name: 'About', href: '/about', external: false },
-    { name: 'Contact', href: '/contact', external: false },
   ];
 
-  const isActive = (href) => location.pathname === href;
+  const isActive = (href) => location.pathname === href
+    || (href !== '/' && location.pathname.startsWith(`${href}/`));
 
   return (
+    <>
+    <a href="#main-content" className="sr-only z-[60] rounded bg-background px-4 py-3 font-semibold focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
@@ -65,6 +67,8 @@ export function Header() {
               className="min-h-11 min-w-11"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
             >
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
@@ -73,7 +77,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
+          <div id="mobile-navigation" className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
               {navigation.map((item) => (
                 item.external ? (
@@ -107,6 +111,7 @@ export function Header() {
         )}
       </div>
     </header>
+    </>
   );
 }
 

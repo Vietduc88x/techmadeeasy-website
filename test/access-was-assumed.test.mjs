@@ -65,7 +65,7 @@ test('access gates move downstream work without pretending delays are additive',
 test('the article exposes the model, field control and public-safe limitations', async () => {
   const page = await readFile(new URL('../src/pages/AccessWasAssumed.jsx', import.meta.url), 'utf8');
 
-  assert.match(page, /Composite example, not a client programme/);
+  assert.match(page, /composite teaching example, not a client programme/i);
   assert.match(page, /Installation start = max/);
   assert.match(page, /Which access condition is most often missing from your baseline/);
   assert.match(page, /What this model cannot tell you/);

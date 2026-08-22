@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { ArticleHeader } from '@/components/article/ArticleHeader';
 import {
   Calendar,
   Clock,
@@ -150,7 +151,7 @@ const MEME_IMAGES = [
 
 // ─── HELPER COMPONENTS ───────────────────────────────────────────────────────
 
-function StatCard({ label, value, sub, icon: Icon, color = 'blue' }) {
+function StatCard({ label, value, sub, icon, color = 'blue' }) {
   const colorMap = {
     blue: 'text-blue-600', green: 'text-green-600', amber: 'text-amber-600',
     red: 'text-red-600', purple: 'text-purple-600', cyan: 'text-cyan-600',
@@ -159,7 +160,7 @@ function StatCard({ label, value, sub, icon: Icon, color = 'blue' }) {
     <Card className="hover:shadow-lg transition-shadow duration-300">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-sm font-medium">{label}</CardTitle>
-        <Icon className={`h-4 w-4 ${colorMap[color]}`} />
+        {React.createElement(icon, { className: `h-4 w-4 ${colorMap[color]}` })}
       </CardHeader>
       <CardContent>
         <div className={`text-2xl font-bold ${colorMap[color]}`}>{value}</div>
@@ -201,13 +202,13 @@ function CustomTooltipNum({ active, payload, label }) {
   );
 }
 
-function InsightCard({ icon: Icon, title, stat, description, color = '#3b82f6' }) {
+function InsightCard({ icon, title, stat, description, color = '#3b82f6' }) {
   return (
     <Card className="hover:shadow-lg transition-all duration-300 border-l-4" style={{ borderLeftColor: color }}>
       <CardContent className="pt-6">
         <div className="flex items-start gap-4">
           <div className="rounded-full p-2 shrink-0" style={{ backgroundColor: `${color}15` }}>
-            <Icon className="h-5 w-5" style={{ color }} />
+            {React.createElement(icon, { className: 'h-5 w-5', style: { color } })}
           </div>
           <div>
             <h3 className="font-bold text-lg mb-1">{title}</h3>
@@ -276,16 +277,17 @@ export function DigitalAIPowerSystems() {
       <Helmet>
         <title>Digitalisation & AI for Power Systems: IRENA 2025 Interactive Analysis | Tech Made Easy</title>
         <meta name="description" content="An interactive deep-dive into IRENA's 2025 report on how AI, digital twins, smart grids, and automation are transforming power systems globally. Key data, insights, and memes for the energy transition." />
-        <link rel="canonical" href="https://techmadeeasy.info/blog/digitalisation-ai-power-systems" />
+        <link rel="canonical" href="https://techmadeeasy.info/blog/digitalisation-ai-power-systems/" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Digitalisation & AI for Power Systems: IRENA 2025 Interactive Analysis" />
         <meta property="og:description" content="How AI and digitalisation are reshaping global power systems. Interactive charts, key stats, and data-driven memes from the IRENA G7 report." />
         <meta property="og:url" content="https://techmadeeasy.info/blog/digitalisation-ai-power-systems" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+      <div className="min-h-screen bg-background">
+        <ArticleHeader slug="digitalisation-ai-power-systems" kicker="IRENA report note" format="Interactive analysis" />
         {/* HEADER */}
-        <div className="bg-white shadow-sm border-b">
+        <div className="hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <Link to="/blog" className="flex items-center text-blue-600 hover:text-blue-800 transition-colors">
@@ -308,11 +310,11 @@ export function DigitalAIPowerSystems() {
 
         {/* HERO */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
+          <div className="hidden">
             <Badge className="mb-4 bg-indigo-100 text-indigo-800 text-sm">IRENA 2025 Report Analysis</Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Digitalisation & AI for<br />Power System Transformation
-            </h1>
+            </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
               A digitalised power system is no longer a nice option — it's a <span className="font-bold text-blue-600">decisive enabler</span> of electrification and decarbonisation. An interactive deep-dive into the data behind the transformation.
             </p>
