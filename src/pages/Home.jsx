@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { blogPosts } from '@/data/posts';
-import { describePost, getStartHerePosts, START_HERE_SLUGS } from '@/data/playbookJourney';
+import { describePost, getStartHerePosts } from '@/data/playbookJourney';
 
 function NoteRow({ post, index }) {
   const detail = describePost(post);
@@ -24,8 +24,8 @@ function NoteRow({ post, index }) {
 
 export function Home() {
   const selected = getStartHerePosts();
-  const recent = blogPosts
-    .filter(({ slug, category }) => category !== 'Off-site' && !START_HERE_SLUGS.includes(slug))
+  const recent = [...blogPosts]
+    .sort((a, b) => b.dateSort.localeCompare(a.dateSort))
     .slice(0, 5);
 
   return (

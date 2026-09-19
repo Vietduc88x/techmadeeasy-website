@@ -28,7 +28,7 @@ test('the homepage offers a simple, natural route into the notes', async () => {
   assert.match(home, /Selected notes/);
   assert.match(home, /A practical place to begin/);
   assert.match(home, /Recent notes/);
-  assert.match(home, /START_HERE_SLUGS/);
+  assert.match(home, /getStartHerePosts/);
   assert.doesNotMatch(home, /Illustrative field-note preview, not a client programme/);
   assert.doesNotMatch(home, /WorkbenchPreview|JourneyCard|NewsletterForm|Start with the playbooks|Open playbook/);
   assert.doesNotMatch(home, /handleNewsletterSubmit|fetch\('\/.netlify\/functions\/newsletter'/);
