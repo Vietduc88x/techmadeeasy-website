@@ -45,7 +45,7 @@ test('site chrome consistently presents energy-delivery field notes', async () =
 });
 
 test('all posts use the new ordered taxonomy', () => {
-  assert.equal(blogPosts.length, 45);
+  assert.equal(blogPosts.length, 46);
   assert.deepEqual(getCategories().map(({ name }) => name), ['All', ...taxonomy]);
   assert.deepEqual([...new Set(blogPosts.map(({ category }) => category))].sort(), [...taxonomy].sort());
 });

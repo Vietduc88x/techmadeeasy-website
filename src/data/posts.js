@@ -5,6 +5,18 @@
 
 const legacyBlogPosts = [
   {
+    slug: 'before-project-plans-we-had-italy',
+    title: 'Before Project Plans, We Had Italy',
+    excerpt: 'Old friends, a familiar map, and the things we carried into working life.',
+    category: 'Off-site',
+    readTime: '7 min read',
+    date: 'September 2026',
+    dateSort: '2026-09-19',
+    tags: ['Counter-Strike', 'childhood', 'teamwork', 'project delivery', 'renewable energy'],
+    author: 'Duc Hoang, PMP',
+    socialImage: 'https://techmadeeasy.info/images/blog/counter-strike-italy.jpg',
+  },
+  {
     slug: 'foundation-before-ground-model',
     title: 'The Foundation Was Chosen Before the Ground Model Was Ready',
     excerpt: 'Test whether the available ground evidence supports option screening, a conditional concept or engineering design review—before an assumption hardens into a commitment.',
@@ -558,6 +570,7 @@ export const BLOG_TAXONOMY = [
 ];
 
 const CATEGORY_BY_SLUG = {
+  'before-project-plans-we-had-italy': 'Off-site',
   'foundation-before-ground-model': 'Preconstruction',
   'drawing-showed-access': 'Constructability',
   'access-was-assumed': 'Preconstruction',

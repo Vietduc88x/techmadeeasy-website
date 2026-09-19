@@ -19,7 +19,7 @@ test('the playbook journey separates delivery work from the off-site notebook', 
   assert.ok(offSite.length > 0);
   assert.ok(playbooks.every(({ category }) => category !== 'Off-site'));
   assert.ok(offSite.every(({ category }) => category === 'Off-site'));
-  assert.equal(playbooks.length + offSite.length, 45);
+  assert.equal(playbooks.length + offSite.length, 46);
 });
 
 test('the homepage offers a simple, natural route into the notes', async () => {
