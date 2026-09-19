@@ -1,10 +1,8 @@
 # Before Project Plans, We Had Italy
 
-![Counter-Strike screenshot showing a cobbled junction, a narrow building between two rising paths, stone walls, and a player's rifle in the foreground.](/images/blog/counter-strike-italy.jpg)
+![Counter-Strike screenshot showing a cobbled junction, a narrow building between two rising paths, stone walls, and a player's rifle in the foreground.](/images/blog/counter-strike-italy.jpg "Photo source: Internet.")
 
 *Before project plans, we knew these streets by heart.*
-
-Photo source: Internet.
 
 Look at this picture for a moment.
 

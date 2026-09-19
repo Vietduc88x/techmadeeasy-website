@@ -16,7 +16,16 @@ const markdownComponents = {
   h2: ({ children }) => <h2 className="mb-4 mt-12 text-3xl font-black tracking-tight text-foreground">{children}</h2>,
   h3: ({ children }) => <h3 className="mb-3 mt-9 text-2xl font-bold text-foreground">{children}</h3>,
   h4: ({ children }) => <h4 className="mb-2 mt-7 text-xl font-bold text-foreground">{children}</h4>,
-  p: ({ children }) => <p className="mb-5 text-[1.05rem] leading-8 text-slate-700 dark:text-slate-300">{children}</p>,
+  p: ({ node, children }) => {
+    const image = node.children.length === 1 && node.children[0];
+    if (image?.tagName === 'img' && image.properties.title?.startsWith('Photo source:')) {
+      return <figure className="mx-auto mb-5 mt-10 max-w-[660px]">
+        <img src={image.properties.src} alt={image.properties.alt || ''} className="h-auto w-full rounded-xl border" loading="lazy" />
+        <figcaption className="mt-2 text-right text-xs leading-5 text-slate-500 dark:text-slate-400">{image.properties.title}</figcaption>
+      </figure>;
+    }
+    return <p className="mb-5 text-[1.05rem] leading-8 text-slate-700 dark:text-slate-300">{children}</p>;
+  },
   a: ({ href, children }) => <a href={href} className="font-medium text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary" target="_blank" rel="noopener noreferrer">{children}</a>,
   strong: ({ children }) => <strong className="font-bold text-foreground">{children}</strong>,
   code: ({ className, children }) => className
