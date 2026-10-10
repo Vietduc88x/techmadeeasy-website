@@ -1,3 +1,10 @@
+# Withdrawn article: return a real 404 before the SPA fallback.
+/articles/platform-revolution-meets-defi.html /article-removed.html 404!
+/articles/platform-revolution-meets-defi /article-removed.html 404!
+/articles/platform-revolution-meets-defi/* /article-removed.html 404!
+/blog/platform-revolution-meets-defi /article-removed.html 404!
+/blog/platform-revolution-meets-defi/* /article-removed.html 404!
+
 # Redirect PDF files to correct location
 /blog/PDF /Renewable-Energy-Workshop-01.pdf 301
 /blog/*.pdf /:splat.pdf 301

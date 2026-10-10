@@ -198,19 +198,6 @@ const legacyBlogPosts = [
     author: 'techmadeeasy',
   },
   {
-    slug: 'platform-revolution-meets-defi',
-    legacyPath: '/articles/platform-revolution-meets-defi.html',
-    title: 'Platform Revolution Meets Decentralized Finance',
-    excerpt: 'How the Platform Business Model framework from Parker, Van Alstyne & Choudary explains why Solana, Hyperliquid, and NEAR Protocol are undervalued platform businesses generating real revenue.',
-    category: 'Investment',
-    readTime: '20 min read',
-    date: '8 February 2026',
-    // First article and blog-listing commits: 786befb3 and 174b309c (2026-02-08).
-    dateSort: '2026-02-08',
-    tags: ['DeFi', 'platform business', 'Solana', 'Hyperliquid', 'NEAR', 'crypto'],
-    author: 'techmadeeasy team',
-  },
-  {
     slug: 'symmetric-risk-versus-asymmetric-risk',
     title: 'The world of symmetric risk versus the power of asymmetric risk',
     excerpt: 'High risk, high reward? Not always. Explore the fundamental difference between symmetric and asymmetric risk through real-world examples from Solar Power Plants to Tesla, NVIDIA, and the attention economy.',
@@ -599,7 +586,6 @@ const CATEGORY_BY_SLUG = {
   'solar-bess-dominance': 'Solar + BESS',
   'digital-twins-energy-infrastructure': 'Preconstruction',
   'life-thesis': 'Off-site',
-  'platform-revolution-meets-defi': 'Off-site',
   'symmetric-risk-versus-asymmetric-risk': 'Off-site',
   'my-story-told-again': 'Off-site',
   'ai-power-hungry-giants-energy-demands': 'Off-site',
